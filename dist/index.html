@@ -29,19 +29,71 @@
   <body class="body">
     <header class="header">
       <div class="container header__container"><a class="header__menu" href="index.html">меню</a>
-        <div class="header__logo"><img src="assets/img/header-logo.svg"></div>
+        <div class="header__logo"><img src="assets/images/header-logo.svg"></div>
         <button class="header__button">Заказать Звонок</button>
       </div>
     </header>
     <div class="content">
-      <div class="container hero__container">
-        <h1 class="hero__title">Униформа для персонала без переплат от производителя</h1>
-        <h3 class="hero__subtitle">Изготовим униформу от 2 дней и доставим по всей России</h3>
-        <div class="button-wrap">
-          <button class="hero__button button">Получить бесплатный дизайн</button>
-          <div class="button-label">free</div>
+      <section class="hero">
+        <div class="container hero__container">
+          <h1 class="hero__title">Униформа для персонала без переплат от производителя</h1>
+          <h3 class="hero__subtitle">Изготовим униформу от 2 дней и доставим по всей России</h3>
+          <div class="button-wrap">
+            <button class="hero__button button">Получить бесплатный дизайн</button>
+            <div class="button-label">free</div>
+          </div>
         </div>
-      </div>
+      </section>
+      <section class="carousels">
+        <div class="photos">
+          <div class="swiper-container photos__swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide photos__swiper-slide"><img src="assets/images/carousel/1.png"></div>
+              <div class="swiper-slide photos__swiper-slide"><img src="assets/images/carousel/2.png"></div>
+              <div class="swiper-slide photos__swiper-slide"><img src="assets/images/carousel/3.png"></div>
+              <div class="swiper-slide photos__swiper-slide"><img src="assets/images/carousel/4.png"></div>
+              <div class="swiper-slide photos__swiper-slide"><img src="assets/images/carousel/5.png"></div>
+              <div class="swiper-slide photos__swiper-slide"><img src="assets/images/carousel/6.png"></div>
+            </div>
+          </div>
+        </div>
+        <div class="benefits">
+          <div class="swiper-container benefits__swiper-container">
+            <div class="swiper-wrapper benefits__swiper-wrapper">
+              <div class="swiper-slide benefits__swiper-slide">
+                <div class="benefits__card benefits__card--left">
+                  <h3 class="benefits__card-title">Цены на 20%<br>ниже<br>рыночных</h3>
+                  <p class="benefits__card-subtitle">благодаря собственному<br>производству</p>
+                </div>
+              </div>
+              <div class="swiper-slide benefits__swiper-slide">
+                <div class="benefits__card">
+                  <h3 class="benefits__card-title">Производим <br>любую вещь<br>для персонала</h3>
+                  <p class="benefits__card-subtitle">от фартуков до арбрендов<br>и головных уборов</p>
+                </div>
+              </div>
+              <div class="swiper-slide benefits__swiper-slide">
+                <div class="benefits__card benefits__card--right">
+                  <h3 class="benefits__card-title">Наносим логотипы <br>с идеальной точностью<br>без потери качества</h3>
+                  <p class="benefits__card-subtitle">на японском оборудовании<br>Tajima</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="banner">
+          <div class="swiper-container banner__swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide banner__swiper-slide">
+                <h2 class="banner__title banner__title--normal">поло    </h2>
+                <h2 class="banner__title banner__title--bold">поварские куртки</h2>
+                <h2 class="banner__title banner__title--normal">свитшоты</h2>
+                <h2 class="banner__title banner__title--bold">фартуки</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     <footer class="footer">
       <div class="container">footer</div>
@@ -50,7 +102,7 @@
       <!-- include popups here-->
     </div>
     <link rel="stylesheet" href="assets/css/common.css?v=1.1.1">
-    <link rel="stylesheet" href="stylesheet&quot; href=&quot;https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script>
       /* изменяемые настройки скриптов, указаны значения по умолчанию */
       var appConfig = {

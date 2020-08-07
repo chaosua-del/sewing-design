@@ -1,0 +1,52 @@
+.photos {
+  &__swiper-slide {
+    width: 102px !important; 
+    height: 102px !important;
+  }
+}
+
+.benefits {
+  &__card {
+    text-transform: uppercase;
+    padding: 20px;
+    width: 231px;
+    border-top: 3px solid rgba(#1E1E1E, 0.1);
+    border-bottom: 3px solid rgba(#1E1E1E, 0.1);
+    &--left {
+      border-right: 3px solid rgba(#1E1E1E, 0.1);
+      width: 206px !important;
+    }
+    &--right  {
+      width: 330px !important;
+      border-left: 3px solid rgba(#1E1E1E, 0.1);
+      margin-left: 24px;
+    }
+    &-title {
+      @include font(20px, -0.03em, 32px);
+    }
+    &-subtitle {
+      font-family: 'Segoe UI Regular' !important;
+      @include font(12px, -0.01em, 16px);
+    }
+  }
+
+}
+
+.banner {
+  &__swiper-slide {
+    display: flex;
+    width: 700px !important;
+    background-color: #D1CABC;
+  }
+  text-transform: uppercase;
+  &__title {
+    display: inline;
+    margin-right: 13px;
+    font-style: italic;
+    &--normal {
+      width: auto !important;
+      font-family: 'Segoe UI Regular';
+    }
+  }
+  @include font(30px, -0.03em, 75px)
+}

@@ -463,9 +463,13 @@ strong {
   text-transform: uppercase; }
   .button-wrap {
     margin: 0 auto;
-    position: relative; }
+    position: relative;
+    display: inline-block; }
   .button-label {
     position: absolute;
+    top: -31px;
+    right: -24px;
+    transform: rotate(45deg);
     width: 53px;
     height: 53px;
     border-radius: 50%;
@@ -478,6 +482,9 @@ strong {
     display: flex;
     justify-content: center;
     align-items: center; }
+
+img {
+  max-width: 100%; }
 
 @font-face {
   font-family: 'Century Gothic Bold';
@@ -532,7 +539,11 @@ strong {
 
 .hero__container {
   padding-top: 56px;
-  padding-bottom: 55px; }
+  padding-bottom: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
 
 .hero__title {
   text-align: center;
@@ -551,5 +562,52 @@ strong {
   line-height: 19px;
   text-align: center;
   padding-bottom: 55px; }
+
+.photos__swiper-slide {
+  width: 102px !important;
+  height: 102px !important; }
+
+.benefits__card {
+  text-transform: uppercase;
+  padding: 20px;
+  width: 231px;
+  border-top: 3px solid rgba(30, 30, 30, 0.1);
+  border-bottom: 3px solid rgba(30, 30, 30, 0.1); }
+  .benefits__card--left {
+    border-right: 3px solid rgba(30, 30, 30, 0.1);
+    width: 206px !important; }
+  .benefits__card--right {
+    width: 330px !important;
+    border-left: 3px solid rgba(30, 30, 30, 0.1);
+    margin-left: 24px; }
+  .benefits__card-title {
+    font-family: 'Century Gothic Bold';
+    font-size: 20px;
+    letter-spacing: -0.03em;
+    line-height: 32px; }
+  .benefits__card-subtitle {
+    font-family: 'Segoe UI Regular' !important;
+    font-family: 'Century Gothic Bold';
+    font-size: 12px;
+    letter-spacing: -0.01em;
+    line-height: 16px; }
+
+.banner {
+  text-transform: uppercase;
+  font-family: 'Century Gothic Bold';
+  font-size: 30px;
+  letter-spacing: -0.03em;
+  line-height: 75px; }
+  .banner__swiper-slide {
+    display: flex;
+    width: 700px !important;
+    background-color: #D1CABC; }
+  .banner__title {
+    display: inline;
+    margin-right: 13px;
+    font-style: italic; }
+    .banner__title--normal {
+      width: auto !important;
+      font-family: 'Segoe UI Regular'; }
 
 /*# sourceMappingURL=maps/common.css.map */

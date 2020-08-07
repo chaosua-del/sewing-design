@@ -141,9 +141,13 @@ strong {
     &-wrap {
       margin: 0 auto;
       position: relative;
+      display: inline-block;
     }
     &-label {
       position: absolute;
+      top: -31px;
+      right: -24px;
+      transform: rotate(45deg);
       width: 53px;
       height: 53px;
       border-radius: 50%;
@@ -153,3 +157,7 @@ strong {
       @include flex-center()
     }
   }
+
+img {
+    max-width: 100%;
+}

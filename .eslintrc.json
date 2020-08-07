@@ -9,7 +9,10 @@
         "ecmaVersion": 6,
         "sourceType": "module"
     },
-    "ignorePatterns": ["src/js/libs/**"],
+    "ignorePatterns": [
+        "src/js/libs/**",
+        "dist/assets/js/**"
+    ],
     "globals": {
         "app": "writable",
         "appConfig": "readonly",
@@ -17,9 +20,20 @@
     },
     "extends": "eslint:recommended",
     "rules": {
-        "strict": ["error", "global"],
-        "semi": ["error", "always"],
-        "quotes": ["warn", "single"],
-        "no-var": ["error"]
+        "strict": [
+            "error",
+            "global"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "quotes": [
+            "warn",
+            "single"
+        ],
+        "no-var": [
+            "error"
+        ]
     }
 }
