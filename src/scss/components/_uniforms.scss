@@ -1,0 +1,94 @@
+.uniforms {
+  background: url('../img/uniforms/uniforms-bg.svg') no-repeat center;
+  padding-bottom: 79px;
+  &__subtitle {
+    @include font(10px, 0.02em, 16px);
+    opacity: 0.5;
+    text-align: center;
+    margin-top: 18px;
+    margin-bottom: 47px;
+  }
+  &__title {
+    @include font(18px, -0.03, 22px);
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  &__card {
+    position: relative;
+    text-transform: uppercase;
+    display: flex;
+    &--first {
+      width: 252px;
+      height: 146px;
+      margin-bottom: 88px;
+      @include bg('../img/uniforms/1.jpg');
+      margin-left: 22px;
+    }
+    &--second, &--third {
+      width: 220px;
+      height: 146px;
+    }
+    &--second {
+      margin-left: -12px;
+      margin-bottom: 41px;
+      .uniforms__card-description {
+        max-width: 144px;
+      }
+      @include bg('../img/uniforms/2.jpg');
+    }
+    &--third {
+      margin-left: auto;
+      margin-bottom: 12px;
+      .uniforms__card-description {
+        max-width: 130px;
+      }
+      .uniforms__card-name {
+        left: 1px;
+        min-width: 220px;
+      }
+      @include bg('../img/uniforms/3.jpg');
+    }
+    &-label {
+      font-family: 'Century Gothic Italic' !important;
+      @include font(10px, 0.02em, 16px);
+      color: $color-white;
+      margin-left: 13px;
+      margin-right: 3px;
+    }
+    &-description {
+      @include font(10px, 0.02em, 16px);
+      color: $color-white;
+      max-width: 171px;
+      display: inline-block;
+    }
+    &-name {
+      @include font(20px, -0.04em, 20px);
+      color: $color-white;
+      position: absolute;
+      bottom: -21.5px;
+      left: 7px;
+      &--primary {
+        color: #CBC3B3;
+        display: block;
+      }
+    }
+  }
+  &__button {
+    width: 147px;
+    height: 147px;
+    border-radius: 50%;
+    background-color: #D1CABC;
+    @include font(10px, 0.02em, 15px);
+    @include flex-center();
+    padding-top: 30px;
+    text-transform: uppercase;
+    position: relative;
+    &::after {
+      content: url(../img/uniforms/button-arrow.svg);
+      position: absolute;
+      top: 42%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

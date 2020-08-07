@@ -487,11 +487,27 @@ img {
   max-width: 100%; }
 
 @font-face {
+  font-family: 'Century Gothic Regular';
+  src: url("fonts/CenturyGothic/CenturyGothic.eot");
+  src: url("fonts/CenturyGothic/CenturyGothic.eot?#iefix") format("embedded-opentype"), url("fonts/CenturyGothic/CenturyGothic.woff") format("woff"), url("fonts/CenturyGothic/CenturyGothic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
   font-family: 'Century Gothic Bold';
   src: url("fonts/CenturyGothic/CenturyGothic-Bold.eot");
   src: url("fonts/CenturyGothic/CenturyGothic-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/CenturyGothic/CenturyGothic-Bold.woff") format("woff"), url("fonts/CenturyGothic/CenturyGothic-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Century Gothic Italic';
+  src: url("fonts/CenturyGothic/CenturyGothic-Italic.eot");
+  src: url("fonts/CenturyGothic/CenturyGothic-Italic.eot?#iefix") format("embedded-opentype"), url("fonts/CenturyGothic/CenturyGothic-Italic.woff") format("woff"), url("fonts/CenturyGothic/CenturyGothic-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
   font-display: swap; }
 
 @font-face {
@@ -609,5 +625,103 @@ img {
     .banner__title--normal {
       width: auto !important;
       font-family: 'Segoe UI Regular'; }
+
+.uniforms {
+  background: url("../img/uniforms/uniforms-bg.svg") no-repeat center;
+  padding-bottom: 79px; }
+  .uniforms__subtitle {
+    font-family: 'Century Gothic Bold';
+    font-size: 10px;
+    letter-spacing: 0.02em;
+    line-height: 16px;
+    opacity: 0.5;
+    text-align: center;
+    margin-top: 18px;
+    margin-bottom: 47px; }
+  .uniforms__title {
+    font-family: 'Century Gothic Bold';
+    font-size: 18px;
+    letter-spacing: -0.03;
+    line-height: 22px;
+    text-align: center;
+    margin-bottom: 56px; }
+  .uniforms__card {
+    position: relative;
+    text-transform: uppercase;
+    display: flex; }
+    .uniforms__card--first {
+      width: 252px;
+      height: 146px;
+      margin-bottom: 88px;
+      background: url("../img/uniforms/1.jpg") no-repeat center/cover;
+      margin-left: 22px; }
+    .uniforms__card--second, .uniforms__card--third {
+      width: 220px;
+      height: 146px; }
+    .uniforms__card--second {
+      margin-left: -12px;
+      margin-bottom: 41px;
+      background: url("../img/uniforms/2.jpg") no-repeat center/cover; }
+      .uniforms__card--second .uniforms__card-description {
+        max-width: 144px; }
+    .uniforms__card--third {
+      margin-left: auto;
+      margin-bottom: 12px;
+      background: url("../img/uniforms/3.jpg") no-repeat center/cover; }
+      .uniforms__card--third .uniforms__card-description {
+        max-width: 130px; }
+      .uniforms__card--third .uniforms__card-name {
+        left: 1px;
+        min-width: 220px; }
+    .uniforms__card-label {
+      font-family: 'Century Gothic Italic' !important;
+      font-family: 'Century Gothic Bold';
+      font-size: 10px;
+      letter-spacing: 0.02em;
+      line-height: 16px;
+      color: #F6F6F6;
+      margin-left: 13px;
+      margin-right: 3px; }
+    .uniforms__card-description {
+      font-family: 'Century Gothic Bold';
+      font-size: 10px;
+      letter-spacing: 0.02em;
+      line-height: 16px;
+      color: #F6F6F6;
+      max-width: 171px;
+      display: inline-block; }
+    .uniforms__card-name {
+      font-family: 'Century Gothic Bold';
+      font-size: 20px;
+      letter-spacing: -0.04em;
+      line-height: 20px;
+      color: #F6F6F6;
+      position: absolute;
+      bottom: -21.5px;
+      left: 7px; }
+      .uniforms__card-name--primary {
+        color: #CBC3B3;
+        display: block; }
+  .uniforms__button {
+    width: 147px;
+    height: 147px;
+    border-radius: 50%;
+    background-color: #D1CABC;
+    font-family: 'Century Gothic Bold';
+    font-size: 10px;
+    letter-spacing: 0.02em;
+    line-height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    text-transform: uppercase;
+    position: relative; }
+    .uniforms__button::after {
+      content: url(../img/uniforms/button-arrow.svg);
+      position: absolute;
+      top: 42%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
 
 /*# sourceMappingURL=maps/common.css.map */
