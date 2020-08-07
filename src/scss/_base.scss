@@ -1,0 +1,155 @@
+.body {
+    background: $color-bg;
+    color     : $color-text;
+
+    font-family   : $font-family;
+    font-size     : $font-size;
+    letter-spacing: $letter-spacing;
+    line-height   : $line-height;
+
+    @include media-breakpoint-up(lg) {
+        font-size  : $font-size-lg;
+        line-height: $line-height-lg;
+    }
+
+    &._frozen {
+        overflow: hidden;
+        height  : 100%;
+    }
+
+}
+
+.container {
+    // width: 100%;
+    // margin: 0 auto;
+    // background-color: black;
+    @include make-container();
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+.hidden-sm {
+    @include media-breakpoint-down(sm) {
+        display: none !important;
+    }
+}
+
+.hidden-lg {
+    @include media-breakpoint-up(lg) {
+        display: none !important;
+    }
+}
+
+.visible-sm {
+    @include media-breakpoint-up(md) {
+        display: none !important;
+    }
+}
+
+.visible-md {
+    @include media-breakpoint-down(sm) {
+        display: none !important;
+    }
+
+    @include media-breakpoint-up(lg) {
+        display: none !important;
+    }
+}
+
+.visible-lg {
+    @include media-breakpoint-down(md) {
+        display: none !important;
+    }
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.muted {
+    opacity: .5;
+}
+
+.dashed {
+    border-bottom: 1px dashed;
+}
+
+a,
+.link {
+    cursor: pointer;
+    color : $color-link;
+}
+
+strong {
+    font-weight: bold;
+}
+
+::placeholder {
+    color: rgba($color-text, .5);
+}
+
+:focus::placeholder {
+    opacity: 1;
+}
+
+.necessaty_fields {
+    display: none !important;
+}
+
+.ios-fixed {
+    @include media-breakpoint-down(sm) {
+        position: fixed;
+        overflow: hidden;
+        height  : 100%;
+        width   : 100%;
+    }
+}
+
+.lazyload {
+    visibility: hidden;
+}
+
+.fancybox-navigation {
+    position: static;
+}
+
+.dev-menu {
+    @include media-breakpoint-up(md) {
+        column-count: 2;
+    }
+
+    @include media-breakpoint-up(lg) {
+        column-count: 4;
+    }
+
+    &__item {
+        display          : block;
+        margin-bottom    : 1em;
+        page-break-inside: avoid;
+    }
+}
+
+.button {
+    color: $color-white;
+    background-color: $color-base;
+    @include font(14px, 0.02em);
+    padding: 16px;
+    text-transform: uppercase;
+    &-wrap {
+      margin: 0 auto;
+      position: relative;
+    }
+    &-label {
+      position: absolute;
+      width: 53px;
+      height: 53px;
+      border-radius: 50%;
+      @include font(15px, -0.01em, 18px);
+      text-transform: uppercase;
+      background: #E3E8EC;
+      @include flex-center()
+    }
+  }

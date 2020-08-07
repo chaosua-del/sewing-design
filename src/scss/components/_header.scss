@@ -1,0 +1,25 @@
+.header {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgba(#1E1E1E, 0.1);
+    padding-top: 12px;
+    padding-bottom: 17px;
+      }
+  &__menu {
+    text-transform: uppercase;
+    @include font(20px, -0.05em);
+    text-decoration-line: underline;
+    line-height: 30px;
+    color: $color-base
+  }
+  &__button {
+    @include font(12px, 0.02em);
+    line-height: 20px;
+    border-bottom: 2px dashed #C4BCBC;
+    border-radius: 0px;
+    text-transform: uppercase;
+  }
+}

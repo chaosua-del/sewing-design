@@ -1,0 +1,23 @@
+@import url('fonts/Fontello/css/fontello.css');
+
+@font-face {
+font-family: 'Century Gothic Bold';
+src: url('fonts/CenturyGothic/CenturyGothic-Bold.eot');
+src: url('fonts/CenturyGothic/CenturyGothic-Bold.eot?#iefix') format('embedded-opentype'),
+url('fonts/CenturyGothic/CenturyGothic-Bold.woff') format('woff'),
+url('fonts/CenturyGothic/CenturyGothic-Bold.ttf') format('truetype');
+font-weight: bold;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'Segoe UI Regular';
+src: url('fonts/SegoeUI/SegoeUI.eot');
+src: url('fonts/SegoeUI/SegoeUI.eot?#iefix') format('embedded-opentype'),
+url('fonts/SegoeUI/SegoeUI.woff') format('woff'),
+url('fonts/SegoeUI/SegoeUI.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+font-display: swap;
+}
