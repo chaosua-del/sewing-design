@@ -54,3 +54,14 @@ font-weight: normal;
 font-style: normal;
 font-display: swap;
 }
+
+@font-face {
+font-family: 'Segoe UI SemiBold';
+src: url('fonts/SegoeUI/SegoeUI-SemiBold.eot');
+src: url('fonts/SegoeUI/SegoeUI-SemiBold.eot?#iefix') format('embedded-opentype'),
+url('fonts/SegoeUI/SegoeUI-SemiBold.woff') format('woff'),
+url('fonts/SegoeUI/SegoeUI-SemiBold.ttf') format('truetype');
+font-weight: 600;
+font-style: normal;
+font-display: swap;
+}

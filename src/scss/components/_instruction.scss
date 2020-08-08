@@ -1,0 +1,48 @@
+.instruction {
+  background-color: #E4E4E4;
+  &__block {
+    background: url(../img/instruction/bags.webp) no-repeat 10px 20px;
+    background-size: 122%;
+    padding-top: 107px;
+  }
+  &__title {
+    color: $color-white;
+    background-color: #C4BCBC;
+    text-transform: uppercase;
+    padding: 31px 20px;
+    max-width: 315px;
+    @include font(35px, -0.05em, 45px);
+  }
+  &__card {
+    background: url(../img/instruction/blue-bag.webp) no-repeat 20px 157px;
+    background-size: 100%;
+    padding-left: 25px;
+    padding-right: 20px;
+    padding-bottom: 278px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-title {
+      margin-top: 21px;
+      margin-bottom: 15px;
+      font-family: 'Segoe UI SemiBold' !important; 
+      @include font(18px, -0.01em, 28px);
+    }
+    &-list {
+      font-family: 'Segoe UI Regular' !important; 
+      @include font(12px, -0.01em, 28px);
+    }
+    &-item {
+      &::before {
+        content: ' ';
+        display: inline-block;
+        margin-right: 11px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #C4BCBC;
+      }
+    }
+  }
+}

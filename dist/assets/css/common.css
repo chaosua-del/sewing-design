@@ -526,6 +526,14 @@ img {
   font-style: normal;
   font-display: swap; }
 
+@font-face {
+  font-family: 'Segoe UI SemiBold';
+  src: url("fonts/SegoeUI/SegoeUI-SemiBold.eot");
+  src: url("fonts/SegoeUI/SegoeUI-SemiBold.eot?#iefix") format("embedded-opentype"), url("fonts/SegoeUI/SegoeUI-SemiBold.woff") format("woff"), url("fonts/SegoeUI/SegoeUI-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap; }
+
 /*
 Основной контейнер
 */
@@ -959,5 +967,54 @@ img {
 
 .swiper-button-next:after, .swiper-button-prev:after {
   top: 223px; }
+
+.instruction {
+  background-color: #E4E4E4; }
+  .instruction__block {
+    background: url(../img/instruction/bags.webp) no-repeat 10px 20px;
+    background-size: 122%;
+    padding-top: 107px; }
+  .instruction__title {
+    color: #F6F6F6;
+    background-color: #C4BCBC;
+    text-transform: uppercase;
+    padding: 31px 20px;
+    max-width: 315px;
+    font-family: 'Century Gothic Bold';
+    font-size: 35px;
+    letter-spacing: -0.05em;
+    line-height: 45px; }
+  .instruction__card {
+    background: url(../img/instruction/blue-bag.webp) no-repeat 20px 157px;
+    background-size: 100%;
+    padding-left: 25px;
+    padding-right: 20px;
+    padding-bottom: 278px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .instruction__card-title {
+      margin-top: 21px;
+      margin-bottom: 15px;
+      font-family: 'Segoe UI SemiBold' !important;
+      font-family: 'Century Gothic Bold';
+      font-size: 18px;
+      letter-spacing: -0.01em;
+      line-height: 28px; }
+    .instruction__card-list {
+      font-family: 'Segoe UI Regular' !important;
+      font-family: 'Century Gothic Bold';
+      font-size: 12px;
+      letter-spacing: -0.01em;
+      line-height: 28px; }
+    .instruction__card-item::before {
+      content: ' ';
+      display: inline-block;
+      margin-right: 11px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #C4BCBC; }
 
 /*# sourceMappingURL=maps/common.css.map */
