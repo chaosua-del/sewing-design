@@ -1,0 +1,81 @@
+.stages{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  &__swiper-wrapper {
+    padding-bottom: 37px;
+  }
+  &__title {
+    @include font(18px, -0.03em, 22px);
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  &__description {
+    @include font(12px, -0.02em, 16px);
+    text-align: center;
+    font-family: 'Segoe UI Regular' !important;
+    margin-bottom: 36px;
+  }
+  &__card {
+    position: relative;
+    width: 100%;
+    height: 455px;
+    padding-top: 52px;
+    &-bg {
+      position: absolute;
+      top: 0;
+      right: 2px;
+      height: 100%;
+      width: 35%;
+      overflow: hidden;
+      &-image {
+        max-width: 455px;
+        height: 600px;
+        margin-left: -137px;
+        position: absolute;
+        bottom: -69px;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(#FFFFFF, 0.2);
+      }
+    }
+    &-title {
+      @include font(25px, -0.05em, 25px);
+      text-transform: uppercase;
+      max-width: 240px;
+      margin-left: 24px;
+      margin-bottom: 42px;
+    }
+    &-description {
+      @include font(12px, -0.01em, 18px);
+      font-family: 'Segoe UI Regular' !important;
+      margin-bottom: 25px;
+      max-width: 140px;
+      margin-left: 24px;
+    }
+  }
+}
+
+.swiper-pagination-bullet {
+    width: 50px !important;
+    height: 2px !important;
+    background: #000000 !important; 
+    border-radius: 0 !important;
+}
+
+.swiper-button-next:after {
+  content: url('../img/stages/arrow-next.svg') !important;
+}
+
+.swiper-button-prev:after {
+  content: url('../img/stages/arrow-prev.svg') !important;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  top: 223px;
+}

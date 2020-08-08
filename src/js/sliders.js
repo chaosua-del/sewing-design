@@ -23,4 +23,14 @@ export default function () {
     freeMode: true,
     loop: true,
   });
+
+  const stages = new Swiper('.stages__swiper-container', {
+    pagination: {
+      el: '.stages__swiper-pagination',
+    },
+    navigation: {
+      nextEl: '.stages__swiper-button-next',
+      prevEl: '.stages__swiper-button-prev',
+    },
+  });
 }

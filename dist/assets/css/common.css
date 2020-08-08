@@ -632,7 +632,7 @@ img {
     font-style: italic; }
     .banner__title--normal {
       width: auto !important;
-      font-family: 'Segoe UI Regular'; }
+      font-family: "Segoe UI Regular"; }
 
 .uniforms {
   background: url("../img/uniforms/uniforms-bg.svg") no-repeat center;
@@ -813,5 +813,151 @@ img {
     font-size: 10px;
     letter-spacing: 0.02em;
     line-height: 18px; }
+
+.model {
+  padding-top: 78px;
+  padding-bottom: 78px; }
+  .model__card {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: url("../img/model/model-photo.webp") no-repeat center/cover; }
+  .model__buttons {
+    position: relative;
+    height: 100%;
+    width: 200px;
+    float: right;
+    background: transparent;
+    z-index: 10; }
+  .model__button {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    border: 1px solid #CBC3B3;
+    background-color: #F6F6F6;
+    color: #313131;
+    border-radius: 50%;
+    padding-bottom: 2px;
+    font-family: monospace;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .model__button:hover {
+      border: 1px solid #1E1E1E;
+      background-color: #1E1E1E;
+      color: #D1CABC; }
+    .model__button-shoulder {
+      left: 0;
+      top: 145px; }
+    .model__button-robe {
+      left: 47%;
+      top: 155px; }
+    .model__button-pocket {
+      left: 28%;
+      top: 234px; }
+    .model__button-loop {
+      right: 13%;
+      top: 164px; }
+  .model__info {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    max-width: 140px;
+    color: #F6F6F6;
+    text-transform: uppercase; }
+    .model__info-subtitle {
+      font-family: 'Century Gothic Regular' !important;
+      margin-bottom: 14px;
+      font-family: 'Century Gothic Bold';
+      font-size: 11px;
+      letter-spacing: 0.02em;
+      line-height: 11px; }
+    .model__info-title {
+      font-family: 'Century Gothic Bold';
+      font-size: 30px;
+      letter-spacing: -0.04em;
+      line-height: 25px; }
+
+.stages {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  .stages__swiper-wrapper {
+    padding-bottom: 37px; }
+  .stages__title {
+    font-family: 'Century Gothic Bold';
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    line-height: 22px;
+    text-align: center;
+    margin-bottom: 36px; }
+  .stages__description {
+    font-family: 'Century Gothic Bold';
+    font-size: 12px;
+    letter-spacing: -0.02em;
+    line-height: 16px;
+    text-align: center;
+    font-family: 'Segoe UI Regular' !important;
+    margin-bottom: 36px; }
+  .stages__card {
+    position: relative;
+    width: 100%;
+    height: 455px;
+    padding-top: 52px; }
+    .stages__card-bg {
+      position: absolute;
+      top: 0;
+      right: 2px;
+      height: 100%;
+      width: 35%;
+      overflow: hidden; }
+      .stages__card-bg-image {
+        max-width: 455px;
+        height: 600px;
+        margin-left: -137px;
+        position: absolute;
+        bottom: -69px; }
+      .stages__card-bg::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.2); }
+    .stages__card-title {
+      font-family: 'Century Gothic Bold';
+      font-size: 25px;
+      letter-spacing: -0.05em;
+      line-height: 25px;
+      text-transform: uppercase;
+      max-width: 240px;
+      margin-left: 24px;
+      margin-bottom: 42px; }
+    .stages__card-description {
+      font-family: 'Century Gothic Bold';
+      font-size: 12px;
+      letter-spacing: -0.01em;
+      line-height: 18px;
+      font-family: 'Segoe UI Regular' !important;
+      margin-bottom: 25px;
+      max-width: 140px;
+      margin-left: 24px; }
+
+.swiper-pagination-bullet {
+  width: 50px !important;
+  height: 2px !important;
+  background: #000000 !important;
+  border-radius: 0 !important; }
+
+.swiper-button-next:after {
+  content: url("../img/stages/arrow-next.svg") !important; }
+
+.swiper-button-prev:after {
+  content: url("../img/stages/arrow-prev.svg") !important; }
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  top: 223px; }
 
 /*# sourceMappingURL=maps/common.css.map */
