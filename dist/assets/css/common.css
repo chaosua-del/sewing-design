@@ -486,6 +486,9 @@ strong {
 img {
   max-width: 100%; }
 
+.background-transparent {
+  background-color: transparent !important; }
+
 @font-face {
   font-family: 'Century Gothic Regular';
   src: url("fonts/CenturyGothic/CenturyGothic.eot");
@@ -599,30 +602,44 @@ img {
   width: 102px !important;
   height: 102px !important; }
 
+.benefits__swiper-slide {
+  display: flex;
+  width: 771px !important; }
+
 .benefits__card {
   text-transform: uppercase;
   padding: 20px;
-  width: 231px;
+  min-width: 231px;
   border-top: 3px solid rgba(30, 30, 30, 0.1);
   border-bottom: 3px solid rgba(30, 30, 30, 0.1); }
   .benefits__card--left {
-    border-right: 3px solid rgba(30, 30, 30, 0.1);
-    width: 206px !important; }
+    border-right: 3px solid rgba(30, 30, 30, 0.1); }
   .benefits__card--right {
-    width: 330px !important;
-    border-left: 3px solid rgba(30, 30, 30, 0.1);
-    margin-left: 24px; }
+    border-left: 3px solid rgba(30, 30, 30, 0.1); }
   .benefits__card-title {
     font-family: 'Century Gothic Bold';
     font-size: 20px;
     letter-spacing: -0.03em;
     line-height: 32px; }
   .benefits__card-subtitle {
+    max-width: 188px;
     font-family: 'Segoe UI Regular' !important;
     font-family: 'Century Gothic Bold';
     font-size: 12px;
     letter-spacing: -0.01em;
     line-height: 16px; }
+  .benefits__card-number {
+    font-family: 'Century Gothic Bold';
+    font-size: 60px;
+    letter-spacing: -0.04em;
+    line-height: 88px; }
+  .benefits__card-supper {
+    vertical-align: super;
+    margin-left: 11px;
+    font-family: 'Century Gothic Bold';
+    font-size: 14px;
+    letter-spacing: -0.04em;
+    line-height: 40px; }
 
 .banner {
   text-transform: uppercase;
@@ -641,6 +658,20 @@ img {
     .banner__title--normal {
       width: auto !important;
       font-family: "Segoe UI Regular"; }
+  .banner__text {
+    font-family: 'Century Gothic Regular' !important;
+    margin-top: 53px;
+    color: #FFFFFF;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+    font-family: 'Century Gothic Bold';
+    font-size: 30px;
+    letter-spacing: -0.04em;
+    line-height: 80px; }
+
+.lower-case {
+  text-transform: none;
+  opacity: 0.7;
+  max-width: 140px; }
 
 .uniforms {
   background: url("../img/uniforms/uniforms-bg.svg") no-repeat center;
@@ -1154,5 +1185,55 @@ img {
   height: 2px !important;
   background: #000000 !important;
   border-radius: 0 !important; }
+
+.questions__container {
+  padding-bottom: 304px; }
+
+.questions__collapsible {
+  font-family: 'Century Gothic Bold';
+  font-size: 16px;
+  letter-spacing: -0.05em;
+  line-height: 17px;
+  width: 100%;
+  text-transform: uppercase;
+  padding-top: 16px;
+  margin-top: 10px;
+  margin-bottom: 34px;
+  display: flex;
+  justify-content: space-between; }
+
+.questions__text {
+  font-family: 'Century Gothic Bold';
+  font-size: 12px;
+  letter-spacing: -0.01em;
+  line-height: 20px;
+  font-family: 'Segoe UI Regular' !important;
+  max-width: 239px;
+  margin: 0 auto; }
+
+.collapsible {
+  cursor: pointer;
+  border-top: 3px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out; }
+
+.collapsible:after {
+  content: '+';
+  color: rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+  font-size: 21px;
+  transition: all 0.3s ease-in-out; }
+
+.active {
+  border-top: 3px solid black; }
+  .active:after {
+    color: black;
+    transform: rotate(45deg); }
+
+.expand-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out; }
 
 /*# sourceMappingURL=maps/common.css.map */

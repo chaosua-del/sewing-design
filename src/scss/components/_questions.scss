@@ -1,0 +1,51 @@
+.questions {
+  &__container {
+    padding-bottom: 304px;
+  }
+  &__collapsible {
+    @include font(16px, -0.05em, 17px);
+    width: 100%;
+    text-transform: uppercase;
+    padding-top: 16px;
+    margin-top: 10px;
+    margin-bottom: 34px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__text {
+    @include font(12px, -0.01em, 20px);
+    font-family: 'Segoe UI Regular' !important;
+    max-width: 239px;
+    margin: 0 auto;
+  }
+}
+
+.collapsible {
+  cursor: pointer;
+  border-top: 3px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+}
+
+.collapsible:after {
+  content: '+';
+  color: rgba(#000000, 0.1);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+  font-size: 21px;
+  transition: all 0.3s ease-in-out;
+}
+
+.active {
+  border-top: 3px solid rgba(#000000, 1);
+  &:after {
+  color: rgba(#000000, 1);
+  transform: rotate(45deg);
+  }
+}
+
+.expand-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}

@@ -9,11 +9,11 @@ export default function () {
   });
 
   const benefits = new Swiper('.benefits__swiper-container', {
-    slidesPerView: 1.55,
+    slidesPerView: 'auto',
     spaceBetween: 0,
     freeMode: true,
     loop: false,
-    slidesOffsetAfter: 140,
+    slidesOffsetAfter: 2,
     // centerInsufficientSlides: 'true'
   });
 
@@ -56,4 +56,19 @@ export default function () {
       prevEl: '.feedback__swiper-button-prev',
     },
   });
+
+  const coll = document.getElementsByClassName('collapsible');
+  let i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener('click', function () {
+      this.classList.toggle('active');
+      let content = this.nextElementSibling;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  }
 }
