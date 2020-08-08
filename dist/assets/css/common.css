@@ -518,6 +518,14 @@ img {
   font-style: normal;
   font-display: swap; }
 
+@font-face {
+  font-family: 'Segoe UI Light';
+  src: url("fonts/SegoeUI/SegoeUI-Light.eot");
+  src: url("fonts/SegoeUI/SegoeUI-Light.eot?#iefix") format("embedded-opentype"), url("fonts/SegoeUI/SegoeUI-Light.woff") format("woff"), url("fonts/SegoeUI/SegoeUI-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
 /*
 Основной контейнер
 */
@@ -723,5 +731,87 @@ img {
       top: 42%;
       left: 50%;
       transform: translate(-50%, -50%); }
+
+.design {
+  background-color: #E3E8EC; }
+  .design__container {
+    padding-top: 57px;
+    padding-bottom: 68px; }
+  .design__title {
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    font-family: 'Century Gothic Bold';
+    font-size: 24px;
+    letter-spacing: -0.03em;
+    line-height: 40px; }
+  .design__subtitle {
+    font-family: 'Segoe UI Regular' !important;
+    opacity: 0.7;
+    margin-bottom: 42px;
+    font-family: 'Century Gothic Bold';
+    font-size: 12px;
+    letter-spacing: -0.02em;
+    line-height: 18px; }
+  .design__button {
+    text-align: center;
+    width: 100%; }
+    .design__button-wrap {
+      width: 100%;
+      margin-bottom: 10px; }
+    .design__button-label {
+      background-color: #D1CABC; }
+  .design__policy {
+    margin: 0 auto;
+    max-width: 240px;
+    text-align: center;
+    font-family: 'Segoe UI Regular' !important;
+    color: rgba(30, 30, 30, 0.5);
+    font-family: 'Century Gothic Bold';
+    font-size: 10px;
+    letter-spacing: -0.01em;
+    line-height: 13px; }
+    .design__policy--strong {
+      color: #1E1E1E; }
+
+.leader {
+  padding-top: 134px;
+  padding-bottom: 15px;
+  padding-right: 12px;
+  padding-left: 25px;
+  width: 100%;
+  background: url("../img/design/designer-photo.webp") no-repeat center/cover;
+  display: flex;
+  flex-direction: column; }
+  .leader__info {
+    margin-bottom: 106px;
+    align-self: flex-end; }
+    .leader__info-name {
+      margin-bottom: 6px;
+      font-family: 'Century Gothic Bold';
+      font-size: 16px;
+      letter-spacing: -0.04em;
+      line-height: 22px; }
+    .leader__info-job {
+      font-family: 'Segoe UI Regular' !important;
+      color: #5F5F5F;
+      opacity: 0.5;
+      font-family: 'Century Gothic Bold';
+      font-size: 12px;
+      letter-spacing: -0.01em;
+      line-height: 22px; }
+  .leader__title {
+    margin-bottom: 8px;
+    color: #F6F6F6;
+    font-family: 'Century Gothic Bold';
+    font-size: 16px;
+    letter-spacing: -0.04em;
+    line-height: 32px; }
+  .leader__description {
+    color: #F6F6F6;
+    font-family: 'Segoe UI Light' !important;
+    font-family: 'Century Gothic Bold';
+    font-size: 10px;
+    letter-spacing: 0.02em;
+    line-height: 18px; }
 
 /*# sourceMappingURL=maps/common.css.map */

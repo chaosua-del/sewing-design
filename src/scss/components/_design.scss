@@ -1,0 +1,78 @@
+.design {
+  background-color: #E3E8EC;
+  &__container {
+    padding-top: 57px;
+    padding-bottom: 68px;
+  }
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    @include font(24px, -0.03em, 40px);
+  }
+  &__subtitle {
+    font-family: 'Segoe UI Regular' !important;
+    opacity: 0.7;
+    margin-bottom: 42px;
+    @include font(12px, -0.02em, 18px);
+  }
+  &__button {
+    text-align: center;
+    width: 100%;
+    &-wrap {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    &-label {
+      background-color: #D1CABC;
+    }
+  }
+  &__policy {
+    margin: 0 auto;
+    max-width: 240px;
+    text-align: center;
+    font-family: 'Segoe UI Regular' !important;
+    color: rgba(30, 30, 30, 0.5);
+    @include font(10px, -0.01em, 13px);
+    &--strong {
+      color: $color-base;
+    }
+  }
+}
+
+.leader {
+  padding-top: 134px;
+  padding-bottom: 15px;
+  padding-right: 12px;
+  padding-left: 25px;
+  width: 100%;
+  background: url('../img/design/designer-photo.webp') no-repeat center / cover;
+  // background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  &__info {
+    margin-bottom: 106px;
+    // display: inline-block;
+    align-self: flex-end;
+    // text-align: right;
+    &-name {
+      margin-bottom: 6px;
+      @include font(16px, -0.04em, 22px);
+    }
+    &-job {
+      font-family: 'Segoe UI Regular' !important;
+      color: #5F5F5F;
+      opacity: 0.5;
+      @include font(12px, -0.01em, 22px);
+    }
+  }
+  &__title {
+    margin-bottom: 8px;
+    color: $color-white;
+    @include font(16px, -0.04em, 32px);
+  }
+  &__description {
+    color: $color-white;
+    font-family: 'Segoe UI Light' !important;
+    @include font(10px, 0.02em, 18px);
+  }
+}
