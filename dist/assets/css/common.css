@@ -1020,24 +1020,25 @@ img {
         background-color: #C4BCBC; }
 
 .clients {
-  background: #000000 url("../img/clients/clients-bg.webp") no-repeat center/cover; }
-  .clients__container {
-    color: #F6F6F6;
-    padding-top: 70px;
-    padding-bottom: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; }
+  background: #000000 url("../img/clients/clients-bg.webp") no-repeat center/cover;
+  color: #F6F6F6;
+  padding-top: 70px;
+  padding-bottom: 70px; }
   .clients__description {
     font-family: 'Century Gothic Regular' !important;
     text-align: center;
+    margin: 0 auto;
     max-width: 187px;
     margin-bottom: 20px;
     font-family: 'Century Gothic Bold';
     font-size: 16px;
     letter-spacing: -0.03em;
     line-height: 20px; }
+  .clients__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
   .clients__name {
     font-family: 'Century Gothic Bold';
     font-size: 20px;
@@ -1055,7 +1056,9 @@ img {
     max-width: 238px; }
 
 .clients__swiper-pagination {
-  bottom: 16px; }
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%) !important; }
   .clients__swiper-pagination .swiper-pagination-bullet {
     margin-right: 2px;
     width: 24px !important;
@@ -1071,5 +1074,85 @@ img {
 
 .clients__swiper-button-next:after, .swiper-button-prev:after {
   top: 223px; }
+
+.feedback {
+  padding-top: 39px;
+  padding-bottom: 79px;
+  font-family: 'Segoe UI Regular' !important; }
+  .feedback__swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 40px; }
+  .feedback__user {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; }
+    .feedback__user-name {
+      font-family: 'Century Gothic Bold' !important;
+      display: block;
+      font-family: 'Century Gothic Bold';
+      font-size: 16px;
+      letter-spacing: -0.04em;
+      line-height: 32px; }
+    .feedback__user-job {
+      font-family: 'Segoe UI Regular' !important;
+      display: block;
+      opacity: 0.6;
+      font-family: 'Century Gothic Bold';
+      font-size: 10px;
+      letter-spacing: -0.01em;
+      line-height: 22px; }
+    .feedback__user-img {
+      border-radius: 50%;
+      margin-right: 10px; }
+  .feedback__card {
+    position: relative;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    padding-left: 19px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 270px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+    .feedback__card-text {
+      font-size: 12px;
+      line-height: 20px;
+      color: #000000;
+      opacity: 0.7; }
+    .feedback__card-date {
+      font-family: 'Century Gothic Bold';
+      font-size: 10px;
+      letter-spacing: -0.01em;
+      line-height: 22px;
+      opacity: 0.3;
+      align-self: flex-end;
+      margin-right: 28px; }
+    .feedback__card::after {
+      content: url("../img/feedback/feedback-decoration.svg");
+      position: absolute;
+      right: 0;
+      top: -33px; }
+
+.feedback__swiper-button-next {
+  top: 23px !important;
+  right: 10px !important; }
+  .feedback__swiper-button-next::after {
+    content: url("../img/stages/arrow-next.svg") !important; }
+
+.feedback__swiper-button-prev {
+  top: 23px !important;
+  left: 10px !important; }
+  .feedback__swiper-button-prev::after {
+    content: url("../img/stages/arrow-prev.svg") !important; }
+
+.feedback__swiper-pagination .swiper-pagination-bullet {
+  margin-right: 2px;
+  width: 24px !important;
+  height: 2px !important;
+  background: #000000 !important;
+  border-radius: 0 !important; }
 
 /*# sourceMappingURL=maps/common.css.map */

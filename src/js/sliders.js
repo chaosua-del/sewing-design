@@ -35,12 +35,25 @@ export default function () {
   });
 
   const clients = new Swiper('.clients__swiper-container', {
+    slidesPerView: 'auto',
     pagination: {
       el: '.clients__swiper-pagination',
     },
     navigation: {
       nextEl: '.clients__swiper-button-next',
       prevEl: '.clients__swiper-button-prev',
+    },
+  });
+
+  const feedback = new Swiper('.feedback__swiper-container', {
+    slidesPerView: '1.1',
+    slidesOffsetAfter: 7,
+    pagination: {
+      el: '.feedback__swiper-pagination',
+    },
+    navigation: {
+      nextEl: '.feedback__swiper-button-next',
+      prevEl: '.feedback__swiper-button-prev',
     },
   });
 }

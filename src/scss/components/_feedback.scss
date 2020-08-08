@@ -1,0 +1,85 @@
+.feedback {
+  padding-top: 39px;
+  padding-bottom: 79px;
+  font-family: 'Segoe UI Regular' !important;
+  &__swiper-slide {
+    @include flex-center();
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  &__user {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    &-name {
+      font-family: 'Century Gothic Bold' !important;
+      display: block;
+      @include font(16px, -0.04em, 32px);
+    }
+    &-job {
+      font-family: 'Segoe UI Regular' !important;
+      display: block;
+      opacity: 0.6;
+      @include font(10px, -0.01em, 22px);
+    }
+    &-img {
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+  &__card {
+    position: relative;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    padding-left: 19px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 270px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    &-text {
+      font-size: 12px;
+      line-height: 20px;
+      color: #000000;
+      opacity: 0.7;
+    }
+    &-date {
+      @include font(10px, -0.01em, 22px);
+      opacity: 0.3;
+      align-self: flex-end;
+      margin-right: 28px;
+    }
+    &::after {
+      content: url('../img/feedback/feedback-decoration.svg');
+      position: absolute;
+      right: 0;
+      top: -33px;
+    }
+  }
+}
+
+.feedback__swiper-button-next {
+  top: 23px !important;
+  right: 10px !important;
+  &::after {
+  content: url('../img/stages/arrow-next.svg') !important;
+}
+}
+
+.feedback__swiper-button-prev {
+  top: 23px !important;
+  left: 10px !important;
+  &::after {
+  content: url('../img/stages/arrow-prev.svg') !important;
+}
+}
+
+.feedback__swiper-pagination {
+  .swiper-pagination-bullet {
+     margin-right: 2px;
+    width: 24px !important;
+    height: 2px !important;
+    background: #000000 !important; 
+    border-radius: 0 !important;
+  }
+}

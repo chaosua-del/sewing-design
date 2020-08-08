@@ -1,18 +1,21 @@
 .clients {
   background: #000000 url('../img/clients/clients-bg.webp') no-repeat center / cover;
-  &__container {
-    color: $color-white;
-    padding-top: 70px;
-    padding-bottom: 70px;
-    @include flex-center();
-    flex-direction: column;
-  }
+  color: $color-white;
+  padding-top: 70px;
+  padding-bottom: 70px;
   &__description {
     font-family: 'Century Gothic Regular' !important; 
     text-align: center;
+    margin: 0 auto;
     max-width: 187px;
     margin-bottom: 20px;
     @include font(16px, -0.03em, 20px);
+  }
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   &__name {
     @include font(20px, -0.04em, 32px);
@@ -33,7 +36,9 @@
 }
 
 .clients__swiper-pagination {
-  bottom: 16px;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%) !important;
   .swiper-pagination-bullet {
     margin-right: 2px;
     width: 24px !important;
