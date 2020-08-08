@@ -33,4 +33,14 @@ export default function () {
       prevEl: '.stages__swiper-button-prev',
     },
   });
+
+  const clients = new Swiper('.clients__swiper-container', {
+    pagination: {
+      el: '.clients__swiper-pagination',
+    },
+    navigation: {
+      nextEl: '.clients__swiper-button-next',
+      prevEl: '.clients__swiper-button-prev',
+    },
+  });
 }

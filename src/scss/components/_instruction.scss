@@ -34,6 +34,7 @@
       @include font(12px, -0.01em, 28px);
     }
     &-item {
+      color: #5F5F5F;
       &::before {
         content: ' ';
         display: inline-block;
