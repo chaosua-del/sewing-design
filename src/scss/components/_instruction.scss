@@ -1,24 +1,24 @@
 .instruction {
   background-color: #E4E4E4;
   &__block {
-    background: url(../img/instruction/bags.webp) no-repeat 10px 20px;
-    background-size: 122%;
+    background: url(../img/instruction/bags.webp) no-repeat -14px 5px;
+    background-size: 139%;
     padding-top: 107px;
   }
   &__title {
     color: $color-white;
     background-color: #C4BCBC;
     text-transform: uppercase;
-    padding: 31px 20px;
+    padding: 29px 20px;
     max-width: 315px;
     @include font(35px, -0.05em, 45px);
   }
   &__card {
-    background: url(../img/instruction/blue-bag.webp) no-repeat 20px 157px;
+    background: url(../img/instruction/blue-bag.webp) no-repeat 0 214px;
     background-size: 100%;
     padding-left: 25px;
     padding-right: 20px;
-    padding-bottom: 278px;
+    padding-bottom: 285px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,6 +35,7 @@
     }
     &-item {
       color: #5F5F5F;
+      margin-bottom: 12px;
       &::before {
         content: ' ';
         display: inline-block;

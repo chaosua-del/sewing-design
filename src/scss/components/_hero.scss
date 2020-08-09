@@ -11,7 +11,7 @@
     text-align: center;
     text-transform: uppercase;
     @include font(25px, -0.03em, 30px);
-    padding-bottom: 33px;
+    margin-bottom: 29px;
   }
   &__subtitle {
     font-family: 'Segoe UI Regular' !important;

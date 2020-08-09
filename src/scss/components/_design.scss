@@ -24,6 +24,10 @@
     }
     &-label {
       background-color: #D1CABC;
+      width: 48px;
+      height: 48px;
+      top: -25px;
+      right: -22px;
     }
   }
   &__policy {
@@ -40,7 +44,7 @@
 }
 
 .leader {
-  padding-top: 134px;
+  padding-top: 139px;
   padding-bottom: 15px;
   padding-right: 12px;
   padding-left: 25px;

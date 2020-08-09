@@ -46,8 +46,9 @@ export default function () {
   });
 
   const feedback = new Swiper('.feedback__swiper-container', {
-    slidesPerView: 'auto',
-    slidesOffsetAfter: 7,
+    slidesPerView: '1.1',
+    slidesOffsetBefore: 10,
+    slidesOffsetAfter: 10,
     pagination: {
       el: '.feedback__swiper-pagination',
     },

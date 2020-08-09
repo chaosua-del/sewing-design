@@ -1,5 +1,5 @@
 .feedback {
-  padding-top: 39px;
+  padding-top: 15px;
   padding-bottom: 79px;
   font-family: 'Segoe UI Regular' !important;
   &__swiper-slide {
@@ -21,17 +21,19 @@
       display: block;
       opacity: 0.6;
       @include font(10px, -0.01em, 22px);
+      margin-top: -4px;
     }
     &-img {
       border-radius: 50%;
       margin-right: 10px;
+      margin-left: -4px;
     }
   }
   &__card {
     position: relative;
     border: 3px solid rgba(0, 0, 0, 0.1);
     padding-left: 19px;
-    padding-top: 20px;
+    padding-top: 17px;
     padding-bottom: 20px;
     width: 270px;
     display: flex;
@@ -42,6 +44,7 @@
       line-height: 20px;
       color: #000000;
       opacity: 0.7;
+      margin-top: 13px;
     }
     &-date {
       @include font(10px, -0.01em, 22px);
@@ -59,25 +62,26 @@
 }
 
 .feedback__swiper-button-next {
-  top: 23px !important;
-  right: 10px !important;
+  top: 257px !important;
+  right: 8% !important;
   &::after {
   content: url('../img/stages/arrow-next.svg') !important;
 }
 }
 
 .feedback__swiper-button-prev {
-  top: 23px !important;
-  left: 10px !important;
+  top: 257px !important;
+  left: 8% !important;
   &::after {
   content: url('../img/stages/arrow-prev.svg') !important;
 }
 }
 
 .feedback__swiper-pagination {
+  bottom: 7px !important;
   .swiper-pagination-bullet {
      margin-right: 2px;
-    width: 24px !important;
+    width: 50px !important;
     height: 2px !important;
     background: #000000 !important; 
     border-radius: 0 !important;

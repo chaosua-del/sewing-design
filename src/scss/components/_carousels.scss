@@ -12,10 +12,13 @@
   }
   &__card {
     text-transform: uppercase;
-    padding: 20px;
-    min-width: 231px;
+    padding-top: 32px;
+    padding-left: 25px;
+    padding-bottom: 25px;
+    padding-right: 12px;
+    // min-width: 231px;
     border-top: 3px solid rgba(#1E1E1E, 0.1);
-    border-bottom: 3px solid rgba(#1E1E1E, 0.1);
+    // border-bottom: 3px solid rgba(#1E1E1E, 0.1);
     &--left {
       border-right: 3px solid rgba(#1E1E1E, 0.1);
       // width: 206px !important;
@@ -26,9 +29,12 @@
       // margin-left: 24px;
     }
     &-title {
+      min-width: 169px;
       @include font(20px, -0.03em, 32px);
     }
     &-subtitle {
+      text-transform: none;
+      margin-top: 12px;
       max-width: 188px;
       font-family: 'Segoe UI Regular' !important;
       @include font(12px, -0.01em, 16px);
@@ -48,8 +54,10 @@
 .banner {
   &__swiper-slide {
     display: flex;
-    width: 700px !important;
+    width: 728px !important;
     background-color: #D1CABC;
+    padding-top: 10px;
+    padding-bottom: 19px;
   }
   text-transform: uppercase;
   &__title {
@@ -58,7 +66,7 @@
     font-style: italic;
     &--normal {
       width: auto !important;
-      font-family: $font-family-alt;
+      font-family: 'Century Gothic Regular' !important;
     }
   }
   &__text {

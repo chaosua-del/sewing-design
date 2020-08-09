@@ -1,0 +1,13 @@
+@media(min-width: 321px) {
+  // design
+  .leader {
+    background: url('../img/design/designer-photo-md.webp') no-repeat center / cover;
+  }
+
+  // model
+  .model {
+    &__card {
+      background: url('../img/model/model-photo-md.webp') no-repeat 66% 0;
+    }
+  }
+}

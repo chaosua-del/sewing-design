@@ -1,5 +1,5 @@
 .uniforms {
-  background: url('../img/uniforms/uniforms-bg.svg') no-repeat center;
+  background: url('../img/uniforms/uniforms-bg.svg') no-repeat 0% 58%;
   padding-bottom: 79px;
   &__subtitle {
     @include font(10px, 0.02em, 16px);
@@ -52,11 +52,13 @@
       font-family: 'Century Gothic Italic' !important;
       @include font(10px, 0.02em, 16px);
       color: $color-white;
+      margin-top: 4px;
       margin-left: 13px;
       margin-right: 3px;
     }
     &-description {
       @include font(10px, 0.02em, 16px);
+      margin-top: 4px;
       color: $color-white;
       max-width: 171px;
       display: inline-block;
@@ -74,6 +76,7 @@
     }
   }
   &__button {
+    margin-left: -7px;
     width: 147px;
     height: 147px;
     border-radius: 50%;

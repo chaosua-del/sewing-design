@@ -467,7 +467,7 @@ strong {
     display: inline-block; }
   .button-label {
     position: absolute;
-    top: -31px;
+    top: -36px;
     right: -24px;
     transform: rotate(45deg);
     width: 53px;
@@ -552,6 +552,9 @@ img {
   padding-top: 12px;
   padding-bottom: 17px; }
 
+.header__logo {
+  margin-left: 10px; }
+
 .header__menu {
   text-transform: uppercase;
   font-family: 'Century Gothic Bold';
@@ -587,7 +590,7 @@ img {
   font-size: 25px;
   letter-spacing: -0.03em;
   line-height: 30px;
-  padding-bottom: 33px; }
+  margin-bottom: 29px; }
 
 .hero__subtitle {
   font-family: 'Segoe UI Regular' !important;
@@ -608,20 +611,24 @@ img {
 
 .benefits__card {
   text-transform: uppercase;
-  padding: 20px;
-  min-width: 231px;
-  border-top: 3px solid rgba(30, 30, 30, 0.1);
-  border-bottom: 3px solid rgba(30, 30, 30, 0.1); }
+  padding-top: 32px;
+  padding-left: 25px;
+  padding-bottom: 25px;
+  padding-right: 12px;
+  border-top: 3px solid rgba(30, 30, 30, 0.1); }
   .benefits__card--left {
     border-right: 3px solid rgba(30, 30, 30, 0.1); }
   .benefits__card--right {
     border-left: 3px solid rgba(30, 30, 30, 0.1); }
   .benefits__card-title {
+    min-width: 169px;
     font-family: 'Century Gothic Bold';
     font-size: 20px;
     letter-spacing: -0.03em;
     line-height: 32px; }
   .benefits__card-subtitle {
+    text-transform: none;
+    margin-top: 12px;
     max-width: 188px;
     font-family: 'Segoe UI Regular' !important;
     font-family: 'Century Gothic Bold';
@@ -649,15 +656,17 @@ img {
   line-height: 75px; }
   .banner__swiper-slide {
     display: flex;
-    width: 700px !important;
-    background-color: #D1CABC; }
+    width: 728px !important;
+    background-color: #D1CABC;
+    padding-top: 10px;
+    padding-bottom: 19px; }
   .banner__title {
     display: inline;
     margin-right: 13px;
     font-style: italic; }
     .banner__title--normal {
       width: auto !important;
-      font-family: "Segoe UI Regular"; }
+      font-family: 'Century Gothic Regular' !important; }
   .banner__text {
     font-family: 'Century Gothic Regular' !important;
     margin-top: 53px;
@@ -674,7 +683,7 @@ img {
   max-width: 140px; }
 
 .uniforms {
-  background: url("../img/uniforms/uniforms-bg.svg") no-repeat center;
+  background: url("../img/uniforms/uniforms-bg.svg") no-repeat 0% 58%;
   padding-bottom: 79px; }
   .uniforms__subtitle {
     font-family: 'Century Gothic Bold';
@@ -727,6 +736,7 @@ img {
       letter-spacing: 0.02em;
       line-height: 16px;
       color: #F6F6F6;
+      margin-top: 4px;
       margin-left: 13px;
       margin-right: 3px; }
     .uniforms__card-description {
@@ -734,6 +744,7 @@ img {
       font-size: 10px;
       letter-spacing: 0.02em;
       line-height: 16px;
+      margin-top: 4px;
       color: #F6F6F6;
       max-width: 171px;
       display: inline-block; }
@@ -750,6 +761,7 @@ img {
         color: #CBC3B3;
         display: block; }
   .uniforms__button {
+    margin-left: -7px;
     width: 147px;
     height: 147px;
     border-radius: 50%;
@@ -798,7 +810,11 @@ img {
       width: 100%;
       margin-bottom: 10px; }
     .design__button-label {
-      background-color: #D1CABC; }
+      background-color: #D1CABC;
+      width: 48px;
+      height: 48px;
+      top: -25px;
+      right: -22px; }
   .design__policy {
     margin: 0 auto;
     max-width: 240px;
@@ -813,7 +829,7 @@ img {
       color: #1E1E1E; }
 
 .leader {
-  padding-top: 134px;
+  padding-top: 139px;
   padding-bottom: 15px;
   padding-right: 12px;
   padding-left: 25px;
@@ -873,8 +889,7 @@ img {
     margin-bottom: 32px; }
 
 .model {
-  padding-top: 78px;
-  padding-bottom: 78px; }
+  padding-top: 66px; }
   .model__card {
     position: relative;
     width: 100%;
@@ -939,10 +954,10 @@ img {
       line-height: 25px; }
 
 .stages {
-  padding-top: 100px;
-  padding-bottom: 100px; }
+  padding-top: 86px;
+  padding-bottom: 113px; }
   .stages__swiper-wrapper {
-    padding-bottom: 37px; }
+    padding-bottom: 52px; }
   .stages__title {
     font-family: 'Century Gothic Bold';
     font-size: 18px;
@@ -968,14 +983,14 @@ img {
       top: 0;
       right: 2px;
       height: 100%;
-      width: 35%;
+      width: 43%;
       overflow: hidden; }
       .stages__card-bg-image {
-        max-width: 455px;
-        height: 600px;
-        margin-left: -137px;
+        max-width: 580px;
+        height: 483px;
+        margin-left: -242px;
         position: absolute;
-        bottom: -69px; }
+        bottom: -21px; }
       .stages__card-bg::after {
         content: '';
         position: absolute;
@@ -999,8 +1014,8 @@ img {
       letter-spacing: -0.01em;
       line-height: 18px;
       font-family: 'Segoe UI Regular' !important;
-      margin-bottom: 25px;
-      max-width: 140px;
+      margin-bottom: 19px;
+      max-width: 130px;
       margin-left: 24px; }
 
 .swiper-pagination-bullet {
@@ -1009,37 +1024,39 @@ img {
   background: #000000 !important;
   border-radius: 0 !important; }
 
-.swiper-button-next:after {
-  content: url("../img/stages/arrow-next.svg") !important; }
+.stages__swiper-button-next:after {
+  content: url("../img/stages/arrow-next.svg") !important;
+  right: 72%; }
 
-.swiper-button-prev:after {
-  content: url("../img/stages/arrow-prev.svg") !important; }
+.stages__swiper-button-prev:after {
+  content: url("../img/stages/arrow-prev.svg") !important;
+  left: 72%; }
 
-.swiper-button-next:after, .swiper-button-prev:after {
-  top: 223px; }
+.stages__swiper-button-next:after, .stages__swiper-button-prev:after {
+  top: 230px !important; }
 
 .instruction {
   background-color: #E4E4E4; }
   .instruction__block {
-    background: url(../img/instruction/bags.webp) no-repeat 10px 20px;
-    background-size: 122%;
+    background: url(../img/instruction/bags.webp) no-repeat -14px 5px;
+    background-size: 139%;
     padding-top: 107px; }
   .instruction__title {
     color: #F6F6F6;
     background-color: #C4BCBC;
     text-transform: uppercase;
-    padding: 31px 20px;
+    padding: 29px 20px;
     max-width: 315px;
     font-family: 'Century Gothic Bold';
     font-size: 35px;
     letter-spacing: -0.05em;
     line-height: 45px; }
   .instruction__card {
-    background: url(../img/instruction/blue-bag.webp) no-repeat 20px 157px;
+    background: url(../img/instruction/blue-bag.webp) no-repeat 0 214px;
     background-size: 100%;
     padding-left: 25px;
     padding-right: 20px;
-    padding-bottom: 278px;
+    padding-bottom: 285px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1059,7 +1076,8 @@ img {
       letter-spacing: -0.01em;
       line-height: 28px; }
     .instruction__card-item {
-      color: #5F5F5F; }
+      color: #5F5F5F;
+      margin-bottom: 12px; }
       .instruction__card-item::before {
         content: ' ';
         display: inline-block;
@@ -1072,14 +1090,14 @@ img {
 .clients {
   background: #000000 url("../img/clients/clients-bg.webp") no-repeat center/cover;
   color: #F6F6F6;
-  padding-top: 70px;
-  padding-bottom: 70px; }
+  padding-top: 47px;
+  padding-bottom: 106px; }
   .clients__description {
     font-family: 'Century Gothic Regular' !important;
     text-align: center;
     margin: 0 auto;
     max-width: 187px;
-    margin-bottom: 20px;
+    margin-bottom: 46px;
     font-family: 'Century Gothic Bold';
     font-size: 16px;
     letter-spacing: -0.03em;
@@ -1099,14 +1117,18 @@ img {
     line-height: 28px;
     font-family: 'Segoe UI Regular' !important;
     opacity: 0.7;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    margin-top: -8px; }
   .clients__feedback {
     font-family: 'Segoe UI Regular' !important;
     line-height: 20px;
     max-width: 238px; }
+  .clients__info {
+    margin-left: -34px;
+    margin-top: 17px; }
 
 .clients__swiper-pagination {
-  bottom: 32px;
+  bottom: 57px;
   left: 50%;
   transform: translateX(-50%) !important; }
   .clients__swiper-pagination .swiper-pagination-bullet {
@@ -1117,16 +1139,18 @@ img {
     border-radius: 0 !important; }
 
 .clients__swiper-button-next:after {
-  content: url("../img/clients/arrow-next.svg") !important; }
+  content: url("../img/clients/arrow-next.svg") !important;
+  right: 65%; }
 
 .clients__swiper-button-prev:after {
-  content: url("../img/clients/arrow-prev.svg") !important; }
+  content: url("../img/clients/arrow-prev.svg") !important;
+  left: 65%; }
 
-.clients__swiper-button-next:after, .swiper-button-prev:after {
-  top: 223px; }
+.clients__swiper-button-next:after, .clients__swiper-button-prev:after {
+  top: 221px; }
 
 .feedback {
-  padding-top: 39px;
+  padding-top: 15px;
   padding-bottom: 79px;
   font-family: 'Segoe UI Regular' !important; }
   .feedback__swiper-slide {
@@ -1153,15 +1177,17 @@ img {
       font-family: 'Century Gothic Bold';
       font-size: 10px;
       letter-spacing: -0.01em;
-      line-height: 22px; }
+      line-height: 22px;
+      margin-top: -4px; }
     .feedback__user-img {
       border-radius: 50%;
-      margin-right: 10px; }
+      margin-right: 10px;
+      margin-left: -4px; }
   .feedback__card {
     position: relative;
     border: 3px solid rgba(0, 0, 0, 0.1);
     padding-left: 19px;
-    padding-top: 20px;
+    padding-top: 17px;
     padding-bottom: 20px;
     width: 270px;
     display: flex;
@@ -1171,7 +1197,8 @@ img {
       font-size: 12px;
       line-height: 20px;
       color: #000000;
-      opacity: 0.7; }
+      opacity: 0.7;
+      margin-top: 13px; }
     .feedback__card-date {
       font-family: 'Century Gothic Bold';
       font-size: 10px;
@@ -1187,23 +1214,25 @@ img {
       top: -33px; }
 
 .feedback__swiper-button-next {
-  top: 23px !important;
-  right: 10px !important; }
+  top: 257px !important;
+  right: 8% !important; }
   .feedback__swiper-button-next::after {
     content: url("../img/stages/arrow-next.svg") !important; }
 
 .feedback__swiper-button-prev {
-  top: 23px !important;
-  left: 10px !important; }
+  top: 257px !important;
+  left: 8% !important; }
   .feedback__swiper-button-prev::after {
     content: url("../img/stages/arrow-prev.svg") !important; }
 
-.feedback__swiper-pagination .swiper-pagination-bullet {
-  margin-right: 2px;
-  width: 24px !important;
-  height: 2px !important;
-  background: #000000 !important;
-  border-radius: 0 !important; }
+.feedback__swiper-pagination {
+  bottom: 7px !important; }
+  .feedback__swiper-pagination .swiper-pagination-bullet {
+    margin-right: 2px;
+    width: 50px !important;
+    height: 2px !important;
+    background: #000000 !important;
+    border-radius: 0 !important; }
 
 .questions__container {
   padding-bottom: 104px; }
@@ -1354,5 +1383,11 @@ img {
 
 .phone-button {
   border-bottom: 2px dashed #C4BCBC; }
+
+@media (min-width: 321px) {
+  .leader {
+    background: url("../img/design/designer-photo-md.webp") no-repeat center/cover; }
+  .model__card {
+    background: url("../img/model/model-photo-md.webp") no-repeat 66% 0; } }
 
 /*# sourceMappingURL=maps/common.css.map */
