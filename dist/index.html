@@ -355,15 +355,52 @@
           </div>
         </div>
       </section>
+      <section class="office">
+        <div class="container office__container">
+          <h3 class="office__title">Офис в Нижнем Новгороде. Работаем по всей России</h3>
+          <p class="office__description">480 м2 производства с уникальным японским оборудованием, автоматизированные линии шитья и 80 человек в штате. Приезжайте в гости, всё покажем и расскажем.</p>
+          <p class="office__location">Нижний Новгород, Московской шоссе, 105 стр. 2</p><a class="office__phone" href="tel:+88003503745">8 800 350 37 45</a><a class="office__site" href="#">info@site.ru</a>
+          <p class="office__schedule">Работаем по будням с 9:00 до 19:00</p>
+        </div>
+      </section>
+      <div class="office__map" id="mapid"></div>
+      <section class="design">
+        <div class="container design__container">
+          <h2 class="design__title">Дизайн-макет бесплатно, за 1 день</h2>
+          <p class="design__subtitle">Оставьте заявку и получите дизайн-макет вашей будущей униформы. Сделаем его для вас иничего&nbsp;не возьмем.</p>
+          <form class="form design__form" action="#">
+            <input class="form__input" type="text" placeholder="Как вас зовут?">
+            <input class="form__input" type="phone" placeholder="Номер телефона">
+            <textarea class="form__input form__input--text" type="text" placeholder="Какая униформа нужна?"></textarea>
+            <div class="button-wrap design__button-wrap">
+              <button class="button design__button" type="submit">Получить макет и расчёт</button>
+              <div class="button-label design__button-label">Free</div>
+            </div>
+          </form>
+          <p class="design__policy">Отправляя заявку, вы соглашаетесь с условиями <a class="design__policy--strong" href="#">политики конфиденциальности</a></p>
+        </div>
+      </section>
     </div>
     <footer class="footer">
-      <div class="container">footer</div>
+      <div class="container footer__container"><a class="footer__logo" href="index.html"><img src="assets/img/footer-logo.webp" alt="logo"></a>
+        <div class="footer__navigation"><a class="footer__navigation-item" href="#">Каталог</a><a class="footer__navigation-item" href="#">Качество</a><a class="footer__navigation-item" href="#">Производство</a><a class="footer__navigation-item" href="#">Отзывы</a><a class="footer__navigation-item" href="#">Вопрос-ответ</a><a class="footer__navigation-item" href="#">Контакты</a></div><a class="web-site" href="#">info@site.com</a>
+        <div class="footer__contacts"><a class="phone footer__contacts-phone" href="tel:88003503745">8 800 350-37-45</a>
+          <button class="phone-button">Заказать звонок</button>
+        </div>
+        <div class="footer__info">
+          <p class="footer__info-item">2005 - 2020. шью, Все права защищены</p>
+          <p class="footer__info-item">Политика конфиденциальности</p>
+          <p class="footer__info-item">Нижний Новгород,  Московское шоссе, 105 стр. 2</p>
+          <p class="footer__info-item">Сделано в <a class="href footer__link" href="#">riverstart</a></p>
+        </div>
+      </div>
     </footer>
     <div class="hidden">
       <!-- include popups here-->
     </div>
     <link rel="stylesheet" href="assets/css/common.css?v=1.1.1">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="">
     <script>
       /* изменяемые настройки скриптов, указаны значения по умолчанию */
       var appConfig = {
@@ -373,6 +410,7 @@
           */
       }
     </script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
     <script src="assets/js/vendors~main.bundle.js"></script>
     <script src="assets/js/main.bundle.js?v=1.1.1"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

@@ -46,7 +46,7 @@ export default function () {
   });
 
   const feedback = new Swiper('.feedback__swiper-container', {
-    slidesPerView: '1.1',
+    slidesPerView: 'auto',
     slidesOffsetAfter: 7,
     pagination: {
       el: '.feedback__swiper-pagination',

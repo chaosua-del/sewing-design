@@ -1,0 +1,62 @@
+.footer {
+  &__container {
+    padding: 56px 0 46px 0;
+  }
+  &__logo {
+    margin-bottom: 41px;
+  }
+  text-transform: uppercase;
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 41px;
+    @include font(12px, 0.02em, 20px);
+    &-item {
+       color: rgba($color-base, 0.4);
+       margin-bottom: 24px;
+    }
+  }
+  &__info {
+    @include font(10px, 0.02em, 20px);
+    &-item {
+       color: rgba($color-base, 0.4);
+       margin-bottom: 13px;
+    }
+  }
+  &__link {
+    color: rgba($color-base, 1);
+    cursor: pointer;
+  }
+  &__contacts {
+    margin-top: 39px;
+    margin-bottom: 43px;
+    &-phone {
+      margin-bottom: 8px;
+    }
+  }
+  &__container, &__navigation, &__info, &__contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+
+
+.web-site {
+  @include font(12px, 0.02em, 20px);
+  color: $color-base;
+}
+
+.phone-button, .phone {
+  @include font(12px, 0.02em, 20px);
+  color: $color-base;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.phone-button {
+  border-bottom: 2px dashed #C4BCBC;
+}
+

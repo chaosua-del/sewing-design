@@ -76,3 +76,24 @@
     @include font(10px, 0.02em, 18px);
   }
 }
+
+.form {
+  &__input {
+    background-color: #FFFFFF;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 24px;
+    margin-bottom: 10px;
+    &::placeholder {
+      font-family: 'Segoe UI Regular' !important;
+      @include font(12px, -0.01em, 20px);
+      opacity: 0.5;
+      color: $color-base;
+    }
+    &--text{
+      padding-bottom: 110px;
+      margin-bottom: 32px;
+    }
+  }
+}

@@ -8,6 +8,7 @@ import 'lazysizes';
 import page from 'page';
 import forms from 'forms';
 import sliders from 'sliders';
+import { myMap } from 'map';
 
 let app = {
 
@@ -180,3 +181,4 @@ app.init();
 
 
 sliders();
+

@@ -1,0 +1,42 @@
+.office {
+  background: #EAEEF1 url('../img/decoration-line-2.svg') no-repeat 0% 50%;
+  &__container {
+    padding-top: 63px;
+    padding-bottom: 45px;
+    position: relative;
+    &::before {
+      content: url('../img/decoration-line.svg');
+      position: absolute;
+      right: 0;
+      top: -54px;
+    }
+  }
+  &__title {
+    max-width: 279px;
+    margin-bottom: 28px;
+    @include font(20px, -0.03em, 25px);
+  }
+  &__description, &__schedule {
+    font-family: 'Segoe UI Regular' !important;
+    @include font(12px, -0.01em, 20px);
+  }
+  &__description {
+    margin-bottom: 113px;
+    max-width: 267px;
+  }
+  &__location, &__phone, &__site {
+    color: $color-base;
+    max-width: 245px;
+    display: block;
+    @include font(16px, -0.01em, 23px);
+  }
+  &__location, &__phone {
+    margin-bottom: 21px;
+  }
+  &__schedule {
+    opacity: 0.6;
+  }
+  &__map {
+    height: 336px;
+  }
+}

@@ -853,6 +853,25 @@ img {
     letter-spacing: 0.02em;
     line-height: 18px; }
 
+.form__input {
+  background-color: #FFFFFF;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 24px;
+  margin-bottom: 10px; }
+  .form__input::placeholder {
+    font-family: 'Segoe UI Regular' !important;
+    font-family: 'Century Gothic Bold';
+    font-size: 12px;
+    letter-spacing: -0.01em;
+    line-height: 20px;
+    opacity: 0.5;
+    color: #1E1E1E; }
+  .form__input--text {
+    padding-bottom: 110px;
+    margin-bottom: 32px; }
+
 .model {
   padding-top: 78px;
   padding-bottom: 78px; }
@@ -1187,7 +1206,7 @@ img {
   border-radius: 0 !important; }
 
 .questions__container {
-  padding-bottom: 304px; }
+  padding-bottom: 104px; }
 
 .questions__collapsible {
   font-family: 'Century Gothic Bold';
@@ -1235,5 +1254,105 @@ img {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out; }
+
+.office {
+  background: #EAEEF1 url("../img/decoration-line-2.svg") no-repeat 0% 50%; }
+  .office__container {
+    padding-top: 63px;
+    padding-bottom: 45px;
+    position: relative; }
+    .office__container::before {
+      content: url("../img/decoration-line.svg");
+      position: absolute;
+      right: 0;
+      top: -54px; }
+  .office__title {
+    max-width: 279px;
+    margin-bottom: 28px;
+    font-family: 'Century Gothic Bold';
+    font-size: 20px;
+    letter-spacing: -0.03em;
+    line-height: 25px; }
+  .office__description, .office__schedule {
+    font-family: 'Segoe UI Regular' !important;
+    font-family: 'Century Gothic Bold';
+    font-size: 12px;
+    letter-spacing: -0.01em;
+    line-height: 20px; }
+  .office__description {
+    margin-bottom: 113px;
+    max-width: 267px; }
+  .office__location, .office__phone, .office__site {
+    color: #1E1E1E;
+    max-width: 245px;
+    display: block;
+    font-family: 'Century Gothic Bold';
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    line-height: 23px; }
+  .office__location, .office__phone {
+    margin-bottom: 21px; }
+  .office__schedule {
+    opacity: 0.6; }
+  .office__map {
+    height: 336px; }
+
+.footer {
+  text-transform: uppercase; }
+  .footer__container {
+    padding: 56px 0 46px 0; }
+  .footer__logo {
+    margin-bottom: 41px; }
+  .footer__navigation {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 41px;
+    font-family: 'Century Gothic Bold';
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    line-height: 20px; }
+    .footer__navigation-item {
+      color: rgba(30, 30, 30, 0.4);
+      margin-bottom: 24px; }
+  .footer__info {
+    font-family: 'Century Gothic Bold';
+    font-size: 10px;
+    letter-spacing: 0.02em;
+    line-height: 20px; }
+    .footer__info-item {
+      color: rgba(30, 30, 30, 0.4);
+      margin-bottom: 13px; }
+  .footer__link {
+    color: #1e1e1e;
+    cursor: pointer; }
+  .footer__contacts {
+    margin-top: 39px;
+    margin-bottom: 43px; }
+    .footer__contacts-phone {
+      margin-bottom: 8px; }
+  .footer__container, .footer__navigation, .footer__info, .footer__contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+
+.web-site {
+  font-family: 'Century Gothic Bold';
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  line-height: 20px;
+  color: #1E1E1E; }
+
+.phone-button, .phone {
+  font-family: 'Century Gothic Bold';
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  line-height: 20px;
+  color: #1E1E1E;
+  cursor: pointer;
+  text-transform: uppercase; }
+
+.phone-button {
+  border-bottom: 2px dashed #C4BCBC; }
 
 /*# sourceMappingURL=maps/common.css.map */
