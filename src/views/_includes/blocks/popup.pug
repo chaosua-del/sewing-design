@@ -2,16 +2,20 @@
   .container.popup__container
     .popup__close-button Закрыть
     .button.popup__button Получить каталог
-    h2.popup__title Униформа от производителя
+    h2.popup__title Униформа от&nbsp;производителя
 
   .swiper-container.benefits2__swiper-container
     .swiper-wrapper.benefits__swiper-wrapper
       .swiper-slide.popup__swiper-slide
         .benefits__card.benefits__card--left
-          h3.popup__card-title Индивидуальный дизайн и пошив под вашу компанию
+          h3.popup__card-title Индивидуальный дизайн и пошив под&nbsp;вашу компанию
           p.popup__card-subtitle благодаря собственному производству
         .benefits__card.benefits__card
-          h3.popup__card-title Цены на 20% ниже рыночных
+          h3.popup__card-title Цены на 20%
+              br
+              | ниже
+              br
+              | рыночных
           p.popup__card-subtitle от фартуков до арбрендов и головных уборов
         .benefits__card.benefits__card--right
           h3.popup__card-title Возможен срочный пошив за 1-2 дня
@@ -43,7 +47,7 @@
         .popup__model-price 1080 
       .popup__model-name Фартук черный короткий
 
-  .popup__title Стильный персонал в нашей одежде
+  .popup__title.popup__title--lower Стильный персонал в&nbsp;нашей одежде
 
   .swiper-container.popup__swiper-container
     .swiper-wrapper.popup__swiper-wrapper
@@ -61,13 +65,13 @@
     .swiper-button-next.popup__swiper-button-next 
   
   .container.popup__container
-    .popup__title Полный каталог моделей у вас на&nbsp;почте за 3 минуты  
+    .popup__title.popup__title--big Полный каталог моделей у вас на&nbsp;почте за 3 минуты  
     button.button.popup__button.popup__button--rounded Дизайн  в подарок
-    p.popup__description Укажите свои контактные данные для скачивания каталога моделей для персонала ресторанов, кафе, пабов и фудкортов с ценами.
+    p.popup__description.popup__description--big Укажите свои контактные данные для скачивания каталога моделей для персонала ресторанов, кафе, пабов и фудкортов с ценами.
 
     .form(action="#").popup__form
-    input.form__input(type="text", placeholder="Как вас зовут?")
-    input.form__input(type="text", placeholder="Номер телефона")
+    input.form__input.popup__input(type="text", placeholder="Как вас зовут?")
+    input.form__input.popup__input(type="text", placeholder="Номер телефона")
     .form__policy-wrap
       input.form__checkbox(type="checkbox", id="policy-checkbox") 
       label.form__policy(for="policy-checkbox") Ознакомлен с политикой конфиденциальности
