@@ -1,6 +1,9 @@
 .office {
   background: #EAEEF1 url('../img/decoration-line-2.svg') no-repeat 0% 50%;
   &__container {
+    // max-width: 320px;
+    max-width: 420px;
+    margin-left: 2%;
     padding-top: 63px;
     padding-bottom: 45px;
     padding-left: 22px;

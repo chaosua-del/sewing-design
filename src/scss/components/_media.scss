@@ -11,3 +11,12 @@
     }
   }
 }
+
+@media(min-width: 450px) {
+  // office
+  .office__container {
+    &::before {
+      right: -14%;
+    }
+  }
+}
