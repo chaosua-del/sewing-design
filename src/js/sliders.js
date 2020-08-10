@@ -68,13 +68,22 @@ export default function () {
   });
 
   const popup = new Swiper('.popup__swiper-container', {
-    slidesPerView: 'auto',
     pagination: {
       el: '.popup__swiper-pagination',
     },
     navigation: {
       nextEl: '.popup__swiper-button-next',
       prevEl: '.popup__swiper-button-prev',
+    },
+  });
+
+  const sliderModel = new Swiper('.sliderModel__swiper-container', {
+    pagination: {
+      el: '.sliderModel__swiper-pagination',
+    },
+    navigation: {
+      nextEl: '.sliderModel__swiper-button-next',
+      prevEl: '.sliderModel__swiper-button-prev',
     },
   });
 

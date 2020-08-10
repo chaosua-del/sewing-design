@@ -239,8 +239,6 @@ let banner2 = document.querySelector('.banner2__wrap');
 window.addEventListener('scroll', function () {
     let viewportOffset = banner.getBoundingClientRect();
     let viewportOffset2 = banner2.getBoundingClientRect();
-    // console.log(banner.getBoundingClientRect());
-    console.log(viewportOffset2.top);
     if (viewportOffset.top > 0 && viewportOffset.top > viewportOffset.top / 2) {
         banner.style.transform = `translateX(-${viewportOffset.top / 50}%)`;
     }
@@ -255,3 +253,35 @@ window.addEventListener('scroll', function () {
     }
 
 });
+
+// модалка
+const popupButton = document.querySelector('.uniforms__button');
+const popupClose = document.querySelector('.popup__close-button');
+const popup = document.querySelector('.popup');
+const body = document.querySelector('body');
+
+let popupButtonOffset = popupButton.getBoundingClientRect();
+popup.style.top = popupButtonOffset.top + 'px';
+
+popupButton.addEventListener('click', function () {
+    let popupButtonOffset = popupButton.getBoundingClientRect();
+    popup.classList.toggle('hidden');
+    popup.style.top = popupButtonOffset.top + window.outerHeight + 'px';
+    body.classList.toggle('dimmed');
+});
+
+popupClose.addEventListener('click', function () {
+    popup.classList.toggle('hidden');
+    body.classList.toggle('dimmed');
+});
+
+body.addEventListener('click', function (event) {
+    if (event.target == this) {
+        popup.classList.toggle('hidden');
+        body.classList.toggle('dimmed');
+    }
+
+});
+
+
+
