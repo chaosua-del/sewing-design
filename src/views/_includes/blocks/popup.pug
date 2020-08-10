@@ -1,0 +1,79 @@
+.popup
+  .container.popup__container
+    .popup__close-button Закрыть
+    .button.popup__button Получить каталог
+    h2.popup__title Униформа от производителя
+
+  .swiper-container.benefits2__swiper-container
+    .swiper-wrapper.benefits__swiper-wrapper
+      .swiper-slide.popup__swiper-slide
+        .benefits__card.benefits__card--left
+          h3.popup__card-title Индивидуальный дизайн и пошив под вашу компанию
+          p.popup__card-subtitle благодаря собственному производству
+        .benefits__card.benefits__card
+          h3.popup__card-title Цены на 20% ниже рыночных
+          p.popup__card-subtitle от фартуков до арбрендов и головных уборов
+        .benefits__card.benefits__card--right
+          h3.popup__card-title Возможен срочный пошив за 1-2 дня
+          p.popup__card-subtitle на японском оборудовании Tajima
+
+  .container.popup__container 
+    h2.popup__title.popup__title--lower Некоторые модели
+    p.popup__description Ниже представлена маленькая часть нашего каталога. Любую модель мы можем переделать под ваш вкус: изменить материал, цвет, нанести логотип, совместить детали из разных моделей в одну.
+
+  .popup__model-wrap
+    .popup__model
+      .popup__model-img
+        img(src="assets/img/popup/model-black.webp", alt="model-black")
+        .popup__model-price 1080 
+      .popup__model-name Фартук черный короткий
+    .popup__model
+      .popup__model-img
+        img(src="assets/img/popup/model-green.webp", alt="model-black")
+        .popup__model-price 3080 
+      .popup__model-name Фартук черный короткий
+    .popup__model
+      .popup__model-img
+        img(src="assets/img/popup/model-56.webp", alt="model-black")
+        .popup__model-price 4080 
+      .popup__model-name Фартук №56
+    .popup__model
+      .popup__model-img
+        img(src="assets/img/popup/model-black.webp", alt="model-black")
+        .popup__model-price 1080 
+      .popup__model-name Фартук черный короткий
+
+  .popup__title Стильный персонал в нашей одежде
+
+  .swiper-container.popup__swiper-container
+    .swiper-wrapper.popup__swiper-wrapper
+      .swiper-slide 
+        .popup__uniform
+          img(src="assets/img/popup/slider-model-blue.webp", alt="uniform-blue")
+      .swiper-slide 
+        .popup__uniform
+          img(src="assets/img/popup/slider-model-blue.webp", alt="uniform-blue")
+      .swiper-slide 
+        .popup__uniform
+          img(src="assets/img/popup/slider-model-blue.webp", alt="uniform-blue")
+    .swiper-pagination.popup__swiper-pagination
+    .swiper-button-prev.popup__swiper-button-prev
+    .swiper-button-next.popup__swiper-button-next 
+  
+  .container.popup__container
+    .popup__title Полный каталог моделей у вас на&nbsp;почте за 3 минуты  
+    button.button.popup__button.popup__button--rounded Дизайн  в подарок
+    p.popup__description Укажите свои контактные данные для скачивания каталога моделей для персонала ресторанов, кафе, пабов и фудкортов с ценами.
+
+    .form(action="#").popup__form
+    input.form__input(type="text", placeholder="Как вас зовут?")
+    input.form__input(type="text", placeholder="Номер телефона")
+    .form__policy-wrap
+      input.form__checkbox(type="checkbox", id="policy-checkbox") 
+      label.form__policy(for="policy-checkbox") Ознакомлен с политикой конфиденциальности
+    .button-wrap
+      .button(type="submit").form-button.popup__form-button Скачать полный каталог
+      .button-label.popup__button-label free
+
+ 
+    

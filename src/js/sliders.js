@@ -67,6 +67,17 @@ export default function () {
     },
   });
 
+  const popup = new Swiper('.popup__swiper-container', {
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.popup__swiper-pagination',
+    },
+    navigation: {
+      nextEl: '.popup__swiper-button-next',
+      prevEl: '.popup__swiper-button-prev',
+    },
+  });
+
   const coll = document.getElementsByClassName('collapsible');
   // const card = document.getElementsByClassName('questions__card');
   let i;

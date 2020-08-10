@@ -17,6 +17,7 @@
   &__swiper-slide {
     display: flex;
     width: 771px !important;
+    border-top: 3px solid rgba(#1E1E1E, 0.1);
   }
   &__card {
     text-transform: uppercase;
@@ -25,7 +26,6 @@
     padding-bottom: 25px;
     padding-right: 12px;
     // min-width: 231px;
-    border-top: 3px solid rgba(#1E1E1E, 0.1);
     // border-bottom: 3px solid rgba(#1E1E1E, 0.1);
     &--left {
       border-right: 3px solid rgba(#1E1E1E, 0.1);

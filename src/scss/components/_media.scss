@@ -19,4 +19,12 @@
       right: -14%;
     }
   }
+
+  // carousels
+  .benefits {
+    &__swiper-slide {
+      display: flex;
+      justify-content: center;
+    }
+  }
 }

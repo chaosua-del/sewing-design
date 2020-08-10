@@ -615,15 +615,15 @@ img {
 
 .benefits__swiper-slide {
   display: flex;
-  width: 771px !important; }
+  width: 771px !important;
+  border-top: 3px solid rgba(30, 30, 30, 0.1); }
 
 .benefits__card {
   text-transform: uppercase;
   padding-top: 32px;
   padding-left: 25px;
   padding-bottom: 25px;
-  padding-right: 12px;
-  border-top: 3px solid rgba(30, 30, 30, 0.1); }
+  padding-right: 12px; }
   .benefits__card--left {
     border-right: 3px solid rgba(30, 30, 30, 0.1); }
   .benefits__card--right {
@@ -906,7 +906,39 @@ img {
     color: #1E1E1E; }
   .form__input--text {
     padding-bottom: 110px;
-    margin-bottom: 24px; }
+    margin-bottom: 28px; }
+
+.form__policy {
+  font-family: 'Century Gothic Bold';
+  font-size: 10px;
+  letter-spacing: -0.01em;
+  line-height: 17px;
+  color: rgba(30, 30, 30, 0.8); }
+  .form__policy-wrap {
+    margin-bottom: 37px; }
+
+.form__checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0; }
+
+.form__checkbox + .form__policy {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  user-select: none; }
+  .form__checkbox + .form__policy::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #FFFFFF;
+    border: 1.5px solid #C6C6C6;
+    border-radius: 3px;
+    margin-right: 6px; }
+
+.form__checkbox:checked + .form__policy::before {
+  background: url("../img/policy-checked.svg") no-repeat center; }
 
 .model {
   padding-top: 66px; }
@@ -1410,6 +1442,154 @@ img {
 .phone-button {
   border-bottom: 2px dashed #C4BCBC; }
 
+.popup {
+  padding-bottom: 100px;
+  border-top: 3px solid rgba(30, 30, 30, 0.1);
+  background: #F9F7F2; }
+  .popup__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  .popup__close-button {
+    font-family: 'Century Gothic Bold';
+    font-size: 20px;
+    letter-spacing: -0.05em;
+    line-height: 35px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 39px;
+    margin-top: 17px; }
+    .popup__close-button::after {
+      content: '+';
+      font-family: sans-serif;
+      font-weight: bold;
+      transform: rotate(-45deg);
+      margin-left: 7px; }
+  .popup__button {
+    font-family: 'Century Gothic Bold';
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    line-height: 20px;
+    margin-bottom: 49px; }
+    .popup__button::after {
+      content: url("../img/popup/popup-download.svg");
+      margin-left: 20px; }
+    .popup__button--rounded {
+      margin-top: 36px;
+      border-radius: 90px; }
+      .popup__button--rounded::after {
+        content: '';
+        margin-left: 0; }
+      .popup__button--rounded::before {
+        content: url("../img/popup/popup-gift.svg");
+        margin-right: 14px; }
+    .popup__button-label {
+      font-size: 11px;
+      width: 40px;
+      height: 40px;
+      background-color: #D1CABC; }
+  .popup__title {
+    font-family: 'Century Gothic Bold';
+    font-size: 25px;
+    letter-spacing: -0.03em;
+    line-height: 25px;
+    text-transform: uppercase;
+    text-align: center; }
+    .popup__title--lower {
+      text-transform: none; }
+  .popup__description {
+    font-family: 'Century Gothic Bold';
+    font-size: 12px;
+    letter-spacing: -0.02em;
+    line-height: 16px;
+    text-align: center;
+    font-family: 'Segoe UI Regular' !important;
+    max-width: 228px;
+    margin: 0 auto;
+    margin-top: 16px;
+    margin-bottom: 60px; }
+  .popup__swiper-slide {
+    margin-top: 24px;
+    margin-bottom: 49px;
+    display: flex;
+    width: 771px !important;
+    border-top: 3px solid rgba(30, 30, 30, 0.1);
+    border-bottom: 3px solid rgba(30, 30, 30, 0.1); }
+  .popup__card {
+    min-width: 194px; }
+    .popup__card-title {
+      font-family: 'Century Gothic Bold';
+      font-size: 14px;
+      letter-spacing: -0.03em;
+      line-height: 20px;
+      text-transform: uppercase;
+      max-width: 168px;
+      margin-bottom: 11px; }
+    .popup__card-subtitle {
+      font-family: 'Century Gothic Bold';
+      font-size: 10px;
+      letter-spacing: -0.01em;
+      line-height: 13px;
+      opacity: 0.7;
+      text-transform: none;
+      max-width: 148px;
+      margin-bottom: 61px; }
+  .popup__model {
+    margin-bottom: 25px;
+    margin-right: 12px;
+    margin-left: 12px; }
+    .popup__model-wrap {
+      padding-right: 25px;
+      padding-left: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center; }
+    .popup__model-img {
+      width: 270px;
+      height: 401px;
+      margin-bottom: 10px;
+      position: relative; }
+    .popup__model-price {
+      font-family: 'Century Gothic Bold';
+      font-size: 50px;
+      letter-spacing: -0.04em;
+      line-height: 75px;
+      color: #F6F6F6;
+      position: absolute;
+      bottom: -15px;
+      left: 0px; }
+    .popup__model-name {
+      font-family: 'Century Gothic Bold';
+      font-size: 16px;
+      letter-spacing: 0.02em;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.7);
+      text-align: left; }
+  .popup__swiper-container {
+    margin-top: 43px;
+    margin-bottom: 100px; }
+  .popup__swiper-wrapper {
+    padding-bottom: 50px; }
+  .popup__uniform {
+    width: 320px;
+    height: 450px;
+    overflow: hidden;
+    margin: 0 auto; }
+    .popup__uniform img {
+      height: 100%;
+      max-width: none;
+      right: 316px; }
+
+.popup__swiper-button-prev,
+.popup__swiper-button-next {
+  display: none !important; }
+
 @media (min-width: 321px) {
   .leader {
     background: url("../img/design/designer-photo-md.webp") no-repeat center/cover; }
@@ -1418,6 +1598,9 @@ img {
 
 @media (min-width: 450px) {
   .office__container::before {
-    right: -14%; } }
+    right: -14%; }
+  .benefits__swiper-slide {
+    display: flex;
+    justify-content: center; } }
 
 /*# sourceMappingURL=maps/common.css.map */
