@@ -9,7 +9,7 @@
   &__navigation {
     display: flex;
     flex-direction: column;
-    margin-bottom: 41px;
+    margin-bottom: 21px;
     @include font(12px, 0.02em, 20px);
     &-item {
        color: rgba($color-base, 0.4);

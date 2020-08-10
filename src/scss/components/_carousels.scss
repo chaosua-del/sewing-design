@@ -1,3 +1,11 @@
+.carousels {
+  &__title {
+    @include font(18px, -0.03em, 22px);
+    text-align: center;
+    margin-bottom: 47px;
+  }
+}
+
 .photos {
   &__swiper-slide {
     width: 102px !important; 
@@ -41,10 +49,13 @@
     }
     &-number {
       @include font(60px, -0.04em, 88px);
+      margin-top: -20px;
+      margin-right: 26px;
     }
     &-supper {
-      vertical-align: super;
+      vertical-align: text-top;
       margin-left: 11px;
+      top: 5px;
       @include font(14px, -0.04em, 40px);
     }
   }
@@ -71,7 +82,7 @@
   }
   &__text {
     font-family: 'Century Gothic Regular' !important;
-    margin-top: 53px;
+    margin-top: 43px;
     color: #FFFFFF;
     text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
     @include font(30px, -0.04em, 80px);
@@ -82,5 +93,7 @@
 .lower-case {
   text-transform: none;
   opacity: 0.7;
-  max-width: 140px;
+  max-width: 160px;
+  font-size: 14px;
+  margin-bottom: 23px;
 }

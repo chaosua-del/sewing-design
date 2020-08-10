@@ -1,6 +1,7 @@
 .questions {
   &__container {
-    padding-bottom: 104px;
+    margin-top: -22px;
+    padding-bottom: 82px;
   }
   &__collapsible {
     @include font(16px, -0.05em, 17px);
@@ -8,7 +9,8 @@
     text-transform: uppercase;
     padding-top: 16px;
     margin-top: 10px;
-    margin-bottom: 34px;
+    height: 34px;
+    margin-bottom: 27px;
     display: flex;
     justify-content: space-between;
   }
@@ -38,6 +40,7 @@
 
 .active {
   border-top: 3px solid rgba(#000000, 1);
+  margin-bottom: 52px;
   &:after {
   color: rgba(#000000, 1);
   transform: rotate(45deg);

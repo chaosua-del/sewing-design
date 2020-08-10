@@ -1,12 +1,12 @@
 .design {
   background-color: #E3E8EC;
   &__container {
-    padding-top: 57px;
-    padding-bottom: 68px;
+    padding-top: 67px;
+    padding-bottom: 60px;
   }
   &__title {
     text-transform: uppercase;
-    margin-bottom: 22px;
+    margin-bottom: 19px;
     @include font(24px, -0.03em, 40px);
   }
   &__subtitle {
@@ -97,7 +97,7 @@
     }
     &--text{
       padding-bottom: 110px;
-      margin-bottom: 32px;
+      margin-bottom: 24px;
     }
   }
 }

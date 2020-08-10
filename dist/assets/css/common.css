@@ -601,6 +601,14 @@ img {
   text-align: center;
   padding-bottom: 55px; }
 
+.carousels__title {
+  font-family: 'Century Gothic Bold';
+  font-size: 18px;
+  letter-spacing: -0.03em;
+  line-height: 22px;
+  text-align: center;
+  margin-bottom: 47px; }
+
 .photos__swiper-slide {
   width: 102px !important;
   height: 102px !important; }
@@ -639,10 +647,13 @@ img {
     font-family: 'Century Gothic Bold';
     font-size: 60px;
     letter-spacing: -0.04em;
-    line-height: 88px; }
+    line-height: 88px;
+    margin-top: -20px;
+    margin-right: 26px; }
   .benefits__card-supper {
-    vertical-align: super;
+    vertical-align: text-top;
     margin-left: 11px;
+    top: 5px;
     font-family: 'Century Gothic Bold';
     font-size: 14px;
     letter-spacing: -0.04em;
@@ -669,7 +680,7 @@ img {
       font-family: 'Century Gothic Regular' !important; }
   .banner__text {
     font-family: 'Century Gothic Regular' !important;
-    margin-top: 53px;
+    margin-top: 43px;
     color: #FFFFFF;
     text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
     font-family: 'Century Gothic Bold';
@@ -680,7 +691,9 @@ img {
 .lower-case {
   text-transform: none;
   opacity: 0.7;
-  max-width: 140px; }
+  max-width: 160px;
+  font-size: 14px;
+  margin-bottom: 23px; }
 
 .uniforms {
   background: url("../img/uniforms/uniforms-bg.svg") no-repeat 0% 58%;
@@ -786,11 +799,11 @@ img {
 .design {
   background-color: #E3E8EC; }
   .design__container {
-    padding-top: 57px;
-    padding-bottom: 68px; }
+    padding-top: 67px;
+    padding-bottom: 60px; }
   .design__title {
     text-transform: uppercase;
-    margin-bottom: 22px;
+    margin-bottom: 19px;
     font-family: 'Century Gothic Bold';
     font-size: 24px;
     letter-spacing: -0.03em;
@@ -886,7 +899,7 @@ img {
     color: #1E1E1E; }
   .form__input--text {
     padding-bottom: 110px;
-    margin-bottom: 32px; }
+    margin-bottom: 24px; }
 
 .model {
   padding-top: 66px; }
@@ -1151,7 +1164,7 @@ img {
 
 .feedback {
   padding-top: 15px;
-  padding-bottom: 79px;
+  padding-bottom: 70px;
   font-family: 'Segoe UI Regular' !important; }
   .feedback__swiper-slide {
     display: flex;
@@ -1235,7 +1248,8 @@ img {
     border-radius: 0 !important; }
 
 .questions__container {
-  padding-bottom: 104px; }
+  margin-top: -22px;
+  padding-bottom: 82px; }
 
 .questions__collapsible {
   font-family: 'Century Gothic Bold';
@@ -1246,7 +1260,8 @@ img {
   text-transform: uppercase;
   padding-top: 16px;
   margin-top: 10px;
-  margin-bottom: 34px;
+  height: 34px;
+  margin-bottom: 27px;
   display: flex;
   justify-content: space-between; }
 
@@ -1274,7 +1289,8 @@ img {
   transition: all 0.3s ease-in-out; }
 
 .active {
-  border-top: 3px solid black; }
+  border-top: 3px solid black;
+  margin-bottom: 52px; }
   .active:after {
     color: black;
     transform: rotate(45deg); }
@@ -1289,6 +1305,7 @@ img {
   .office__container {
     padding-top: 63px;
     padding-bottom: 45px;
+    padding-left: 22px;
     position: relative; }
     .office__container::before {
       content: url("../img/decoration-line.svg");
@@ -1335,7 +1352,7 @@ img {
   .footer__navigation {
     display: flex;
     flex-direction: column;
-    margin-bottom: 41px;
+    margin-bottom: 21px;
     font-family: 'Century Gothic Bold';
     font-size: 12px;
     letter-spacing: 0.02em;

@@ -17,6 +17,15 @@ export default function () {
     // centerInsufficientSlides: 'true'
   });
 
+  const benefits2 = new Swiper('.benefits2__swiper-container', {
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    freeMode: true,
+    loop: false,
+    slidesOffsetAfter: 0,
+    // centerInsufficientSlides: 'true'
+  });
+
   const banner = new Swiper('.banner__swiper-container', {
     slidesPerView: 'auto',
     spaceBetween: 0,
@@ -59,16 +68,20 @@ export default function () {
   });
 
   const coll = document.getElementsByClassName('collapsible');
+  // const card = document.getElementsByClassName('questions__card');
   let i;
 
   for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener('click', function () {
       this.classList.toggle('active');
+      // card.classList.toggle('questions__card--active');
       let content = this.nextElementSibling;
       if (content.style.maxHeight) {
         content.style.maxHeight = null;
+        content.style.marginBottom = 0 + 'px';
       } else {
         content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.marginBottom = 52 + 'px';
       }
     });
   }
