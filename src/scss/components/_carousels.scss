@@ -63,13 +63,7 @@
 }
 
 .banner {
-  &__swiper-slide {
-    display: flex;
-    width: 728px !important;
-    background-color: #D1CABC;
-    padding-top: 10px;
-    padding-bottom: 19px;
-  }
+  background-color: #D1CABC;
   text-transform: uppercase;
   &__title {
     display: inline;
@@ -80,15 +74,15 @@
       font-family: 'Century Gothic Regular' !important;
     }
   }
-  &__text {
-    font-family: 'Century Gothic Regular' !important;
-    margin-top: 43px;
-    color: #FFFFFF;
-    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
-    @include font(30px, -0.04em, 80px);
+  &__wrap {
+    width: 1505px;
+    overflow: hidden;
+    background-color: #D1CABC;
+    transition: all 0.2s ease-out;
   }
   @include font(30px, -0.03em, 75px)
 }
+
 
 .lower-case {
   text-transform: none;
@@ -96,4 +90,21 @@
   max-width: 160px;
   font-size: 14px;
   margin-bottom: 23px;
+}
+
+.banner2 {
+  &__wrap {
+    width: 1505px;
+    overflow: hidden;
+    background-color: transparent;
+    transition: all 0.2s ease-out;
+  }
+   &__text {
+    text-transform: uppercase;
+    font-family: 'Century Gothic Regular' !important;
+    margin-top: 43px;
+    color: #FFFFFF;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+    @include font(30px, -0.04em, 80px);
+  }
 }
