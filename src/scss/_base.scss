@@ -147,7 +147,7 @@ strong {
       position: absolute;
       top: -36px;
       right: -24px;
-      transform: rotate(45deg);
+    //   transform: rotate(45deg);
       width: 53px;
       height: 53px;
       border-radius: 50%;
@@ -155,6 +155,9 @@ strong {
       text-transform: uppercase;
       background: #E3E8EC;
       @include flex-center()
+    }
+    &-labelText {
+        transform: rotate(45deg);
     }
   }
 

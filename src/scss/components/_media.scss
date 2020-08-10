@@ -27,4 +27,12 @@
       justify-content: center;
     }
   }
+
+  // popup
+   .popup {
+    &__swiper-slide {
+      display: flex;
+      justify-content: center;
+    }
+  }
 }

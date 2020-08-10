@@ -26,18 +26,26 @@
     &-title {
       margin-top: 21px;
       margin-bottom: 15px;
+      width: 279px;
       font-family: 'Segoe UI SemiBold' !important; 
       @include font(18px, -0.01em, 28px);
     }
     &-list {
       font-family: 'Segoe UI Regular' !important; 
       @include font(12px, -0.01em, 28px);
+      width: 250px;
+      margin-left: 23px;
     }
     &-item {
       color: #5F5F5F;
       margin-bottom: 12px;
+      position: relative;
       &::before {
         content: ' ';
+        position: absolute;
+        top: 50%;
+        left: -22px;
+        transform: translateY(-50%);
         display: inline-block;
         margin-right: 11px;
         width: 6px;

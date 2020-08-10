@@ -8,6 +8,7 @@
   &__title {
     text-transform: uppercase;
     margin-bottom: 19px;
+    width: 300px;
     @include font(24px, -0.03em, 40px);
   }
   &__subtitle {
@@ -77,6 +78,7 @@
   }
   &__description {
     color: $color-white;
+    width: 268px;
     font-family: 'Segoe UI Light' !important;
     @include font(10px, 0.02em, 18px);
   }

@@ -9,20 +9,21 @@
     padding-bottom: 17px;
       }
   &__logo {
-    margin-left: 10px;
+    margin-left: 17px;
   }
   &__menu {
     text-transform: uppercase;
-    @include font(20px, -0.05em);
+    @include font(20.67px, -0.05em);
     text-decoration-line: underline;
     line-height: 30px;
     color: $color-base
   }
   &__button {
-    @include font(12px, 0.02em);
+    @include font(12.02px, 0.02em);
     line-height: 20px;
     border-bottom: 2px dashed #C4BCBC;
     border-radius: 0px;
     text-transform: uppercase;
+    margin-right: -4px;
   }
 }

@@ -469,7 +469,6 @@ strong {
     position: absolute;
     top: -36px;
     right: -24px;
-    transform: rotate(45deg);
     width: 53px;
     height: 53px;
     border-radius: 50%;
@@ -482,6 +481,8 @@ strong {
     display: flex;
     justify-content: center;
     align-items: center; }
+  .button-labelText {
+    transform: rotate(45deg); }
 
 img {
   max-width: 100%; }
@@ -553,12 +554,12 @@ img {
   padding-bottom: 17px; }
 
 .header__logo {
-  margin-left: 10px; }
+  margin-left: 17px; }
 
 .header__menu {
   text-transform: uppercase;
   font-family: 'Century Gothic Bold';
-  font-size: 20px;
+  font-size: 20.67px;
   letter-spacing: -0.05em;
   line-height: normal;
   text-decoration-line: underline;
@@ -567,17 +568,17 @@ img {
 
 .header__button {
   font-family: 'Century Gothic Bold';
-  font-size: 12px;
+  font-size: 12.02px;
   letter-spacing: 0.02em;
   line-height: normal;
   line-height: 20px;
   border-bottom: 2px dashed #C4BCBC;
   border-radius: 0px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-right: -4px; }
 
 .hero__container {
-  padding-top: 56px;
-  padding-bottom: 55px;
+  padding: 56px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -599,7 +600,11 @@ img {
   letter-spacing: -0.01em;
   line-height: 19px;
   text-align: center;
-  padding-bottom: 55px; }
+  padding-bottom: 55px;
+  max-width: 210px; }
+
+.hero__button {
+  padding: 16px 16.92px; }
 
 .carousels__title {
   font-family: 'Century Gothic Bold';
@@ -811,6 +816,7 @@ img {
   .design__title {
     text-transform: uppercase;
     margin-bottom: 19px;
+    width: 300px;
     font-family: 'Century Gothic Bold';
     font-size: 24px;
     letter-spacing: -0.03em;
@@ -883,6 +889,7 @@ img {
     line-height: 32px; }
   .leader__description {
     color: #F6F6F6;
+    width: 268px;
     font-family: 'Segoe UI Light' !important;
     font-family: 'Century Gothic Bold';
     font-size: 10px;
@@ -1116,6 +1123,7 @@ img {
     .instruction__card-title {
       margin-top: 21px;
       margin-bottom: 15px;
+      width: 279px;
       font-family: 'Segoe UI SemiBold' !important;
       font-family: 'Century Gothic Bold';
       font-size: 18px;
@@ -1126,12 +1134,19 @@ img {
       font-family: 'Century Gothic Bold';
       font-size: 12px;
       letter-spacing: -0.01em;
-      line-height: 28px; }
+      line-height: 28px;
+      width: 250px;
+      margin-left: 23px; }
     .instruction__card-item {
       color: #5F5F5F;
-      margin-bottom: 12px; }
+      margin-bottom: 12px;
+      position: relative; }
       .instruction__card-item::before {
         content: ' ';
+        position: absolute;
+        top: 50%;
+        left: -22px;
+        transform: translateY(-50%);
         display: inline-block;
         margin-right: 11px;
         width: 6px;
@@ -1354,7 +1369,7 @@ img {
       right: 0;
       top: -54px; }
   .office__title {
-    max-width: 279px;
+    width: 279px;
     margin-bottom: 28px;
     font-family: 'Century Gothic Bold';
     font-size: 20px;
@@ -1515,7 +1530,8 @@ img {
       text-transform: none; }
     .popup__title--big {
       font-size: 30px;
-      line-height: 30px; }
+      line-height: 30px;
+      max-width: 285px; }
   .popup__description {
     font-family: 'Century Gothic Bold';
     font-size: 12px;
@@ -1610,7 +1626,8 @@ img {
       max-width: none;
       right: 316px; }
   .popup__form {
-    margin-top: -14px; }
+    margin-top: -14px;
+    margin-left: auto; }
     .popup__form-button {
       width: 270px;
       font-size: 16px;
@@ -1618,7 +1635,8 @@ img {
       display: flex;
       justify-content: center; }
   .popup__input {
-    margin-bottom: 31px; }
+    margin-bottom: 31px;
+    max-width: 270px; }
     .popup__input::placeholder {
       font-family: 'Century Gothic Bold';
       font-size: 16px;
@@ -1639,6 +1657,9 @@ img {
   .office__container::before {
     right: -14%; }
   .benefits__swiper-slide {
+    display: flex;
+    justify-content: center; }
+  .popup__swiper-slide {
     display: flex;
     justify-content: center; } }
 

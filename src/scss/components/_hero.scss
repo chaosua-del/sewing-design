@@ -1,7 +1,6 @@
 .hero {
   &__container {
-    padding-top: 56px;
-    padding-bottom: 55px;
+    padding: 56px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,5 +17,9 @@
     @include font(14px, -0.01em, 19px);
     text-align: center;
     padding-bottom: 55px;
+    max-width: 210px;
+  }
+  &__button {
+    padding: 16px 16.92px;
   }
 }
