@@ -588,6 +588,25 @@ img {
   text-transform: uppercase;
   margin-right: -4px; }
 
+.header__contacts {
+  display: none; }
+  .header__contacts-button {
+    font-family: 'Century Gothic Bold';
+    font-size: 12.02px;
+    letter-spacing: 0.02em;
+    line-height: normal;
+    line-height: 20px;
+    border-bottom: 2px dashed #C4BCBC;
+    border-radius: 0px;
+    text-transform: uppercase;
+    margin-right: -4px; }
+  .header__contacts-web-site {
+    font-family: 'Century Gothic Bold';
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    line-height: 20px;
+    text-transform: uppercase; }
+
 .hero__container {
   padding: 56px 20px;
   display: flex;
@@ -1688,5 +1707,11 @@ img {
   .popup__swiper-slide {
     display: flex;
     justify-content: center; } }
+
+@media (min-width: 768px) {
+  .header__button {
+    display: none; }
+  .header__contacts {
+    display: block; } }
 
 /*# sourceMappingURL=maps/common.css.map */

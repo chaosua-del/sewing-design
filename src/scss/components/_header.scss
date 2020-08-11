@@ -26,4 +26,20 @@
     text-transform: uppercase;
     margin-right: -4px;
   }
+  &__contacts {
+    display: none;
+    &-button {
+      @include font(12.02px, 0.02em);
+      line-height: 20px;
+      border-bottom: 2px dashed #C4BCBC;
+      border-radius: 0px;
+      text-transform: uppercase;
+      margin-right: -4px;
+    }
+    &-web-site {
+      @include font(12px, 0.02em, 20px);
+      text-transform: uppercase;
+    }
+    
+  }
 }

@@ -2,5 +2,15 @@ header.header
     .container.header__container
         a(href="index.html").header__menu меню
         .header__logo
-            img(src="assets/img/header-logo.svg", alt="logo")
+            picture
+                <source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/header-logo.svg">
+                <source type="image/webp" media="(min-width: 768px)" data-srcset="assets/img/header-logo-md.svg">
+                <img class="lazyload" data-src="assets/img/header-logo.svg" alt="logo">
+            //- img(src="assets/img/header-logo.svg", alt="logo")
         button.header__button Заказать Звонок
+        .header__contacts 
+             a(href="tel:88003503745").phone.header__contacts-phone 8 800 350-37-45
+             button.header__contacts-button Заказать Звонок
+             a(href="#").web-site.header__contacts-web-site info@site.com
+
+

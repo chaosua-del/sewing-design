@@ -1,4 +1,6 @@
-import Swiper from 'swiper';
+
+import Swiper from 'swiper/js/swiper.js';
+
 
 export default function () {
   const photos = new Swiper('.photos__swiper-container', {
@@ -67,25 +69,6 @@ export default function () {
     },
   });
 
-  const popup = new Swiper('.popup__swiper-container', {
-    pagination: {
-      el: '.popup__swiper-pagination',
-    },
-    navigation: {
-      nextEl: '.popup__swiper-button-next',
-      prevEl: '.popup__swiper-button-prev',
-    },
-  });
-
-  const sliderModel = new Swiper('.sliderModel__swiper-container', {
-    pagination: {
-      el: '.sliderModel__swiper-pagination',
-    },
-    navigation: {
-      nextEl: '.sliderModel__swiper-button-next',
-      prevEl: '.sliderModel__swiper-button-prev',
-    },
-  });
 
   const coll = document.getElementsByClassName('collapsible');
   // const card = document.getElementsByClassName('questions__card');
@@ -106,3 +89,54 @@ export default function () {
     });
   }
 }
+
+// модалка
+const popupButton = document.querySelector('.uniforms__button');
+const popupClose = document.querySelector('.popup__close-button');
+const popup = document.querySelector('.popup');
+const body = document.querySelector('body');
+
+let popupButtonOffset = popupButton.getBoundingClientRect();
+popup.style.top = popupButtonOffset.top + 'px';
+
+popupButton.addEventListener('click', function () {
+  let popupButtonOffset = popupButton.getBoundingClientRect();
+  popup.classList.toggle('hidden');
+  popup.style.top = popupButtonOffset.top + window.outerHeight + 'px';
+  body.classList.toggle('dimmed');
+
+  const sliderModel = new Swiper('.sliderModel__swiper-container', {
+    freeMode: false,
+    loop: false,
+    pagination: {
+      el: '.sliderModel__swiper-pagination',
+    },
+    navigation: {
+      nextEl: '.sliderModel__swiper-button-next',
+      prevEl: '.sliderModel__swiper-button-prev',
+    },
+  });
+
+  const sliderPopup = new Swiper('.popup__swiper-container', {
+    pagination: {
+      el: '.popup__swiper-pagination',
+    },
+    navigation: {
+      nextEl: '.popup__swiper-button-next',
+      prevEl: '.popup__swiper-button-prev',
+    },
+  });
+});
+
+popupClose.addEventListener('click', function () {
+  popup.classList.toggle('hidden');
+  body.classList.toggle('dimmed');
+});
+
+body.addEventListener('click', function (event) {
+  if (event.target == this) {
+    popup.classList.toggle('hidden');
+    body.classList.toggle('dimmed');
+  }
+
+});

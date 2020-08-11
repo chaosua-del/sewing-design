@@ -1,9 +1,6 @@
 import $ from 'jquery';
 import 'lazysizes';
-// import Swiper JS
-// import Swiper from 'swiper';
-// // import Swiper styles
-// import 'swiper/swiper-bundle.css';
+
 
 import page from 'page';
 import forms from 'forms';
@@ -192,18 +189,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     for (i = 320; i < 768; i += 10) {
         count = (i - 320) / 10;
-        if (i === window.innerWidth && i < 450) {
-            console.log(count);
+        if (i < 450) {
+            // console.log(count);
             block.style.right = count + '%';
         }
-        else if (i === window.innerWidth && i >= 450 && i < 570) {
-            block.style.right = count / 1.5 + '%';
-        }
-        else if (i === window.innerWidth && i >= 570 && i < 640) {
-            block.style.right = count / 1.7 + '%';
-        }
-        else if (i === window.innerWidth && i >= 640 && i < 768) {
+        else if (i >= 450 && i < 570) {
             block.style.right = count / 2 + '%';
+        }
+        else if (i >= 570 && i < 640) {
+            block.style.right = count / 2.3 + '%';
+        }
+        else if (i >= 640 && i < 768) {
+            block.style.right = count / 2.5 + '%';
         }
     }
 
@@ -214,7 +211,7 @@ function reportWindowSize() {
     for (i = 320; i < 768; i += 10) {
         count = (i - 320) / 10;
         if (i === window.innerWidth && i < 450) {
-            console.log(count);
+            // console.log(count);
             block.style.right = count + '%';
         }
         else if (i === window.innerWidth && i >= 450 && i < 570) {
@@ -254,34 +251,6 @@ window.addEventListener('scroll', function () {
 
 });
 
-// модалка
-const popupButton = document.querySelector('.uniforms__button');
-const popupClose = document.querySelector('.popup__close-button');
-const popup = document.querySelector('.popup');
-const body = document.querySelector('body');
-
-let popupButtonOffset = popupButton.getBoundingClientRect();
-popup.style.top = popupButtonOffset.top + 'px';
-
-popupButton.addEventListener('click', function () {
-    let popupButtonOffset = popupButton.getBoundingClientRect();
-    popup.classList.toggle('hidden');
-    popup.style.top = popupButtonOffset.top + window.outerHeight + 'px';
-    body.classList.toggle('dimmed');
-});
-
-popupClose.addEventListener('click', function () {
-    popup.classList.toggle('hidden');
-    body.classList.toggle('dimmed');
-});
-
-body.addEventListener('click', function (event) {
-    if (event.target == this) {
-        popup.classList.toggle('hidden');
-        body.classList.toggle('dimmed');
-    }
-
-});
 
 
 
