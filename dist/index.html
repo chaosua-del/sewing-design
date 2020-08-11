@@ -30,9 +30,9 @@
     <header class="header">
       <div class="container header__container"><a class="header__menu" href="index.html">меню</a>
         <div class="header__logo">
-          <picture><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/header-logo.svg">
-<source type="image/webp" media="(min-width: 768px)" data-srcset="assets/img/header-logo-md.svg">
-<img class="lazyload" data-src="assets/img/header-logo.svg" alt="logo">
+          <picture><source type="image/svg+xml" media="(max-width: 767px)" data-srcset="assets/img/header-logo.svg">
+<source type="image/svg+xml" media="(min-width: 768px)" data-srcset="assets/img/header-logo-md.svg">
+<img class="lazyload" src="assets/img/header-logo.svg" alt="logo">
           </picture>
         </div>
         <button class="header__button">Заказать Звонок</button>
@@ -58,12 +58,36 @@
         <div class="photos">
           <div class="swiper-container photos__swiper-container">
             <div class="swiper-wrapper">
-              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/1.webp" alt="client-1"></div>
-              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/2.webp" alt="client-2"></div>
-              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/3.webp" alt="client-3"></div>
-              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/4.webp" alt="client-4"></div>
-              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/5.webp" alt="client-5"></div>
-              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/6.webp" alt="client-6"></div>
+              <div class="swiper-slide photos__swiper-slide">
+                <picture><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/carousel/1.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/carousel/1.jpg"><img src="assets/img/carousel/1.webp" alt="client-1">
+                </picture>
+              </div>
+              <div class="swiper-slide photos__swiper-slide">
+                <picture><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/carousel/2.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/carousel/2.jpg"><img src="assets/img/carousel/2.webp" alt="client-1">
+                </picture>
+              </div>
+              <div class="swiper-slide photos__swiper-slide">
+                <picture><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/carousel/3.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/carousel/3.jpg"><img src="assets/img/carousel/3.webp" alt="client-1">
+                </picture>
+              </div>
+              <div class="swiper-slide photos__swiper-slide">
+                <picture><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/carousel/3.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/carousel/3.jpg"><img src="assets/img/carousel/3.webp" alt="client-1">
+                </picture>
+              </div>
+              <div class="swiper-slide photos__swiper-slide">
+                <picture><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/carousel/4.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/carousel/4.jpg"><img src="assets/img/carousel/4.webp" alt="client-1">
+                </picture>
+              </div>
+              <div class="swiper-slide photos__swiper-slide">
+                <picture><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/carousel/5.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/carousel/5.jpg"><img src="assets/img/carousel/5.webp" alt="client-1">
+                </picture>
+              </div>
             </div>
           </div>
         </div>
@@ -162,7 +186,11 @@
           <div class="swiper-wrapper stages__swiper-wrapper">
             <div class="swiper-slide stages__swiper-slide">
               <div class="stages__card">
-                <div class="stages__card-bg"><img class="stages__card-bg-image" src="assets/img/stages/1.webp" alt="model-1"></div>
+                <div class="stages__card-bg">
+                  <picture class="stages__card-bg-image"><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/stages/1.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/stages/1.jpg"><img src="assets/img/stages/1.webp" alt="model-1">
+                  </picture>
+                </div>
                 <h3 class="stages__card-title">Подберем модели и материалы</h3>
                 <p class="stages__card-description">Поможем с выбором существующей модели или изготовим конкретно для вас. </p>
                 <p class="stages__card-description">Заменяем цвета, карманы, отделку, фурнитуру любых моделей одежды. </p>
@@ -170,7 +198,11 @@
             </div>
             <div class="swiper-slide stages__swiper-slide">
               <div class="stages__card">
-                <div class="stages__card-bg"><img class="stages__card-bg-image" src="assets/img/stages/2.webp" alt="model-2"></div>
+                <div class="stages__card-bg">
+                  <picture class="stages__card-bg-image"><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/stages/2.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/stages/2.jpg"><img src="assets/img/stages/2.webp" alt="model-2">
+                  </picture>
+                </div>
                 <h3 class="stages__card-title">нарисуем дизайн под вашу компанию</h3>
                 <p class="stages__card-description">Нанесём логотип и подберём ткань под фирменные цвета вашего бренда. </p>
                 <p class="stages__card-description">Для вас на выбор более 100 расцветок тканей, джинсовая ткань уровня качества Левайс и нанесение логотипов любой сложности на японском оборудованиии Tajima.</p>
@@ -178,7 +210,11 @@
             </div>
             <div class="swiper-slide stages__swiper-slide">
               <div class="stages__card">
-                <div class="stages__card-bg"><img class="stages__card-bg-image" src="assets/img/stages/3.webp" alt="model-3"></div>
+                <div class="stages__card-bg">
+                  <picture class="stages__card-bg-image"><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/stages/3.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/stages/3.jpg"><img src="assets/img/stages/3.webp" alt="model-3">
+                  </picture>
+                </div>
                 <h3 class="stages__card-title">произведем и доставим</h3>
                 <p class="stages__card-description">Производим срочные заказы от 100 единиц в день. Работаем с транспортными компаниями </p>
                 <p class="stages__card-description">Поможем с оформлением доставки и отслеживанием.</p>
@@ -214,7 +250,11 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide clients__swiper-slide">
               <div class="clients__card">
-                <div class="clients__photo"><img src="assets/img/clients/client-1.webp" alt="client-1"></div>
+                <div class="clients__photo">
+                  <picture><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/clients/client-1.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/clients/client-1.jpg"><img src="assets/img/clients/client-1.webp" alt="client-1">
+                  </picture>
+                </div>
                 <div class="clients__info">
                   <h3 class="clients__name">Ресторан Poke Room</h3>
                   <p class="clients__location">город Самара</p>
@@ -224,7 +264,11 @@
             </div>
             <div class="swiper-slide clients__swiper-slide">
               <div class="clients__card">
-                <div class="clients__photo"><img src="assets/img/clients/client-1.webp" alt="client-1"></div>
+                <div class="clients__photo">
+                  <picture><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/clients/client-1.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/clients/client-1.jpg"><img src="assets/img/clients/client-1.webp" alt="client-1">
+                  </picture>
+                </div>
                 <div class="clients__info">
                   <h3 class="clients__name">Ресторан Poke Room</h3>
                   <p class="clients__location">город Самара</p>
@@ -234,7 +278,11 @@
             </div>
             <div class="swiper-slide clients__swiper-slide">
               <div class="clients__card">
-                <div class="clients__photo"><img src="assets/img/clients/client-1.webp" alt="client-1"></div>
+                <div class="clients__photo">
+                  <picture><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/clients/client-1.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/clients/client-1.jpg"><img src="assets/img/clients/client-1.webp" alt="client-1">
+                  </picture>
+                </div>
                 <div class="clients__info">
                   <h3 class="clients__name">Ресторан Poke Room</h3>
                   <p class="clients__location">город Самара</p>
@@ -309,12 +357,36 @@
         <div class="photos">
           <div class="swiper-container photos__swiper-container">
             <div class="swiper-wrapper">
-              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/1.webp" alt="client-1"></div>
-              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/2.webp" alt="client-2"></div>
-              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/3.webp" alt="client-3"></div>
-              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/4.webp" alt="client-4"></div>
-              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/5.webp" alt="client-5"></div>
-              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/6.webp" alt="client-6"></div>
+              <div class="swiper-slide photos__swiper-slide">
+                <picture><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/carousel/1.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/carousel/1.jpg"><img src="assets/img/carousel/1.webp" alt="client-1">
+                </picture>
+              </div>
+              <div class="swiper-slide photos__swiper-slide">
+                <picture><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/carousel/2.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/carousel/2.jpg"><img src="assets/img/carousel/2.webp" alt="client-1">
+                </picture>
+              </div>
+              <div class="swiper-slide photos__swiper-slide">
+                <picture><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/carousel/3.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/carousel/3.jpg"><img src="assets/img/carousel/3.webp" alt="client-1">
+                </picture>
+              </div>
+              <div class="swiper-slide photos__swiper-slide">
+                <picture><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/carousel/3.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/carousel/3.jpg"><img src="assets/img/carousel/3.webp" alt="client-1">
+                </picture>
+              </div>
+              <div class="swiper-slide photos__swiper-slide">
+                <picture><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/carousel/4.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/carousel/4.jpg"><img src="assets/img/carousel/4.webp" alt="client-1">
+                </picture>
+              </div>
+              <div class="swiper-slide photos__swiper-slide">
+                <picture><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/carousel/5.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/carousel/5.jpg"><img src="assets/img/carousel/5.webp" alt="client-1">
+                </picture>
+              </div>
             </div>
           </div>
         </div>
@@ -436,19 +508,28 @@
       </div>
       <div class="popup__model-wrap">
         <div class="popup__model">
-          <div class="popup__model-img"><img src="assets/img/popup/model-black.webp" alt="model-black">
+          <div class="popup__model-img">
+            <picture><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/popup/model-black.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/popup/model-black.jpg"><img src="assets/img/popup/model-black.webp" alt="client-1">
+            </picture>
             <div class="popup__model-price">1080 </div>
           </div>
           <div class="popup__model-name">Фартук черный короткий</div>
         </div>
         <div class="popup__model">
-          <div class="popup__model-img"><img src="assets/img/popup/model-green.webp" alt="model-black">
+          <div class="popup__model-img">
+            <picture><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/popup/model-green.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/popup/model-green.jpg"><img src="assets/img/popup/model-green.webp" alt="model-green">
+            </picture>
             <div class="popup__model-price">3080 </div>
           </div>
           <div class="popup__model-name">Фартук черный короткий</div>
         </div>
         <div class="popup__model">
-          <div class="popup__model-img"><img src="assets/img/popup/model-56.webp" alt="model-black">
+          <div class="popup__model-img">
+            <picture><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/popup/model-56.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/popup/model-56.jpg"><img src="assets/img/popup/model-56.webp" alt="model-56">
+            </picture>
             <div class="popup__model-price">4080 </div>
           </div>
           <div class="popup__model-name">Фартук №56</div>
@@ -464,13 +545,25 @@
       <div class="swiper-container sliderModel__swiper-container">
         <div class="swiper-wrapper sliderModel__swiper-wrapper">
           <div class="swiper-slide"> 
-            <div class="sliderModel__uniform"><img src="assets/img/popup/slider-model-blue.webp" alt="uniform-blue"></div>
+            <div class="sliderModel__uniform">
+              <picture><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/popup/slider-model-blue.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/popup/slider-model-blue.jpg"><img src="assets/img/popup/slider-model-blue.webp" alt="uniform-blue">
+              </picture>
+            </div>
           </div>
           <div class="swiper-slide"> 
-            <div class="sliderModel__uniform"><img src="assets/img/popup/slider-model-blue.webp" alt="uniform-blue"></div>
+            <div class="sliderModel__uniform">
+              <picture><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/popup/slider-model-blue.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/popup/slider-model-blue.jpg"><img src="assets/img/popup/slider-model-blue.webp" alt="uniform-blue">
+              </picture>
+            </div>
           </div>
           <div class="swiper-slide"> 
-            <div class="sliderModel__uniform"><img src="assets/img/popup/slider-model-blue.webp" alt="uniform-blue"></div>
+            <div class="sliderModel__uniform">
+              <picture><source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/popup/slider-model-blue.webp">
+<source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/popup/slider-model-blue.jpg"><img src="assets/img/popup/slider-model-blue.webp" alt="uniform-blue">
+              </picture>
+            </div>
           </div>
         </div>
         <div class="swiper-pagination sliderModel__swiper-pagination"></div>

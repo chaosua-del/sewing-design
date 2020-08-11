@@ -28,17 +28,26 @@
   .popup__model-wrap
     .popup__model
       .popup__model-img
-        img(src="assets/img/popup/model-black.webp", alt="model-black")
+        picture
+          <source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/popup/model-black.webp">
+          <source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/popup/model-black.jpg">
+          img(src="assets/img/popup/model-black.webp", alt="client-1")
         .popup__model-price 1080 
       .popup__model-name Фартук черный короткий
     .popup__model
       .popup__model-img
-        img(src="assets/img/popup/model-green.webp", alt="model-black")
+        picture
+          <source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/popup/model-green.webp">
+          <source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/popup/model-green.jpg">
+          img(src="assets/img/popup/model-green.webp", alt="model-green")
         .popup__model-price 3080 
       .popup__model-name Фартук черный короткий
     .popup__model
       .popup__model-img
-        img(src="assets/img/popup/model-56.webp", alt="model-black")
+        picture
+          <source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/popup/model-56.webp">
+          <source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/popup/model-56.jpg">
+          img(src="assets/img/popup/model-56.webp", alt="model-56")
         .popup__model-price 4080 
       .popup__model-name Фартук №56
     .popup__model
@@ -53,13 +62,22 @@
     .swiper-wrapper.sliderModel__swiper-wrapper
       .swiper-slide 
         .sliderModel__uniform
-          img(src="assets/img/popup/slider-model-blue.webp", alt="uniform-blue")
+          picture
+            <source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/popup/slider-model-blue.webp">
+            <source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/popup/slider-model-blue.jpg">
+            img(src="assets/img/popup/slider-model-blue.webp", alt="uniform-blue")
       .swiper-slide 
         .sliderModel__uniform
-          img(src="assets/img/popup/slider-model-blue.webp", alt="uniform-blue")
+          picture
+            <source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/popup/slider-model-blue.webp">
+            <source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/popup/slider-model-blue.jpg">
+            img(src="assets/img/popup/slider-model-blue.webp", alt="uniform-blue")
       .swiper-slide 
         .sliderModel__uniform
-          img(src="assets/img/popup/slider-model-blue.webp", alt="uniform-blue")
+          picture
+            <source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/popup/slider-model-blue.webp">
+            <source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/popup/slider-model-blue.jpg">
+            img(src="assets/img/popup/slider-model-blue.webp", alt="uniform-blue")
     .swiper-pagination.sliderModel__swiper-pagination
     .swiper-button-prev.sliderModel__swiper-button-prev
     .swiper-button-next.sliderModel__swiper-button-next 

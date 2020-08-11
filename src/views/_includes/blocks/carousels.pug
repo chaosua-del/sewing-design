@@ -3,17 +3,35 @@ section.carousels
     .swiper-container.photos__swiper-container
       .swiper-wrapper
         .swiper-slide.photos__swiper-slide
-          img(src="assets/img/carousel/1.webp", alt="client-1")
+          picture
+              <source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/carousel/1.webp">
+              <source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/carousel/1.jpg">
+              img(src="assets/img/carousel/1.webp", alt="client-1")
         .swiper-slide.photos__swiper-slide
-          img(src="assets/img/carousel/2.webp", alt="client-2")
+          picture
+                <source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/carousel/2.webp">
+                <source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/carousel/2.jpg">
+                img(src="assets/img/carousel/2.webp", alt="client-1")
         .swiper-slide.photos__swiper-slide
-          img(src="assets/img/carousel/3.webp", alt="client-3")
+          picture
+                <source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/carousel/3.webp">
+                <source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/carousel/3.jpg">
+                img(src="assets/img/carousel/3.webp", alt="client-1")
         .swiper-slide.photos__swiper-slide
-          img(src="assets/img/carousel/4.webp", alt="client-4")
+          picture
+                <source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/carousel/3.webp">
+                <source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/carousel/3.jpg">
+                img(src="assets/img/carousel/3.webp", alt="client-1")
         .swiper-slide.photos__swiper-slide
-          img(src="assets/img/carousel/5.webp", alt="client-5")
+          picture
+                <source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/carousel/4.webp">
+                <source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/carousel/4.jpg">
+                img(src="assets/img/carousel/4.webp", alt="client-1")
         .swiper-slide.photos__swiper-slide
-          img(src="assets/img/carousel/6.webp", alt="client-6")
+          picture
+                <source type="image/webp" media="(max-width: 767px)" data-srcset="assets/img/carousel/5.webp">
+                <source type="image/jpg" media="(max-width: 767px)" data-srcset="assets/img/carousel/5.jpg">
+                img(src="assets/img/carousel/5.webp", alt="client-1")
 
   .benefits
     .swiper-container.benefits__swiper-container
