@@ -1,3 +1,5 @@
+import leaflet from 'node_modules/leaflet/dist';
+
 export const myMap = L.map('mapid').setView([56.320568, 44.000775], 13);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
