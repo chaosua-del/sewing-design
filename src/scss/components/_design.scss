@@ -1,4 +1,7 @@
 .design {
+  &--hidden {
+    display: none;
+  }
   background-color: #E3E8EC;
   &__container {
     padding-top: 67px;

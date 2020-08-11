@@ -204,52 +204,135 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-});
 
-function reportWindowSize() {
+    function reportWindowSize() {
 
-    for (i = 320; i < 768; i += 10) {
-        count = (i - 320) / 10;
-        if (i === window.innerWidth && i < 450) {
-            // console.log(count);
-            block.style.right = count + '%';
-        }
-        else if (i === window.innerWidth && i >= 450 && i < 570) {
-            block.style.right = count / 1.5 + '%';
-        }
-        else if (i === window.innerWidth && i >= 570 && i < 640) {
-            block.style.right = count / 1.7 + '%';
-        }
-        else if (i === window.innerWidth && i >= 640 && i < 768) {
-            block.style.right = count / 2 + '%';
+        for (i = 320; i < 768; i += 10) {
+            count = (i - 320) / 10;
+            if (i === window.innerWidth && i < 450) {
+                // console.log(count);
+                block.style.right = count + '%';
+            }
+            else if (i === window.innerWidth && i >= 450 && i < 570) {
+                block.style.right = count / 1.5 + '%';
+            }
+            else if (i === window.innerWidth && i >= 570 && i < 640) {
+                block.style.right = count / 1.7 + '%';
+            }
+            else if (i === window.innerWidth && i >= 640 && i < 768) {
+                block.style.right = count / 2 + '%';
+            }
         }
     }
-}
 
-window.onresize = reportWindowSize;
+    window.onresize = reportWindowSize;
 
-// скролл банера
-let banner = document.querySelector('.banner__wrap');
-let banner2 = document.querySelector('.banner2__wrap');
-// let banner2 = 
-// banner.style.transform = 'translateX(-50%)';
-window.addEventListener('scroll', function () {
+
+    // скролл банера
+    let banner = document.querySelector('.banner__wrap');
+    let banner2 = document.querySelector('.banner2__wrap');
+
     let viewportOffset = banner.getBoundingClientRect();
     let viewportOffset2 = banner2.getBoundingClientRect();
-    if (viewportOffset.top > 0 && viewportOffset.top > viewportOffset.top / 2) {
-        banner.style.transform = `translateX(-${viewportOffset.top / 50}%)`;
-    }
-    else if (viewportOffset.top > 0 && viewportOffset.top < viewportOffset.top / 2) {
-        banner.style.transform = `translateX(${viewportOffset.top / 50}%)`;
-    }
-    else if (viewportOffset2.top > 0 && viewportOffset2.top > viewportOffset2.top / 2) {
-        banner2.style.transform = `translateX(-${viewportOffset2.top / 50}%)`;
-    }
-    else if (viewportOffset2.top > 0 && viewportOffset2.top < viewportOffset2.top / 2) {
-        banner2.style.transform = `translateX(${viewportOffset2.top / 50}%)`;
+    banner.style.transform = `translateX(-${viewportOffset.top / 50}%)`;
+    banner2.style.transform = `translateX(-${viewportOffset2.top / 50}%)`;
+    // let banner2 = 
+    // banner.style.transform = 'translateX(-50%)';
+    window.addEventListener('scroll', function () {
+        let viewportOffset = banner.getBoundingClientRect();
+        let viewportOffset2 = banner2.getBoundingClientRect();
+        if (viewportOffset.top > 0 && viewportOffset.top > viewportOffset.top / 2) {
+            banner.style.transform = `translateX(-${viewportOffset.top / 50}%)`;
+        }
+        else if (viewportOffset.top > 0 && viewportOffset.top < viewportOffset.top / 2) {
+            banner.style.transform = `translateX(${viewportOffset.top / 50}%)`;
+        }
+        else if (viewportOffset2.top > 0 && viewportOffset2.top > viewportOffset2.top / 2) {
+            banner2.style.transform = `translateX(-${viewportOffset2.top / 50}%)`;
+        }
+        else if (viewportOffset2.top > 0 && viewportOffset2.top < viewportOffset2.top / 2) {
+            banner2.style.transform = `translateX(${viewportOffset2.top / 50}%)`;
+        }
+
+    });
+
+
+    // clients hovers
+    let place = document.getElementsByClassName('clients__block-name');
+    let clientsDimm = document.querySelector('.clients__dimmed');
+    let clientsPhoto = document.querySelector('.clients__dimmed-photo');
+
+    for (i = 0; i < place.length; i++) {
+        place[i].onmouseover = function () {
+            this.style.zIndex = '20';
+            clientsDimm.style.zIndex = '19';
+            clientsDimm.style.opacity = '1';
+            let html = `<img src="assets/img/clients/poke-room.webp" />`;
+            clientsPhoto.innerHTML = html;
+            // clientsDimm.style.height = '100%';
+        };
+        place[i].onmouseleave = function () {
+            clientsDimm.style.opacity = '0';
+            clientsDimm.style.zIndex = '-1';
+            this.style.zIndex = '0';
+            // clientsDimm.style.height = '0';
+        };
     }
 
+    // модалка
+    const popupButton = document.querySelector('.uniforms__button');
+    const popupClose = document.querySelector('.popup__close-button');
+    const popup = document.querySelector('.popup');
+    const body = document.querySelector('body');
+
+    let popupButtonOffset = popupButton.getBoundingClientRect();
+    popup.style.top = popupButtonOffset.top + 'px';
+
+    popupButton.addEventListener('click', function () {
+        let popupButtonOffset = popupButton.getBoundingClientRect();
+        popup.classList.toggle('hidden');
+        popup.style.top = popupButtonOffset.top + window.outerHeight + 'px';
+        body.classList.toggle('dimmed');
+
+        const sliderModel = new Swiper('.sliderModel__swiper-container', {
+            freeMode: false,
+            loop: false,
+            pagination: {
+                el: '.sliderModel__swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.sliderModel__swiper-button-next',
+                prevEl: '.sliderModel__swiper-button-prev',
+            },
+        });
+
+        const sliderPopup = new Swiper('.popup__swiper-container', {
+            pagination: {
+                el: '.popup__swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.popup__swiper-button-next',
+                prevEl: '.popup__swiper-button-prev',
+            },
+        });
+    });
+
+    popupClose.addEventListener('click', function () {
+        popup.classList.toggle('hidden');
+        body.classList.toggle('dimmed');
+    });
+
+    body.addEventListener('click', function (event) {
+        if (event.target == this) {
+            popup.classList.toggle('hidden');
+            body.classList.toggle('dimmed');
+        }
+
+    });
+
 });
+
+
 
 
 

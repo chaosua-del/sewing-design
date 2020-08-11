@@ -34,7 +34,10 @@
       border-bottom: 2px dashed #C4BCBC;
       border-radius: 0px;
       text-transform: uppercase;
-      margin-right: -4px;
+      margin-right: 30px;
+    }
+    &-phone {
+      margin-right: 30px;
     }
     &-web-site {
       @include font(12px, 0.02em, 20px);

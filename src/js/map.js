@@ -1,4 +1,4 @@
-import leaflet from 'node_modules/leaflet/dist';
+// import leaflet from 'node_modules/leaflet/dist';
 
 export const myMap = L.map('mapid').setView([56.320568, 44.000775], 13);
 
@@ -11,7 +11,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   accessToken: 'pk.eyJ1IjoiY2hhb3N1YS1kZWwiLCJhIjoiY2tkbjBqY3dqMGlmaDJxcW4xbnljb2V1aiJ9.lKJeJfZMCU8J2h9G8aMbVg'
 }).addTo(myMap);
 
-const greenIcon = L.icon({
+const greenIcon =  L.icon({
   iconUrl: 'assets/img/map-marker.png',
   // shadowUrl: 'leaf-shadow.png',
 

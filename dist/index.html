@@ -104,7 +104,7 @@
                   <p class="benefits__card-subtitle">от фартуков до арбрендов и головных уборов</p>
                 </div>
                 <div class="benefits__card benefits__card--right">
-                  <h3 class="benefits__card-title">Наносим логотипы с идеальной точностью без&nbsp;потери качества</h3>
+                  <h3 class="benefits__card-title">Наносим логотипы с&nbsp;идеальной точностью без&nbsp;потери качества</h3>
                   <p class="benefits__card-subtitle">на японском оборудовании Tajima</p>
                 </div>
               </div>
@@ -130,7 +130,7 @@
           <h3 class="uniforms__title">Каталог униформы</h3>
           <div class="uniforms__card uniforms__card--first"><span class="uniforms__card-label">на фото:</span>
             <p class="uniforms__card-description">фартуки для сети ресторанов «Сулугуни»</p>
-            <p class="uniforms__card-name">Рестораны, кафе,<span class="uniforms__card-name--primary">пабы, фудкорты</span></p>
+            <p class="uniforms__card-name">Рестораны, кафе,<span class="uniforms__card-name--light">пабы,</span><span class="uniforms__card-name--primary">фудкорты</span></p>
           </div>
           <div class="uniforms__card uniforms__card--second"><span class="uniforms__card-label">на фото:</span>
             <p class="uniforms__card-description">фартуки для барбершопа  «Big big» </p>
@@ -147,13 +147,27 @@
         <div class="container design__container">
           <h2 class="design__title">Дизайн-макет бесплатно, за 1 день</h2>
           <p class="design__subtitle">Оставьте заявку и получите дизайн-макет вашей будущей униформы. Сделаем его для вас иничего&nbsp;не возьмем.</p>
-          <div class="button-wrap design__button-wrap">
-            <button class="button design__button">Получить макет и расчёт</button>
-            <div class="button-label design__button-label"> 
-              <p class="button-labelText">Free</p>
+          <form class="form design__form design--hidden" action="#">
+            <input class="form__input design__form-input" type="text" placeholder="Как вас зовут?">
+            <input class="form__input design__form-input" type="text" placeholder="Номер телефона">
+            <textarea class="form__input form__input--text" placeholder="Какая униформа нужна?"></textarea>
+            <div class="button-wrap design__button-wrap">
+              <button class="button design__button" type="submit">Получить макет и расчёт</button>
+              <div class="button-label design__button-label"> 
+                <p class="button-labelText">Free</p>
+              </div>
             </div>
+            <p class="design__policy">Отправляя заявку, вы соглашаетесь с условиями <a class="design__policy--strong" href="#">политики конфиденциальности</a></p>
+          </form>
+          <div class="design--hiddenMd">
+            <div class="button-wrap design__button-wrap">
+              <button class="button design__button">Получить макет и расчёт</button>
+              <div class="button-label design__button-label"> 
+                <p class="button-labelText">Free</p>
+              </div>
+            </div>
+            <p class="design__policy">Отправляя заявку, вы соглашаетесь с условиями <a class="design__policy--strong" href="#">политики конфиденциальности</a></p>
           </div>
-          <p class="design__policy">Отправляя заявку, вы соглашаетесь с условиями <a class="design__policy--strong" href="#">политики конфиденциальности</a></p>
         </div>
         <div class="leader">
           <div class="leader__info"><strong class="leader__info-name">Максим Ротару</strong>
@@ -185,39 +199,40 @@
         <div class="swiper-container stages__swiper-container">
           <div class="swiper-wrapper stages__swiper-wrapper">
             <div class="swiper-slide stages__swiper-slide">
-              <div class="stages__card">
+              <div class="stages__card stages__card--first">
                 <div class="stages__card-bg">
-                  <picture class="stages__card-bg-image"><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/stages/1.webp">
+                  <picture class="stages__card-bg-image" data-swiper-parallax="-300"><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/stages/1.webp">
 <source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/stages/1.jpg"><img src="assets/img/stages/1.webp" alt="model-1">
                   </picture>
                 </div>
-                <h3 class="stages__card-title">Подберем модели и материалы</h3>
-                <p class="stages__card-description">Поможем с выбором существующей модели или изготовим конкретно для вас. </p>
-                <p class="stages__card-description">Заменяем цвета, карманы, отделку, фурнитуру любых моделей одежды. </p>
+                <h3 class="stages__card-title" data-swiper-parallax="-200"> Подберем модели и материалы</h3>
+                <p class="stages__card-description" data-swiper-parallax="-100">Поможем с выбором существующей модели или изготовим конкретно для вас. </p>
+                <p class="stages__card-description" data-swiper-parallax="-100">Заменяем цвета, карманы, отделку, фурнитуру любых моделей одежды. </p>
+                <div class="stages__card-arrow">scroll</div>
               </div>
             </div>
             <div class="swiper-slide stages__swiper-slide">
               <div class="stages__card">
                 <div class="stages__card-bg">
-                  <picture class="stages__card-bg-image"><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/stages/2.webp">
+                  <picture class="stages__card-bg-image" data-swiper-parallax="-300"><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/stages/2.webp">
 <source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/stages/2.jpg"><img src="assets/img/stages/2.webp" alt="model-2">
                   </picture>
                 </div>
-                <h3 class="stages__card-title">нарисуем дизайн под вашу компанию</h3>
-                <p class="stages__card-description">Нанесём логотип и подберём ткань под фирменные цвета вашего бренда. </p>
-                <p class="stages__card-description">Для вас на выбор более 100 расцветок тканей, джинсовая ткань уровня качества Левайс и нанесение логотипов любой сложности на японском оборудованиии Tajima.</p>
+                <h3 class="stages__card-title" data-swiper-parallax="-200">нарисуем дизайн под вашу компанию</h3>
+                <p class="stages__card-description" data-swiper-parallax="-100">Нанесём логотип и подберём ткань под фирменные цвета вашего бренда. </p>
+                <p class="stages__card-description" data-swiper-parallax="-100">Для вас на выбор более 100 расцветок тканей, джинсовая ткань уровня качества Левайс и нанесение логотипов любой сложности на японском оборудованиии Tajima.</p>
               </div>
             </div>
             <div class="swiper-slide stages__swiper-slide">
               <div class="stages__card">
                 <div class="stages__card-bg">
-                  <picture class="stages__card-bg-image"><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/stages/3.webp">
+                  <picture class="stages__card-bg-image" data-swiper-parallax="-300"><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/stages/3.webp">
 <source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/stages/3.jpg"><img src="assets/img/stages/3.webp" alt="model-3">
                   </picture>
                 </div>
-                <h3 class="stages__card-title">произведем и доставим</h3>
-                <p class="stages__card-description">Производим срочные заказы от 100 единиц в день. Работаем с транспортными компаниями </p>
-                <p class="stages__card-description">Поможем с оформлением доставки и отслеживанием.</p>
+                <h3 class="stages__card-title" data-swiper-parallax="-200">произведем и доставим</h3>
+                <p class="stages__card-description" data-swiper-parallax="-100">Производим срочные заказы от 100 единиц в день. Работаем с транспортными компаниями </p>
+                <p class="stages__card-description" data-swiper-parallax="-100">Поможем с оформлением доставки и отслеживанием.</p>
               </div>
             </div>
           </div>
@@ -227,22 +242,27 @@
         </div>
       </section>
       <section class="instruction">
-        <div class="instruction__block">
-          <h2 class="instruction__title">Мы собрали<br>подробную<br>инструкцию <br>по уходу<br>за&nbsp;униформой</h2>
-        </div>
-        <div class="instruction__card">
-          <div class="instruction__card-wrap">
-            <h3 class="instruction__card-title">В инструкции в вашей посылке вы найдёте</h3>
-            <ul class="instruction__card-list">
-              <li class="instruction__card-item">Разрешённые способы стирки</li>
-              <li class="instruction__card-item">При какой температуре стирать</li>
-              <li class="instruction__card-item">Можно ли отпаривать вещь</li>
-              <li class="instruction__card-item">Важные особенности определённой модели</li>
-            </ul>
+        <div class="instruction__container">
+          <div class="instruction__block">
+            <h2 class="instruction__title">Мы собрали<br>подробную<br>инструкцию <br>по уходу<br>за&nbsp;униформой</h2>
+          </div>
+          <div class="instruction__card">
+            <div class="instruction__card-wrap">
+              <h3 class="instruction__card-title">В инструкции в вашей посылке вы найдёте</h3>
+              <ul class="instruction__card-list">
+                <li class="instruction__card-item">Разрешённые способы стирки</li>
+                <li class="instruction__card-item">При какой температуре стирать</li>
+                <li class="instruction__card-item">Можно ли отпаривать вещь</li>
+                <li class="instruction__card-item">Важные особенности определённой модели</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
       <section class="clients">
+        <div class="clients__dimmed">
+          <div class="clients__dimmed-photo"></div>
+        </div>
         <div class="container clients__container">
           <p class="clients__description">Среди наших клиентов как малый бизнес, так&nbsp;и&nbsp;большие сетевые организации по всей России:</p>
         </div>
@@ -295,10 +315,16 @@
         <div class="swiper-pagination clients__swiper-pagination"></div>
         <div class="swiper-button-prev clients__swiper-button-prev"></div>
         <div class="swiper-button-next clients__swiper-button-next"> </div>
+        <div class="clients__block">
+          <p class="clients__block-text">
+            Рестораны <span class="clients__block-name">Грабли</span>, <span class="clients__block-name">Черетто</span> и <span class="clients__block-name">Poke Room</span>, кафе <span class="clients__block-name">Груша </span>и бар <span class="clients__block-name">Pachia,</span> сети&nbsp;кофеен&nbsp;<span class="clients__block-name">Steam Coffee</span>
+            , <span class="clients__block-name">Gardentmn</span>, <span class="clients__block-name">Coffeebtainmsk</span> и <span class="clients__block-name">Calipso Coffee Roastery</span>, салоны красоты <span class="clients__block-name">Топ Лайн</span> и <span class="clients__block-name">Sugarbabystudio</span> , <span class="clients__block-name">Moscow flower school</span>, студия флористики <span class="clients__block-name">Vetki</span> и ресторан мороженого <span class="clients__block-name">Ванильный шпатель</span>
+          </p>
+        </div>
       </section>
       <section class="feedback">
         <div class="swiper-container feedback__swiper-container">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper feedback__swiper-wrapper">
             <div class="swiper-slide feedback__swiper-slide">
               <div class="feedback__card">
                 <div class="feedback__user">

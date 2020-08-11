@@ -1,7 +1,8 @@
 .instruction {
-  background-color: #E4E4E4;
+  background: #E4E4E4 url(../img/instruction/instruction-bg.webp) no-repeat center;
+  // background-color: #E4E4E4;
   &__block {
-    background: url(../img/instruction/bags.webp) no-repeat -14px 5px;
+    // background: url(../img/instruction/bags.webp) no-repeat -14px 5px;
     background-size: 139%;
     padding-top: 107px;
   }
@@ -10,11 +11,13 @@
     background-color: #C4BCBC;
     text-transform: uppercase;
     padding: 29px 20px;
-    max-width: 315px;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
     @include font(35px, -0.05em, 45px);
   }
   &__card {
-    background: url(../img/instruction/blue-bag.webp) no-repeat 0 214px;
+    // background: url(../img/instruction/blue-bag.webp) no-repeat 0 214px;
     background-size: 100%;
     padding-left: 25px;
     padding-right: 20px;

@@ -1,6 +1,11 @@
 .stages{
   padding-top: 86px;
   padding-bottom: 113px;
+  &__swiper-container {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   &__swiper-wrapper {
     padding-bottom: 52px;
   }
@@ -8,12 +13,18 @@
     @include font(18px, -0.03em, 22px);
     text-align: center;
     margin-bottom: 36px;
+     width: 269px;
+      margin-left: auto;
+      margin-right: auto;
   }
   &__description {
     @include font(12px, -0.02em, 16px);
     text-align: center;
     font-family: 'Segoe UI Regular' !important;
     margin-bottom: 36px;
+    width: 269px;
+    margin-left: auto;
+    margin-right: auto;
   }
   &__card {
     position: relative;
@@ -28,7 +39,7 @@
       width: 43%;
       overflow: hidden;
       &-image {
-        max-width: 580px;
+        width: 580px;
         height: 483px;
         margin-left: -242px;
         position: absolute;
@@ -47,7 +58,7 @@
     &-title {
       @include font(25px, -0.05em, 25px);
       text-transform: uppercase;
-      max-width: 240px;
+      width: 240px;
       margin-left: 24px;
       margin-bottom: 42px;
     }
@@ -55,8 +66,15 @@
       @include font(12px, -0.01em, 18px);
       font-family: 'Segoe UI Regular' !important;
       margin-bottom: 19px;
-      max-width: 130px;
+      width: 130px;
       margin-left: 24px;
+    }
+    &-arrow {
+      display: none;
+      font-family: 'Segoe UI Regular' !important;
+      @include font(12px, 0.2em, 28px);
+      color: #000000;
+      text-transform: uppercase;
     }
   }
 }

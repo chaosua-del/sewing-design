@@ -35,15 +35,50 @@ export default function () {
     loop: true,
   });
 
-  const stages = new Swiper('.stages__swiper-container', {
-    pagination: {
-      el: '.stages__swiper-pagination',
-    },
-    navigation: {
-      nextEl: '.stages__swiper-button-next',
-      prevEl: '.stages__swiper-button-prev',
-    },
-  });
+  if (window.innerWidth < 768) {
+    const stages = new Swiper('.stages__swiper-container', {
+      parallax: true,
+      speed: 600,
+      pagination: {
+        el: '.stages__swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.stages__swiper-button-next',
+        prevEl: '.stages__swiper-button-prev',
+      },
+    });
+
+    const feedback = new Swiper('.feedback__swiper-container', {
+      centeredSlides: true,
+      pagination: {
+        el: '.feedback__swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.feedback__swiper-button-next',
+        prevEl: '.feedback__swiper-button-prev',
+      },
+    });
+  }
+  else {
+    const stages = new Swiper('.stages__swiper-container', {
+      direction: 'horizontal',
+      mousewheel: true,
+      speed: 600,
+      parallax: true,
+      slidesPerView: 1,
+    });
+
+    const feedback = new Swiper('.feedback__swiper-container', {
+      centeredSlides: true,
+      pagination: {
+        el: '.feedback__swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.feedback__swiper-button-next',
+        prevEl: '.feedback__swiper-button-prev',
+      },
+    });
+  }
 
   const clients = new Swiper('.clients__swiper-container', {
     slidesPerView: 'auto',
@@ -56,22 +91,10 @@ export default function () {
     },
   });
 
-  const feedback = new Swiper('.feedback__swiper-container', {
-    slidesPerView: '1.1',
-    slidesOffsetBefore: 10,
-    slidesOffsetAfter: 10,
-    pagination: {
-      el: '.feedback__swiper-pagination',
-    },
-    navigation: {
-      nextEl: '.feedback__swiper-button-next',
-      prevEl: '.feedback__swiper-button-prev',
-    },
-  });
 
 
+  // expand menu
   const coll = document.getElementsByClassName('collapsible');
-  // const card = document.getElementsByClassName('questions__card');
   let i;
 
   for (i = 0; i < coll.length; i++) {
@@ -84,59 +107,15 @@ export default function () {
         content.style.marginBottom = 0 + 'px';
       } else {
         content.style.maxHeight = content.scrollHeight + 'px';
-        content.style.marginBottom = 52 + 'px';
+        if (window.innerWidth < 768)
+          content.style.marginBottom = 52 + 'px';
+        else if (window.innerWidth >= 768)
+          content.style.marginBottom = 113 + 'px';
       }
     });
   }
 }
 
-// модалка
-const popupButton = document.querySelector('.uniforms__button');
-const popupClose = document.querySelector('.popup__close-button');
-const popup = document.querySelector('.popup');
-const body = document.querySelector('body');
 
-let popupButtonOffset = popupButton.getBoundingClientRect();
-popup.style.top = popupButtonOffset.top + 'px';
 
-popupButton.addEventListener('click', function () {
-  let popupButtonOffset = popupButton.getBoundingClientRect();
-  popup.classList.toggle('hidden');
-  popup.style.top = popupButtonOffset.top + window.outerHeight + 'px';
-  body.classList.toggle('dimmed');
 
-  const sliderModel = new Swiper('.sliderModel__swiper-container', {
-    freeMode: false,
-    loop: false,
-    pagination: {
-      el: '.sliderModel__swiper-pagination',
-    },
-    navigation: {
-      nextEl: '.sliderModel__swiper-button-next',
-      prevEl: '.sliderModel__swiper-button-prev',
-    },
-  });
-
-  const sliderPopup = new Swiper('.popup__swiper-container', {
-    pagination: {
-      el: '.popup__swiper-pagination',
-    },
-    navigation: {
-      nextEl: '.popup__swiper-button-next',
-      prevEl: '.popup__swiper-button-prev',
-    },
-  });
-});
-
-popupClose.addEventListener('click', function () {
-  popup.classList.toggle('hidden');
-  body.classList.toggle('dimmed');
-});
-
-body.addEventListener('click', function (event) {
-  if (event.target == this) {
-    popup.classList.toggle('hidden');
-    body.classList.toggle('dimmed');
-  }
-
-});
