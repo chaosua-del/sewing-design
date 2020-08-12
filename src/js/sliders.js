@@ -10,23 +10,6 @@ export default function () {
     loop: true,
   });
 
-  const benefits = new Swiper('.benefits__swiper-container', {
-    slidesPerView: 'auto',
-    spaceBetween: 0,
-    freeMode: true,
-    loop: false,
-    slidesOffsetAfter: 2,
-    // centerInsufficientSlides: 'true'
-  });
-
-  const benefits2 = new Swiper('.benefits2__swiper-container', {
-    slidesPerView: 'auto',
-    spaceBetween: 0,
-    freeMode: true,
-    loop: false,
-    slidesOffsetAfter: 0,
-    // centerInsufficientSlides: 'true'
-  });
 
   const banner = new Swiper('.banner__swiper-container', {
     slidesPerView: 'auto',
@@ -36,6 +19,24 @@ export default function () {
   });
 
   if (window.innerWidth < 768) {
+    const benefits = new Swiper('.benefits__swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 0,
+      freeMode: true,
+      loop: false,
+      slidesOffsetAfter: 2,
+      // centerInsufficientSlides: 'true'
+    });
+
+    const benefits2 = new Swiper('.benefits2__swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 0,
+      freeMode: true,
+      loop: false,
+      slidesOffsetAfter: 0,
+      // centerInsufficientSlides: 'true'
+    });
+
     const stages = new Swiper('.stages__swiper-container', {
       parallax: true,
       speed: 600,

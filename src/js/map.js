@@ -1,6 +1,11 @@
 // import leaflet from 'node_modules/leaflet/dist';
 
-export const myMap = L.map('mapid').setView([56.320568, 44.000775], 13);
+export const myMap = L.map('mapid', {
+  center: [56.320568, 44.000775],
+  zoom: 15,
+  scrollWheelZoom: false
+})
+// .setView([], 13);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -11,7 +16,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   accessToken: 'pk.eyJ1IjoiY2hhb3N1YS1kZWwiLCJhIjoiY2tkbjBqY3dqMGlmaDJxcW4xbnljb2V1aiJ9.lKJeJfZMCU8J2h9G8aMbVg'
 }).addTo(myMap);
 
-const greenIcon =  L.icon({
+const greenIcon = L.icon({
   iconUrl: 'assets/img/map-marker.png',
   // shadowUrl: 'leaf-shadow.png',
 

@@ -4,6 +4,11 @@
   }
   &__logo {
     margin-bottom: 41px;
+    &-text {
+      display: none;
+      @include font(10px, 0.02em, 16px);
+      color: rgba(#000000, 0.4);
+    }
   }
   text-transform: uppercase;
   &__navigation {
@@ -34,11 +39,17 @@
       margin-bottom: 8px;
     }
   }
-  &__container, &__navigation, &__info, &__contacts {
+  &__container,  &__wrap, &__navigation, &__info, &__contacts {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+  &-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 

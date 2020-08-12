@@ -1,23 +1,30 @@
 footer.footer
     .container.footer__container
-        a.footer__logo(href="index.html")
-            img(src="assets/img/footer-logo.webp", alt="logo")
-        .footer__navigation
-            a.footer__navigation-item(href="#") Каталог
-            a.footer__navigation-item(href="#") Качество
-            a.footer__navigation-item(href="#") Производство
-            a.footer__navigation-item(href="#") Отзывы
-            a.footer__navigation-item(href="#") Вопрос-ответ
-            a.footer__navigation-item(href="#") Контакты
-        a(href="#").web-site info@site.com
-        .footer__contacts
-            a(href="tel:88003503745").phone.footer__contacts-phone 8 800 350-37-45
-            button.phone-button Заказать звонок
+        .footer__wrap
+            a.footer__logo(href="index.html")
+                img(src="assets/img/footer-logo.webp", alt="logo")
+                p.footer__logo-text since 2015
+            .footer__navigation
+                .footer__navigation-block.footer-block
+                    a.footer__navigation-item(href="#") Каталог
+                    a.footer__navigation-item(href="#") Качество
+                    a.footer__navigation-item(href="#") Производство
+                .footer__navigation-block.footer-block
+                    a.footer__navigation-item(href="#") Отзывы
+                    a.footer__navigation-item(href="#") Вопрос-ответ
+                    a.footer__navigation-item(href="#") Контакты
+            d.footer-block.footer__contacts-block
+                a(href="#").web-site info@site.com
+                .footer__contacts
+                    a(href="tel:88003503745").phone.footer__contacts-phone 8 800 350-37-45
+                    button.phone-button Заказать звонок
         .footer__info
-            p.footer__info-item 2005 - 2020. шью, Все права защищены
-            p.footer__info-item Политика конфиденциальности
-            p.footer__info-item Нижний Новгород,  Московское шоссе, 105 стр. 2
-            p.footer__info-item Сделано в 
-                a.href(href="#").footer__link riverstart
+            .footer-block.footer__info-block.footer__info-block--left
+                p.footer__info-item 2005 - 2020. шью, Все права защищены
+                p.footer__info-item Политика конфиденциальности
+            .footer-block.footer__info-block.footer__info-block--right
+                p.footer__info-item Нижний Новгород,  Московское шоссе, 105 стр. 2
+                p.footer__info-item Сделано в 
+                    a.href(href="#").footer__link riverstart
 
         

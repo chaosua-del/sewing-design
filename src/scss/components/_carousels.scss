@@ -75,6 +75,8 @@
     }
   }
   &__wrap {
+    padding-top: 10px;
+    padding-bottom: 18px;
     width: 1505px;
     overflow: hidden;
     background-color: #D1CABC;
@@ -102,7 +104,8 @@
    &__text {
     text-transform: uppercase;
     font-family: 'Century Gothic Regular' !important;
-    margin-top: 43px;
+    margin-top: 53px;
+    margin-bottom: 19px;
     color: #FFFFFF;
     text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
     @include font(30px, -0.04em, 80px);

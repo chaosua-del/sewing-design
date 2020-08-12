@@ -150,7 +150,7 @@
           <form class="form design__form design--hidden" action="#">
             <input class="form__input design__form-input" type="text" placeholder="Как вас зовут?">
             <input class="form__input design__form-input" type="text" placeholder="Номер телефона">
-            <textarea class="form__input form__input--text" placeholder="Какая униформа нужна?"></textarea>
+            <textarea class="form__input form__input--text" placeholder="Какая униформа нужна? (необязательно)"></textarea>
             <div class="button-wrap design__button-wrap">
               <button class="button design__button" type="submit">Получить макет и расчёт</button>
               <div class="button-label design__button-label"> 
@@ -491,16 +491,28 @@
       </section>
     </div>
     <footer class="footer">
-      <div class="container footer__container"><a class="footer__logo" href="index.html"><img src="assets/img/footer-logo.webp" alt="logo"></a>
-        <div class="footer__navigation"><a class="footer__navigation-item" href="#">Каталог</a><a class="footer__navigation-item" href="#">Качество</a><a class="footer__navigation-item" href="#">Производство</a><a class="footer__navigation-item" href="#">Отзывы</a><a class="footer__navigation-item" href="#">Вопрос-ответ</a><a class="footer__navigation-item" href="#">Контакты</a></div><a class="web-site" href="#">info@site.com</a>
-        <div class="footer__contacts"><a class="phone footer__contacts-phone" href="tel:88003503745">8 800 350-37-45</a>
-          <button class="phone-button">Заказать звонок</button>
+      <div class="container footer__container">
+        <div class="footer__wrap"><a class="footer__logo" href="index.html"><img src="assets/img/footer-logo.webp" alt="logo">
+            <p class="footer__logo-text">since 2015</p></a>
+          <div class="footer__navigation">
+            <div class="footer__navigation-block footer-block"><a class="footer__navigation-item" href="#">Каталог</a><a class="footer__navigation-item" href="#">Качество</a><a class="footer__navigation-item" href="#">Производство</a></div>
+            <div class="footer__navigation-block footer-block"><a class="footer__navigation-item" href="#">Отзывы</a><a class="footer__navigation-item" href="#">Вопрос-ответ</a><a class="footer__navigation-item" href="#">Контакты</a></div>
+          </div>
+          <d class="footer-block footer__contacts-block"><a class="web-site" href="#">info@site.com</a>
+            <div class="footer__contacts"><a class="phone footer__contacts-phone" href="tel:88003503745">8 800 350-37-45</a>
+              <button class="phone-button">Заказать звонок</button>
+            </div>
+          </d>
         </div>
         <div class="footer__info">
-          <p class="footer__info-item">2005 - 2020. шью, Все права защищены</p>
-          <p class="footer__info-item">Политика конфиденциальности</p>
-          <p class="footer__info-item">Нижний Новгород,  Московское шоссе, 105 стр. 2</p>
-          <p class="footer__info-item">Сделано в <a class="href footer__link" href="#">riverstart</a></p>
+          <div class="footer-block footer__info-block footer__info-block--left">
+            <p class="footer__info-item">2005 - 2020. шью, Все права защищены</p>
+            <p class="footer__info-item">Политика конфиденциальности</p>
+          </div>
+          <div class="footer-block footer__info-block footer__info-block--right">
+            <p class="footer__info-item">Нижний Новгород,  Московское шоссе, 105 стр. 2</p>
+            <p class="footer__info-item">Сделано в <a class="href footer__link" href="#">riverstart</a></p>
+          </div>
         </div>
       </div>
     </footer>
