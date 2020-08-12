@@ -3,9 +3,15 @@ section.feedback
     .swiper-wrapper.feedback__swiper-wrapper
       .swiper-slide.feedback__swiper-slide
         .feedback__card
+          .feedback__card-decoration.feedback__card-decoration--top
           .feedback__user
             .feedback__user-photo
-              img(src='assets/img/feedback/user-photo1.webp', alt="user-photo").feedback__user-img
+               picture
+                <source type="image/webp" media="(max-width: 767px)" srcset="assets/img/feedback/user-photo1.webp">
+                <source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/feedback/user-photo1.jpg">
+                <source type="image/webp" media="(min-width: 768px)" srcset="assets/img/feedback/user-photo1-md.webp">
+                <source type="image/jpg" media="(min-width: 768px)" srcset="assets/img/feedback/user-photo1-md.jpg">
+                img(src="assets/img/feedback/user-photo1.webp", alt="client-1").feedback__user-img
             div
               strong.feedback__user-name Андрей Степанов
               span.feedback__user-job Директор сети ретсоранов “Сулугуни”
@@ -13,9 +19,15 @@ section.feedback
           span.feedback__card-date 23.02.2020
       .swiper-slide.feedback__swiper-slide
         .feedback__card
+          .feedback__card-decoration.feedback__card-decoration--top
           .feedback__user
             .feedback__user-photo
-              img(src='assets/img/feedback/user-photo1.webp', alt="user-photo").feedback__user-img
+               picture
+                <source type="image/webp" media="(max-width: 767px)" srcset="assets/img/feedback/user-photo1.webp">
+                <source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/feedback/user-photo1.jpg">
+                <source type="image/webp" media="(min-width: 768px)" srcset="assets/img/feedback/user-photo1-md.webp">
+                <source type="image/jpg" media="(min-width: 768px)" srcset="assets/img/feedback/user-photo1-md.jpg">
+                img(src="assets/img/feedback/user-photo1.webp", alt="client-1").feedback__user-img
             div
               strong.feedback__user-name Андрей Степанов
               span.feedback__user-job Директор сети ретсоранов “Сулугуни”
@@ -23,9 +35,15 @@ section.feedback
           span.feedback__card-date 23.02.2020
       .swiper-slide.feedback__swiper-slide
         .feedback__card
+          .feedback__card-decoration.feedback__card-decoration--top
           .feedback__user
             .feedback__user-photo
-              img(src='assets/img/feedback/user-photo1.webp', alt="user-photo").feedback__user-img
+               picture
+                <source type="image/webp" media="(max-width: 767px)" srcset="assets/img/feedback/user-photo1.webp">
+                <source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/feedback/user-photo1.jpg">
+                <source type="image/webp" media="(min-width: 768px)" srcset="assets/img/feedback/user-photo1-md.webp">
+                <source type="image/jpg" media="(min-width: 768px)" srcset="assets/img/feedback/user-photo1-md.jpg">
+                img(src="assets/img/feedback/user-photo1.webp", alt="client-1").feedback__user-img
             div
               strong.feedback__user-name Андрей Степанов
               span.feedback__user-job Директор сети ретсоранов “Сулугуни”

@@ -1356,11 +1356,14 @@ img {
       opacity: 0.3;
       align-self: flex-end;
       margin-right: 28px; }
-    .feedback__card::after {
-      content: url("../img/feedback/feedback-decoration.svg");
+    .feedback__card-decoration {
       position: absolute;
-      right: 0;
-      top: -33px; }
+      width: 150px;
+      height: 50px;
+      background: url("../img/feedback/feedback-decoration.svg") no-repeat center; }
+      .feedback__card-decoration--top {
+        right: -17px;
+        top: -33px; }
 
 .feedback__swiper-button-next {
   top: 257px !important;
@@ -1807,7 +1810,8 @@ img {
       right: -31px; }
   .carousels__title {
     font-size: 20px;
-    line-height: 25px; }
+    line-height: 25px;
+    margin-bottom: 41px; }
   .photos {
     margin-bottom: 53px; }
   .benefits__swiper-slide {
@@ -2049,80 +2053,129 @@ img {
       content: '' !important; }
   .instruction {
     background: #E4E4E4 url(../img/instruction/instruction-bg-md.webp) no-repeat center; }
+    .instruction__container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center; }
     .instruction__block {
-      padding-bottom: 120px;
+      padding-top: 114px;
       background-size: 100%; }
     .instruction__title {
       font-size: 60px;
       line-height: 70px;
       max-width: 589px;
       padding-left: 55px;
-      padding-right: 55px;
+      padding-right: 82px;
+      margin-left: -45px;
       padding-top: 54px;
       padding-bottom: 54px;
       margin-left: auto;
-      margin-right: auto; }
-    .instruction__card-title {
-      font-size: 21px;
-      line-height: 28px;
-      width: 423px; }
-    .instruction__card-item {
+      margin-right: auto;
+      margin-bottom: 64px; }
+    .instruction__card {
+      margin-left: -105px;
+      padding-bottom: 470px; }
+      .instruction__card-title {
+        font-size: 21px;
+        line-height: 28px;
+        width: 423px;
+        margin-bottom: 30px; }
+      .instruction__card-item {
+        font-size: 20px;
+        line-height: 26px;
+        width: 356px;
+        margin-bottom: 14px;
+        max-height: 27px; }
+        .instruction__card-item::before {
+          width: 6px;
+          height: 6px; }
+  .clients {
+    padding-bottom: 232px;
+    padding-top: 87px;
+    margin-bottom: -11px; }
+    .clients__swiper-container {
+      display: none; }
+    .clients__swiper-pagination {
+      display: none; }
+    .clients__swiper-button-next::after, .clients__swiper-button-prev::after {
+      content: '' !important; }
+    .clients__description {
+      font-size: 30px;
+      line-height: 40px;
+      width: 690px;
+      margin-bottom: 84px; }
+    .clients__block {
+      position: relative;
+      font-family: 'Century Gothic Bold';
+      font-size: 54px;
+      letter-spacing: -0.04em;
+      line-height: 80px; }
+      .clients__block-text {
+        margin-left: 22px;
+        width: 724px; }
+      .clients__block-name {
+        text-transform: uppercase;
+        text-decoration: underline;
+        cursor: pointer; }
+        .clients__block-name:hover ~ .clients__block::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background: #000; }
+    .clients__block {
+      display: block; }
+  .feedback {
+    padding-bottom: 126px; }
+    .feedback__card {
+      width: 416px;
+      padding-left: 31px;
+      padding-right: 24px;
+      padding-top: 25px;
+      padding-bottom: 25px; }
+      .feedback__card-text {
+        font-size: 14px;
+        line-height: 20px;
+        width: 350px;
+        margin-top: 20px;
+        margin-left: -3px; }
+      .feedback__card-date {
+        font-size: 12px;
+        line-height: 22px;
+        margin-top: 8px;
+        right: -21px; }
+      .feedback__card-decoration {
+        background: url("../img/feedback/feedback-decoration-md.svg") no-repeat center;
+        height: 70px;
+        width: 200px; }
+        .feedback__card-decoration--top {
+          right: -39px; }
+        .feedback__card-decoration--bottom {
+          left: -37px;
+          top: 179px; }
+    .feedback__user-name {
       font-size: 20px;
-      line-height: 26px;
-      width: 356px; }
-      .instruction__card-item::before {
-        width: 6px;
-        height: 6px; }
-  .clients__swiper-container {
-    display: none; }
-  .clients__swiper-pagination {
-    display: none; }
-  .clients__swiper-button-next::after, .clients__swiper-button-prev::after {
-    content: '' !important; }
-  .clients__description {
-    font-size: 30px;
-    line-height: 40px;
-    width: 690px; }
-  .clients__block {
-    position: relative;
-    font-family: 'Century Gothic Bold';
-    font-size: 54px;
-    letter-spacing: -0.04em;
-    line-height: 80px; }
-    .clients__block-text {
-      margin-left: 22px;
-      width: 724px; }
-    .clients__block-name {
-      text-transform: uppercase;
-      text-decoration: underline;
-      cursor: pointer; }
-      .clients__block-name:hover ~ .clients__block::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background: #000; }
-  .clients__block {
-    display: block; }
-  .feedback__card {
-    width: 416px; }
-    .feedback__card-text {
+      line-height: 32px; }
+    .feedback__user-job {
       font-size: 14px;
-      line-height: 20px;
-      width: 316px; }
-    .feedback__card-date {
-      font-size: 12px;
       line-height: 22px; }
-  .feedback__user-name {
-    font-size: 20px;
-    line-height: 32px; }
-  .feedback__user-job {
-    font-size: 14px;
-    line-height: 22px; }
+    .feedback__user-img {
+      margin-right: 16px; }
   .feedback__swiper-button-next, .feedback__swiper-button-prev {
     top: 240px !important; }
+  .feedback__swiper-button-next:after {
+    content: url("../img/feedback/arrow-next-md.svg") !important;
+    right: -21px; }
+  .feedback__swiper-button-prev:after {
+    content: url("../img/feedback/arrow-prev-md.svg") !important;
+    left: -12px; }
+  .feedback__swiper-pagination {
+    bottom: -3px !important; }
+    .feedback__swiper-pagination .swiper-pagination-bullet {
+      width: 81px !important; }
   .banner2__wrap {
     width: 3000px;
     margin-bottom: 60px; }
