@@ -58,9 +58,9 @@
     &-title {
       @include font(25px, -0.05em, 25px);
       text-transform: uppercase;
-      width: 240px;
+      width: 280px;
       margin-left: 24px;
-      margin-bottom: 42px;
+      margin-bottom: 27px;
     }
     &-description {
       @include font(12px, -0.01em, 18px);
@@ -75,6 +75,16 @@
       @include font(12px, 0.2em, 28px);
       color: #000000;
       text-transform: uppercase;
+    }
+    &-button {
+      font-size: 10px;
+      line-height: 20px;
+      padding: 10px 32px;
+      margin-left: 24px;
+    }
+    &-companies {
+      margin-left: 24px;
+      margin-bottom: 19px;
     }
   }
 }

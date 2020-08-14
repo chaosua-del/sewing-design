@@ -260,26 +260,43 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // clients hovers
-    let place = document.getElementsByClassName('clients__block-name');
+    let place = document.querySelectorAll('.clients__block-name');
     let clientsDimm = document.querySelector('.clients__dimmed');
     let clientsPhoto = document.querySelector('.clients__dimmed-photo');
 
-    for (i = 0; i < place.length; i++) {
-        place[i].onmouseover = function () {
+    console.log(place);
+    place.forEach(element => {
+        console.log(element);
+        element.onmouseover = function () {
+            console.log(element);
+            let placeOffset = element.getBoundingClientRect().top;
+            let html = `<img src="assets/img/clients/poke-room.webp" />`;
+            clientsPhoto.innerHTML = html;
+            let clientsDimmOffset = clientsDimm.getBoundingClientRect().top;
+            let offset = placeOffset - clientsDimmOffset;
+            if (offset < clientsDimm.offsetHeight / 2) {
+                clientsPhoto.style.top = offset - 300 + 'px';
+            }
+            else {
+                clientsPhoto.style.top = offset - 900 + 'px';
+            }
+            clientsPhoto.style.opacity = '1';
             this.style.zIndex = '20';
             clientsDimm.style.zIndex = '19';
             clientsDimm.style.opacity = '1';
-            let html = `<img src="assets/img/clients/poke-room.webp" />`;
-            clientsPhoto.innerHTML = html;
             // clientsDimm.style.height = '100%';
         };
-        place[i].onmouseleave = function () {
-            clientsDimm.style.opacity = '0';
-            clientsDimm.style.zIndex = '-1';
+        element.onmouseleave = function () {
+            // clientsDimm.style.opacity = '0';
+            clientsDimm.style.zIndex = '0';
             this.style.zIndex = '0';
+            clientsPhoto.style.opacity = '0';
             // clientsDimm.style.height = '0';
         };
-    }
+    });
+    // for (i = 0; i < place.length; i++) {
+
+    // }
 
     // модалка
     const popupButton = document.querySelector('.uniforms__button');

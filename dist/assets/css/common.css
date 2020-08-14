@@ -1117,9 +1117,9 @@ img {
       letter-spacing: -0.05em;
       line-height: 25px;
       text-transform: uppercase;
-      width: 240px;
+      width: 280px;
       margin-left: 24px;
-      margin-bottom: 42px; }
+      margin-bottom: 27px; }
     .stages__card-description {
       font-family: 'Century Gothic Bold';
       font-size: 12px;
@@ -1138,6 +1138,14 @@ img {
       line-height: 28px;
       color: #000000;
       text-transform: uppercase; }
+    .stages__card-button {
+      font-size: 10px;
+      line-height: 20px;
+      padding: 10px 32px;
+      margin-left: 24px; }
+    .stages__card-companies {
+      margin-left: 24px;
+      margin-bottom: 19px; }
 
 .swiper-pagination-bullet {
   width: 50px !important;
@@ -1262,16 +1270,18 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0;
+    opacity: 1;
     z-index: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.85);
     transition: opacity 0.1s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center; }
     .clients__dimmed-photo {
       width: 694px;
-      height: 405px; }
+      height: 405px;
+      opacity: 0;
+      transition: opacity 0.1s ease-in; }
   .clients__block {
     display: none; }
 
@@ -1882,8 +1892,7 @@ img {
   .banner__wrap {
     width: 3100px;
     padding-top: 43px;
-    padding-bottom: 45px;
-    margin-top: 52px; }
+    padding-bottom: 45px; }
   .banner__title {
     font-size: 50px;
     line-height: 75px; }
@@ -2058,6 +2067,8 @@ img {
     .stages__swiper-container {
       max-width: 768px;
       margin: 0 auto; }
+    .stages__swiper-pagination {
+      display: none !important; }
     .stages__swiper-wrapper {
       padding-bottom: 0; }
     .stages__title {
@@ -2083,7 +2094,7 @@ img {
         margin-top: 27px;
         font-size: 50px;
         line-height: 45px;
-        width: 480px; }
+        width: 562px; }
       .stages__card-description {
         font-size: 14px;
         line-height: 18px;
@@ -2099,6 +2110,15 @@ img {
         position: absolute;
         bottom: 49px;
         left: 20px; }
+      .stages__card-button {
+        font-size: 14px;
+        background: transparent;
+        border: 2px solid rgba(0, 0, 0, 0.1);
+        color: #1E1E1E;
+        padding-top: 17px;
+        padding-bottom: 14px;
+        padding-left: 37px;
+        padding-right: 37px; }
     .stages__swiper-button-next::after, .stages__swiper-button-prev::after {
       content: '' !important; }
   .instruction {
@@ -2155,30 +2175,22 @@ img {
       width: 690px;
       margin-bottom: 84px; }
     .clients__block {
+      display: block;
       position: relative;
       font-family: 'Century Gothic Bold';
       font-size: 54px;
       letter-spacing: -0.04em;
       line-height: 80px; }
       .clients__block-text {
-        margin-left: 22px;
-        width: 724px; }
+        margin-left: 22px; }
       .clients__block-name {
         text-transform: uppercase;
         text-decoration: underline;
         cursor: pointer; }
-        .clients__block-name:hover ~ .clients__block::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          right: 0;
-          width: 100%;
-          height: 100%;
-          background: #000; }
-    .clients__block {
-      display: block; }
   .feedback {
-    padding-bottom: 126px; }
+    padding-bottom: 106px; }
+    .feedback__swiper-wrapper {
+      padding-bottom: 20px; }
     .feedback__card {
       width: 416px;
       padding-left: 31px;
@@ -2214,15 +2226,15 @@ img {
     .feedback__user-img {
       margin-right: 16px; }
   .feedback__swiper-button-next, .feedback__swiper-button-prev {
-    top: 240px !important; }
+    top: 291px !important; }
   .feedback__swiper-button-next:after {
     content: url("../img/feedback/arrow-next-md.svg") !important;
-    right: -21px; }
+    right: -17px; }
   .feedback__swiper-button-prev:after {
     content: url("../img/feedback/arrow-prev-md.svg") !important;
-    left: -12px; }
+    left: -7px; }
   .feedback__swiper-pagination {
-    bottom: -3px !important; }
+    bottom: 12px !important; }
     .feedback__swiper-pagination .swiper-pagination-bullet {
       width: 81px !important; }
   .banner2__wrap {

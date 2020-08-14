@@ -175,7 +175,7 @@
       width: 3100px;
       padding-top: 43px;
       padding-bottom: 45px;
-      margin-top: 52px;
+      // margin-top: 52px;
     }
     &__title {
      font-size: 50px;
@@ -418,6 +418,9 @@
       max-width: 768px;
       margin: 0 auto;
     }
+    &__swiper-pagination {
+      display: none !important;
+    }
     &__swiper-wrapper {
       padding-bottom: 0;
     }
@@ -448,7 +451,7 @@
         margin-top: 27px;
         font-size: 50px;
         line-height: 45px;
-        width: 480px;
+        width: 562px;
       }
       &-description {
         font-size: 14px;
@@ -469,6 +472,16 @@
           bottom: 49px;
           left: 20px;
         }
+      }
+      &-button {
+        font-size: 14px;
+        background: transparent;
+        border: 2px solid rgba(0, 0, 0, 0.1);
+        color: $color-base;
+        padding-top: 17px;
+        padding-bottom: 14px;
+        padding-left: 37px;
+        padding-right: 37px;
       }
     }
     &__swiper-button-next::after, &__swiper-button-prev::after {
@@ -547,35 +560,28 @@
       margin-bottom: 84px;
     }
     &__block {
+      display: block;
       position: relative;
       @include font(54px, -0.04em, 80px);
       &-text {
         margin-left: 22px;
-        width: 724px;
+        // width: 724px;
       }
       &-name {
         text-transform: uppercase;
         text-decoration: underline;
         cursor: pointer;
-        &:hover ~ .clients__block::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          right: 0;
-          width: 100%;
-          height: 100%;
-          background: #000;
-        }
+
       }
-    }
-    &__block {
-      display: block;
     }
   }
 
   // feedback
   .feedback {
-    padding-bottom: 126px;
+    padding-bottom: 106px;
+    &__swiper-wrapper {
+      padding-bottom: 20px;
+    }
     &__card {
       width: 416px;
       padding-left: 31px;
@@ -623,21 +629,21 @@
     }
   }
   .feedback__swiper-button-next, .feedback__swiper-button-prev {
-    top: 240px !important;
+    top: 291px !important;
   }
 
   .feedback__swiper-button-next:after {
     content: url('../img/feedback/arrow-next-md.svg') !important;
-    right: -21px;
+    right: -17px;
   }
 
   .feedback__swiper-button-prev:after {
     content: url('../img/feedback/arrow-prev-md.svg') !important;
-    left: -12px;
+    left: -7px;
   }
 
   .feedback__swiper-pagination {
-    bottom: -3px !important;
+    bottom: 12px !important;
     .swiper-pagination-bullet {
       width: 81px !important;
     }

@@ -38,6 +38,16 @@ export default function () {
       // centerInsufficientSlides: 'true'
     });
 
+    const clients = new Swiper('.clients__swiper-container', {
+      slidesPerView: 'auto',
+      pagination: {
+        el: '.clients__swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.clients__swiper-button-next',
+        prevEl: '.clients__swiper-button-prev',
+      },
+    });
 
     const stages = new Swiper('.stages__swiper-container', {
       parallax: true,
@@ -51,16 +61,7 @@ export default function () {
       },
     });
 
-    const feedback = new Swiper('.feedback__swiper-container', {
-      centeredSlides: true,
-      pagination: {
-        el: '.feedback__swiper-pagination',
-      },
-      navigation: {
-        nextEl: '.feedback__swiper-button-next',
-        prevEl: '.feedback__swiper-button-prev',
-      },
-    });
+
   }
   else {
     const stages = new Swiper('.stages__swiper-container', {
@@ -70,30 +71,7 @@ export default function () {
       parallax: true,
       slidesPerView: 1,
     });
-
-    const feedback = new Swiper('.feedback__swiper-container', {
-      centeredSlides: true,
-      pagination: {
-        el: '.feedback__swiper-pagination',
-      },
-      navigation: {
-        nextEl: '.feedback__swiper-button-next',
-        prevEl: '.feedback__swiper-button-prev',
-      },
-    });
   }
-
-  const clients = new Swiper('.clients__swiper-container', {
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.clients__swiper-pagination',
-    },
-    navigation: {
-      nextEl: '.clients__swiper-button-next',
-      prevEl: '.clients__swiper-button-prev',
-    },
-  });
-
 
 
   // expand menu
@@ -117,8 +95,42 @@ export default function () {
       }
     });
   }
+
+  const feedback = new Swiper('.feedback__swiper-container', {
+    slidesPerView: 1.2,
+    loop: true,
+    // updateOnWindowResize: false,
+    spaceBetween: 10,
+    slidesOffsetBefore: 20,
+
+    pagination: {
+      el: '.feedback__swiper-pagination',
+    },
+    navigation: {
+      nextEl: '.feedback__swiper-button-next',
+      prevEl: '.feedback__swiper-button-prev',
+    },
+    breakpoints: {
+      420: {
+        slidesOffsetAfter: 100,
+        slidesPerView: 1.5,
+        spaceBetween: 10,
+        slidesOffsetBefore: 50,
+      },
+      520: {
+        slidesPerView: 2,
+      },
+      650: {
+        slidesOffsetBefore: 0
+      },
+      768: {
+        slidesPerView: 1.7,
+        slidesOffsetAfter: 200,
+      },
+      920: {
+        slidesPerView: 2
+      }
+    }
+  });
+
 }
-
-
-
-
