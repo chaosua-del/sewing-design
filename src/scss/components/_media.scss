@@ -43,6 +43,13 @@
   .form {
    &__input {
     font-size: 14px;
+    flex-basis: 49%;
+    &--text {
+      flex-basis: 100%;
+    }
+    &::placeholder {
+      font-size: 14px;
+    }
      &--text {
           padding-top: 18px;
           margin-bottom: 17px;
@@ -133,6 +140,21 @@
       &-subtitle {
         max-width: 180px;
       }
+      &-number {
+        margin-right: 9px;
+      }
+    }
+  }
+
+  .benefits2 {
+    &__card {
+      padding-left: 37px;
+      &--left {
+        padding-right: 63px;    
+      }
+      &--middle {
+        padding-right: 57px;
+      }
     }
   }
 
@@ -153,6 +175,12 @@
     &__title {
      font-size: 50px;
      line-height: 75px;
+    }
+  }
+
+  .banner2 {
+    &__text {
+      margin-top: 13px;
     }
   }
 
@@ -286,12 +314,6 @@
       // font-size: 14px;
       flex-wrap: wrap;
       justify-content: space-between;
-      &-input {
-        flex-basis: 49%;
-        &::placeholder {
-          font-size: 14px;
-        }
-      }
     } 
     &__policy {
       font-size: 12px;
@@ -471,7 +493,6 @@
       margin-left: -45px;
       padding-top: 54px;
       padding-bottom: 54px;
-      margin-left: auto;
       margin-right: auto;
       margin-bottom: 64px;
     }
@@ -646,6 +667,15 @@
 
   // office
   .office {
+     &__container {
+      padding-top: 58px;
+      padding-left: 68px;
+      &::before {
+        content: url(../img/decoration-line-md.svg);
+        top: -80px;
+        right: -60%;
+      }
+    }
     &__title {
       font-size: 30px;
       line-height: 37px;
@@ -655,10 +685,21 @@
       font-size: 14px;
       line-height: 20px;
       max-width: 389px;
+      margin-bottom: 105px;
+      width: 389px;
     }
-    &__location, &__phone, &__site, &__schedule {
+    &__location, &__phone, &__site {
       font-size: 20px;
       line-height: 28px;
+    }
+    &__schedule {
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 5px;
+    }
+    &__location {
+      max-width: none;
+      width: 306px;
     }
     &__map {
       height: 716px;
@@ -667,6 +708,10 @@
 
   // footer 
   .footer {
+   &__container {
+     padding-top: 35px;
+     padding-bottom: 20px;
+   }
    &__logo {
      order: 1;
      display: flex;
@@ -684,6 +729,7 @@
      justify-content: space-between;
      width: 768px;
      padding: 0 18px;
+     margin-bottom: 51px;
    }
    &__contacts {
      align-items: flex-end;
@@ -722,5 +768,32 @@
       }
    }
   }
-}
 
+  // questions 
+  .questions {
+    &__container {
+      padding-left: 18px;
+      padding-right: 23px;
+      padding-bottom: 67px;
+    }
+  }
+
+  .collapsible {
+    margin-bottom: 44px;
+    &::after {
+      top: -6px;
+      right: -4px;
+      font-size: 33px;
+    }
+  }
+
+  // design2
+  .design2 {
+    .form__input--text {
+      padding-bottom: 104px;
+    }
+  }
+
+
+
+}
