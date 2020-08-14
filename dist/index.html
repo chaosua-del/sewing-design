@@ -543,20 +543,20 @@
         <div class="button popup__button">Получить каталог</div>
         <h2 class="popup__title">Униформа от&nbsp;производителя</h2>
       </div>
-      <div class="swiper-container benefits2__swiper-container">
-        <div class="swiper-wrapper benefits__swiper-wrapper">
+      <div class="swiper-container popup__swiper-container">
+        <div class="swiper-wrapper popup__swiper-wrapper">
           <div class="swiper-slide popup__swiper-slide">
-            <div class="benefits__card benefits__card--left">
-              <h3 class="popup__card-title">Индивидуальный дизайн и пошив под&nbsp;вашу компанию</h3>
-              <p class="popup__card-subtitle">благодаря собственному производству</p>
+            <div class="pluses popup__pluses pluses--left">
+              <h3 class="pluses__title">Индивидуальный дизайн и пошив под&nbsp;вашу компанию</h3>
+              <p class="pluses__subtitle">благодаря собственному производству</p>
             </div>
-            <div class="benefits__card benefits__card">
-              <h3 class="popup__card-title">Цены на 20%<br>ниже<br>рыночных</h3>
-              <p class="popup__card-subtitle">от фартуков до арбрендов и головных уборов</p>
+            <div class="pluses popup__pluses pluses--middle">
+              <h3 class="pluses__title">Цены на 20%<br>ниже<br>рыночных</h3>
+              <p class="pluses__subtitle">от фартуков до арбрендов и головных уборов</p>
             </div>
-            <div class="benefits__card benefits__card--right">
-              <h3 class="popup__card-title">Возможен срочный пошив за 1-2 дня</h3>
-              <p class="popup__card-subtitle">на японском оборудовании Tajima</p>
+            <div class="pluses popup__pluses pluses--right">
+              <h3 class="pluses__title">Возможен срочный пошив за&nbsp;1-2 дня</h3>
+              <p class="pluses__subtitle">на японском оборудовании Tajima</p>
             </div>
           </div>
         </div>
@@ -580,7 +580,7 @@
             <picture><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/popup/model-green.webp">
 <source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/popup/model-green.jpg"><img src="assets/img/popup/model-green.webp" alt="model-green">
             </picture>
-            <div class="popup__model-price">3080 </div>
+            <div class="popup__model-price">3 080 </div>
           </div>
           <div class="popup__model-name">Фартук черный короткий</div>
         </div>
@@ -589,7 +589,7 @@
             <picture><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/popup/model-56.webp">
 <source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/popup/model-56.jpg"><img src="assets/img/popup/model-56.webp" alt="model-56">
             </picture>
-            <div class="popup__model-price">4080 </div>
+            <div class="popup__model-price">4 080 </div>
           </div>
           <div class="popup__model-name">Фартук №56</div>
         </div>
@@ -606,7 +606,9 @@
           <div class="swiper-slide"> 
             <div class="sliderModel__uniform">
               <picture><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/popup/slider-model-blue.webp">
-<source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/popup/slider-model-blue.jpg"><img src="assets/img/popup/slider-model-blue.webp" alt="uniform-blue">
+<source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/popup/slider-model-blue.jpg">
+<source type="image/webp" media="(min-width: 768px)" srcset="assets/img/popup/slider-model-blue-md.webp">
+<source type="image/jpg" media="(min-width: 768px)" srcset="assets/img/popup/slider-model-blue-md.jpg"><img src="assets/img/popup/slider-model-blue.webp" alt="uniform-blue">
               </picture>
             </div>
           </div>
@@ -633,19 +635,20 @@
         <div class="popup__title popup__title--big">Полный каталог моделей у вас на&nbsp;почте за 3 минуты  </div>
         <button class="button popup__button popup__button--rounded">Дизайн  в подарок</button>
         <p class="popup__description popup__description--big">Укажите свои контактные данные для скачивания каталога моделей для персонала ресторанов, кафе, пабов и фудкортов с ценами.</p>
-        <form class="form popup__form" action="#"></form>
-        <input class="form__input popup__input" type="text" placeholder="Как вас зовут?">
-        <input class="form__input popup__input" type="text" placeholder="Номер телефона">
-        <div class="form__policy-wrap">
-          <input class="form__checkbox" type="checkbox" id="policy-checkbox">
-          <label class="form__policy" for="policy-checkbox">Ознакомлен с политикой конфиденциальности</label>
-        </div>
-        <div class="button-wrap">
-          <button class="button form-button popup__form-button" type="submit">Скачать полный каталог</button>
-          <div class="button-label popup__button-label"> 
-            <p class="button-labelText">free</p>
+        <form class="form popup__form" action="#">
+          <input class="form__input popup__input" type="text" placeholder="Как вас зовут?">
+          <input class="form__input popup__input" type="text" placeholder="Номер телефона">
+          <div class="form__policy-wrap">
+            <input class="form__checkbox" type="checkbox" id="policy-checkbox">
+            <label class="form__policy" for="policy-checkbox">Ознакомлен с политикой конфиденциальности</label>
           </div>
-        </div>
+          <div class="button-wrap">
+            <button class="button form-button popup__form-button" type="submit">Скачать полный каталог</button>
+            <div class="button-label popup__button-label"> 
+              <p class="button-labelText">free</p>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
     <link rel="stylesheet" href="assets/css/common.css?v=1.1.1">

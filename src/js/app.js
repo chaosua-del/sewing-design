@@ -7,6 +7,8 @@ import forms from 'forms';
 import sliders from 'sliders';
 import { myMap } from 'map';
 
+import Swiper from 'swiper/js/swiper.js';
+
 let app = {
 
     // параметры, изменяемые в appConfig
@@ -306,15 +308,22 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         });
 
-        const sliderPopup = new Swiper('.popup__swiper-container', {
-            pagination: {
-                el: '.popup__swiper-pagination',
-            },
-            navigation: {
-                nextEl: '.popup__swiper-button-next',
-                prevEl: '.popup__swiper-button-prev',
-            },
-        });
+        if (window.innerWidth < 768) {
+            const sliderPopup = new Swiper('.popup__swiper-container', {
+                freeMode: false,
+                loop: false,
+                slidesPerView: 'auto',
+                spaceBetween: 0,
+                pagination: {
+                    el: '.popup__swiper-pagination',
+                },
+                navigation: {
+                    nextEl: '.popup__swiper-button-next',
+                    prevEl: '.popup__swiper-button-prev',
+                },
+            });
+        }
+
     });
 
     popupClose.addEventListener('click', function () {

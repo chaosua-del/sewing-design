@@ -18,6 +18,7 @@ export default function () {
     loop: true,
   });
 
+
   if (window.innerWidth < 768) {
     const benefits = new Swiper('.benefits__swiper-container', {
       slidesPerView: 'auto',
@@ -36,6 +37,7 @@ export default function () {
       slidesOffsetAfter: 0,
       // centerInsufficientSlides: 'true'
     });
+
 
     const stages = new Swiper('.stages__swiper-container', {
       parallax: true,

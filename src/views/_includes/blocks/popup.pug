@@ -4,22 +4,22 @@
     .button.popup__button Получить каталог
     h2.popup__title Униформа от&nbsp;производителя
 
-  .swiper-container.benefits2__swiper-container
-    .swiper-wrapper.benefits__swiper-wrapper
+  .swiper-container.popup__swiper-container
+    .swiper-wrapper.popup__swiper-wrapper
       .swiper-slide.popup__swiper-slide
-        .benefits__card.benefits__card--left
-          h3.popup__card-title Индивидуальный дизайн и пошив под&nbsp;вашу компанию
-          p.popup__card-subtitle благодаря собственному производству
-        .benefits__card.benefits__card
-          h3.popup__card-title Цены на 20%
+        .pluses.popup__pluses.pluses--left
+          h3.pluses__title Индивидуальный дизайн и пошив под&nbsp;вашу компанию
+          p.pluses__subtitle благодаря собственному производству
+        .pluses.popup__pluses.pluses--middle
+          h3.pluses__title Цены на 20%
               br
               | ниже
               br
               | рыночных
-          p.popup__card-subtitle от фартуков до арбрендов и головных уборов
-        .benefits__card.benefits__card--right
-          h3.popup__card-title Возможен срочный пошив за 1-2 дня
-          p.popup__card-subtitle на японском оборудовании Tajima
+          p.pluses__subtitle от фартуков до арбрендов и головных уборов
+        .pluses.popup__pluses.pluses--right
+          h3.pluses__title Возможен срочный пошив за&nbsp;1-2 дня
+          p.pluses__subtitle на японском оборудовании Tajima
 
   .container.popup__container 
     h2.popup__title.popup__title--lower Некоторые модели
@@ -40,7 +40,7 @@
           <source type="image/webp" media="(max-width: 767px)" srcset="assets/img/popup/model-green.webp">
           <source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/popup/model-green.jpg">
           img(src="assets/img/popup/model-green.webp", alt="model-green")
-        .popup__model-price 3080 
+        .popup__model-price 3 080 
       .popup__model-name Фартук черный короткий
     .popup__model
       .popup__model-img
@@ -48,7 +48,7 @@
           <source type="image/webp" media="(max-width: 767px)" srcset="assets/img/popup/model-56.webp">
           <source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/popup/model-56.jpg">
           img(src="assets/img/popup/model-56.webp", alt="model-56")
-        .popup__model-price 4080 
+        .popup__model-price 4 080 
       .popup__model-name Фартук №56
     .popup__model
       .popup__model-img
@@ -65,6 +65,8 @@
           picture
             <source type="image/webp" media="(max-width: 767px)" srcset="assets/img/popup/slider-model-blue.webp">
             <source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/popup/slider-model-blue.jpg">
+            <source type="image/webp" media="(min-width: 768px)" srcset="assets/img/popup/slider-model-blue-md.webp">
+            <source type="image/jpg" media="(min-width: 768px)" srcset="assets/img/popup/slider-model-blue-md.jpg">
             img(src="assets/img/popup/slider-model-blue.webp", alt="uniform-blue")
       .swiper-slide 
         .sliderModel__uniform
@@ -88,15 +90,15 @@
     p.popup__description.popup__description--big Укажите свои контактные данные для скачивания каталога моделей для персонала ресторанов, кафе, пабов и фудкортов с ценами.
 
     form.form(action="#").popup__form
-    input.form__input.popup__input(type="text", placeholder="Как вас зовут?")
-    input.form__input.popup__input(type="text", placeholder="Номер телефона")
-    .form__policy-wrap
-      input.form__checkbox(type="checkbox", id="policy-checkbox") 
-      label.form__policy(for="policy-checkbox") Ознакомлен с политикой конфиденциальности
-    .button-wrap
-      button.button(type="submit").form-button.popup__form-button Скачать полный каталог
-      .button-label.popup__button-label 
-        p.button-labelText free
+      input.form__input.popup__input(type="text", placeholder="Как вас зовут?")
+      input.form__input.popup__input(type="text", placeholder="Номер телефона")
+      .form__policy-wrap
+        input.form__checkbox(type="checkbox", id="policy-checkbox") 
+        label.form__policy(for="policy-checkbox") Ознакомлен с политикой конфиденциальности
+      .button-wrap
+        button.button(type="submit").form-button.popup__form-button Скачать полный каталог
+        .button-label.popup__button-label 
+          p.button-labelText free
 
  
     
