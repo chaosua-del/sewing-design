@@ -183,51 +183,51 @@ sliders();
 
 
 // позиционирование кнопок в блоке model
-const block = document.querySelector('.model__buttons');
-let count = 0;
-let i;
+// const block = document.querySelector('.model__buttons');
+// let count = 0;
+// let i;
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    for (i = 320; i < 768; i += 10) {
-        count = (i - 320) / 10;
-        if (i < 450) {
-            // console.log(count);
-            block.style.right = count + '%';
-        }
-        else if (i >= 450 && i < 570) {
-            block.style.right = count / 2 + '%';
-        }
-        else if (i >= 570 && i < 640) {
-            block.style.right = count / 2.3 + '%';
-        }
-        else if (i >= 640 && i < 768) {
-            block.style.right = count / 2.5 + '%';
-        }
-    }
+    // for (i = 320; i < 768; i += 10) {
+    //     count = (i - 320) / 10;
+    //     if (i < 450) {
+    //         // console.log(count);
+    //         block.style.right = count + '%';
+    //     }
+    //     else if (i >= 450 && i < 570) {
+    //         block.style.right = count / 2 + '%';
+    //     }
+    //     else if (i >= 570 && i < 640) {
+    //         block.style.right = count / 2.3 + '%';
+    //     }
+    //     else if (i >= 640 && i < 768) {
+    //         block.style.right = count / 2.5 + '%';
+    //     }
+    // }
 
 
-    function reportWindowSize() {
+    // function reportWindowSize() {
 
-        for (i = 320; i < 768; i += 10) {
-            count = (i - 320) / 10;
-            if (i === window.innerWidth && i < 450) {
-                // console.log(count);
-                block.style.right = count + '%';
-            }
-            else if (i === window.innerWidth && i >= 450 && i < 570) {
-                block.style.right = count / 1.5 + '%';
-            }
-            else if (i === window.innerWidth && i >= 570 && i < 640) {
-                block.style.right = count / 1.7 + '%';
-            }
-            else if (i === window.innerWidth && i >= 640 && i < 768) {
-                block.style.right = count / 2 + '%';
-            }
-        }
-    }
+    //     for (i = 320; i < 768; i += 10) {
+    //         count = (i - 320) / 10;
+    //         if (i === window.innerWidth && i < 450) {
+    //             // console.log(count);
+    //             block.style.right = count + '%';
+    //         }
+    //         else if (i === window.innerWidth && i >= 450 && i < 570) {
+    //             block.style.right = count / 1.5 + '%';
+    //         }
+    //         else if (i === window.innerWidth && i >= 570 && i < 640) {
+    //             block.style.right = count / 1.7 + '%';
+    //         }
+    //         else if (i === window.innerWidth && i >= 640 && i < 768) {
+    //             block.style.right = count / 2 + '%';
+    //         }
+    //     }
+    // }
 
-    window.onresize = reportWindowSize;
+    // window.onresize = reportWindowSize;
 
 
     // скролл банера

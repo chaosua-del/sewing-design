@@ -5,11 +5,11 @@
   }
 
   // model
-  .model {
-    &__card {
-      background: url('../img/model/model-photo-md.webp') no-repeat 66% 0;
-    }
-  }
+  // .model {
+  //   &__card {
+  //     background: url('../img/model/model-photo-md.webp') no-repeat 66% 0;
+  //   }
+  // }
 }
 
 @media(min-width: 450px) {
@@ -367,6 +367,7 @@
   .model {
     padding-top: 44px;
     &__info {
+      transform: translateX(0);
       left: 11px;
       &-subtitle {
         bottom: 27px;
@@ -385,7 +386,9 @@
       height: 434px;
     }
     &__buttons {
-      width: 223px;
+      width: 300px;
+      margin-left: auto;
+      margin-right: 106px;
     }
     &__button {
       width: 29.83px;
@@ -394,17 +397,18 @@
       font-family: 'Century Gothic Regular' !important;
       &-shoulder {
         top: 132px;
+        left: 44px;
       }
       &-pocket {
-        left: 21%;
+        left: 93px;
         top: 249px;
       }
       &-robe {
-        left: 69%;
+        left: 200px;
         top: 96px;
       }
       &-loop {
-        right: -6%;
+        right: 20px;
         top: 182px;
       }
     }

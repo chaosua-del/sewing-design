@@ -995,17 +995,20 @@ img {
 .model {
   padding-top: 66px; }
   .model__card {
+    display: flex;
+    justify-content: center;
     position: relative;
     width: 100%;
     height: 400px;
-    background: url("../img/model/model-photo.webp") no-repeat center/cover; }
+    background: #c5c6ca;
+    background: linear-gradient(90deg, #c5c6ca 0%, #d5d6d8 55%); }
   .model__buttons {
+    margin-left: 40px;
     position: relative;
     height: 100%;
-    width: 200px;
-    float: right;
+    width: 280px;
     background: transparent;
-    z-index: 10; }
+    background: url("../img/model/girl-md.webp") no-repeat center/cover; }
   .model__button {
     position: absolute;
     width: 19px;
@@ -1024,21 +1027,22 @@ img {
       background-color: #1E1E1E;
       color: #D1CABC; }
     .model__button-shoulder {
-      left: 0;
+      left: 28px;
       top: 145px; }
     .model__button-robe {
-      left: 47%;
+      left: 130px;
       top: 155px; }
     .model__button-pocket {
-      left: 28%;
+      left: 97px;
       top: 234px; }
     .model__button-loop {
-      right: 13%;
+      right: 63px;
       top: 164px; }
   .model__info {
+    left: 26%;
+    transform: translateX(-50%);
     position: absolute;
     bottom: 0;
-    left: 20px;
     max-width: 140px;
     color: #F6F6F6;
     text-transform: uppercase; }
@@ -1799,9 +1803,7 @@ img {
 
 @media (min-width: 321px) {
   .leader {
-    background: url("../img/design/designer-photo-md.webp") no-repeat center/cover; }
-  .model__card {
-    background: url("../img/model/model-photo-md.webp") no-repeat 66% 0; } }
+    background: url("../img/design/designer-photo-md.webp") no-repeat center/cover; } }
 
 @media (min-width: 450px) {
   .office__container::before {
@@ -2030,6 +2032,7 @@ img {
   .model {
     padding-top: 44px; }
     .model__info {
+      transform: translateX(0);
       left: 11px; }
       .model__info-subtitle {
         bottom: 27px;
@@ -2044,22 +2047,25 @@ img {
     .model__card {
       height: 434px; }
     .model__buttons {
-      width: 223px; }
+      width: 300px;
+      margin-left: auto;
+      margin-right: 106px; }
     .model__button {
       width: 29.83px;
       height: 29.83px;
       font-size: 24px;
       font-family: 'Century Gothic Regular' !important; }
       .model__button-shoulder {
-        top: 132px; }
+        top: 132px;
+        left: 44px; }
       .model__button-pocket {
-        left: 21%;
+        left: 93px;
         top: 249px; }
       .model__button-robe {
-        left: 69%;
+        left: 200px;
         top: 96px; }
       .model__button-loop {
-        right: -6%;
+        right: 20px;
         top: 182px; }
   .stages {
     padding-top: 121px;
