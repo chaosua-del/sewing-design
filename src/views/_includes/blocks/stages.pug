@@ -12,7 +12,7 @@ section.stages
                 <source type="image/webp" media="(max-width: 767px)" srcset="assets/img/stages/1.webp">
                 <source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/stages/1.jpg">
                 img(src="assets/img/stages/1.webp", alt="model-1")
-          h3.stages__card-title(data-swiper-parallax="-200")  Подберем модели и материалы
+          h3.stages__card-title(data-swiper-parallax="-200")  Подберем модели и&nbsp;материалы
           p.stages__card-description(data-swiper-parallax="-100") Поможем с выбором существующей модели или изготовим конкретно для вас. 
           p.stages__card-description(data-swiper-parallax="-100") Заменяем цвета, карманы, отделку, фурнитуру любых моделей одежды. 
           .stages__card-arrow scroll
@@ -36,8 +36,13 @@ section.stages
                 img(src="assets/img/stages/3.webp", alt="model-3")
           h3.stages__card-title(data-swiper-parallax="-200") произведем и доставим
           p.stages__card-description(data-swiper-parallax="-100") Производим срочные заказы от 100 единиц в день. Работаем с транспортными компаниями 
-          .stages__card-companies
-            img(src="assets/img/stages/companies.webp", alt="companies", data-swiper-parallax="-100")
+          .stages__card-companies(data-swiper-parallax="-100")
+            picture(data-swiper-parallax="-300")
+              <source type="image/webp" media="(max-width: 767px)" srcset="assets/img/stages/companies.webp">
+              <source type="image/png" media="(max-width: 767px)" srcset="assets/img/stages/companies.png">
+              <source type="image/webp" media="(min-width: 768px)" srcset="assets/img/stages/companies-md.webp">
+              <source type="image/png" media="(min-width: 768px)" srcset="assets/img/stages/companies-md.png">
+              img(src="assets/img/stages/companies.webp", alt="companies")
           p.stages__card-description(data-swiper-parallax="-100") Поможем с оформлением доставки и отслеживанием.
     .swiper-pagination.stages__swiper-pagination
     .swiper-button-prev.stages__swiper-button-prev

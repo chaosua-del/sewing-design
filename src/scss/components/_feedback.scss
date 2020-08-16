@@ -6,7 +6,10 @@
     @include flex-center();
     padding-top: 30px;
     padding-bottom: 40px;
-    // max-width: 270px !important;
+    width: 270px !important;
+  }
+  &__swiper-wrapper {
+    padding-left: 25px;
   }
   &__user {
     display: flex;
@@ -62,13 +65,10 @@
         right: -17px;
         top: -33px;
       }
+      &--bottom {
+        display: none;
+      }
     }
-    // &::after {
-    //   content: url('../img/feedback/feedback-decoration.svg');
-    //   position: absolute;
-    //   right: 0;
-    //   top: -33px;
-    // }
   }
 }
 

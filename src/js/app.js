@@ -264,11 +264,11 @@ document.addEventListener('DOMContentLoaded', function () {
     let clientsDimm = document.querySelector('.clients__dimmed');
     let clientsPhoto = document.querySelector('.clients__dimmed-photo');
 
-    console.log(place);
+    // console.log(place);
     place.forEach(element => {
-        console.log(element);
+        // console.log(element);
         element.onmouseover = function () {
-            console.log(element);
+            // console.log(element);
             let placeOffset = element.getBoundingClientRect().top;
             let html = `<img src="assets/img/clients/poke-room.webp" />`;
             clientsPhoto.innerHTML = html;

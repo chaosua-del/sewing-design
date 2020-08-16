@@ -1,12 +1,19 @@
 header.header
     .container.header__container
         a(href="index.html").header__menu меню
+        .header__navigation
+            a.header__navigation-item(href="#") Каталог
+            a.header__navigation-item(href="#") Качество
+            a.header__navigation-item(href="#") Производство
+            a.header__navigation-item(href="#") Отзывы
+            a.header__navigation-item(href="#") Вопрос-ответ
         .header__logo
             picture
                 <source type="image/svg+xml" media="(max-width: 767px)" srcset="assets/img/header-logo.svg">
                 <source type="image/svg+xml" media="(min-width: 768px)" srcset="assets/img/header-logo-md.svg">
                 <img class="lazyload" src="assets/img/header-logo.svg" alt="logo">
             //- img(src="assets/img/header-logo.svg", alt="logo")
+        a.header__navigation-item(href="#") Контакты
         button.header__button Заказать Звонок
         .header__contacts 
              a(href="tel:88003503745").phone.header__contacts-phone 8 800 350-37-45
