@@ -1158,7 +1158,9 @@
   }
 
   .photos {
-    margin-bottom: 124px;
+    &__swiper-wrapper {
+      padding-bottom: 124px;
+    }
     &__swiper-slide {
       width: 350px !important;
       height: 350px !important;
@@ -1714,7 +1716,7 @@
 
   // questions-1450
   .questions {
-    padding-bottom: 245px
+    padding-bottom: 245px;
     &__container {
       padding-left: 0;
       padding-right: 0;
@@ -1746,7 +1748,7 @@
       background: #EAEEF1 url(../img/decoration-line-2.svg) no-repeat 0% 50%;
       z-index: 3000;
       width: 691px;
-      left: 280px;
+      left: 13%;
       max-width: none;
       position: absolute;
       top: -137px;

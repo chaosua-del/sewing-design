@@ -1,7 +1,7 @@
 // import leaflet from 'node_modules/leaflet/dist';
 
 export const myMap = L.map('mapid', {
-  center: [56.320568, 44.000775],
+  center: [56.318434, 43.902824],
   zoom: 15,
   scrollWheelZoom: false
 })
@@ -27,5 +27,5 @@ const greenIcon = L.icon({
   popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
 });
 
-L.marker([56.320568, 44.000775], { icon: greenIcon }).addTo(myMap);
+L.marker([56.318213, 43.907047], { icon: greenIcon }).addTo(myMap);
 

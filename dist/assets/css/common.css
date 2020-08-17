@@ -665,6 +665,9 @@ img {
   width: 102px !important;
   height: 102px !important; }
 
+.photos__info {
+  display: none; }
+
 .benefits__swiper-slide {
   display: flex;
   width: 771px !important;
@@ -719,6 +722,7 @@ img {
   letter-spacing: -0.03em;
   line-height: 75px; }
   .banner__title {
+    user-select: none;
     display: inline;
     margin-right: 13px;
     font-style: italic; }
@@ -2602,11 +2606,11 @@ img {
   .carousels__title {
     font-size: 40px;
     line-height: 49px; }
-  .photos {
-    margin-bottom: 124px; }
-    .photos__swiper-slide {
-      width: 350px !important;
-      height: 350px !important; }
+  .photos__swiper-wrapper {
+    padding-bottom: 124px; }
+  .photos__swiper-slide {
+    width: 350px !important;
+    height: 350px !important; }
   .benefits__card {
     padding-bottom: 35px; }
     .benefits__card-title {
@@ -2997,9 +3001,10 @@ img {
         left: -23px;
         top: 253px; }
   .questions {
-    padding-bottom: 245px .questions __container;
-      padding-bottom-padding-left: 0;
-      padding-bottom-padding-right: 0; }
+    padding-bottom: 245px; }
+    .questions__container {
+      padding-left: 0;
+      padding-right: 0; }
     .questions__collapsible {
       font-size: 28px;
       line-height: 35px;
@@ -3021,7 +3026,7 @@ img {
       background: #EAEEF1 url(../img/decoration-line-2.svg) no-repeat 0% 50%;
       z-index: 3000;
       width: 691px;
-      left: 280px;
+      left: 13%;
       max-width: none;
       position: absolute;
       top: -137px;
@@ -3114,5 +3119,31 @@ img {
   .design2 .form__input--text {
     padding-bottom: 91px;
     margin-bottom: 17px; } }
+
+@media (min-width: 1250px) {
+  .photos__info {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: -64px;
+    left: 0;
+    width: 100%;
+    justify-content: space-between; }
+    .photos__info-name {
+      max-width: 167px;
+      text-align: right; }
+  .photos__swiper-slide {
+    position: relative;
+    cursor: pointer; }
+    .photos__swiper-slide:hover .photos__info {
+      display: block;
+      display: flex; }
+  .banner__wrap--active {
+    background: url("../img/carousel/banner-bg.webp"); }
+    .banner__wrap--active .banner__title {
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4); } }
 
 /*# sourceMappingURL=maps/common.css.map */

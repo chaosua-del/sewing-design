@@ -320,7 +320,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// button expands 'section model'
+// button expands 'section model' + hovers
 if (window.innerWidth >= 1450) {
     let expandButton = document.querySelectorAll('.model__button');
     expandButton.forEach((elem) => {
@@ -336,6 +336,24 @@ if (window.innerWidth >= 1450) {
                 this.innerHTML = '';
             }
 
+        });
+    });
+
+    let banner = document.querySelectorAll('.banner__title');
+    let bannerWrap = document.querySelectorAll('.banner__wrap');
+    banner.forEach((elem) => {
+        elem.addEventListener('mouseenter', (event) => {
+            event.target.style.color = '#FFFFFF';
+            bannerWrap.forEach(item => {
+                item.classList.add('banner__wrap--active');
+            });
+
+        });
+        elem.addEventListener('mouseleave', event => {
+            event.target.style.color = '#1E1E1E';
+            bannerWrap.forEach(item => {
+                item.classList.remove('banner__wrap--active');
+            });
         });
     });
 }
