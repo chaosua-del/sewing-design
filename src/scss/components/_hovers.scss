@@ -33,4 +33,28 @@
       // text-shadow: '-2px 2px 0 rgba(#fff, 0.4), 2px 2px 0 rgba(#fff, 0.4), 2px -2px 0 rgba(#fff, 0.4), -2px -2px 0 rgba(#fff, 0.4)';
     }
   }
+
+  .button {
+    border: 1px solid #1E1E1E;
+    transition: all 0.2s;
+    &:hover {
+      background-color: #FFFFFF;
+      color: $color-base;
+    }
+  }
+
+  .stages__card-button {
+    transition: all 0.2s;
+    &:hover {
+      background-color: $color-base;
+      color: #FFFFFF;
+    }
+  }
+
+  .uniforms__button {
+    transition: background-color 0.2s;
+    &:hover {
+      background-color: lighten(#D1CABC, 5%);
+    }
+  }
 }

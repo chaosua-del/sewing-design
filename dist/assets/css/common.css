@@ -849,6 +849,7 @@ img {
       .uniforms__card-name--large {
         display: none; }
   .uniforms__button {
+    cursor: pointer;
     margin-left: -29px;
     width: 147px;
     height: 147px;
@@ -3118,7 +3119,112 @@ img {
     margin-bottom: 3px; }
   .design2 .form__input--text {
     padding-bottom: 91px;
-    margin-bottom: 17px; } }
+    margin-bottom: 17px; }
+  .popup {
+    max-width: 1250px;
+    left: auto;
+    right: 0; }
+    .popup__close-button {
+      font-size: 30px;
+      line-height: 35px;
+      margin-top: 30px;
+      margin-right: -38px;
+      margin-bottom: 84px; }
+    .popup__button--rounded {
+      font-size: 20px;
+      line-height: 20px;
+      margin-top: 20px; }
+    .popup__button-label {
+      width: 58px;
+      height: 58px;
+      font-size: 15px;
+      top: -27px;
+      right: -28px; }
+    .popup__title {
+      font-size: 50px;
+      line-height: 60px; }
+      .popup__title--lower {
+        font-size: 40px;
+        line-height: 49px; }
+      .popup__title--big {
+        max-width: 949px; }
+    .popup__description {
+      font-size: 20px;
+      line-height: 30px;
+      max-width: 700px;
+      margin-top: 37px;
+      margin-bottom: 91px; }
+    .popup__model-name {
+      margin-top: 29px; }
+    .popup__model-img {
+      width: 370px;
+      height: 545px; }
+      .popup__model-img img {
+        width: 100%; }
+    .popup__model-price {
+      font-size: 80px;
+      line-height: 80px; }
+    .popup__input {
+      margin-bottom: 18px; }
+    .popup__form {
+      width: 729px;
+      margin-top: -1px; }
+      .popup__form-button {
+        margin-top: -1px; }
+        .popup__form-button::after {
+          content: url("../img/popup/popup-download.svg");
+          margin-left: 20px; }
+  .pluses {
+    margin-top: 14px;
+    margin-bottom: 11px; }
+    .pluses__title {
+      font-size: 28px;
+      line-height: 32px;
+      margin-bottom: 34px; }
+    .pluses__subtitle {
+      font-size: 15px;
+      line-height: 20px; }
+    .pluses--left {
+      width: 437px;
+      padding-left: 82px; }
+      .pluses--left .pluses__title {
+        width: 270px;
+        margin-bottom: 52px; }
+      .pluses--left .pluses__subtitle {
+        width: 266px; }
+    .pluses--middle {
+      width: 409px; }
+      .pluses--middle .pluses__title {
+        width: 237px; }
+      .pluses--middle .pluses__subtitle {
+        width: 186px; }
+    .pluses--right {
+      width: 398px; }
+      .pluses--right .pluses__title {
+        width: 266px; }
+      .pluses--right .pluses__subtitle {
+        width: 196px; }
+  .sliderModel__uniform {
+    width: 1170px;
+    height: 600px; }
+    .sliderModel__uniform::after {
+      content: url(../img/popup/ellipse-lg.svg);
+      right: -19px;
+      top: 225px; }
+  .sliderModel__swiper-button-next {
+    top: 264px !important;
+    right: 133px !important; }
+    .sliderModel__swiper-button-next::after {
+      content: url("../img/popup/arrow-next-lg.svg") !important; }
+  .sliderModel__swiper-button-prev {
+    left: 17px !important;
+    top: 262px !important; }
+    .sliderModel__swiper-button-prev::after {
+      content: url("../img/popup/arrow-prev-lg.svg") !important; }
+  .sliderModel__swiper-wrapper {
+    padding-bottom: 48px; }
+  .sliderModel__swiper-container {
+    margin-bottom: 26px; } }
 
 @media (min-width: 1250px) {
   .photos__info {
@@ -3144,6 +3250,21 @@ img {
     background: url("../img/carousel/banner-bg.webp"); }
     .banner__wrap--active .banner__title {
       color: transparent;
-      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4); } }
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4); }
+  .button {
+    border: 1px solid #1E1E1E;
+    transition: all 0.2s; }
+    .button:hover {
+      background-color: #FFFFFF;
+      color: #1E1E1E; }
+  .stages__card-button {
+    transition: all 0.2s; }
+    .stages__card-button:hover {
+      background-color: #1E1E1E;
+      color: #FFFFFF; }
+  .uniforms__button {
+    transition: background-color 0.2s; }
+    .uniforms__button:hover {
+      background-color: #dbd6cb; } }
 
 /*# sourceMappingURL=maps/common.css.map */
