@@ -93,8 +93,10 @@ export default function () {
         content.style.maxHeight = content.scrollHeight + 'px';
         if (window.innerWidth < 768)
           content.style.marginBottom = 52 + 'px';
-        else if (window.innerWidth >= 768)
+        else if (window.innerWidth >= 768 && window.innerWidth < 1450)
           content.style.marginBottom = 113 + 'px';
+        else if (window.innerWidth >= 1450)
+          content.style.marginBottom = 54 + 'px';
       }
     });
   }
@@ -122,7 +124,8 @@ export default function () {
       },
       1450: {
         freeMode: true,
-        loop: true
+        loop: true,
+        spaceBetween: 42,
       }
     }
   });

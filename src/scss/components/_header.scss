@@ -10,6 +10,11 @@
       }
   &__logo {
     margin-left: 17px;
+    &-text {
+      display: none;
+      @include font(10px, 0.02em, 16px);
+      color: rgba(#000000, 0.4);
+    }
   }
   &__menu {
     text-transform: uppercase;

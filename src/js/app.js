@@ -189,46 +189,6 @@ sliders();
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    // for (i = 320; i < 768; i += 10) {
-    //     count = (i - 320) / 10;
-    //     if (i < 450) {
-    //         // console.log(count);
-    //         block.style.right = count + '%';
-    //     }
-    //     else if (i >= 450 && i < 570) {
-    //         block.style.right = count / 2 + '%';
-    //     }
-    //     else if (i >= 570 && i < 640) {
-    //         block.style.right = count / 2.3 + '%';
-    //     }
-    //     else if (i >= 640 && i < 768) {
-    //         block.style.right = count / 2.5 + '%';
-    //     }
-    // }
-
-
-    // function reportWindowSize() {
-
-    //     for (i = 320; i < 768; i += 10) {
-    //         count = (i - 320) / 10;
-    //         if (i === window.innerWidth && i < 450) {
-    //             // console.log(count);
-    //             block.style.right = count + '%';
-    //         }
-    //         else if (i === window.innerWidth && i >= 450 && i < 570) {
-    //             block.style.right = count / 1.5 + '%';
-    //         }
-    //         else if (i === window.innerWidth && i >= 570 && i < 640) {
-    //             block.style.right = count / 1.7 + '%';
-    //         }
-    //         else if (i === window.innerWidth && i >= 640 && i < 768) {
-    //             block.style.right = count / 2 + '%';
-    //         }
-    //     }
-    // }
-
-    // window.onresize = reportWindowSize;
-
 
     // скролл банера
     let banner = document.querySelector('.banner__wrap');
@@ -360,6 +320,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+// button expands 'section model'
+if (window.innerWidth >= 1450) {
+    let expandButton = document.querySelectorAll('.model__button');
+    expandButton.forEach((elem) => {
+        elem.addEventListener('click', function () {
+            if (event.target.classList.contains('button--close')) {
+                event.target.classList.remove('button--expand', 'button--close');
+                event.target.innerHTML = '+';
+                // console.log(event.target);
+            }
+            else {
+                this.classList.add('button--expand');
+                this.classList.add('button--close');
+                this.innerHTML = '';
+            }
 
+        });
+    });
+}
 
 
