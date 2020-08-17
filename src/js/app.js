@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 clientsPhoto.style.top = offset - 300 + 'px';
             }
             else {
-                clientsPhoto.style.top = offset - 900 + 'px';
+                clientsPhoto.style.top = offset - 700 + 'px';
             }
             clientsPhoto.style.opacity = '1';
             this.style.zIndex = '20';
