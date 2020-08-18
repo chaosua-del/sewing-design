@@ -1012,6 +1012,7 @@
   .sliderModel {
     &__swiper-container {
       margin-top: 87px;
+      max-width: 840px;
     }
     &__swiper-wrapper {
       padding-bottom: 65px;
@@ -2057,6 +2058,9 @@
   }
 
   .sliderModel {
+    &__swiper-container {
+      max-width: 100%;
+    }
     &__uniform {
       width: 1170px;
       height: 600px;

@@ -502,6 +502,9 @@ img {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1999; }
 
+input.form__error {
+  border-bottom: 2px solid tomato; }
+
 @font-face {
   font-family: 'Century Gothic Regular';
   src: url("fonts/CenturyGothic/CenturyGothic.eot");
@@ -2575,7 +2578,8 @@ img {
     .pluses--left {
       padding-right: 45px; }
   .sliderModel__swiper-container {
-    margin-top: 87px; }
+    margin-top: 87px;
+    max-width: 840px; }
   .sliderModel__swiper-wrapper {
     padding-bottom: 65px; }
   .sliderModel__uniform {
@@ -3296,6 +3300,8 @@ img {
         width: 266px; }
       .pluses--right .pluses__subtitle {
         width: 196px; }
+  .sliderModel__swiper-container {
+    max-width: 100%; }
   .sliderModel__uniform {
     width: 1170px;
     height: 600px; }

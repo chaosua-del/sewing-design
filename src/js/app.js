@@ -183,12 +183,8 @@ app.init();
 
 
 sliders();
-// formValidation();
+formValidation();
 
-// позиционирование кнопок в блоке model
-// const block = document.querySelector('.model__buttons');
-// let count = 0;
-// let i;
 
 document.addEventListener('DOMContentLoaded', function () {
 
