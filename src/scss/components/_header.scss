@@ -21,7 +21,9 @@
     @include font(20.67px, -0.05em);
     text-decoration-line: underline;
     line-height: 30px;
-    color: $color-base
+    a {
+      color: $color-base
+    }
   }
   &__button {
     @include font(12.02px, 0.02em);

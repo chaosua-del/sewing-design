@@ -95,6 +95,7 @@
     padding-bottom: 15px;
     padding-left: 24px;
     margin-bottom: 10px;
+    position: relative;
     &::placeholder {
       font-family: 'Segoe UI Regular' !important;
       @include font(12px, -0.01em, 20px);
@@ -142,4 +143,18 @@
      background: url('../img/policy-checked.svg') no-repeat center;
     }
   }
+  
+  #userName-error {
+    position: absolute;
+    top: -30px;
+    left: 0;
+  }
+
+  #userPhone-error {
+    position: absolute;
+    top: -30px;
+    // left: 257px
+    right: 0;
+  }
+
 }

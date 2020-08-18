@@ -28,7 +28,8 @@
   </head>
   <body class="body">
     <header class="header">
-      <div class="container header__container"><a class="header__menu" href="index.html">меню</a>
+      <div class="container header__container">
+        <div class="header__menu"><a href="index.html">меню</a></div>
         <div class="header__navigation"><a class="header__navigation-item" href="#">Каталог</a><a class="header__navigation-item" href="#">Качество</a><a class="header__navigation-item" href="#">Производство</a><a class="header__navigation-item" href="#">Отзывы</a><a class="header__navigation-item" href="#">Вопрос-ответ</a></div>
         <div class="header__logo">
           <picture><source type="image/svg+xml" media="(max-width: 767px)" srcset="assets/img/header-logo.svg">
@@ -60,55 +61,37 @@
         <div class="photos">
           <div class="swiper-container photos__swiper-container">
             <div class="swiper-wrapper photos__swiper-wrapper">
-              <div class="swiper-slide photos__swiper-slide">
-                <picture><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/carousel/1.webp">
-<source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/carousel/1.jpg"><img src="assets/img/carousel/1.webp" alt="client-1">
-                </picture>
+              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/1.png" alt="client-1">
                 <div class="photos__info">
                   <p class="photos__info-label">На фото:</p>
                   <p class="photos__info-name">Фартуки для сети ресторанов “Хачапури и Вино</p>
                 </div>
               </div>
-              <div class="swiper-slide photos__swiper-slide">
-                <picture><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/carousel/2.webp">
-<source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/carousel/2.jpg"><img src="assets/img/carousel/2.webp" alt="client-2">
-                </picture>
+              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/2.png" alt="client-2">
                 <div class="photos__info">
                   <p class="photos__info-label">На фото:</p>
                   <p class="photos__info-name">Фартуки для сети ресторанов “Хачапури и Вино</p>
                 </div>
               </div>
-              <div class="swiper-slide photos__swiper-slide">
-                <picture><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/carousel/3.webp">
-<source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/carousel/3.jpg"><img src="assets/img/carousel/3.webp" alt="client-3">
-                </picture>
+              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/3.png" alt="client-3">
                 <div class="photos__info">
                   <p class="photos__info-label">На фото:</p>
                   <p class="photos__info-name">Фартуки для сети ресторанов “Хачапури и Вино</p>
                 </div>
               </div>
-              <div class="swiper-slide photos__swiper-slide">
-                <picture><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/carousel/4.webp">
-<source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/carousel/4.jpg"><img src="assets/img/carousel/4.webp" alt="client-4">
-                </picture>
+              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/4.png" alt="client-4">
                 <div class="photos__info">
                   <p class="photos__info-label">На фото:</p>
                   <p class="photos__info-name">Фартуки для сети ресторанов “Хачапури и Вино</p>
                 </div>
               </div>
-              <div class="swiper-slide photos__swiper-slide">
-                <picture><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/carousel/5.webp">
-<source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/carousel/5.jpg"><img src="assets/img/carousel/5.webp" alt="client-5">
-                </picture>
+              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/5.png" alt="client-5">
                 <div class="photos__info">
                   <p class="photos__info-label">На фото:</p>
                   <p class="photos__info-name">Фартуки для сети ресторанов “Хачапури и Вино</p>
                 </div>
               </div>
-              <div class="swiper-slide photos__swiper-slide">
-                <picture><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/carousel/6.webp">
-<source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/carousel/6.jpg"><img src="assets/img/carousel/6.webp" alt="client-6">
-                </picture>
+              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/6.png" alt="client-6">
                 <div class="photos__info">
                   <p class="photos__info-label">На фото:</p>
                   <p class="photos__info-name">Фартуки для сети ресторанов “Хачапури и Вино</p>
@@ -174,12 +157,12 @@
         <div class="container design__container">
           <h2 class="design__title">Дизайн-макет бесплатно, за 1 день</h2>
           <p class="design__subtitle">Оставьте заявку и получите дизайн-макет вашей будущей униформы. Сделаем его для вас иничего&nbsp;не возьмем.</p>
-          <form class="form design__form design--hidden" action="#">
-            <input class="form__input design__form-input" type="text" placeholder="Как вас зовут?">
-            <input class="form__input design__form-input" type="text" placeholder="Номер телефона">
+          <form class="form design__form design--hidden" id="designForm1">
+            <input class="form__input design__form-input" type="text" placeholder="Как вас зовут?" name="userName">
+            <input class="form__input design__form-input" type="tel" placeholder="Номер телефона" name="userPhone">
             <textarea class="form__input form__input--text" placeholder="Какая униформа нужна? (необязательно)"></textarea>
             <div class="button-wrap design__button-wrap">
-              <button class="button design__button" type="submit">Получить макет и расчёт</button>
+              <button class="button design__button" type="submit" form="designForm1">Получить макет и расчёт</button>
               <div class="button-label design__button-label"> 
                 <p class="button-labelText">Free</p>
               </div>
@@ -240,7 +223,7 @@
               </div>
             </div>
             <div class="swiper-slide stages__swiper-slide">
-              <div class="stages__card">
+              <div class="stages__card stages__card--second">
                 <div class="stages__card-bg">
                   <picture class="stages__card-bg-image" data-swiper-parallax="-300"><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/stages/2.webp">
 <source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/stages/2.jpg"><img src="assets/img/stages/2.webp" alt="model-2">
@@ -253,7 +236,7 @@
               </div>
             </div>
             <div class="swiper-slide stages__swiper-slide">
-              <div class="stages__card">
+              <div class="stages__card stages__card--third">
                 <div class="stages__card-bg">
                   <picture class="stages__card-bg-image" data-swiper-parallax="-300"><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/stages/3.webp">
 <source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/stages/3.jpg"><img src="assets/img/stages/3.webp" alt="model-3">
@@ -280,7 +263,7 @@
       <section class="instruction">
         <div class="instruction__container">
           <div class="instruction__block">
-            <h2 class="instruction__title"><span class="d-block">Мы</span> собрали<br>подробную<br>инструкцию <br>по уходу<br>за&nbsp;униформой</h2>
+            <h2 class="instruction__title"><span class="d-block-lg">Мы</span> собрали подробную инструкцию по&nbsp;уходу за&nbsp;униформой</h2>
           </div>
           <div class="instruction__card">
             <div class="instruction__card-wrap">
@@ -296,9 +279,8 @@
         </div>
       </section>
       <section class="clients">
-        <div class="clients__dimmed">
-          <div class="clients__dimmed-photo"></div>
-        </div>
+        <div class="clients__dimmed"></div>
+        <div class="clients__dimmed-photo"></div>
         <div class="container clients__container">
           <p class="clients__description">Среди наших клиентов как малый бизнес, так&nbsp;и&nbsp;большие сетевые организации по всей России:</p>
         </div>
@@ -440,35 +422,41 @@
         <div class="photos">
           <div class="swiper-container photos__swiper-container">
             <div class="swiper-wrapper">
-              <div class="swiper-slide photos__swiper-slide">
-                <picture><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/carousel/1.webp">
-<source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/carousel/1.jpg"><img src="assets/img/carousel/1.webp" alt="client-1">
-                </picture>
+              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/1.png" alt="client-1">
+                <div class="photos__info">
+                  <p class="photos__info-label">На фото:</p>
+                  <p class="photos__info-name">Фартуки для сети ресторанов “Хачапури и Вино</p>
+                </div>
               </div>
-              <div class="swiper-slide photos__swiper-slide">
-                <picture><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/carousel/2.webp">
-<source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/carousel/2.jpg"><img src="assets/img/carousel/2.webp" alt="client-1">
-                </picture>
+              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/2.png" alt="client-2">
+                <div class="photos__info">
+                  <p class="photos__info-label">На фото:</p>
+                  <p class="photos__info-name">Фартуки для сети ресторанов “Хачапури и Вино</p>
+                </div>
               </div>
-              <div class="swiper-slide photos__swiper-slide">
-                <picture><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/carousel/3.webp">
-<source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/carousel/3.jpg"><img src="assets/img/carousel/3.webp" alt="client-1">
-                </picture>
+              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/3.png" alt="client-3">
+                <div class="photos__info">
+                  <p class="photos__info-label">На фото:</p>
+                  <p class="photos__info-name">Фартуки для сети ресторанов “Хачапури и Вино</p>
+                </div>
               </div>
-              <div class="swiper-slide photos__swiper-slide">
-                <picture><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/carousel/4.webp">
-<source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/carousel/4.jpg"><img src="assets/img/carousel/4.webp" alt="client-1">
-                </picture>
+              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/4.png" alt="client-4">
+                <div class="photos__info">
+                  <p class="photos__info-label">На фото:</p>
+                  <p class="photos__info-name">Фартуки для сети ресторанов “Хачапури и Вино</p>
+                </div>
               </div>
-              <div class="swiper-slide photos__swiper-slide">
-                <picture><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/carousel/5.webp">
-<source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/carousel/5.jpg"><img src="assets/img/carousel/5.webp" alt="client-1">
-                </picture>
+              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/5.png" alt="client-5">
+                <div class="photos__info">
+                  <p class="photos__info-label">На фото:</p>
+                  <p class="photos__info-name">Фартуки для сети ресторанов “Хачапури и Вино</p>
+                </div>
               </div>
-              <div class="swiper-slide photos__swiper-slide">
-                <picture><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/carousel/6.webp">
-<source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/carousel/6.jpg"><img src="assets/img/carousel/6.webp" alt="client-1">
-                </picture>
+              <div class="swiper-slide photos__swiper-slide"><img src="assets/img/carousel/6.png" alt="client-6">
+                <div class="photos__info">
+                  <p class="photos__info-label">На фото:</p>
+                  <p class="photos__info-name">Фартуки для сети ресторанов “Хачапури и Вино</p>
+                </div>
               </div>
             </div>
           </div>
@@ -532,12 +520,12 @@
         <div class="container design__container">
           <h2 class="design__title">Дизайн-макет бесплатно, за 1 день</h2>
           <p class="design__subtitle design2__subtitle">Оставьте заявку и получите дизайн-макет вашей будущей униформы. Сделаем его для вас иничего&nbsp;не возьмем.</p>
-          <form class="form design__form" action="#">
-            <input class="form__input" type="text" placeholder="Как вас зовут?">
-            <input class="form__input" type="text" placeholder="Номер телефона">
+          <form class="form design__form" id="designForm2">
+            <input class="form__input" type="text" placeholder="Как вас зовут?" name="userName">
+            <input class="form__input" type="tel" placeholder="Номер телефона" name="userPhone">
             <textarea class="form__input form__input--text" placeholder="Какая униформа нужна?"></textarea>
             <div class="button-wrap design__button-wrap">
-              <button class="button design__button" type="submit">Получить макет и расчёт</button>
+              <button class="button design__button" type="submit" form="designForm2">Получить макет и расчёт</button>
               <div class="button-label design__button-label"> 
                 <p class="button-labelText">Free</p>
               </div>
@@ -683,15 +671,15 @@
         <div class="popup__title popup__title--big">Полный каталог моделей у вас на&nbsp;почте за 3 минуты  </div>
         <button class="button popup__button popup__button--rounded">Дизайн  в подарок</button>
         <p class="popup__description popup__description--big">Укажите свои контактные данные для скачивания каталога моделей для персонала ресторанов, кафе, пабов и фудкортов с ценами.</p>
-        <form class="form popup__form" action="#">
-          <input class="form__input popup__input" type="text" placeholder="Как вас зовут?">
-          <input class="form__input popup__input" type="text" placeholder="Номер телефона">
+        <form class="form popup__form" action="#" id="popupForm">
+          <input class="form__input popup__input" type="text" placeholder="Как вас зовут?" name="userName">
+          <input class="form__input popup__input" type="tel" placeholder="Номер телефона" name="userPhone">
           <div class="form__policy-wrap">
             <input class="form__checkbox" type="checkbox" id="policy-checkbox">
             <label class="form__policy" for="policy-checkbox">Ознакомлен с политикой конфиденциальности</label>
           </div>
           <div class="button-wrap">
-            <button class="button form-button popup__form-button" type="submit">Скачать полный каталог</button>
+            <button class="button form-button popup__form-button" type="submit" form="popupForm">Скачать полный каталог</button>
             <div class="button-label popup__button-label"> 
               <p class="button-labelText">free</p>
             </div>

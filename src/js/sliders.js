@@ -19,7 +19,6 @@ export default function () {
   });
 
 
-
   if (window.innerWidth < 768) {
 
     const benefits = new Swiper('.benefits__swiper-container', {
@@ -63,7 +62,6 @@ export default function () {
       },
     });
 
-
   }
   else {
 
@@ -74,8 +72,25 @@ export default function () {
       parallax: true,
       slidesPerView: 1,
     });
-  }
 
+
+    document.querySelector('.stages__card--second').addEventListener('mouseleave', () => {
+      stages.mousewheel.disable();
+    });
+
+    document.querySelector('.stages__card--third').addEventListener('mouseleave', () => {
+      stages.mousewheel.enable();
+    });
+
+    document.querySelector('.stages__card--first').addEventListener('mouseleave', () => {
+      stages.mousewheel.enable();
+    });
+
+    //   addEventListener('mouseleave', (event) => {
+    //   console.log(event.target);
+    //   stages.mousewheel.enable();
+    // });
+  }
 
   // expand menu
   const coll = document.getElementsByClassName('collapsible');
@@ -131,5 +146,7 @@ export default function () {
   });
 
   feedback.translateTo(document.querySelector('.feedback__swiper-slide').style.width, 300);
+
+
 
 }

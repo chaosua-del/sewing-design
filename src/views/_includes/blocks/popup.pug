@@ -99,14 +99,14 @@
     button.button.popup__button.popup__button--rounded Дизайн  в подарок
     p.popup__description.popup__description--big Укажите свои контактные данные для скачивания каталога моделей для персонала ресторанов, кафе, пабов и фудкортов с ценами.
 
-    form.form(action="#").popup__form
-      input.form__input.popup__input(type="text", placeholder="Как вас зовут?")
-      input.form__input.popup__input(type="text", placeholder="Номер телефона")
+    form.form(action="#").popup__form#popupForm
+      input.form__input.popup__input(type="text", placeholder="Как вас зовут?", name="userName")
+      input.form__input.popup__input(type="tel", placeholder="Номер телефона", name="userPhone")
       .form__policy-wrap
         input.form__checkbox(type="checkbox", id="policy-checkbox") 
         label.form__policy(for="policy-checkbox") Ознакомлен с политикой конфиденциальности
       .button-wrap
-        button.button(type="submit").form-button.popup__form-button Скачать полный каталог
+        button.button(type="submit", form="popupForm").form-button.popup__form-button Скачать полный каталог
         .button-label.popup__button-label 
           p.button-labelText free
 

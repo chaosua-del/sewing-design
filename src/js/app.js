@@ -1,13 +1,16 @@
 import $ from 'jquery';
 import 'lazysizes';
-
+import validate from 'jquery.validate.min';
 
 import page from 'page';
 import forms from 'forms';
 import sliders from 'sliders';
 import { myMap } from 'map';
+import formValidation from 'validation';
+// import Inputmask from 'forms';
 
 import Swiper from 'swiper/js/swiper.js';
+// import mask from 'swiper/js/swiper.js';
 
 let app = {
 
@@ -180,7 +183,7 @@ app.init();
 
 
 sliders();
-
+// formValidation();
 
 // позиционирование кнопок в блоке model
 // const block = document.querySelector('.model__buttons');
@@ -221,7 +224,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // clients hovers
     let place = document.querySelectorAll('.clients__block-name');
-    let clientsDimm = document.querySelector('.clients__dimmed');
+    let clientsDimm = document.querySelector('.clients');
     let clientsPhoto = document.querySelector('.clients__dimmed-photo');
 
     // console.log(place);
@@ -240,17 +243,22 @@ document.addEventListener('DOMContentLoaded', function () {
             else {
                 clientsPhoto.style.top = offset - 700 + 'px';
             }
-            clientsPhoto.style.opacity = '1';
-            this.style.zIndex = '20';
-            clientsDimm.style.zIndex = '19';
-            clientsDimm.style.opacity = '1';
+            clientsDimm.classList.add('clients--darken');
+            this.style.zIndex = '30';
+            setTimeout(() => {
+                clientsPhoto.style.zIndex = '1';
+                clientsPhoto.style.opacity = '1';
+            }), 100;
             // clientsDimm.style.height = '100%';
         };
         element.onmouseleave = function () {
-            // clientsDimm.style.opacity = '0';
-            clientsDimm.style.zIndex = '0';
+            clientsDimm.classList.remove('clients--darken');
             this.style.zIndex = '0';
-            clientsPhoto.style.opacity = '0';
+            setTimeout(() => {
+                clientsPhoto.style.zIndex = '-1';
+                clientsPhoto.style.opacity = '0';
+            }), 100;
+
             // clientsDimm.style.height = '0';
         };
     });
@@ -341,21 +349,17 @@ if (window.innerWidth >= 1450) {
 
     let banner = document.querySelectorAll('.banner__title');
     let bannerWrap = document.querySelectorAll('.banner__wrap');
-    banner.forEach((elem) => {
+    bannerWrap.forEach((elem) => {
         elem.addEventListener('mouseenter', (event) => {
-            event.target.style.color = '#FFFFFF';
-            bannerWrap.forEach(item => {
-                item.classList.add('banner__wrap--active');
-            });
+            event.target.classList.add('banner__wrap--active');
 
         });
         elem.addEventListener('mouseleave', event => {
-            event.target.style.color = '#1E1E1E';
-            bannerWrap.forEach(item => {
-                item.classList.remove('banner__wrap--active');
-            });
+            event.target.classList.remove('banner__wrap--active');
         });
     });
+
+
 }
 
 

@@ -25,12 +25,20 @@
     }
   }
 
+  .banner__wrap {
+    background-image: url('../img/carousel/banner-color.svg');
+    transition: background-image 0.1s ease-in-out;
+  }
+
   .banner__wrap--active {
-    background: url('../img/carousel/banner-bg.webp');
+    background-image: url('../img/carousel/banner-bg.webp');
     .banner__title {
       color: transparent;
       -webkit-text-stroke: 1px rgba(#FFFFFF, 0.4);
       // text-shadow: '-2px 2px 0 rgba(#fff, 0.4), 2px 2px 0 rgba(#fff, 0.4), 2px -2px 0 rgba(#fff, 0.4), -2px -2px 0 rgba(#fff, 0.4)';
+      &:hover {
+        color: #FFFFFF;
+      }
     }
   }
 
@@ -55,6 +63,16 @@
     transition: background-color 0.2s;
     &:hover {
       background-color: lighten(#D1CABC, 5%);
+    }
+  }
+
+  .footer {
+    &__navigation-item {
+      transition: color 0.2s ease-in-out;
+      &:hover {
+        color: $color-base;
+
+      }
     }
   }
 }

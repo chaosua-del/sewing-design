@@ -579,6 +579,10 @@
     padding-bottom: 232px;
     padding-top: 87px;
     margin-bottom: -11px;
+    transition: color 0.2s ease-in-out;
+    &--darken {
+      color: rgba(#000000, 0.5);
+    }
     &__swiper-container {
       display: none;
     }
@@ -609,7 +613,9 @@
         text-transform: uppercase;
         text-decoration: underline;
         cursor: pointer;
-
+        &:hover {
+          color: #FFFFFF;
+        }
       }
     }
   }
@@ -1058,6 +1064,10 @@
 // }
 
 @media(min-width: 1450px) {
+  .d-block-lg {
+    display: block;
+}
+  
   .phone {
     letter-spacing: 0.0242em;
   }
