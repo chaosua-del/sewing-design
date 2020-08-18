@@ -7,6 +7,7 @@
     border: 2px solid rgba(#1E1E1E, 0.1);
     padding-top: 12px;
     padding-bottom: 17px;
+    position: relative;
       }
   &__logo {
     margin-left: 17px;
@@ -17,12 +18,58 @@
     }
   }
   &__menu {
+    cursor: pointer;
     text-transform: uppercase;
     @include font(20.67px, -0.05em);
     text-decoration-line: underline;
     line-height: 30px;
+    position: static;
+    z-index: 5;
+    transition: opacity 0.3s ease-in-out;
     a {
       color: $color-base
+    }
+    &-expand {
+      // padding-left: 25px;
+      // padding-right: 25px;
+      transition: max-height 0.2s ease-in-out;
+      max-height: 0;
+      overflow: hidden;
+      padding-top: 29px;
+      height: 573px;
+      // padding-bottom: 38px;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0.02em;
+      position: absolute;
+      width: 101%;
+      top: 70px;
+      left: -2px;
+      display: flex;
+      flex-direction: column;
+      background: #F6F6F6;
+    }
+    &-close {
+      // transition: opacity 0.1s ease-in-out;
+      text-decoration: none;
+      position: absolute;
+      font-size: 45px;
+      transform: rotate(45deg);
+      left: 0;
+      top: 16px;
+      left: 27px;
+      opacity: 0;
+    }
+    &-item {
+      margin-bottom: 45px;
+      margin-left: 25px;
+    }
+    &-contacts {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      border-top: 2px solid rgba(#1E1E1E, 0.1);
+      padding: 35px 25px;
     }
   }
   &__button {

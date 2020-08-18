@@ -1,20 +1,25 @@
 header.header
     .container.header__container
         .header__menu
-            a(href="index.html") меню
-            //- .header__menu-expand
-            //-     a.menu-item(href="#") Каталог
-            //-     a.header__menu-item-item(href="#") Качество
-            //-     a.header__menu-item-item(href="#") Производство
-            //-     a.header__menu-item-item(href="#") Отзывы
-            //-     a.header__menu-item-item(href="#") Вопрос-ответ
+            span.header__menu-button меню
+            .header__menu-close +
+            .header__menu-expand
+                a.header__menu-item(href="#") Каталог
+                a.header__menu-item(href="#") Качество
+                a.header__menu-item(href="#") Производство
+                a.header__menu-item(href="#") Отзывы
+                a.header__menu-item(href="#") Вопрос-ответ
+                a.header__menu-item(href="#") Контакты
+                .header__menu-contacts
+                    a(href="tel:88003503745").phone.header__menu-phone 8 800 350-37-45
+                    a(href="#").web-site.header__menu-site info@site.com
         .header__navigation
             a.header__navigation-item(href="#") Каталог
             a.header__navigation-item(href="#") Качество
             a.header__navigation-item(href="#") Производство
             a.header__navigation-item(href="#") Отзывы
             a.header__navigation-item(href="#") Вопрос-ответ
-        .header__logo
+        a.header__logo(href="index.html")
             picture
                 <source type="image/svg+xml" media="(max-width: 767px)" srcset="assets/img/header-logo.svg">
                 <source type="image/svg+xml" media="(min-width: 1450px)" srcset="assets/img/header-logo-lg.svg">

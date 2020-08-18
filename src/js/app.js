@@ -238,10 +238,10 @@ document.addEventListener('DOMContentLoaded', function () {
             let clientsDimmOffset = clientsDimm.getBoundingClientRect().top;
             let offset = placeOffset - clientsDimmOffset;
             if (offset < clientsDimm.offsetHeight / 2) {
-                clientsPhoto.style.top = offset - 300 + 'px';
+                clientsPhoto.style.top = offset + 50 + 'px';
             }
             else {
-                clientsPhoto.style.top = offset - 700 + 'px';
+                clientsPhoto.style.top = offset - 400 + 'px';
             }
             clientsDimm.classList.add('clients--darken');
             this.style.zIndex = '30';
@@ -250,6 +250,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 clientsPhoto.style.opacity = '1';
             }), 100;
             // clientsDimm.style.height = '100%';
+            if (window.innerWidth >= 1450 && this.getBoundingClientRect().left > window.innerWidth / 2) {
+                // console.log(this.getBoundingClientRect().left);
+                clientsPhoto.style.left = this.getBoundingClientRect().left - 150 + 'px';
+                clientsPhoto.style.transform = 'translateX(0)';
+            }
+            else if (window.innerWidth >= 1450 && this.getBoundingClientRect().left < window.innerWidth / 2) {
+                // console.log(this.getBoundingClientRect().left);
+                clientsPhoto.style.left = this.getBoundingClientRect().left + 'px';
+                clientsPhoto.style.transform = 'translateX(0)';
+            }
         };
         element.onmouseleave = function () {
             clientsDimm.classList.remove('clients--darken');
@@ -324,42 +334,65 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 
+
+    // button expands 'section model' + hovers
+    if (window.innerWidth >= 1450) {
+        let expandButton = document.querySelectorAll('.model__button');
+        expandButton.forEach((elem) => {
+            elem.addEventListener('click', function () {
+                if (event.target.classList.contains('button--close')) {
+                    event.target.classList.remove('button--expand', 'button--close');
+                    event.target.innerHTML = '+';
+                    // console.log(event.target);
+                }
+                else {
+                    this.classList.add('button--expand');
+                    this.classList.add('button--close');
+                    this.innerHTML = '';
+                }
+
+            });
+        });
+
+        let banner = document.querySelectorAll('.banner__title');
+        let bannerWrap = document.querySelectorAll('.banner__wrap');
+        bannerWrap.forEach((elem) => {
+            elem.addEventListener('mouseenter', (event) => {
+                event.target.classList.add('banner__wrap--active');
+
+            });
+            elem.addEventListener('mouseleave', event => {
+                event.target.classList.remove('banner__wrap--active');
+            });
+        });
+
+
+    }
+
+    const headerMenuButton = document.querySelector('.header__menu-button');
+    const menuClose = document.querySelector('.header__menu-close');
+    const headerMenuExpand = document.querySelector('.header__menu-expand');
+    // expand-menu 
+    headerMenuButton.addEventListener('click', (event) => {
+        // console.log('hello');
+        headerMenuExpand.style.maxHeight = 573 + 'px';
+        event.target.style.opacity = '0';
+        event.target.style.zIndex = '-3';
+        menuClose.style.opacity = '1';
+        menuClose.style.zIndex = '3';
+    });
+
+    menuClose.addEventListener('click', (event) => {
+        headerMenuExpand.style.maxHeight = 0;
+        event.target.style.opacity = '0';
+        event.target.style.zIndex = '-3';
+        headerMenuButton.style.opacity = '1';
+        headerMenuButton.style.zIndex = '3';
+    });
 });
 
 
 
-// button expands 'section model' + hovers
-if (window.innerWidth >= 1450) {
-    let expandButton = document.querySelectorAll('.model__button');
-    expandButton.forEach((elem) => {
-        elem.addEventListener('click', function () {
-            if (event.target.classList.contains('button--close')) {
-                event.target.classList.remove('button--expand', 'button--close');
-                event.target.innerHTML = '+';
-                // console.log(event.target);
-            }
-            else {
-                this.classList.add('button--expand');
-                this.classList.add('button--close');
-                this.innerHTML = '';
-            }
 
-        });
-    });
-
-    let banner = document.querySelectorAll('.banner__title');
-    let bannerWrap = document.querySelectorAll('.banner__wrap');
-    bannerWrap.forEach((elem) => {
-        elem.addEventListener('mouseenter', (event) => {
-            event.target.classList.add('banner__wrap--active');
-
-        });
-        elem.addEventListener('mouseleave', event => {
-            event.target.classList.remove('banner__wrap--active');
-        });
-    });
-
-
-}
 
 

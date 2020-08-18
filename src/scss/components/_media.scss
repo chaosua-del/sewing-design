@@ -581,7 +581,7 @@
     margin-bottom: -11px;
     transition: color 0.2s ease-in-out;
     &--darken {
-      color: rgba(#000000, 0.5);
+      color: #4D4D4D;
     }
     &__swiper-container {
       display: none;
@@ -631,6 +631,7 @@
       padding-bottom: 20px;
     }
     &__card {
+      height: 235px;
       width: 416px;
       padding-left: 31px;
       padding-right: 24px;
@@ -712,11 +713,13 @@
     }
   }
 
-  // questions
+  // questions-768
   .questions {
     &__collapsible {
       font-size: 20px;
       line-height: 35px;
+      height: auto;
+      
     }
     &__text {
       font-size: 14px;
@@ -840,7 +843,7 @@
   }
 
   .collapsible {
-    margin-bottom: 44px;
+    margin-bottom: 26px;
     &::after {
       top: -6px;
       right: -4px;
@@ -1716,6 +1719,7 @@
       }
     }
     &__card {
+      height: 313px;
       padding-top: 36px;
       padding-left: 55px;
       padding-bottom: 47px;

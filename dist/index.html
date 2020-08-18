@@ -29,15 +29,18 @@
   <body class="body">
     <header class="header">
       <div class="container header__container">
-        <div class="header__menu"><a href="index.html">меню</a></div>
-        <div class="header__navigation"><a class="header__navigation-item" href="#">Каталог</a><a class="header__navigation-item" href="#">Качество</a><a class="header__navigation-item" href="#">Производство</a><a class="header__navigation-item" href="#">Отзывы</a><a class="header__navigation-item" href="#">Вопрос-ответ</a></div>
-        <div class="header__logo">
+        <div class="header__menu"><span class="header__menu-button">меню</span>
+          <div class="header__menu-close">+</div>
+          <div class="header__menu-expand"><a class="header__menu-item" href="#">Каталог</a><a class="header__menu-item" href="#">Качество</a><a class="header__menu-item" href="#">Производство</a><a class="header__menu-item" href="#">Отзывы</a><a class="header__menu-item" href="#">Вопрос-ответ</a><a class="header__menu-item" href="#">Контакты</a>
+            <div class="header__menu-contacts"><a class="phone header__menu-phone" href="tel:88003503745">8 800 350-37-45</a><a class="web-site header__menu-site" href="#">info@site.com</a></div>
+          </div>
+        </div>
+        <div class="header__navigation"><a class="header__navigation-item" href="#">Каталог</a><a class="header__navigation-item" href="#">Качество</a><a class="header__navigation-item" href="#">Производство</a><a class="header__navigation-item" href="#">Отзывы</a><a class="header__navigation-item" href="#">Вопрос-ответ</a></div><a class="header__logo" href="index.html">
           <picture><source type="image/svg+xml" media="(max-width: 767px)" srcset="assets/img/header-logo.svg">
 <source type="image/svg+xml" media="(min-width: 1450px)" srcset="assets/img/header-logo-lg.svg">
 <img class="lazyload" src="assets/img/header-logo.svg" alt="logo">
             <p class="header__logo-text">since 2015</p>
-          </picture>
-        </div><a class="header__navigation-item" href="#">Контакты</a>
+          </picture></a><a class="header__navigation-item" href="#">Контакты</a>
         <button class="header__button">Заказать Звонок</button>
         <div class="header__contacts"> <a class="phone header__contacts-phone" href="tel:88003503745">8 800 350-37-45</a>
           <button class="header__contacts-button">Заказать Звонок</button><a class="web-site header__contacts-web-site" href="#">info@site.com</a>
@@ -363,13 +366,7 @@
               <div class="feedback__card">
                 <div class="feedback__card-decoration feedback__card-decoration--bottom"></div>
                 <div class="feedback__user">
-                  <div class="feedback__user-photo">
-                    <picture><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/feedback/user-photo2.webp">
-<source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/feedback/user-photo2.jpg">
-<source type="image/webp" media="(min-width: 768px)" srcset="assets/img/feedback/user-photo2-md.webp">
-<source type="image/jpg" media="(min-width: 768px)" srcset="assets/img/feedback/user-photo2-md.jpg"><img class="feedback__user-img" src="assets/img/feedback/user-photo2-md.webp" alt="client-2">
-                    </picture>
-                  </div>
+                  <div class="feedback__user-photo"><img class="feedback__user-img" src="assets/img/feedback/user-photo2-md.webp" alt="client-2"></div>
                   <div><strong class="feedback__user-name">Ольга Петрова</strong><span class="feedback__user-job">Директор сети ретсоранов “Сулугуни”</span></div>
                 </div>
                 <p class="feedback__card-text">Хорошая одежда. Отличное качество. Люблю ваш магазин. Стильные образы, отличное качество тканей и пошива изделий.</p><span class="feedback__card-date">23.02.2020</span>
@@ -379,13 +376,7 @@
               <div class="feedback__card">
                 <div class="feedback__card-decoration feedback__card-decoration--top"></div>
                 <div class="feedback__user">
-                  <div class="feedback__user-photo">
-                    <picture><source type="image/webp" media="(max-width: 767px)" srcset="assets/img/feedback/user-photo3.webp">
-<source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/feedback/user-photo3.jpg">
-<source type="image/webp" media="(min-width: 768px)" srcset="assets/img/feedback/user-photo3-md.webp">
-<source type="image/jpg" media="(min-width: 768px)" srcset="assets/img/feedback/user-photo3-md.jpg"><img class="feedback__user-img" src="assets/img/feedback/user-photo3-md.webp" alt="client-1">
-                    </picture>
-                  </div>
+                  <div class="feedback__user-photo"><img class="feedback__user-img" src="assets/img/feedback/user-photo3-md.webp" alt="client-1"></div>
                   <div><strong class="feedback__user-name">Екатерина Иванова</strong><span class="feedback__user-job">Директор сети ретсоранов “Сулугуни”</span></div>
                 </div>
                 <p class="feedback__card-text">Хорошая одежда. Отличное качество. Люблю ваш магазин. Стильные образы, отличное качество тканей и пошива изделий.</p><span class="feedback__card-date">23.02.2020</span>
