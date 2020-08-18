@@ -133,6 +133,7 @@ strong {
 }
 
 .button {
+    cursor: pointer;
     color: $color-white;
     background-color: $color-base;
     @include font(14px, 0.02em);
@@ -147,7 +148,6 @@ strong {
       position: absolute;
       top: -36px;
       right: -24px;
-    //   transform: rotate(45deg);
       width: 53px;
       height: 53px;
       border-radius: 50%;

@@ -36,7 +36,7 @@
 
   .button {
     border: 1px solid #1E1E1E;
-    transition: all 0.2s;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; 
     &:hover {
       background-color: #FFFFFF;
       color: $color-base;

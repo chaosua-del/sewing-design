@@ -1058,6 +1058,13 @@
 // }
 
 @media(min-width: 1450px) {
+  .phone {
+    letter-spacing: 0.0242em;
+  }
+
+  .web-site {
+    letter-spacing: 0.0234em;
+  }
   // form-1450
   .form {
     &__input {
@@ -1089,6 +1096,11 @@
   }
 
   .header {
+    &__contacts {
+      &-button {
+        letter-spacing: 0.0203em;
+      }
+    }
     &__container {
       border: 0;
       // padding-top: 14px;
@@ -1331,6 +1343,7 @@
         .uniforms__card-name {
           left: -4px;
           bottom: -123.5px;
+          max-width: 397px;
         }
       }
     }
@@ -1396,6 +1409,9 @@
     &__info {
       margin-top: 146px;
       margin-right: 101px;
+      &-name {
+        letter-spacing: -0.034em;
+      }
       &-job {
         margin-top: 8px;
       }
@@ -1570,7 +1586,7 @@
       &-title {
       font-size: 70px;
       line-height: 70px;
-      width: 672px;
+      width: 804px;
       margin-top: 60px;
       margin-left: 19%;
       margin-bottom: 84px;
@@ -1590,9 +1606,17 @@
       }
       &-button {
          margin-left: 19%;
+         border: 2px solid rgba(0, 0, 0, 0.1) !important;
+         padding-top: 22px;
+         padding-bottom: 20px;
+         padding-left: 64.52px;
+         padding-right: 65px;
       }
       &-companies {
          margin-left: 19%;
+         img {
+           height: 16px;
+         }
       }
     } 
   }
@@ -1702,7 +1726,7 @@
           background: url(../img/feedback/feedback-decoration-lg.svg) no-repeat center;
           top: -55px;
           right: -36px;
-          height: 117px;
+          height: 124px;
           width: 300px;
         }
         &--bottom {

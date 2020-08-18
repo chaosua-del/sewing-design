@@ -454,6 +454,7 @@ strong {
   page-break-inside: avoid; }
 
 .button {
+  cursor: pointer;
   color: #F6F6F6;
   background-color: #1E1E1E;
   font-family: 'Century Gothic Bold';
@@ -1459,7 +1460,7 @@ img {
 .collapsible {
   cursor: pointer;
   border-top: 3px solid rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-out; }
+  transition: border-top 0.2s ease-in-out; }
 
 .collapsible:after {
   content: '+';
@@ -1468,7 +1469,7 @@ img {
   float: right;
   margin-left: 5px;
   font-size: 21px;
-  transition: all 0.3s ease-in-out; }
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out; }
 
 .active {
   border-top: 3px solid black;
@@ -1480,7 +1481,7 @@ img {
 .expand-content {
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3s ease-in-out; }
+  transition: max-height 0.2s ease-in-out, margin-bottom 0.2s ease-in-out; }
 
 .office {
   background: #EAEEF1 url("../img/decoration-line-2.svg") no-repeat 0% 50%; }
@@ -2540,6 +2541,10 @@ img {
     left: 15%; } }
 
 @media (min-width: 1450px) {
+  .phone {
+    letter-spacing: 0.0242em; }
+  .web-site {
+    letter-spacing: 0.0234em; }
   .form__input {
     font-size: 16px;
     line-height: 20px;
@@ -2560,6 +2565,8 @@ img {
       line-height: 26px;
       top: -43px;
       right: -56px; }
+  .header__contacts-button {
+    letter-spacing: 0.0203em; }
   .header__container {
     border: 0;
     padding-left: 0;
@@ -2725,7 +2732,8 @@ img {
         right: 23px; }
       .uniforms__card--third .uniforms__card-name {
         left: -4px;
-        bottom: -123.5px; }
+        bottom: -123.5px;
+        max-width: 397px; }
     .uniforms__button {
       right: -201px;
       top: 50%; }
@@ -2775,6 +2783,8 @@ img {
     .leader__info {
       margin-top: 146px;
       margin-right: 101px; }
+      .leader__info-name {
+        letter-spacing: -0.034em; }
       .leader__info-job {
         margin-top: 8px; }
     .leader__title {
@@ -2898,7 +2908,7 @@ img {
       .stages__card-title {
         font-size: 70px;
         line-height: 70px;
-        width: 672px;
+        width: 804px;
         margin-top: 60px;
         margin-left: 19%;
         margin-bottom: 84px; }
@@ -2914,9 +2924,16 @@ img {
         left: 19%;
         bottom: 194px; }
       .stages__card-button {
-        margin-left: 19%; }
+        margin-left: 19%;
+        border: 2px solid rgba(0, 0, 0, 0.1) !important;
+        padding-top: 22px;
+        padding-bottom: 20px;
+        padding-left: 64.52px;
+        padding-right: 65px; }
       .stages__card-companies {
         margin-left: 19%; }
+        .stages__card-companies img {
+          height: 16px; }
   .instruction {
     background: #F9F7F2 url(../img/instruction/instruction-bg-lg.webp) no-repeat 0% 0%; }
     .instruction__title {
@@ -2996,7 +3013,7 @@ img {
         background: url(../img/feedback/feedback-decoration-lg.svg) no-repeat center;
         top: -55px;
         right: -36px;
-        height: 117px;
+        height: 124px;
         width: 300px; }
       .feedback__card-decoration--bottom {
         left: -23px;
@@ -3253,7 +3270,7 @@ img {
       -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4); }
   .button {
     border: 1px solid #1E1E1E;
-    transition: all 0.2s; }
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; }
     .button:hover {
       background-color: #FFFFFF;
       color: #1E1E1E; }
