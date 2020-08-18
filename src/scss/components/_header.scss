@@ -32,10 +32,10 @@
     &-expand {
       // padding-left: 25px;
       // padding-right: 25px;
-      transition: max-height 0.2s ease-in-out;
+      transition: max-height 0.2s ease-in-out, padding-top 0.2s ease-in-out;
       max-height: 0;
       overflow: hidden;
-      padding-top: 29px;
+      // padding-top: 29px;
       height: 573px;
       // padding-bottom: 38px;
       font-size: 12px;

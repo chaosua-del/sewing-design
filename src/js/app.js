@@ -375,7 +375,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // expand-menu 
     headerMenuButton.addEventListener('click', (event) => {
         // console.log('hello');
-        headerMenuExpand.style.maxHeight = 573 + 'px';
+        headerMenuExpand.style.maxHeight = 504 + 'px';
+        headerMenuExpand.style.paddingTop = 29 + 'px';
         event.target.style.opacity = '0';
         event.target.style.zIndex = '-3';
         menuClose.style.opacity = '1';
@@ -383,11 +384,34 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     menuClose.addEventListener('click', (event) => {
+        headerMenuExpand.style.paddingTop = 0 + 'px';
         headerMenuExpand.style.maxHeight = 0;
         event.target.style.opacity = '0';
         event.target.style.zIndex = '-3';
         headerMenuButton.style.opacity = '1';
         headerMenuButton.style.zIndex = '3';
+    });
+
+    // scorll down
+    $('.header__menu-item').click(function (b) {
+        b.preventDefault();
+        $('body,html').animate({
+            scrollTop: $(this.hash).offset().top
+        }, 1000);
+    });
+
+    $('.footer__navigation-item').click(function (b) {
+        b.preventDefault();
+        $('body,html').animate({
+            scrollTop: $(this.hash).offset().top
+        }, 1000);
+    });
+
+    $('.header__navigation-item').click(function (b) {
+        b.preventDefault();
+        $('body,html').animate({
+            scrollTop: $(this.hash).offset().top
+        }, 1000);
     });
 });
 

@@ -591,10 +591,9 @@ img {
   .header__menu a {
     color: #1E1E1E; }
   .header__menu-expand {
-    transition: max-height 0.2s ease-in-out;
+    transition: max-height 0.2s ease-in-out, padding-top 0.2s ease-in-out;
     max-height: 0;
     overflow: hidden;
-    padding-top: 29px;
     height: 573px;
     font-size: 12px;
     line-height: 20px;
@@ -1946,6 +1945,17 @@ img {
   .header__menu {
     font-size: 30px;
     line-height: 80px; }
+    .header__menu-expand {
+      top: 92px; }
+    .header__menu-close {
+      top: 0;
+      left: 44px; }
+    .header__menu-item {
+      font-size: 16px;
+      line-height: 20px;
+      margin-left: 44px; }
+    .header__menu-contacts {
+      display: none; }
   .hero__container {
     padding-top: 81px;
     padding-bottom: 115px; }
