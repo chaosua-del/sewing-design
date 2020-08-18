@@ -333,24 +333,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // button expands 'section model' + hovers
     if (window.innerWidth >= 1450) {
-        let expandButton = document.querySelectorAll('.model__button');
-        expandButton.forEach((elem) => {
-            elem.addEventListener('click', function () {
-                if (event.target.classList.contains('button--close')) {
-                    event.target.classList.remove('button--expand', 'button--close');
-                    event.target.innerHTML = '+';
-                    // console.log(event.target);
-                }
-                else {
-                    this.classList.add('button--expand');
-                    this.classList.add('button--close');
-                    this.innerHTML = '';
-                }
 
-            });
-        });
-
-        let banner = document.querySelectorAll('.banner__title');
         let bannerWrap = document.querySelectorAll('.banner__wrap');
         bannerWrap.forEach((elem) => {
             elem.addEventListener('mouseenter', (event) => {
@@ -409,6 +392,28 @@ document.addEventListener('DOMContentLoaded', function () {
             scrollTop: $(this.hash).offset().top
         }, 1000);
     });
+
+
+    let expandButton = document.querySelectorAll('.model__button');
+    expandButton.forEach((elem) => {
+        elem.addEventListener('click', function () {
+            if (window.innerWidth >= 1450) {
+                console.log('hello');
+                if (event.target.classList.contains('button--close')) {
+                    event.target.classList.remove('button--expand', 'button--close');
+                    event.target.innerHTML = '+';
+                    // console.log(event.target);
+                }
+                else {
+                    this.classList.add('button--expand');
+                    this.classList.add('button--close');
+                    this.innerHTML = '';
+                }
+            }
+
+        });
+    });
+
 });
 
 

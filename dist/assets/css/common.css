@@ -1517,7 +1517,7 @@ input.form__error {
 .collapsible {
   cursor: pointer;
   border-top: 3px solid rgba(0, 0, 0, 0.1);
-  transition: border-top 0.2s ease-in-out; }
+  transition: border-top 0.2s ease-in-out, margin-bottom 0.2s ease-in-out; }
 
 .collapsible:after {
   content: '+';
@@ -1891,7 +1891,7 @@ input.form__error {
 
 @media (min-width: 321px) {
   .leader {
-    background: url("../img/design/designer-photo-md.webp") no-repeat center/cover; } }
+    background: url("../img/design/designer-photo-md.jpg") no-repeat center/cover; } }
 
 @media (min-width: 450px) {
   .office__container::before {
@@ -2365,7 +2365,9 @@ input.form__error {
       font-size: 14px;
       line-height: 22px; }
     .feedback__user-img {
-      margin-right: 16px; }
+      margin-right: 16px;
+      width: 66px;
+      height: 66px; }
   .feedback__swiper-button-next, .feedback__swiper-button-prev {
     top: 291px !important; }
   .feedback__swiper-button-next:after {
@@ -2857,7 +2859,7 @@ input.form__error {
     margin-left: auto;
     margin-right: 0;
     flex-basis: 50%;
-    background: url(../img/design/designer-photo-lg.webp) no-repeat center/cover; }
+    background: url("../img/design/designer-photo-lg.jpg") no-repeat center/cover; }
     .leader__info {
       margin-top: 146px;
       margin-right: 101px; }
@@ -3073,7 +3075,8 @@ input.form__error {
         font-size: 17px;
         line-height: 22px; }
       .feedback__user-img {
-        width: 76px; }
+        width: 76px;
+        height: 76px; }
     .feedback__card {
       height: 313px;
       padding-top: 36px;

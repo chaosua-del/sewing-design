@@ -1,7 +1,7 @@
 @media(min-width: 321px) {
   // design
   .leader {
-    background: url('../img/design/designer-photo-md.webp') no-repeat center / cover;
+    background: url('../img/design/designer-photo-md.jpg') no-repeat center / cover;
   }
 
   // model
@@ -690,6 +690,8 @@
       }
       &-img  {
         margin-right: 16px;
+        width: 66px;
+        height: 66px;
       }
     }
   }
@@ -1450,7 +1452,7 @@
     margin-left: auto;
     margin-right: 0;
     flex-basis: 50%;
-    background: url(../img/design/designer-photo-lg.webp) no-repeat center/cover;
+    background: url('../img/design/designer-photo-lg.jpg') no-repeat center/cover;
     &__title {
       font-size: 26px;
       line-height: 32px;
@@ -1733,6 +1735,7 @@
       }
       &-img {
         width: 76px;
+        height: 76px;
       }
     }
     &__card {

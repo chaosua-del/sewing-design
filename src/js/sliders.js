@@ -120,9 +120,9 @@ export default function () {
   const feedback = new Swiper('.feedback__swiper-container', {
     slidesPerView: 'auto',
     // loop: true,
-    setWrapperSize: true,
+    // setWrapperSize: true,
     updateOnWindowResize: false,
-    spaceBetween: 10,
+    // spaceBetween: 10,
     // slidesOffsetBefore: 25,
     slidesOffsetAfter: 40,
 
@@ -138,6 +138,7 @@ export default function () {
         slidesOffsetAfter: 350
       },
       1450: {
+        slidesOffsetAfter: 0,
         freeMode: true,
         loop: true,
         spaceBetween: 42,
