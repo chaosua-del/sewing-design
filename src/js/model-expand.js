@@ -1,4 +1,8 @@
 export default function modelExpand() {
+  let text = {
+    neck: 'neck',
+    shoulder: 'shouler'
+  }
   let expandButton = document.querySelectorAll('.model__button');
   expandButton.forEach((elem) => {
     elem.addEventListener('click', function () {
@@ -10,9 +14,16 @@ export default function modelExpand() {
           // console.log(event.target);
         }
         else {
-          this.classList.add('button--expand');
-          this.classList.add('button--close');
-          this.innerHTML = '';
+          expandButton.forEach((elem) => {
+            if (elem != event.target) {
+              elem.classList.remove('button--expand', 'button--close');
+              elem.innerHTML = '+';
+            }
+
+          });
+          event.target.classList.add('button--expand');
+          event.target.classList.add('button--close');
+          event.target.innerHTML = ``;
         }
       }
 

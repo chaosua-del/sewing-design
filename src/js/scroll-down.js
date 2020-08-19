@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 export default function scrollDown() {
   // scorll down
   $('.header__menu-item').click(function (b) {
