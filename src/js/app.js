@@ -12,6 +12,9 @@ import bannerScroll from 'banner';
 import bannerHover from 'banner-hover';
 import clientsHovers from 'clients';
 import expandMenu from 'expand-menu';
+import headerMenu from 'header-menu';
+import scrollDown from 'scroll-down';
+import modelExpand from 'model-expand';
 
 import Swiper from 'swiper/js/swiper.js';
 // import mask from 'swiper/js/swiper.js';
@@ -64,13 +67,16 @@ let app = {
         });
 
         app.window.on('load', () => {
-            sliders();
-            formValidation();
-            popupMenu();
+            headerMenu();
             bannerScroll();
             bannerHover();
+            sliders();
+            popupMenu();
+            modelExpand();
+            formValidation();
             clientsHovers();
             expandMenu();
+            scrollDown();
         });
 
         this.document.on(app.resizeEventName, () => {
@@ -199,87 +205,6 @@ app.init();
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
-
-
-
-
-    // for (i = 0; i < place.length; i++) {
-
-    // }
-
-
-
-
-
-
-    const headerMenuButton = document.querySelector('.header__menu-button');
-    const menuClose = document.querySelector('.header__menu-close');
-    const headerMenuExpand = document.querySelector('.header__menu-expand');
-    // expand-menu 
-    headerMenuButton.addEventListener('click', (event) => {
-        // console.log('hello');
-        headerMenuExpand.style.maxHeight = 504 + 'px';
-        headerMenuExpand.style.paddingTop = 29 + 'px';
-        event.target.style.opacity = '0';
-        event.target.style.zIndex = '-3';
-        menuClose.style.opacity = '1';
-        menuClose.style.zIndex = '3';
-    });
-
-    menuClose.addEventListener('click', (event) => {
-        headerMenuExpand.style.paddingTop = 0 + 'px';
-        headerMenuExpand.style.maxHeight = 0;
-        event.target.style.opacity = '0';
-        event.target.style.zIndex = '-3';
-        headerMenuButton.style.opacity = '1';
-        headerMenuButton.style.zIndex = '3';
-    });
-
-    // scorll down
-    $('.header__menu-item').click(function (b) {
-        b.preventDefault();
-        $('body,html').animate({
-            scrollTop: $(this.hash).offset().top
-        }, 1000);
-    });
-
-    $('.footer__navigation-item').click(function (b) {
-        b.preventDefault();
-        $('body,html').animate({
-            scrollTop: $(this.hash).offset().top
-        }, 1000);
-    });
-
-    $('.header__navigation-item').click(function (b) {
-        b.preventDefault();
-        $('body,html').animate({
-            scrollTop: $(this.hash).offset().top
-        }, 1000);
-    });
-
-
-    let expandButton = document.querySelectorAll('.model__button');
-    expandButton.forEach((elem) => {
-        elem.addEventListener('click', function () {
-            if (window.innerWidth >= 768) {
-                console.log('hello');
-                if (event.target.classList.contains('button--close')) {
-                    event.target.classList.remove('button--expand', 'button--close');
-                    event.target.innerHTML = '+';
-                    // console.log(event.target);
-                }
-                else {
-                    this.classList.add('button--expand');
-                    this.classList.add('button--close');
-                    this.innerHTML = '';
-                }
-            }
-
-        });
-    });
-
-});
 
 
 
