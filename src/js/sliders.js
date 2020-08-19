@@ -148,6 +148,14 @@ export default function () {
 
   feedback.translateTo(document.querySelector('.feedback__swiper-slide').style.width, 300);
 
-
+  const model = new Swiper('.model__swiper-container', {
+    pagination: {
+      el: '.model__swiper-pagination',
+    },
+    navigation: {
+      nextEl: '.model__swiper-button-next',
+      prevEl: '.model__swiper-button-prev',
+    },
+  });
 
 }

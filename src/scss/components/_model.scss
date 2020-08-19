@@ -1,7 +1,13 @@
 .model {
-  padding-top: 66px;
+  background-color: #E3E8EC;
+  &__swiper-container {
+    max-width: 320px !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
   &__card {
-    display: flex;
+    display: none;
+    // display: flex;
     justify-content: center;
     position: relative;
     width: 100%;
@@ -73,5 +79,64 @@
     &-title {
       @include font(30px, -0.04em, 25px);
     }
+  }
+  &__advantages {
+    position: relative;
+    height: 284px;
+    
+    padding-right: 24px;
+    padding-left: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    &-subtitle {
+      margin-top: 31px;
+      margin-bottom: 19px;
+      // margin-left: -150px;
+      font-family: 'Century Gothic Regular' !important;
+      text-transform: uppercase;
+      color: #757575;
+      @include font(11px, 0.02em, 11px);
+      width: 138px;
+      max-width: 45%;
+    }
+    &-title {
+      text-transform: uppercase;
+      @include font(30px, -0.04em, 25px);
+      // max-width: 70%;
+      width: 194px; 
+      // margin-left: -98px;
+    }
+    &-number {
+      right: 24px;
+      position: absolute;
+      color: #C4BCBC;
+      @include font(30px, -0.03em, 75px);
+      flex-basis: 50%;
+      text-align: right;
+    }
+  }
+}
+
+.model__swiper-button-next:after {
+  content: url('../img/stages/arrow-next.svg') !important;
+  right: 72%;
+}
+
+.model__swiper-button-prev:after {
+  content: url('../img/stages/arrow-prev.svg') !important;
+  left: 72%;
+}
+
+.model__swiper-button-next, .model__swiper-button-prev {
+  top: 218px !important;
+}
+
+.model__swiper-pagination {
+  bottom: 52px !important;
+  .swiper-pagination-bullet {
+    width: 27px !important;
   }
 }

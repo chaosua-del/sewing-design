@@ -40,7 +40,9 @@
 
 @media(min-width: 768px) {
   // base
+
   
+
   .phone-button {
     letter-spacing: 0.0209em;
   }
@@ -411,9 +413,12 @@
     }
   }
 
-  // model
+  // model-768
   .model {
-    padding-top: 44px;
+    // padding-top: 44px;
+    &__swiper-container {
+      display: none;
+    }
     &__info {
       transform: translateX(0);
       left: 11px;
@@ -431,6 +436,7 @@
       }
     }
     &__card {
+      display: flex;
       height: 434px;
     }
     &__buttons {
@@ -459,8 +465,59 @@
         right: 20px;
         top: 182px;
       }
+      &::before {
+        top: -10px;
+        left: 50px;
+        opacity: 0;
+        z-index: 20;
+        transition: opacity 0.3s;
+        font-size: 15px;
+      }
+      &::after {
+        content: '';
+        margin-top: 32px;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        position: absolute;
+        width: 283px;
+        height: 283px;
+        border-radius: 50%;
+        border: 2px solid #FFFFFF;
+        transition: max-width 0.1s ease-in, max-height 0.1s ease-in;
+      }
     }
   }
+
+  .button--expand {
+    border: 0 !important;
+    max-height: 0 !important;
+    // position: relative;
+    &::after {
+      opacity: 1 !important;
+      max-height: 131px !important;
+      max-width: 131px !important;
+      // margin-top: 0;
+    }
+  }
+
+  .button--close {
+    &::before {
+      content: '+';
+      transform: rotate(45deg);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      // float: left;
+      opacity: 1 !important;
+      // position: absolute;
+      background-color: #FFFFFF;
+    }
+  }
+
 
   // stages
   .stages {
@@ -1550,35 +1607,7 @@
    
   }
 
-  .button--expand {
-      border: 0 !important;
-      max-height: 0 !important;
-    // position: relative;
-    &::after {
-      opacity: 1;
-      max-height: 283px;
-      max-width: 283px;
-      // margin-top: 0;
-    }
-  }
-
-  .button--close {
-    &::before {
-      content: '+';
-      transform: rotate(45deg);
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 35px;
-      height: 35px;
-      // float: left;
-      opacity: 1;
-      // position: absolute;
-      background-color: #FFFFFF;
-    }
-  }
-
+  
   // stages-1450
   .stages {
     padding-bottom: 137px;

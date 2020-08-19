@@ -233,19 +233,14 @@ document.addEventListener('DOMContentLoaded', function () {
             clientsPhoto.innerHTML = html;
             let clientsDimmOffset = clientsDimm.getBoundingClientRect().top;
             let offset = placeOffset - clientsDimmOffset;
-            if (offset < clientsDimm.offsetHeight / 2) {
-                clientsPhoto.style.top = offset + 50 + 'px';
-            }
-            else {
-                clientsPhoto.style.top = offset - 400 + 'px';
-            }
+
+            clientsPhoto.style.top = offset + 70 + 'px';
             clientsDimm.classList.add('clients--darken');
             this.style.zIndex = '30';
             setTimeout(() => {
                 clientsPhoto.style.zIndex = '1';
                 clientsPhoto.style.opacity = '1';
             }), 100;
-            // clientsDimm.style.height = '100%';
             if (window.innerWidth >= 1450 && this.getBoundingClientRect().left > window.innerWidth / 2) {
                 // console.log(this.getBoundingClientRect().left);
                 clientsPhoto.style.left = this.getBoundingClientRect().left - 150 + 'px';
@@ -331,7 +326,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    // button expands 'section model' + hovers
+    // benner hovers
     if (window.innerWidth >= 1450) {
 
         let bannerWrap = document.querySelectorAll('.banner__wrap');
@@ -397,7 +392,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let expandButton = document.querySelectorAll('.model__button');
     expandButton.forEach((elem) => {
         elem.addEventListener('click', function () {
-            if (window.innerWidth >= 1450) {
+            if (window.innerWidth >= 768) {
                 console.log('hello');
                 if (event.target.classList.contains('button--close')) {
                     event.target.classList.remove('button--expand', 'button--close');
