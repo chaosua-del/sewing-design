@@ -1950,7 +1950,7 @@ input.form__error {
 
 @media (min-width: 321px) {
   .leader {
-    background: url("../img/design/designer-photo-md.jpg") no-repeat center/cover; } }
+    background: url("../img/design/designer-photo-md.png") no-repeat center/cover; } }
 
 @media (min-width: 450px) {
   .office__container::before {
@@ -2956,7 +2956,7 @@ input.form__error {
     margin-left: auto;
     margin-right: 0;
     flex-basis: 50%;
-    background: url("../img/design/designer-photo-lg.jpg") no-repeat center/cover; }
+    background: url("../img/design/designer-photo-lg.png") no-repeat center/cover; }
     .leader__info {
       margin-top: 146px;
       margin-right: 101px; }
