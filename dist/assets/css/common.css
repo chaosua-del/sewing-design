@@ -3038,6 +3038,24 @@ input.form__error {
         justify-content: center;
         left: 13%;
         top: 37%; }
+  .button--expand {
+    border: 0 !important;
+    max-height: 0 !important; }
+    .button--expand::after {
+      opacity: 1 !important;
+      max-height: 283px !important;
+      max-width: 283px !important; }
+  .button--close::before {
+    content: '+';
+    transform: rotate(45deg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    opacity: 1 !important;
+    background-color: #FFFFFF; }
   .stages {
     padding-bottom: 137px; }
     .stages__swiper-container {

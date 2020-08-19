@@ -1607,6 +1607,35 @@
    
   }
 
+  .button--expand {
+    border: 0 !important;
+    max-height: 0 !important;
+    // position: relative;
+    &::after {
+      opacity: 1 !important;
+      max-height: 283px !important;
+      max-width: 283px !important;
+      // margin-top: 0;
+    }
+  }
+
+  .button--close {
+    &::before {
+      content: '+';
+      transform: rotate(45deg);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 35px;
+      height: 35px;
+      // float: left;
+      opacity: 1 !important;
+      // position: absolute;
+      background-color: #FFFFFF;
+    }
+  }
+
   
   // stages-1450
   .stages {
