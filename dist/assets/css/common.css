@@ -3426,25 +3426,29 @@ input.form__error {
     margin-bottom: 26px; } }
 
 @media (min-width: 1250px) {
-  .photos__info {
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    position: absolute;
-    bottom: -64px;
-    left: 0;
-    width: 100%;
-    justify-content: space-between; }
-    .photos__info-name {
-      max-width: 167px;
-      text-align: right; }
-  .photos__swiper-slide {
-    position: relative;
-    cursor: pointer; }
-    .photos__swiper-slide:hover .photos__info {
-      display: block;
-      display: flex; }
+  .photos {
+    margin-bottom: 20px; }
+    .photos__swiper-wrapper {
+      padding-bottom: 63px; }
+    .photos__info {
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      position: absolute;
+      bottom: -64px;
+      left: 0;
+      width: 100%;
+      justify-content: space-between; }
+      .photos__info-name {
+        max-width: 167px;
+        text-align: right; }
+    .photos__swiper-slide {
+      position: relative;
+      cursor: pointer; }
+      .photos__swiper-slide:hover .photos__info {
+        display: block;
+        display: flex; }
   .banner__wrap {
     background-image: url("../img/carousel/banner-color.svg");
     transition: background-image 0.1s ease-in-out; }

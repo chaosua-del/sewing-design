@@ -1,5 +1,9 @@
 @media (min-width: 1250px) {
   .photos {
+    margin-bottom: 20px;
+    &__swiper-wrapper {
+      padding-bottom: 63px;
+    }
     &__info {
       font-size: 14px;
       line-height: 16px;

@@ -20,6 +20,17 @@ export default function () {
 
 
   if (window.innerWidth < 768) {
+    const model = new Swiper('.model__swiper-container', {
+      parallax: true,
+      speed: 600,
+      pagination: {
+        el: '.model__swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.model__swiper-button-next',
+        prevEl: '.model__swiper-button-prev',
+      },
+    });
 
     const benefits = new Swiper('.benefits__swiper-container', {
       slidesPerView: 'auto',
@@ -40,6 +51,8 @@ export default function () {
     });
 
     const clients = new Swiper('.clients__swiper-container', {
+      parallax: true,
+      speed: 600,
       slidesPerView: 'auto',
       pagination: {
         el: '.clients__swiper-pagination',
@@ -63,7 +76,33 @@ export default function () {
     });
 
   }
-  else {
+  if (window.innerWidth < 1450) {
+    const feedback = new Swiper('.feedback__swiper-container', {
+      slidesPerView: 'auto',
+      // loop: true,
+      // setWrapperSize: true,
+      updateOnWindowResize: false,
+      spaceBetween: 10,
+      // slidesOffsetBefore: 25,
+      slidesOffsetAfter: 40,
+
+      pagination: {
+        el: '.feedback__swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.feedback__swiper-button-next',
+        prevEl: '.feedback__swiper-button-prev',
+      },
+      breakpoints: {
+        768: {
+          slidesOffsetAfter: 350
+        }
+      }
+    });
+
+    feedback.translateTo(document.querySelector('.feedback__swiper-slide').style.width, 300);
+  }
+  if (window.innerWidth >= 768) {
 
     const stages = new Swiper('.stages__swiper-container', {
       direction: 'horizontal',
@@ -72,7 +111,6 @@ export default function () {
       parallax: true,
       slidesPerView: 1,
     });
-
 
     document.querySelector('.stages__card--second').addEventListener('mouseleave', () => {
       stages.mousewheel.disable();
@@ -85,77 +123,28 @@ export default function () {
     document.querySelector('.stages__card--first').addEventListener('mouseleave', () => {
       stages.mousewheel.enable();
     });
-
-    //   addEventListener('mouseleave', (event) => {
-    //   console.log(event.target);
-    //   stages.mousewheel.enable();
-    // });
   }
-
-  // expand menu
-  const coll = document.getElementsByClassName('collapsible');
-  let i;
-
-  for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener('click', function () {
-      this.classList.toggle('active');
-      // card.classList.toggle('questions__card--active');
-      let content = this.nextElementSibling;
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-        content.style.marginBottom = 0 + 'px';
-      } else {
-        content.style.maxHeight = content.scrollHeight + 'px';
-        if (window.innerWidth < 768)
-          content.style.marginBottom = 52 + 'px';
-        else if (window.innerWidth >= 768 && window.innerWidth < 1450)
-          content.style.marginBottom = 113 + 'px';
-        else if (window.innerWidth >= 1450)
-          content.style.marginBottom = 54 + 'px';
-      }
+  if (window.innerWidth >= 1450) {
+    const feedback = new Swiper('.feedback__swiper-container', {
+      loop: true,
+      slidesPerView: 'auto',
     });
   }
 
 
-  const feedback = new Swiper('.feedback__swiper-container', {
-    slidesPerView: 'auto',
-    // loop: true,
-    // setWrapperSize: true,
-    updateOnWindowResize: false,
-    // spaceBetween: 10,
-    // slidesOffsetBefore: 25,
-    slidesOffsetAfter: 40,
 
-    pagination: {
-      el: '.feedback__swiper-pagination',
-    },
-    navigation: {
-      nextEl: '.feedback__swiper-button-next',
-      prevEl: '.feedback__swiper-button-prev',
-    },
-    breakpoints: {
-      768: {
-        slidesOffsetAfter: 350
-      },
-      1450: {
-        slidesOffsetAfter: 0,
-        freeMode: true,
-        loop: true,
-        spaceBetween: 42,
-      }
-    }
-  });
 
-  feedback.translateTo(document.querySelector('.feedback__swiper-slide').style.width, 300);
-
-  const model = new Swiper('.model__swiper-container', {
-    pagination: {
-      el: '.model__swiper-pagination',
-    },
-    navigation: {
-      nextEl: '.model__swiper-button-next',
-      prevEl: '.model__swiper-button-prev',
-    },
-  });
+  //   addEventListener('mouseleave', (event) => {
+  //   console.log(event.target);
+  //   stages.mousewheel.enable();
+  // });
 
 }
+
+
+
+
+
+
+
+

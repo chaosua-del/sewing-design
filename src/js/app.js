@@ -7,7 +7,11 @@ import forms from 'forms';
 import sliders from 'sliders';
 import { myMap } from 'map';
 import formValidation from 'validation';
-// import Inputmask from 'forms';
+import popupMenu from 'popups';
+import bannerScroll from 'banner';
+import bannerHover from 'banner-hover';
+import clientsHovers from 'clients';
+import expandMenu from 'expand-menu';
 
 import Swiper from 'swiper/js/swiper.js';
 // import mask from 'swiper/js/swiper.js';
@@ -19,7 +23,7 @@ let app = {
     breakpoints: {
         sm: 320,
         md: 768,
-        lg: 1280
+        lg: 1250
     },
     media: 320,
     resizeEventName: 'app_resize',
@@ -59,11 +63,21 @@ let app = {
             this.initScrollTo();
         });
 
-        // app.window.on('load', () => {
-        // });
+        app.window.on('load', () => {
+            sliders();
+            formValidation();
+            popupMenu();
+            bannerScroll();
+            bannerHover();
+            clientsHovers();
+            expandMenu();
+        });
 
-        // this.document.on(app.resizeEventName, () => {
-        // });
+        this.document.on(app.resizeEventName, () => {
+            console.log('im resizing');
+            bannerHover();
+            sliders();
+        });
 
     },
 
@@ -182,166 +196,22 @@ let app = {
 app.init();
 
 
-sliders();
-formValidation();
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
 
 
-    // скролл банера
-    let banner = document.querySelector('.banner__wrap');
-    let banner2 = document.querySelector('.banner2__wrap');
-
-    let viewportOffset = banner.getBoundingClientRect();
-    let viewportOffset2 = banner2.getBoundingClientRect();
-    banner.style.transform = `translateX(-${viewportOffset.top / 50}%)`;
-    banner2.style.transform = `translateX(-${viewportOffset2.top / 50}%)`;
-    // let banner2 = 
-    // banner.style.transform = 'translateX(-50%)';
-    window.addEventListener('scroll', function () {
-        let viewportOffset = banner.getBoundingClientRect();
-        let viewportOffset2 = banner2.getBoundingClientRect();
-        if (viewportOffset.top > 0 && viewportOffset.top > viewportOffset.top / 2) {
-            banner.style.transform = `translateX(-${viewportOffset.top / 50}%)`;
-        }
-        else if (viewportOffset.top > 0 && viewportOffset.top < viewportOffset.top / 2) {
-            banner.style.transform = `translateX(${viewportOffset.top / 50}%)`;
-        }
-        else if (viewportOffset2.top > 0 && viewportOffset2.top > viewportOffset2.top / 2) {
-            banner2.style.transform = `translateX(-${viewportOffset2.top / 50}%)`;
-        }
-        else if (viewportOffset2.top > 0 && viewportOffset2.top < viewportOffset2.top / 2) {
-            banner2.style.transform = `translateX(${viewportOffset2.top / 50}%)`;
-        }
-
-    });
 
 
-    // clients hovers
-    let place = document.querySelectorAll('.clients__block-name');
-    let clientsDimm = document.querySelector('.clients');
-    let clientsPhoto = document.querySelector('.clients__dimmed-photo');
-
-    // console.log(place);
-    place.forEach(element => {
-        // console.log(element);
-        element.onmouseover = function () {
-            // console.log(element);
-            let placeOffset = element.getBoundingClientRect().top;
-            let html = `<img src="assets/img/clients/poke-room.webp" />`;
-            clientsPhoto.innerHTML = html;
-            let clientsDimmOffset = clientsDimm.getBoundingClientRect().top;
-            let offset = placeOffset - clientsDimmOffset;
-
-            clientsPhoto.style.top = offset + 70 + 'px';
-            clientsDimm.classList.add('clients--darken');
-            this.style.zIndex = '30';
-            setTimeout(() => {
-                clientsPhoto.style.zIndex = '1';
-                clientsPhoto.style.opacity = '1';
-            }), 100;
-            if (window.innerWidth >= 1450 && this.getBoundingClientRect().left > window.innerWidth / 2) {
-                // console.log(this.getBoundingClientRect().left);
-                clientsPhoto.style.left = this.getBoundingClientRect().left - 150 + 'px';
-                clientsPhoto.style.transform = 'translateX(0)';
-            }
-            else if (window.innerWidth >= 1450 && this.getBoundingClientRect().left < window.innerWidth / 2) {
-                // console.log(this.getBoundingClientRect().left);
-                clientsPhoto.style.left = this.getBoundingClientRect().left + 'px';
-                clientsPhoto.style.transform = 'translateX(0)';
-            }
-        };
-        element.onmouseleave = function () {
-            clientsDimm.classList.remove('clients--darken');
-            this.style.zIndex = '0';
-            setTimeout(() => {
-                clientsPhoto.style.zIndex = '-1';
-                clientsPhoto.style.opacity = '0';
-            }), 100;
-
-            // clientsDimm.style.height = '0';
-        };
-    });
     // for (i = 0; i < place.length; i++) {
 
     // }
 
-    // модалка
-    const popupButton = document.querySelector('.uniforms__button');
-    const popupClose = document.querySelector('.popup__close-button');
-    const popup = document.querySelector('.popup');
-    const body = document.querySelector('body');
-
-    let popupButtonOffset = popupButton.getBoundingClientRect();
-    popup.style.top = popupButtonOffset.top + 'px';
-
-    popupButton.addEventListener('click', function () {
-        let popupButtonOffset = popupButton.getBoundingClientRect();
-        popup.classList.toggle('hidden');
-        popup.style.top = popupButtonOffset.top + window.outerHeight + 'px';
-        body.classList.toggle('dimmed');
-
-        const sliderModel = new Swiper('.sliderModel__swiper-container', {
-            freeMode: false,
-            loop: false,
-            pagination: {
-                el: '.sliderModel__swiper-pagination',
-            },
-            navigation: {
-                nextEl: '.sliderModel__swiper-button-next',
-                prevEl: '.sliderModel__swiper-button-prev',
-            },
-        });
-
-        if (window.innerWidth < 768) {
-            const sliderPopup = new Swiper('.popup__swiper-container', {
-                freeMode: false,
-                loop: false,
-                slidesPerView: 'auto',
-                spaceBetween: 0,
-                pagination: {
-                    el: '.popup__swiper-pagination',
-                },
-                navigation: {
-                    nextEl: '.popup__swiper-button-next',
-                    prevEl: '.popup__swiper-button-prev',
-                },
-            });
-        }
-
-    });
-
-    popupClose.addEventListener('click', function () {
-        popup.classList.toggle('hidden');
-        body.classList.toggle('dimmed');
-    });
-
-    body.addEventListener('click', function (event) {
-        if (event.target == this) {
-            popup.classList.toggle('hidden');
-            body.classList.toggle('dimmed');
-        }
-
-    });
 
 
-    // benner hovers
-    if (window.innerWidth >= 1450) {
-
-        let bannerWrap = document.querySelectorAll('.banner__wrap');
-        bannerWrap.forEach((elem) => {
-            elem.addEventListener('mouseenter', (event) => {
-                event.target.classList.add('banner__wrap--active');
-
-            });
-            elem.addEventListener('mouseleave', event => {
-                event.target.classList.remove('banner__wrap--active');
-            });
-        });
 
 
-    }
 
     const headerMenuButton = document.querySelector('.header__menu-button');
     const menuClose = document.querySelector('.header__menu-close');
