@@ -45,6 +45,7 @@
 
   .phone-button {
     letter-spacing: 0.0209em;
+    line-height: 18px;
   }
 
   .form {
@@ -69,6 +70,9 @@
   .form__checkbox + .form__policy::before {
     width: 16px;
     height: 16px;
+  }
+  &__error {
+    font-size: 14px;
   }
 }
 
@@ -114,6 +118,8 @@
       line-height: 80px;
       &-expand {
         top: 92px;
+        height: 480px;
+        padding-top: 46px !important;
       }
       &-close {
         top: 0;
@@ -389,6 +395,8 @@
       margin-right: 58px;
       margin-bottom: 97px;;
       &-name {
+        padding-top: 2.5px;
+        padding-bottom: 2.5px;
         font-size: 22px;
         line-height: 32px;
         letter-spacing: -0.0343em;
@@ -582,6 +590,13 @@
           left: 20px;
         }
       }
+      &--third {
+        .stages__card-bg-image {
+          margin-left: -66px;
+          width: 909px;
+          bottom: 27px;
+        }
+      }
       &-button {
         font-size: 14px;
         background: transparent;
@@ -753,7 +768,7 @@
     }
   }
   .feedback__swiper-button-next, .feedback__swiper-button-prev {
-    top: 291px !important;
+    top: 297px !important;
   }
 
   .feedback__swiper-button-next:after {
@@ -831,7 +846,7 @@
     }
     &__schedule {
       font-size: 14px;
-      line-height: 20px;
+      line-height: 28px;
       margin-top: 5px;
       width: 225px;
     }
@@ -1165,7 +1180,7 @@
         line-height: 20px;
       }
       &--text {
-        padding-bottom: 96px;
+        padding-bottom: 91px;
         margin-bottom: 25px;
       }
     }
@@ -1476,7 +1491,7 @@
     }
     &__form {
       // padding-right: 40px;
-      width: 508px;
+      width: 513px;
     }
     &__button {
       &-label {
@@ -1666,6 +1681,13 @@
           left: 19%;
         }
       }
+      &--third {
+        .stages__card-bg-image {
+              margin-left: 0px;
+              width: 100%;
+              bottom: 413px;
+        }
+      }
       &-bg {
         max-width: 1080px;
         overflow: hidden;
@@ -1732,7 +1754,7 @@
       padding-bottom: 170px;
       &-wrap {
         border: 3px solid rgba(30, 30, 30, 0.1);
-        padding: 9px 50px 13px;
+        padding: 7px 44px 11px;
         margin-top: -205px;
         margin-left: 698px;
       }

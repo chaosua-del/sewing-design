@@ -31,6 +31,15 @@
     width: 100%;
     height: 455px;
     padding-top: 52px;
+    &--third {
+      .stages__card-bg-image {
+        width: 814px;
+        height: 483px;
+        margin-left: -178px;
+        position: absolute;
+        bottom: -29px;
+      }
+    }
     &-bg {
       position: absolute;
       top: 0;
@@ -52,7 +61,7 @@
         height: 100%;
         top: 0;
         left: 0;
-        background: rgba(#FFFFFF, 0.2);
+        background: rgba(#FFFFFF, 0.4);
       }
     }
     &-title {

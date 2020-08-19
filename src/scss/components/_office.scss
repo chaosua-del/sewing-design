@@ -26,7 +26,7 @@
   }
   &__description {
     margin-bottom: 113px;
-    max-width: 267px;
+    width: 267px;
   }
   &__location, &__phone, &__site {
     color: $color-base;
@@ -39,6 +39,7 @@
   }
   &__schedule {
     opacity: 0.6;
+    width: 192px;
   }
   &__map {
     height: 336px;

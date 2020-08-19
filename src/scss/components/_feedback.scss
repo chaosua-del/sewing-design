@@ -77,7 +77,7 @@
 }
 
 .feedback__swiper-button-next {
-  top: 257px !important;
+  top: 260px !important;
   right: 8% !important;
   &::after {
   content: url('../img/stages/arrow-next.svg') !important;
@@ -85,7 +85,7 @@
 }
 
 .feedback__swiper-button-prev {
-  top: 257px !important;
+  top: 260px !important;
   left: 8% !important;
   &::after {
   content: url('../img/stages/arrow-prev.svg') !important;
@@ -96,7 +96,7 @@
   bottom: 7px !important;
   .swiper-pagination-bullet {
      margin-right: 2px;
-    width: 50px !important;
+    width: 30px !important;
     height: 2px !important;
     background: #000000 !important; 
     border-radius: 0 !important;

@@ -503,7 +503,10 @@ img {
   z-index: 1999; }
 
 input.form__error {
-  border-bottom: 2px solid tomato; }
+  border-bottom: 2px solid #1E1E1E; }
+
+.form__error {
+  font-size: 12px; }
 
 @font-face {
   font-family: 'Century Gothic Regular';
@@ -765,14 +768,19 @@ input.form__error {
     user-select: none;
     display: inline;
     margin-right: 13px;
-    font-style: italic; }
+    font-style: italic;
+    letter-spacing: -0.03em; }
     .banner__title--normal {
       width: auto !important;
       font-family: 'Century Gothic Regular' !important; }
+    .banner__title:nth-child(2) {
+      letter-spacing: -0.0272em; }
+    .banner__title:nth-child(1) {
+      letter-spacing: -0.0668em; }
   .banner__wrap {
     padding-top: 10px;
     padding-bottom: 18px;
-    width: 1505px;
+    width: 1700px;
     overflow: hidden;
     background-color: #D1CABC;
     transition: all 0.2s ease-out; }
@@ -780,7 +788,7 @@ input.form__error {
 .lower-case {
   text-transform: none;
   opacity: 0.7;
-  max-width: 160px;
+  max-width: 165px;
   font-size: 14px;
   margin-bottom: 23px; }
 
@@ -818,7 +826,9 @@ input.form__error {
     opacity: 0.5;
     text-align: center;
     margin-top: 18px;
-    margin-bottom: 47px; }
+    margin-bottom: 47px;
+    width: 286px;
+    text-transform: uppercase; }
   .uniforms__title {
     font-family: 'Century Gothic Bold';
     font-size: 18px;
@@ -1006,8 +1016,8 @@ input.form__error {
 .form__input {
   background-color: #FFFFFF;
   width: 100%;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 16.5px;
+  padding-bottom: 16.5px;
   padding-left: 24px;
   margin-bottom: 10px;
   position: relative; }
@@ -1065,6 +1075,9 @@ input.form__error {
   top: -30px;
   right: 0; }
 
+.design2__subtitle {
+  width: 267px; }
+
 .model {
   background-color: #E3E8EC; }
   .model__swiper-container {
@@ -1085,7 +1098,8 @@ input.form__error {
     height: 100%;
     width: 280px;
     background: transparent;
-    background: url("../img/model/girl-md.webp") no-repeat center/cover; }
+    background: url("../img/model/girl-lg.webp") no-repeat 76% 0%/cover;
+    background-size: 286%; }
   .model__button {
     position: absolute;
     width: 19px;
@@ -1228,6 +1242,12 @@ input.form__error {
     width: 100%;
     height: 455px;
     padding-top: 52px; }
+    .stages__card--third .stages__card-bg-image {
+      width: 814px;
+      height: 483px;
+      margin-left: -178px;
+      position: absolute;
+      bottom: -29px; }
     .stages__card-bg {
       position: absolute;
       top: 0;
@@ -1248,7 +1268,7 @@ input.form__error {
         height: 100%;
         top: 0;
         left: 0;
-        background: rgba(255, 255, 255, 0.2); }
+        background: rgba(255, 255, 255, 0.4); }
     .stages__card-title {
       font-family: 'Century Gothic Bold';
       font-size: 25px;
@@ -1370,6 +1390,7 @@ input.form__error {
   padding-bottom: 106px;
   position: relative; }
   .clients__description {
+    padding: 2px 0;
     font-family: 'Century Gothic Regular' !important;
     text-align: center;
     margin: 0 auto;
@@ -1526,13 +1547,13 @@ input.form__error {
         display: none; }
 
 .feedback__swiper-button-next {
-  top: 257px !important;
+  top: 260px !important;
   right: 8% !important; }
   .feedback__swiper-button-next::after {
     content: url("../img/stages/arrow-next.svg") !important; }
 
 .feedback__swiper-button-prev {
-  top: 257px !important;
+  top: 260px !important;
   left: 8% !important; }
   .feedback__swiper-button-prev::after {
     content: url("../img/stages/arrow-prev.svg") !important; }
@@ -1541,7 +1562,7 @@ input.form__error {
   bottom: 7px !important; }
   .feedback__swiper-pagination .swiper-pagination-bullet {
     margin-right: 2px;
-    width: 50px !important;
+    width: 30px !important;
     height: 2px !important;
     background: #000000 !important;
     border-radius: 0 !important; }
@@ -1628,7 +1649,7 @@ input.form__error {
     line-height: 20px; }
   .office__description {
     margin-bottom: 113px;
-    max-width: 267px; }
+    width: 267px; }
   .office__location, .office__phone, .office__site {
     color: #1E1E1E;
     max-width: 245px;
@@ -1640,7 +1661,8 @@ input.form__error {
   .office__location, .office__phone {
     margin-bottom: 21px; }
   .office__schedule {
-    opacity: 0.6; }
+    opacity: 0.6;
+    width: 192px; }
   .office__map {
     height: 336px; }
 
@@ -1964,7 +1986,8 @@ input.form__error {
 
 @media (min-width: 768px) {
   .phone-button {
-    letter-spacing: 0.0209em; }
+    letter-spacing: 0.0209em;
+    line-height: 18px; }
   .form__input {
     font-size: 14px;
     flex-basis: 49.32%;
@@ -1981,6 +2004,8 @@ input.form__error {
   .form .form__checkbox + .form__policy::before {
     width: 16px;
     height: 16px; }
+  .form__error {
+    font-size: 14px; }
   .button {
     font-size: 16px; }
   .phone {
@@ -2008,7 +2033,9 @@ input.form__error {
     font-size: 30px;
     line-height: 80px; }
     .header__menu-expand {
-      top: 92px; }
+      top: 92px;
+      height: 480px;
+      padding-top: 46px !important; }
     .header__menu-close {
       top: 0;
       left: 44px; }
@@ -2195,6 +2222,8 @@ input.form__error {
       margin-right: 58px;
       margin-bottom: 97px; }
       .leader__info-name {
+        padding-top: 2.5px;
+        padding-bottom: 2.5px;
         font-size: 22px;
         line-height: 32px;
         letter-spacing: -0.0343em; }
@@ -2337,6 +2366,10 @@ input.form__error {
         position: absolute;
         bottom: 49px;
         left: 20px; }
+      .stages__card--third .stages__card-bg-image {
+        margin-left: -66px;
+        width: 909px;
+        bottom: 27px; }
       .stages__card-button {
         font-size: 14px;
         background: transparent;
@@ -2466,7 +2499,7 @@ input.form__error {
       width: 66px;
       height: 66px; }
   .feedback__swiper-button-next, .feedback__swiper-button-prev {
-    top: 291px !important; }
+    top: 297px !important; }
   .feedback__swiper-button-next:after {
     content: url("../img/feedback/arrow-next-md.svg") !important;
     right: -17px; }
@@ -2514,7 +2547,7 @@ input.form__error {
     line-height: 28px; }
   .office__schedule {
     font-size: 14px;
-    line-height: 20px;
+    line-height: 28px;
     margin-top: 5px;
     width: 225px; }
   .office__location {
@@ -2731,7 +2764,7 @@ input.form__error {
       font-size: 16px;
       line-height: 20px; }
     .form__input--text {
-      padding-bottom: 96px;
+      padding-bottom: 91px;
       margin-bottom: 25px; }
   .button {
     font-size: 16px; }
@@ -2940,7 +2973,7 @@ input.form__error {
       line-height: 28px;
       margin-bottom: 50px; }
     .design__form {
-      width: 508px; }
+      width: 513px; }
     .design__button-label {
       width: 58px;
       height: 58px;
@@ -3078,6 +3111,10 @@ input.form__error {
         content: url("../img/stages/scroll-arrow-lg.svg");
         bottom: 179px;
         left: 19%; }
+      .stages__card--third .stages__card-bg-image {
+        margin-left: 0px;
+        width: 100%;
+        bottom: 413px; }
       .stages__card-bg {
         max-width: 1080px;
         overflow: hidden; }
@@ -3130,7 +3167,7 @@ input.form__error {
       padding-bottom: 170px; }
       .instruction__card-wrap {
         border: 3px solid rgba(30, 30, 30, 0.1);
-        padding: 9px 50px 13px;
+        padding: 7px 44px 11px;
         margin-top: -205px;
         margin-left: 698px; }
       .instruction__card-item {

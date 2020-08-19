@@ -102,7 +102,7 @@ export default function () {
     const feedback = new Swiper('.feedback__swiper-container', {
       loop: true,
       slidesPerView: 'auto',
-      pagination: false,
+      // pagination: false,
     });
 
     feedback.update();
@@ -115,7 +115,7 @@ export default function () {
       updateOnWindowResize: false,
       spaceBetween: 10,
       // slidesOffsetBefore: 25,
-      slidesOffsetAfter: 40,
+      // slidesOffsetAfter: 40,
 
       pagination: {
         el: '.feedback__swiper-pagination',

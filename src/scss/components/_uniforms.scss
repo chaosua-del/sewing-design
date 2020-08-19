@@ -13,6 +13,8 @@
     text-align: center;
     margin-top: 18px;
     margin-bottom: 47px;
+    width: 286px;
+    text-transform: uppercase;
   }
   &__title {
     @include font(18px, -0.03, 22px);

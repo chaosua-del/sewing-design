@@ -183,6 +183,9 @@ img {
 }
 
 input.form__error {
-    border-bottom: 2px solid tomato;
+    border-bottom: 2px solid $color-base;
 }
 
+.form__error {
+    font-size: 12px;
+}

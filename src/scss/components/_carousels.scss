@@ -73,15 +73,22 @@
     display: inline;
     margin-right: 13px;
     font-style: italic;
+    letter-spacing: -0.03em;
     &--normal {
       width: auto !important;
       font-family: 'Century Gothic Regular' !important;
+    }
+    &:nth-child(2) {
+      letter-spacing: -0.0272em;
+    }
+    &:nth-child(1) {
+     letter-spacing: -0.0668em;
     }
   }
   &__wrap {
     padding-top: 10px;
     padding-bottom: 18px;
-    width: 1505px;
+    width: 1700px;
     overflow: hidden;
     background-color: #D1CABC;
     transition: all 0.2s ease-out;
@@ -93,7 +100,7 @@
 .lower-case {
   text-transform: none;
   opacity: 0.7;
-  max-width: 160px;
+  max-width: 165px;
   font-size: 14px;
   margin-bottom: 23px;
 }
