@@ -709,7 +709,21 @@ input.form__error {
   height: 102px !important; }
 
 .photos__info {
-  display: none; }
+  color: transparent;
+  display: flex;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: -64px;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  transition: color 0.2s ease-in-out; }
+  .photos__info-name {
+    max-width: 167px;
+    text-align: right; }
 
 .benefits__swiper-slide {
   display: flex;
@@ -3463,29 +3477,30 @@ input.form__error {
     margin-bottom: 26px; } }
 
 @media (min-width: 1250px) {
+  .header__navigation-item {
+    transition: color 0.2s ease-in-out; }
+    .header__navigation-item:hover {
+      color: #BCBCBC !important; }
   .photos {
     margin-bottom: 20px; }
     .photos__swiper-wrapper {
       padding-bottom: 63px; }
-    .photos__info {
-      font-size: 14px;
-      line-height: 16px;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-      position: absolute;
-      bottom: -64px;
-      left: 0;
-      width: 100%;
-      justify-content: space-between; }
-      .photos__info-name {
-        max-width: 167px;
-        text-align: right; }
     .photos__swiper-slide {
       position: relative;
       cursor: pointer; }
+      .photos__swiper-slide::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.5);
+        transition: background-color 0.2s ease-in-out; }
       .photos__swiper-slide:hover .photos__info {
-        display: block;
-        display: flex; }
+        color: #1E1E1E; }
+      .photos__swiper-slide:hover::after {
+        background-color: transparent; }
   .banner__wrap {
     background-image: url("../img/carousel/banner-color.svg");
     transition: background-image 0.1s ease-in-out; }
@@ -3500,7 +3515,7 @@ input.form__error {
     border: 1px solid #1E1E1E;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; }
     .button:hover {
-      background-color: #FFFFFF;
+      background-color: transparent;
       color: #1E1E1E; }
   .stages__card-button {
     transition: all 0.2s; }
@@ -3508,9 +3523,10 @@ input.form__error {
       background-color: #1E1E1E;
       color: #FFFFFF; }
   .uniforms__button {
-    transition: background-color 0.2s; }
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out; }
     .uniforms__button:hover {
-      background-color: #dbd6cb; }
+      width: 290px;
+      height: 290px; }
   .footer__navigation-item {
     transition: color 0.2s ease-in-out; }
     .footer__navigation-item:hover {
