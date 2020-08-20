@@ -778,6 +778,9 @@ input.form__error {
   font-size: 30px;
   letter-spacing: -0.03em;
   line-height: 75px; }
+  .banner__swiper-slide {
+    width: 1532px !important;
+    transition: transform 0.2s ease-in-out; }
   .banner__title {
     user-select: none;
     display: inline;
@@ -794,7 +797,7 @@ input.form__error {
   .banner__wrap {
     padding-top: 10px;
     padding-bottom: 18px;
-    width: 1700px;
+    width: 1532px;
     overflow: hidden;
     background-color: #D1CABC;
     transition: all 0.2s ease-out; }
@@ -2881,9 +2884,11 @@ input.form__error {
   .benefits2__card .benefits__card--right {
     min-width: 283px; }
   .banner__wrap {
-    width: 5100px;
+    width: 5100px !important;
     padding-top: 86px;
     padding-bottom: 64px; }
+  .banner__swiper-slide {
+    width: 5100px !important; }
   .banner__title {
     font-size: 90px; }
   .banner2__wrap {
@@ -3504,6 +3509,8 @@ input.form__error {
   .banner__wrap {
     background-image: url("../img/carousel/banner-color.svg");
     transition: background-image 0.1s ease-in-out; }
+  .banner__swiper-wrapper {
+    transform: translate3d(0, 0, 0) !important; }
   .banner__wrap--active {
     background-image: url("../img/carousel/banner-bg.webp"); }
     .banner__wrap--active .banner__title {

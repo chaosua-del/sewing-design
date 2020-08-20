@@ -48,6 +48,10 @@
     transition: background-image 0.1s ease-in-out;
   }
 
+  .banner__swiper-wrapper {
+    transform: translate3d(0, 0, 0) !important;
+  }
+
   .banner__wrap--active {
     background-image: url('../img/carousel/banner-bg.webp');
     .banner__title {

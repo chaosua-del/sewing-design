@@ -1339,9 +1339,12 @@
 
   .banner {
     &__wrap {
-      width: 5100px;
+      width: 5100px !important;
       padding-top: 86px;
       padding-bottom: 64px;
+    }
+    &__swiper-slide {
+      width: 5100px !important;
     }
     &__title {
       font-size: 90px;

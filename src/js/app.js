@@ -80,8 +80,9 @@ let app = {
         });
 
         this.document.on(app.resizeEventName, () => {
-            console.log('im resizing');
+            // console.log('im resizing');
             bannerHover();
+            bannerScroll();
             sliders();
         });
 

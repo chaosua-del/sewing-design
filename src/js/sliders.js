@@ -11,15 +11,16 @@ export default function () {
   });
 
 
-  const banner = new Swiper('.banner__swiper-container', {
-    slidesPerView: 'auto',
-    spaceBetween: 0,
-    freeMode: true,
-    loop: true,
-  });
 
 
   if (window.innerWidth < 768) {
+    const banner = new Swiper('.banner__swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 0,
+      freeMode: true,
+      loop: true,
+    });
+
     const model = new Swiper('.model__swiper-container', {
       parallax: true,
       speed: 600,
@@ -77,6 +78,14 @@ export default function () {
 
   }
   if (window.innerWidth >= 768) {
+    const banner = new Swiper('.banner__swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 0,
+      freeMode: false,
+      loop: false,
+    });
+
+    banner.destroy();
 
     const stages = new Swiper('.stages__swiper-container', {
       direction: 'horizontal',
