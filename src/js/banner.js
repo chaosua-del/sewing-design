@@ -30,10 +30,10 @@ export default function bannerScroll() {
     window.addEventListener('scroll', function () {
       let viewportOffset = banner.getBoundingClientRect();
       if (viewportOffset.top > 0 && viewportOffset.top > viewportOffset.top / 2) {
-        banner.style.transform = `translateX(-${viewportOffset.top / 50}%)`;
+        banner.style.transform = `translateX(-${viewportOffset.top / 40}%)`;
       }
       else if (viewportOffset.top > 0 && viewportOffset.top < viewportOffset.top / 2) {
-        banner.style.transform = `translateX(${viewportOffset.top / 50}%)`;
+        banner.style.transform = `translateX(${viewportOffset.top / 40}%)`;
       }
     });
   }
