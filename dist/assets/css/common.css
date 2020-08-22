@@ -779,7 +779,7 @@ input.form__error {
   letter-spacing: -0.03em;
   line-height: 75px; }
   .banner__swiper-slide {
-    width: 1532px !important;
+    width: 1600px !important;
     transition: transform 0.2s ease-in-out; }
   .banner__title {
     user-select: none;
@@ -795,12 +795,13 @@ input.form__error {
     .banner__title:nth-child(1) {
       letter-spacing: -0.0668em; }
   .banner__wrap {
+    margin-left: -300px;
     padding-top: 10px;
     padding-bottom: 18px;
-    width: 1532px;
+    width: 1600px;
     overflow: hidden;
     background-color: #D1CABC;
-    transition: all 0.2s ease-out; }
+    transition: margin-left 0.2s ease-out; }
 
 .lower-case {
   text-transform: none;
@@ -3536,6 +3537,10 @@ input.form__error {
   .footer__navigation-item {
     transition: color 0.2s ease-in-out; }
     .footer__navigation-item:hover {
+      color: #1E1E1E; }
+  .footer__info-block a {
+    transition: color 0.2s ease-in-out; }
+    .footer__info-block a:hover {
       color: #1E1E1E; } }
 
 /*# sourceMappingURL=maps/common.css.map */

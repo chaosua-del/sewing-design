@@ -1,144 +1,162 @@
 .carousels {
-  &__title {
-    @include font(18px, -0.03em, 22px);
-    text-align: center;
-    margin-bottom: 47px;
-  }
+    &__title {
+        @include font(18px, -0.03em, 22px);
+        text-align: center;
+        margin-bottom: 47px;
+    }
 }
 
 .photos {
-  &__swiper-slide {
-    width: 102px !important; 
-    height: 102px !important;
-  }
-  &__info {
-    // opacity: 0;
-    color: transparent;
-    display: flex;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    position: absolute;
-    bottom: -64px;
-    left: 0;
-    width: 100%;
-    justify-content: space-between;
-    transition: color 0.2s ease-in-out;
-    &-name {
-      max-width: 167px;
-      text-align: right;
+    &__swiper-slide {
+        width: 102px !important;
+        height: 102px !important;
     }
-  }
+
+    &__info {
+        // opacity: 0;
+        color: transparent;
+        display: flex;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: -64px;
+        left: 0;
+        width: 100%;
+        justify-content: space-between;
+        transition: color 0.2s ease-in-out;
+
+        &-name {
+            max-width: 167px;
+            text-align: right;
+        }
+    }
 }
 
 .benefits {
-  &__swiper-slide {
-    display: flex;
-    width: 771px !important;
-    border-top: 3px solid rgba(#1E1E1E, 0.1);
-  }
-  &__card {
-    text-transform: uppercase;
-    padding-top: 32px;
-    padding-left: 25px;
-    padding-bottom: 25px;
-    padding-right: 12px;
-    // min-width: 231px;
-    // border-bottom: 3px solid rgba(#1E1E1E, 0.1);
-    &--left {
-      border-right: 3px solid rgba(#1E1E1E, 0.1);
-      // width: 206px !important;
+    &__swiper-slide {
+        display: flex;
+        width: 771px !important;
+        border-top: 3px solid rgba(#1E1E1E, 0.1);
     }
-    &--right  {
-      // width: 330px !important;
-      border-left: 3px solid rgba(#1E1E1E, 0.1);
-      // margin-left: 24px;
+
+    &__card {
+        text-transform: uppercase;
+        padding-top: 32px;
+        padding-left: 25px;
+        padding-bottom: 25px;
+        padding-right: 12px;
+
+        // min-width: 231px;
+        // border-bottom: 3px solid rgba(#1E1E1E, 0.1);
+        &--left {
+            border-right: 3px solid rgba(#1E1E1E, 0.1);
+            // width: 206px !important;
+        }
+
+        &--right {
+            // width: 330px !important;
+            border-left: 3px solid rgba(#1E1E1E, 0.1);
+            // margin-left: 24px;
+        }
+
+        &-title {
+            min-width: 169px;
+            @include font(20px, -0.03em, 32px);
+        }
+
+        &-subtitle {
+            text-transform: none;
+            margin-top: 12px;
+            max-width: 188px;
+            font-family: 'Segoe UI Regular' !important;
+            @include font(12px, -0.01em, 16px);
+        }
+
+        &-number {
+            @include font(60px, -0.04em, 88px);
+            margin-top: -20px;
+            margin-right: 26px;
+        }
+
+        &-supper {
+            vertical-align: text-top;
+            margin-left: 11px;
+            top: 5px;
+            @include font(14px, -0.04em, 40px);
+        }
     }
-    &-title {
-      min-width: 169px;
-      @include font(20px, -0.03em, 32px);
-    }
-    &-subtitle {
-      text-transform: none;
-      margin-top: 12px;
-      max-width: 188px;
-      font-family: 'Segoe UI Regular' !important;
-      @include font(12px, -0.01em, 16px);
-    }
-    &-number {
-      @include font(60px, -0.04em, 88px);
-      margin-top: -20px;
-      margin-right: 26px;
-    }
-    &-supper {
-      vertical-align: text-top;
-      margin-left: 11px;
-      top: 5px;
-      @include font(14px, -0.04em, 40px);
-    }
-  }
 
 }
 
 .banner {
-  background-color: #D1CABC;
-  text-transform: uppercase;
-  &__swiper-slide {
-    width: 1532px !important;
-    transition: transform 0.2s ease-in-out;
-  }
-  &__title {
-    user-select: none;
-    display: inline;
-    margin-right: 13px;
-    font-style: italic;
-    letter-spacing: -0.03em;
-    &--normal {
-      width: auto !important;
-      font-family: 'Century Gothic Regular' !important;
-    }
-    &:nth-child(2) {
-      letter-spacing: -0.0272em;
-    }
-    &:nth-child(1) {
-     letter-spacing: -0.0668em;
-    }
-  }
-  &__wrap {
-    padding-top: 10px;
-    padding-bottom: 18px;
-    width: 1532px;
-    overflow: hidden;
     background-color: #D1CABC;
-    transition: all 0.2s ease-out;
-  }
-  @include font(30px, -0.03em, 75px)
+    text-transform: uppercase;
+
+    &__swiper-slide {
+        width: 1600px !important;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    &__title {
+        user-select: none;
+        display: inline;
+        margin-right: 13px;
+        font-style: italic;
+        letter-spacing: -0.03em;
+
+        &--normal {
+            width: auto !important;
+            font-family: 'Century Gothic Regular' !important;
+        }
+
+        &:nth-child(2) {
+            letter-spacing: -0.0272em;
+        }
+
+        &:nth-child(1) {
+            letter-spacing: -0.0668em;
+        }
+    }
+
+    &__wrap {
+        margin-left: -300px;
+        padding-top: 10px;
+        padding-bottom: 18px;
+        width: 1600px;
+        overflow: hidden;
+        background-color: #D1CABC;
+        transition: margin-left 0.2s ease-out;
+    }
+
+    @include font(30px, -0.03em, 75px)
 }
 
 
 .lower-case {
-  text-transform: none;
-  opacity: 0.7;
-  max-width: 165px;
-  font-size: 14px;
-  margin-bottom: 23px;
+    text-transform: none;
+    opacity: 0.7;
+    max-width: 165px;
+    font-size: 14px;
+    margin-bottom: 23px;
 }
 
 .banner2 {
-  &__wrap {
-    width: 1505px;
-    overflow: hidden;
-    background-color: transparent;
-    transition: all 0.2s ease-out;
-  }
-   &__text {
-    text-transform: uppercase;
-    font-family: 'Century Gothic Regular' !important;
-    margin-top: 53px;
-    margin-bottom: 19px;
-    color: #FFFFFF;
-    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
-    @include font(30px, -0.04em, 80px);
-  }
+    &__wrap {
+        width: 1505px;
+        overflow: hidden;
+        background-color: transparent;
+        transition: all 0.2s ease-out;
+    }
+
+    &__text {
+        text-transform: uppercase;
+        font-family: 'Century Gothic Regular' !important;
+        margin-top: 53px;
+        margin-bottom: 19px;
+        color: #FFFFFF;
+        text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+        @include font(30px, -0.04em, 80px);
+    }
 }
