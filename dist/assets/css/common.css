@@ -3530,10 +3530,9 @@ input.form__error {
       background-color: #1E1E1E;
       color: #FFFFFF; }
   .uniforms__button {
-    transition: width 0.2s ease-in-out, height 0.2s ease-in-out; }
+    transition: transform 0.2s ease-in-out; }
     .uniforms__button:hover {
-      width: 290px;
-      height: 290px; }
+      transform: scale(1.4); }
   .footer__navigation-item {
     transition: color 0.2s ease-in-out; }
     .footer__navigation-item:hover {
