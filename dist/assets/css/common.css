@@ -3153,7 +3153,7 @@ input.form__error {
       width: 66px;
       height: 66px; }
       .model__button::before {
-        top: -39px;
+        top: -70px;
         left: 125px;
         opacity: 0;
         z-index: 20;
