@@ -1,84 +1,96 @@
 @media (min-width: 1250px) {
-  .header {
-    &__navigation-item  {
-        transition: color 0.2s ease-in-out;
+    .header {
+        &__navigation-item {
+            transition: color 0.2s ease-in-out;
+
+            &:hover {
+                color: #BCBCBC !important;
+            }
+        }
+    }
+
+
+    .photos {
+        margin-bottom: 20px;
+
+        &__swiper-wrapper {
+            padding-bottom: 63px;
+        }
+
+        &__swiper-slide {
+            position: relative;
+            cursor: pointer;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: rgba(#FFFFFF, 0.5);
+                transition: background-color 0.2s ease-in-out;
+            }
+
+            // &:hover .photos__info {
+            //   // display: block;
+            //   display: flex;
+            // }
+            &:hover {
+                .photos__info {
+                    // display: flex;
+                    color: $color-base;
+                }
+
+                &::after {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    .banner__wrap {
+        background-image: url('../img/carousel/banner-color.svg');
+        transition: background-image 0.1s ease-in-out;
+    }
+
+    .banner__swiper-wrapper {
+        transform: translate3d(0, 0, 0) !important;
+    }
+
+    .banner__wrap--active {
+        background-image: url('../img/carousel/banner-bg.webp');
+
+        .banner__title {
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(#FFFFFF, 0.4);
+
+            // text-shadow: '-2px 2px 0 rgba(#fff, 0.4), 2px 2px 0 rgba(#fff, 0.4), 2px -2px 0 rgba(#fff, 0.4), -2px -2px 0 rgba(#fff, 0.4)';
+            &:hover {
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    .button {
+        border: 1px solid #1E1E1E;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
         &:hover {
-          color: #BCBCBC !important;
+            background-color: transparent;
+            color: $color-base;
         }
     }
-  }
 
+    .stages__card-button {
+        transition: all 0.2s;
 
-  .photos {
-    margin-bottom: 20px;
-    &__swiper-wrapper {
-      padding-bottom: 63px;
-    }
-    &__swiper-slide {
-      position: relative;
-      cursor: pointer;
-      &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: rgba(#FFFFFF, 0.5);
-        transition: background-color 0.2s ease-in-out;
-      }
-      // &:hover .photos__info {
-      //   // display: block;
-      //   display: flex;
-      // }
-      &:hover {
-        .photos__info {
-          // display: flex;
-          color: $color-base;
+        &:hover {
+            background-color: $color-base;
+            color: #FFFFFF;
         }
-        &::after {
-          background-color: transparent;
-        }
-      }
     }
-  }
-
-  .banner__wrap {
-    background-image: url('../img/carousel/banner-color.svg');
-    transition: background-image 0.1s ease-in-out;
-  }
-
-  .banner__swiper-wrapper {
-    transform: translate3d(0, 0, 0) !important;
-  }
-
-  .banner__wrap--active {
-    background-image: url('../img/carousel/banner-bg.webp');
-    .banner__title {
-      color: transparent;
-      -webkit-text-stroke: 1px rgba(#FFFFFF, 0.4);
-      // text-shadow: '-2px 2px 0 rgba(#fff, 0.4), 2px 2px 0 rgba(#fff, 0.4), 2px -2px 0 rgba(#fff, 0.4), -2px -2px 0 rgba(#fff, 0.4)';
-      &:hover {
-        color: #FFFFFF;
-      }
-    }
-  }
-
-  .button {
-    border: 1px solid #1E1E1E;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; 
-    &:hover {
-      background-color: transparent;
-      color: $color-base;
-    }
-  }
-
-  .stages__card-button {
-    transition: all 0.2s;
-    &:hover {
-      background-color: $color-base;
-      color: #FFFFFF;
-    }
+<<<<<<< HEAD
   }
 
   .uniforms__button {
@@ -89,17 +101,38 @@
       // height: 290px;
       transform: scale(1.4);
       // right: -284px;
-    }
-  }
+=======
 
-  .footer {
-    &__navigation-item {
-      transition: color 0.2s ease-in-out;
-      &:hover {
-        color: $color-base;
+    .uniforms__button {
+        transition: transform 0.2s ease-in-out;
 
-      }
+        &:hover {
+            // background-color: lighten(#D1CABC, 5%);
+            transform: scale(1.4);
+            // right: -284px;
+        }
+>>>>>>> 1801bb5634a905b8ef9d9eefaae301d77503937d
     }
-  }
+
+    .footer {
+        &__navigation-item {
+            transition: color 0.2s ease-in-out;
+
+            &:hover {
+                color: $color-base;
+
+            }
+        }
+
+        &__info-block {
+            a {
+                transition: color 0.2s ease-in-out;
+
+                &:hover {
+                    color: $color-base;
+                }
+            }
+        }
+    }
 
 }
