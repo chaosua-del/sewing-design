@@ -1602,7 +1602,7 @@ input.form__error {
   display: flex;
   justify-content: space-between; }
 
-.questions__text {
+.questions p {
   font-family: 'Century Gothic Bold';
   font-size: 12px;
   letter-spacing: -0.01em;
@@ -2515,7 +2515,8 @@ input.form__error {
       margin-right: 16px;
       width: 66px;
       height: 66px; }
-  .feedback__swiper-button-next, .feedback__swiper-button-prev {
+  .feedback__swiper-button-next,
+  .feedback__swiper-button-prev {
     top: 297px !important; }
   .feedback__swiper-button-next:after {
     content: url("../img/feedback/arrow-next-md.svg") !important;
@@ -2538,7 +2539,7 @@ input.form__error {
     font-size: 20px;
     line-height: 35px;
     height: auto; }
-  .questions__text {
+  .questions p {
     font-size: 14px;
     line-height: 20px;
     max-width: 733px; }
@@ -3267,7 +3268,7 @@ input.form__error {
         font-size: 43px;
         top: -9px;
         right: 16px; }
-    .questions__text {
+    .questions p {
       font-size: 20px;
       line-height: 28px;
       margin-right: auto;
@@ -3530,10 +3531,9 @@ input.form__error {
       background-color: #1E1E1E;
       color: #FFFFFF; }
   .uniforms__button {
-    transition: width 0.2s ease-in-out, height 0.2s ease-in-out; }
+    transition: transform 0.2s ease-in-out; }
     .uniforms__button:hover {
-      width: 290px;
-      height: 290px; }
+      transform: scale(1.4); }
   .footer__navigation-item {
     transition: color 0.2s ease-in-out; }
     .footer__navigation-item:hover {

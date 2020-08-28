@@ -82,11 +82,12 @@
   }
 
   .uniforms__button {
-    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
     &:hover {
       // background-color: lighten(#D1CABC, 5%);
-      width: 290px;
-      height: 290px;
+      // width: 290px;
+      // height: 290px;
+      transform: scale(1.4);
       // right: -284px;
     }
   }

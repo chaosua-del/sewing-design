@@ -1,54 +1,57 @@
 .questions {
-  &__container {
-    margin-top: -22px;
-    padding-bottom: 82px;
-  }
-  &__collapsible {
-    @include font(16px, -0.05em, 17px);
-    width: 100%;
-    text-transform: uppercase;
-    padding-top: 16px;
-    margin-top: 10px;
-    height: 34px;
-    margin-bottom: 27px;
-    display: flex;
-    justify-content: space-between;
-  }
-  &__text {
-    @include font(12px, -0.01em, 20px);
-    font-family: 'Segoe UI Regular' !important;
-    max-width: 239px;
-    margin: 0 auto;
-  }
+    &__container {
+        margin-top: -22px;
+        padding-bottom: 82px;
+    }
+
+    &__collapsible {
+        @include font(16px, -0.05em, 17px);
+        width: 100%;
+        text-transform: uppercase;
+        padding-top: 16px;
+        margin-top: 10px;
+        height: 34px;
+        margin-bottom: 27px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    p {
+        @include font(12px, -0.01em, 20px);
+        font-family: 'Segoe UI Regular' !important;
+        max-width: 239px;
+        margin: 0 auto;
+    }
 }
 
 .collapsible {
-  cursor: pointer;
-  border-top: 3px solid rgba(0, 0, 0, 0.1);
-  transition: border-top 0.2s ease-in-out, margin-bottom 0.2s ease-in-out;
+    cursor: pointer;
+    border-top: 3px solid rgba(0, 0, 0, 0.1);
+    transition: border-top 0.2s ease-in-out, margin-bottom 0.2s ease-in-out;
 }
 
 .collapsible:after {
-  content: '+';
-  color: rgba(#000000, 0.1);
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-  font-size: 21px;
-  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+    content: '+';
+    color: rgba(#000000, 0.1);
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    font-size: 21px;
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .active {
-  border-top: 3px solid rgba(#000000, 1);
-  margin-bottom: 52px;
-  &:after {
-  color: rgba(#000000, 1);
-  transform: rotate(45deg);
-  }
+    border-top: 3px solid rgba(#000000, 1);
+    margin-bottom: 52px;
+
+    &:after {
+        color: rgba(#000000, 1);
+        transform: rotate(45deg);
+    }
 }
 
 .expand-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-in-out, margin-bottom 0.2s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out, margin-bottom 0.2s ease-in-out;
 }
