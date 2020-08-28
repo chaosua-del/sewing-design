@@ -1148,6 +1148,17 @@ input.form__error {
       top: 164px; }
     .model__button-neck {
       display: none; }
+    .model__button-text {
+      position: absolute;
+      display: none;
+      font-size: 12px;
+      /* or 175% */
+      letter-spacing: -0.01em;
+      color: #FFFFFF;
+      max-width: 131px;
+      top: -36px;
+      left: -29px;
+      top: -6px; }
   .model__info {
     left: 26%;
     transform: translateX(-50%);
@@ -1216,7 +1227,8 @@ input.form__error {
   content: url("../img/stages/arrow-prev.svg") !important;
   left: 72%; }
 
-.model__swiper-button-next, .model__swiper-button-prev {
+.model__swiper-button-next,
+.model__swiper-button-prev {
   top: 218px !important; }
 
 .model__swiper-pagination {
@@ -1987,6 +1999,53 @@ input.form__error {
     padding-left: 17px;
     padding-right: 5px; }
 
+.submit {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000; }
+  .submit__wrap {
+    padding: 68px 0;
+    width: 320px;
+    background-color: #EAEEF1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .submit__title {
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: -0.03em;
+    color: #1E1E1E;
+    margin-bottom: 14px; }
+  .submit__subtitle {
+    font-family: 'Segoe UI Regular';
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: #1E1E1E;
+    margin-bottom: 55px; }
+  .submit__button {
+    position: relative; }
+    .submit__button::after {
+      content: '';
+      position: absolute;
+      left: -106px;
+      width: 96px;
+      height: 30px;
+      background: url("../img/submit-arrow.svg") no-repeat center; }
+
 @media (min-width: 321px) {
   .leader {
     background: url("../img/design/designer-photo-md.png") no-repeat center/cover; } }
@@ -2002,6 +2061,25 @@ input.form__error {
     justify-content: center; } }
 
 @media (min-width: 768px) {
+  .submit__wrap {
+    width: 768px;
+    padding: 75px 0; }
+  .submit__title {
+    font-size: 35px;
+    line-height: 43px;
+    margin-bottom: 20px; }
+  .submit__subtitle {
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 70px; }
+  .submit__button {
+    padding: 15px 33px; }
+    .submit__button::after {
+      background: url("../img/submit-arrow-md.svg") no-repeat center;
+      width: 277px;
+      height: 80px;
+      left: -309px;
+      top: -20px; }
   .phone-button {
     letter-spacing: 0.0209em;
     line-height: 18px; }
@@ -2298,12 +2376,13 @@ input.form__error {
       right: 20px;
       top: 182px; }
     .model__button::before {
-      top: -10px;
+      top: -26px;
       left: 50px;
       opacity: 0;
       z-index: 20;
       transition: opacity 0.3s;
-      font-size: 15px; }
+      font-size: 15px;
+      position: absolute; }
     .model__button::after {
       content: '';
       margin-top: 32px;
@@ -2323,6 +2402,8 @@ input.form__error {
       opacity: 1 !important;
       max-height: 131px !important;
       max-width: 131px !important; }
+    .button--expand ~ .model__button-text {
+      display: block; }
   .button--close::before {
     content: '+';
     transform: rotate(45deg);
@@ -2767,6 +2848,21 @@ input.form__error {
     left: 15%; } }
 
 @media (min-width: 1450px) {
+  .submit__wrap {
+    width: 750px; }
+  .submit__title {
+    font-size: 40px;
+    line-height: 49px;
+    margin-bottom: 24px; }
+  .submit__subtitle {
+    margin-bottom: 60px; }
+  .submit__button {
+    padding: 22px 55px; }
+    .submit__button::after {
+      width: 248px;
+      background: url("../img/submit-arrow-lg.svg") no-repeat center;
+      left: -278px;
+      top: -8px; }
   .d-block-lg {
     display: block; }
   .phone {
