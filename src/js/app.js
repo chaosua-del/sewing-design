@@ -5,7 +5,9 @@ import validate from 'jquery.validate.min';
 import page from 'page';
 import forms from 'forms';
 import sliders from 'sliders';
-import { myMap } from 'map';
+import {
+    myMap
+} from 'map';
 import formValidation from 'validation';
 import popupMenu from 'popups';
 import bannerScroll from 'banner';
@@ -15,6 +17,8 @@ import expandMenu from 'expand-menu';
 import headerMenu from 'header-menu';
 import scrollDown from 'scroll-down';
 import modelExpand from 'model-expand';
+import cardHeight from 'cardHeight';
+
 
 import Swiper from 'swiper/js/swiper.js';
 // import mask from 'swiper/js/swiper.js';
@@ -26,7 +30,8 @@ let app = {
     breakpoints: {
         sm: 320,
         md: 768,
-        lg: 1250
+        lg: 1250,
+        xl: 1450
     },
     media: 320,
     resizeEventName: 'app_resize',
@@ -77,6 +82,7 @@ let app = {
             clientsHovers();
             expandMenu();
             scrollDown();
+            cardHeight();
         });
 
         this.document.on(app.resizeEventName, () => {
@@ -84,6 +90,8 @@ let app = {
             bannerHover();
             bannerScroll();
             sliders();
+            cardHeight();
+            console.log('resizing');
         });
 
     },
@@ -131,13 +139,13 @@ let app = {
             j = 0;
         }
 
-        km = j
-            ? i.substr(0, j) + thousands_sep
-            : '';
+        km = j ?
+            i.substr(0, j) + thousands_sep :
+            '';
         kw = i.substr(j).replace(/(\d{3})(?=\d)/g, '$1' + thousands_sep);
-        kd = (decimals
-            ? dec_point + Math.abs(number - i).toFixed(decimals).replace(/-/, '0').slice(2)
-            : '');
+        kd = (decimals ?
+            dec_point + Math.abs(number - i).toFixed(decimals).replace(/-/, '0').slice(2) :
+            '');
 
         return km + kw + kd;
     },
@@ -155,7 +163,9 @@ let app = {
             //            console.log(app.media);
         }
         if (app.media != current) {
-            app.document.trigger(app.resizeEventName, { media: app.media });
+            app.document.trigger(app.resizeEventName, {
+                media: app.media
+            });
         }
     },
 
@@ -201,14 +211,3 @@ let app = {
 
 };
 app.init();
-
-
-
-
-
-
-
-
-
-
-

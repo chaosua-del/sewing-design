@@ -1,97 +1,110 @@
 .clients {
-  position: relative;
-  background: #000000 url('../img/clients/clients-bg.webp') no-repeat center / cover;
-  color: $color-white;
-  padding-top: 47px;
-  padding-bottom: 106px;
-  position: relative;
-  &__description {
-    padding: 2px 0;
-    font-family: 'Century Gothic Regular' !important; 
-    text-align: center;
-    margin: 0 auto;
-    width: 187px;
-    margin-bottom: 46px;
-    @include font(16px, -0.03em, 20px);
-  }
-  &__card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  &__name {
-    @include font(20px, -0.04em, 32px);
-  }
-  &__location {
-   font-size: 13px;
-   line-height: 28px;
-   font-family: 'Segoe UI Regular' !important;
-   opacity: 0.7;
-   margin-bottom: 10px;
-   margin-top: -8px;
-  }
-  &__feedback {
-    font-family: 'Segoe UI Regular' !important;
-    line-height: 20px;
-    max-width: 238px;
-  }
-  &__info {
-    margin-left: -34px;
-    margin-top: 17px;
-  }
-  &__dimmed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    z-index: 0;
-    background-color: rgba(#000000, 0.85);
-    transition: opacity 0.1s ease-in-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // transition: z-index 0.2s ease-out;
-    &-photo {
-      position: absolute;
-      width: 694px;
-      height: 405px;
-      opacity: 0;
-      transition: opacity 0.1s ease-in;
-      left: 50%;
-      transform: translateX(-50%);
+    position: relative;
+    background: #000000 url('../img/clients/clients-bg.webp') no-repeat center / cover;
+    color: $color-white;
+    padding-top: 47px;
+    padding-bottom: 106px;
+    position: relative;
+    z-index: 100;
+
+    &__description {
+        padding: 2px 0;
+        font-family: 'Century Gothic Regular' !important;
+        text-align: center;
+        margin: 0 auto;
+        width: 187px;
+        margin-bottom: 46px;
+        @include font(16px, -0.03em, 20px);
     }
-  }
-  &__block {
-    display: none;
-  }
+
+    &__card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__name {
+        @include font(20px, -0.04em, 32px);
+    }
+
+    &__location {
+        font-size: 13px;
+        line-height: 28px;
+        font-family: 'Segoe UI Regular' !important;
+        opacity: 0.7;
+        margin-bottom: 10px;
+        margin-top: -8px;
+    }
+
+    &__feedback {
+        font-family: 'Segoe UI Regular' !important;
+        line-height: 20px;
+        max-width: 238px;
+    }
+
+    &__info {
+        margin-left: -34px;
+        margin-top: 17px;
+    }
+
+    &__dimmed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        z-index: 0;
+        background-color: rgba(#000000, 0.85);
+        transition: opacity 0.1s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        // transition: z-index 0.2s ease-out;
+        &-photo {
+            position: absolute;
+            width: 694px;
+            height: 405px;
+            opacity: 0;
+            transition: opacity 0.1s ease-in;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+    }
+
+    &__block {
+        display: none;
+    }
 }
 
 .clients__swiper-pagination {
-  bottom: 57px;
-  left: 50%;
-  transform: translateX(-50%) !important;
-  .swiper-pagination-bullet {
-    margin-right: 2px;
-    width: 24px !important;
-    height: 2px !important;
-    background: #ffffff !important; 
-    border-radius: 0 !important;
-  }
+    bottom: 57px;
+    left: 50%;
+    transform: translateX(-50%) !important;
+
+    .swiper-pagination-bullet {
+        margin-right: 2px;
+        width: 24px !important;
+        height: 2px !important;
+        background: #ffffff !important;
+        border-radius: 0 !important;
+    }
 }
 
 .clients__swiper-button-next:after {
-  content: url('../img/clients/arrow-next.svg') !important;
-  right: 65%;
+    content: url('../img/clients/arrow-next.svg') !important;
+    right: 65%;
 }
 
 .clients__swiper-button-prev:after {
-  content: url('../img/clients/arrow-prev.svg') !important;
-  left: 65%;
+    content: url('../img/clients/arrow-prev.svg') !important;
+    left: 65%;
 }
 
-.clients__swiper-button-next:after, .clients__swiper-button-prev:after {
-  top: 221px;
+.clients__swiper-button-next:after,
+.clients__swiper-button-prev:after {
+    top: 221px;
 }

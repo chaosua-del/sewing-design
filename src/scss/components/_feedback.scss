@@ -1,104 +1,122 @@
 .feedback {
-  padding-top: 15px;
-  padding-bottom: 70px;
-  font-family: 'Segoe UI Regular' !important;
-  &__swiper-slide {
-    @include flex-center();
-    padding-top: 30px;
-    padding-bottom: 40px;
-    width: 270px !important;
-  }
-  &__swiper-wrapper {
-    padding-left: 25px;
-  }
-  &__user {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    &-name {
-      font-family: 'Century Gothic Bold' !important;
-      display: block;
-      @include font(16px, -0.04em, 32px);
+    padding-top: 15px;
+    padding-bottom: 70px;
+    font-family: 'Segoe UI Regular' !important;
+
+    &__swiper-slide {
+        @include flex-center();
+        padding-top: 30px;
+        padding-bottom: 40px;
+        width: 270px !important;
     }
-    &-job {
-      font-family: 'Segoe UI Regular' !important;
-      display: block;
-      opacity: 0.6;
-      @include font(10px, -0.01em, 22px);
-      margin-top: -4px;
+
+    &__swiper-wrapper {
+        padding-left: 25px;
     }
-    &-img {
-      border-radius: 50%;
-      margin-right: 10px;
-      margin-left: -4px;
-      width: 40px;
-      height: 40px;
+
+    &__user {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        &-name {
+            font-family: 'Century Gothic Bold' !important;
+            display: block;
+            @include font(16px, -0.04em, 32px);
+        }
+
+        &-job {
+            font-family: 'Segoe UI Regular' !important;
+            display: block;
+            opacity: 0.6;
+            @include font(10px, -0.01em, 22px);
+            margin-top: -4px;
+        }
+
+        &-img {
+            border-radius: 50%;
+            margin-right: 10px;
+            margin-left: -4px;
+            width: 40px;
+            height: 40px;
+        }
     }
-  }
-  &__card {
-    cursor: pointer;
-    position: relative;
-    border: 3px solid rgba(0, 0, 0, 0.1);
-    padding-left: 19px;
-    padding-top: 17px;
-    padding-bottom: 20px;
-    height: 210px;
-    width: 270px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    &-text {
-      font-size: 12px;
-      line-height: 20px;
-      color: #000000;
-      opacity: 0.7;
-      margin-top: 13px;
+
+    &__card {
+        cursor: pointer;
+        position: relative;
+        border: 3px solid rgba(0, 0, 0, 0.1);
+        padding-left: 19px;
+        padding-top: 17px;
+        padding-bottom: 20px;
+        // height: 210px;
+        height: 100%;
+        width: 270px;
+        display: flex;
+        margin-right: 10px;
+        // justify-content: center;
+        flex-direction: column;
+
+        &-text {
+            font-size: 12px;
+            line-height: 20px;
+            color: #000000;
+            opacity: 0.7;
+            margin-top: 13px;
+        }
+
+        &-date {
+            @include font(10px, -0.01em, 22px);
+            opacity: 0.3;
+            align-self: flex-end;
+            margin-right: 28px;
+            margin-top: auto;
+        }
+
+        &-decoration {
+            position: absolute;
+            width: 150px;
+            height: 50px;
+            background: url('../img/feedback/feedback-decoration.svg') no-repeat center;
+
+            &--top {
+                right: -17px;
+                top: -33px;
+            }
+
+            &--bottom {
+                display: none;
+            }
+        }
     }
-    &-date {
-      @include font(10px, -0.01em, 22px);
-      opacity: 0.3;
-      align-self: flex-end;
-      margin-right: 28px;
-    }
-    &-decoration {
-      position: absolute;
-      width: 150px;
-      height: 50px;
-      background: url('../img/feedback/feedback-decoration.svg') no-repeat center;
-      &--top {
-        right: -17px;
-        top: -33px;
-      }
-      &--bottom {
-        display: none;
-      }
-    }
-  }
 }
 
 .feedback__swiper-button-next {
-  top: 260px !important;
-  right: 8% !important;
-  &::after {
-  content: url('../img/stages/arrow-next.svg') !important;
-}
+    top: 93.5% !important;
+    right: 8% !important;
+
+    &::after {
+        content: url('../img/stages/arrow-next.svg') !important;
+    }
 }
 
 .feedback__swiper-button-prev {
-  top: 260px !important;
-  left: 8% !important;
-  &::after {
-  content: url('../img/stages/arrow-prev.svg') !important;
-}
+    top: 93.5% !important;
+    left: 8% !important;
+
+    &::after {
+        content: url('../img/stages/arrow-prev.svg') !important;
+    }
 }
 
 .feedback__swiper-pagination {
-  bottom: 7px !important;
-  .swiper-pagination-bullet {
-     margin-right: 2px;
-    width: 30px !important;
-    height: 2px !important;
-    background: #000000 !important; 
-    border-radius: 0 !important;
-  }
+    bottom: 1.5% !important;
+
+    .swiper-pagination-bullet {
+        margin-right: 2px;
+        width: 30px !important;
+        height: 2px !important;
+        background: #000000 !important;
+        border-radius: 0 !important;
+    }
 }

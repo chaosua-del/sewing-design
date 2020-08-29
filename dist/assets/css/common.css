@@ -800,8 +800,7 @@ input.form__error {
     padding-bottom: 18px;
     width: 1600px;
     overflow: hidden;
-    background-color: #D1CABC;
-    transition: margin-left 0.2s ease-out; }
+    background-color: #D1CABC; }
 
 .lower-case {
   text-transform: none;
@@ -1418,7 +1417,8 @@ input.form__error {
   color: #F6F6F6;
   padding-top: 47px;
   padding-bottom: 106px;
-  position: relative; }
+  position: relative;
+  z-index: 100; }
   .clients__description {
     padding: 2px 0;
     font-family: 'Century Gothic Regular' !important;
@@ -1474,7 +1474,8 @@ input.form__error {
       opacity: 0;
       transition: opacity 0.1s ease-in;
       left: 50%;
-      transform: translateX(-50%); }
+      transform: translateX(-50%);
+      z-index: 1000; }
   .clients__block {
     display: none; }
 
@@ -1497,7 +1498,8 @@ input.form__error {
   content: url("../img/clients/arrow-prev.svg") !important;
   left: 65%; }
 
-.clients__swiper-button-next:after, .clients__swiper-button-prev:after {
+.clients__swiper-button-next:after,
+.clients__swiper-button-prev:after {
   top: 221px; }
 
 .feedback {
@@ -1546,10 +1548,10 @@ input.form__error {
     padding-left: 19px;
     padding-top: 17px;
     padding-bottom: 20px;
-    height: 210px;
+    height: 100%;
     width: 270px;
     display: flex;
-    justify-content: center;
+    margin-right: 10px;
     flex-direction: column; }
     .feedback__card-text {
       font-size: 12px;
@@ -1564,7 +1566,8 @@ input.form__error {
       line-height: 22px;
       opacity: 0.3;
       align-self: flex-end;
-      margin-right: 28px; }
+      margin-right: 28px;
+      margin-top: auto; }
     .feedback__card-decoration {
       position: absolute;
       width: 150px;
@@ -1577,19 +1580,19 @@ input.form__error {
         display: none; }
 
 .feedback__swiper-button-next {
-  top: 260px !important;
+  top: 93.5% !important;
   right: 8% !important; }
   .feedback__swiper-button-next::after {
     content: url("../img/stages/arrow-next.svg") !important; }
 
 .feedback__swiper-button-prev {
-  top: 260px !important;
+  top: 93.5% !important;
   left: 8% !important; }
   .feedback__swiper-button-prev::after {
     content: url("../img/stages/arrow-prev.svg") !important; }
 
 .feedback__swiper-pagination {
-  bottom: 7px !important; }
+  bottom: 1.5% !important; }
   .feedback__swiper-pagination .swiper-pagination-bullet {
     margin-right: 2px;
     width: 30px !important;
@@ -2560,7 +2563,6 @@ input.form__error {
     .feedback__swiper-wrapper {
       padding-bottom: 20px; }
     .feedback__card {
-      height: 235px;
       width: 416px;
       padding-left: 31px;
       padding-right: 24px;
@@ -2575,7 +2577,7 @@ input.form__error {
       .feedback__card-date {
         font-size: 12px;
         line-height: 22px;
-        margin-top: 8px;
+        margin-top: auto;
         right: -21px; }
       .feedback__card-decoration {
         background: url("../img/feedback/feedback-decoration-md.svg") no-repeat center;
@@ -2586,7 +2588,7 @@ input.form__error {
         .feedback__card-decoration--bottom {
           display: block;
           left: -37px;
-          top: 179px; }
+          bottom: -20px; }
     .feedback__user-name {
       font-size: 20px;
       line-height: 32px; }
@@ -3329,7 +3331,6 @@ input.form__error {
         width: 76px;
         height: 76px; }
     .feedback__card {
-      height: 313px;
       padding-top: 36px;
       padding-left: 55px;
       padding-bottom: 47px;
@@ -3341,7 +3342,6 @@ input.form__error {
       .feedback__card-date {
         font-size: 15px;
         line-height: 22px;
-        margin-top: 13px;
         right: 7px; }
       .feedback__card-decoration--top {
         background: url(../img/feedback/feedback-decoration-lg.svg) no-repeat center;
@@ -3350,8 +3350,7 @@ input.form__error {
         height: 124px;
         width: 300px; }
       .feedback__card-decoration--bottom {
-        left: -23px;
-        top: 253px; }
+        left: -23px; }
   .questions {
     padding-bottom: 245px; }
     .questions__container {

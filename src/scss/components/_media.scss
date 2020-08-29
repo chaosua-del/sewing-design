@@ -867,7 +867,7 @@
         }
 
         &__card {
-            height: 235px;
+            // height: 235px;
             width: 416px;
             padding-left: 31px;
             padding-right: 24px;
@@ -885,7 +885,8 @@
             &-date {
                 font-size: 12px;
                 line-height: 22px;
-                margin-top: 8px;
+                margin-top: auto;
+                // margin-bottom: 29px;
                 right: -21px;
             }
 
@@ -901,7 +902,7 @@
                 &--bottom {
                     display: block;
                     left: -37px;
-                    top: 179px;
+                    bottom: -20px;
                 }
             }
         }
@@ -2174,11 +2175,12 @@
         }
 
         &__card {
-            height: 313px;
+            // height: 313px;
             padding-top: 36px;
             padding-left: 55px;
             padding-bottom: 47px;
             width: 547px;
+            // min-height: 313px;
 
             &-text {
                 font-size: 20px;
@@ -2189,7 +2191,7 @@
             &-date {
                 font-size: 15px;
                 line-height: 22px;
-                margin-top: 13px;
+                // margin-bottom: 46px;
                 right: 7px;
             }
 
@@ -2204,7 +2206,7 @@
 
                 &--bottom {
                     left: -23px;
-                    top: 253px;
+                    // top: 253px;
                 }
             }
 

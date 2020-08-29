@@ -10,36 +10,46 @@ export default function bannerHover() {
             elem.addEventListener('mouseenter', (event) => {
                 event.target.classList.add('banner__wrap--active');
                 if (event.clientX > window.innerWidth / 2) {
-                    let counter = parseInt($(event.target).css("margin-left"));
-                    console.log(counter);
+
+
+
+                    $(event.target).animate({
+
+                        marginLeft: '-5000px',
+
+                    }, 10000);
+
                     let interval = setInterval(() => {
-                        if (counter <= -(parseInt($(event.target).css("width"))) / 1.8)
+
+                        if (parseInt($(event.target).css('margin-left')) <= -parseInt($(event.target).css('width')) / 1.8) {
+                            $(event.target).stop();
+                            console.log('hello');
                             clearInterval(interval);
-                        else {
-                            counter -= 10;
-                            event.target.style.marginLeft = `${counter}px`;
                         }
 
-                    }, 15);
+                    }, 100);
+
                     event.target.addEventListener('mouseleave', function (event) {
                         event.target.classList.remove('banner__wrap--active');
-                        clearInterval(interval);
+                        // 
+                        $(event.target).stop();
                     });
                 } else if (event.clientX < window.innerWidth / 2) {
-                    let counter = parseInt($(event.target).css("margin-left"));
+                    $(event.target).animate({
+
+                        marginLeft: '5000px',
+
+                    }, 10000);
+
                     let interval = setInterval(() => {
-                        if (counter >= 0)
+
+                        if (parseInt($(event.target).css('margin-left')) >= -20) {
+                            $(event.target).stop();
+                            console.log('hello');
                             clearInterval(interval);
-                        else {
-                            counter += 10;
-                            event.target.style.marginLeft = `${counter}px`;
                         }
 
-                    }, 15);
-                    event.target.addEventListener('mouseleave', function (event) {
-                        event.target.classList.remove('banner__wrap--active');
-                        clearInterval(interval);
-                    });
+                    }, 0);
                 }
 
             });
