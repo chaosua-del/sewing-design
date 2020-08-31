@@ -1474,8 +1474,7 @@ input.form__error {
       opacity: 0;
       transition: opacity 0.1s ease-in;
       left: 50%;
-      transform: translateX(-50%);
-      z-index: 1000; }
+      transform: translateX(-50%); }
   .clients__block {
     display: none; }
 
