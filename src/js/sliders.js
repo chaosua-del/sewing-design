@@ -123,7 +123,7 @@ export default function () {
             updateOnWindowResize: false,
             spaceBetween: 10,
             // slidesOffsetBefore: 25,
-            // slidesOffsetAfter: 40,
+            slidesOffsetAfter: 40,
 
             pagination: {
                 el: '.feedback__swiper-pagination',

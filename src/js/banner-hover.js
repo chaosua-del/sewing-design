@@ -23,7 +23,7 @@ export default function bannerHover() {
 
                         if (parseInt($(event.target).css('margin-left')) <= -parseInt($(event.target).css('width')) / 1.8) {
                             $(event.target).stop();
-                            console.log('hello');
+                            // console.log('hello');
                             clearInterval(interval);
                         }
 
@@ -45,7 +45,7 @@ export default function bannerHover() {
 
                         if (parseInt($(event.target).css('margin-left')) >= -20) {
                             $(event.target).stop();
-                            console.log('hello');
+                            // console.log('hello');
                             clearInterval(interval);
                         }
 
@@ -57,6 +57,28 @@ export default function bannerHover() {
 
 
     }
+
+    const photosDimm = document.querySelectorAll('.photos__dimm');
+
+    $('.photos__swiper-slide').on('mouseenter', event => {
+        // console.log('hello');
+        photosDimm.forEach(elem => {
+            // console.log(elem);
+            elem.style.backgroundColor = '#FFFFFF';
+        });
+        event.target.style.backgroundColor = 'transparent';
+    });
+
+    $('.photos__swiper-slide').on('mouseleave', event => {
+        // console.log('hello');
+        photosDimm.forEach(elem => {
+            // console.log(elem);
+            elem.style.backgroundColor = 'transparent';
+        });
+        // event.target.style.backgroundColor = 'transparent';
+    });
+
+
 
 
 }

@@ -911,9 +911,9 @@
             &-date {
                 font-size: 12px;
                 line-height: 22px;
-                margin-top: auto;
+                // margin-top: auto;
                 // margin-bottom: 29px;
-                right: -21px;
+                // right: -21px;
             }
 
             &-decoration {
@@ -952,10 +952,10 @@
         }
     }
 
-    .feedback__swiper-button-next,
-    .feedback__swiper-button-prev {
-        top: 297px !important;
-    }
+    // .feedback__swiper-button-next,
+    // .feedback__swiper-button-prev {
+    //     top: 297px !important;
+    // }
 
     .feedback__swiper-button-next:after {
         content: url('../img/feedback/arrow-next-md.svg') !important;
@@ -2250,7 +2250,7 @@
                 font-size: 15px;
                 line-height: 22px;
                 // margin-bottom: 46px;
-                right: 7px;
+                // right: 7px;
             }
 
             &-decoration {

@@ -31,6 +31,7 @@
             opacity: 0.6;
             @include font(10px, -0.01em, 22px);
             margin-top: -4px;
+            color: rgba(#1E1E1E, 0.6);
         }
 
         &-img {
@@ -43,12 +44,12 @@
     }
 
     &__card {
-        cursor: pointer;
+        // cursor: pointer;
         position: relative;
         border: 3px solid rgba(0, 0, 0, 0.1);
         padding-left: 19px;
         padding-top: 17px;
-        padding-bottom: 20px;
+        // padding-bottom: 46px;
         // height: 210px;
         height: 100%;
         width: 270px;
@@ -56,6 +57,7 @@
         margin-right: 10px;
         // justify-content: center;
         flex-direction: column;
+        padding-right: 10px;
 
         &-text {
             font-size: 12px;
@@ -63,14 +65,18 @@
             color: #000000;
             opacity: 0.7;
             margin-top: 13px;
+            margin-bottom: 46px;
         }
 
         &-date {
             @include font(10px, -0.01em, 22px);
             opacity: 0.3;
-            align-self: flex-end;
-            margin-right: 28px;
-            margin-top: auto;
+            // align-self: flex-end;
+            // margin-right: 28px;
+            // margin-top: auto;
+            position: absolute;
+            right: 28px;
+            bottom: 24px;
         }
 
         &-decoration {
@@ -92,7 +98,8 @@
 }
 
 .feedback__swiper-button-next {
-    top: 93.5% !important;
+    top: auto !important;
+    bottom: 5px !important;
     right: 8% !important;
 
     &::after {
@@ -101,7 +108,8 @@
 }
 
 .feedback__swiper-button-prev {
-    top: 93.5% !important;
+    top: auto !important;
+    bottom: 5px !important;
     left: 8% !important;
 
     &::after {

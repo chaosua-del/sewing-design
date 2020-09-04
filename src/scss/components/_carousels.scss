@@ -12,6 +12,12 @@
         height: 102px !important;
     }
 
+    &__wrap {
+        display: flex;
+        margin-bottom: 125px;
+        transition: transform 0.1s ease-in-out;
+    }
+
     &__info {
         // opacity: 0;
         color: transparent;
