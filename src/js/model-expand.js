@@ -27,6 +27,41 @@ export default function modelExpand() {
                 }
             }
 
+            console.log(event.target.dataset.name);
+            let name = event.target.dataset.name;
+            const modelTitle = document.querySelector('.model__info-title');
+            const modelSubtitle = document.querySelector('.model__info-subtitle');
+            modelTitle.style.opacity = '0';
+            modelSubtitle.style.opacity = '0';
+            setTimeout(function () {
+                switch (name) {
+                    case 'shoulder':
+                        modelTitle.innerHTML = '100 % ХЛОПОК ПРОЧНОГО ПЛЕТЕНИЯ';
+                        modelSubtitle.innerHTML = 'Натуральная дышащая ткань —  комфорт в любое время года';
+                        break;
+                    case 'pocket':
+                        modelTitle.innerHTML = 'ПОШИВ АРМИРОВАННЫМИ&nbsp;НИТКАМИ';
+                        modelSubtitle.innerHTML = 'Лавсановая нить и хлопковая оплетка обеспечат устойчивость моделей';
+                        break;
+                    case 'robe':
+                        modelTitle.innerHTML = 'ШИРОКАЯ ЦВЕТОВАЯ&nbsp;ПАЛИТРА';
+                        modelSubtitle.innerHTML = '150+ цветовых решений напрямую от зарубежных производителей';
+                        break;
+                    case 'loop':
+                        modelTitle.innerHTML = 'ПОВЫШЕННАЯ ИЗНОСОСТОЙКОСТЬ';
+                        modelSubtitle.innerHTML = 'Ткани специального плетения методом Канвас';
+                        break;
+                    case 'neck':
+                        modelTitle.innerHTML = 'ТОЛЬКО НАТУРАЛЬНАЯ КОЖА ДЛЯ КРЕПЛЕНИЙ';
+                        modelSubtitle.innerHTML = 'Натуральная кожа гарантирует долговечность, надежность и презентабельный вид';
+                        break;
+                }
+                modelTitle.style.opacity = '1';
+                modelSubtitle.style.opacity = '1';
+
+            }, 200);
+
+
         });
     });
 }

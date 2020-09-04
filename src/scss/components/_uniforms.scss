@@ -1,110 +1,133 @@
 .uniforms {
-  padding-bottom: 79px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &__container {
-    background: url('../img/uniforms/uniforms-bg.svg') no-repeat 0% 69%;
-    max-width: 320px;
-  }
-  &__subtitle {
-    @include font(10px, 0.02em, 16px);
-    opacity: 0.5;
-    text-align: center;
-    margin-top: 18px;
-    margin-bottom: 47px;
-    width: 286px;
-    text-transform: uppercase;
-  }
-  &__title {
-    @include font(18px, -0.03, 22px);
-    text-align: center;
-    margin-bottom: 56px;
-  }
-  &__card {
-    position: relative;
-    text-transform: uppercase;
+    padding-bottom: 79px;
     display: flex;
-    &--first {
-      width: 252px;
-      height: 146px;
-      margin-bottom: 88px;
-      @include bg('../img/uniforms/1.jpg');
-      margin-left: -3px;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        background: url('../img/uniforms/uniforms-bg.svg') no-repeat 0% 69%;
+        max-width: 320px;
     }
-    &--second, &--third {
-      width: 220px;
-      height: 146px;
+
+    &__subtitle {
+        @include font(10px, 0.02em, 16px);
+        opacity: 0.5;
+        text-align: center;
+        margin-top: 18px;
+        margin-bottom: 47px;
+        width: 286px;
+        text-transform: uppercase;
     }
-    &--second {
-      margin-left: -27px;
-      margin-bottom: 41px;
-      .uniforms__card-description {
-        max-width: 144px;
-      }
-      @include bg('../img/uniforms/2.jpg');
+
+    &__title {
+        @include font(18px, -0.03, 22px);
+        text-align: center;
+        margin-bottom: 56px;
+        cursor: pointer;
     }
-    &--third {
-      margin-left: auto;
-      margin-right: -24px;
-      margin-bottom: 12px;
-      .uniforms__card-description {
-        max-width: 130px;
-      }
-      .uniforms__card-name {
-        left: 1px;
-        min-width: 220px;
-      }
-      @include bg('../img/uniforms/3.jpg');
+
+    &__card {
+        position: relative;
+        text-transform: uppercase;
+        display: flex;
+        cursor: pointer;
+
+        &--first {
+            width: 252px;
+            height: 146px;
+            margin-bottom: 88px;
+            @include bg('../img/uniforms/1.jpg');
+            margin-left: -3px;
+        }
+
+        &--second,
+        &--third {
+            width: 220px;
+            height: 146px;
+        }
+
+        &--second {
+            margin-left: -27px;
+            margin-bottom: 41px;
+
+            .uniforms__card-description {
+                max-width: 144px;
+            }
+
+            @include bg('../img/uniforms/2.jpg');
+        }
+
+        &--third {
+            margin-left: auto;
+            margin-right: -24px;
+            margin-bottom: 12px;
+
+            .uniforms__card-description {
+                max-width: 130px;
+            }
+
+            .uniforms__card-name {
+                left: 1px;
+                min-width: 220px;
+            }
+
+            @include bg('../img/uniforms/3.jpg');
+        }
+
+        &-label {
+            font-family: 'Century Gothic Italic' !important;
+            @include font(10px, 0.02em, 16px);
+            color: $color-white;
+            margin-top: 4px;
+            margin-left: 13px;
+            margin-right: 3px;
+        }
+
+        &-description {
+            @include font(10px, 0.02em, 16px);
+            margin-top: 4px;
+            color: $color-white;
+            max-width: 171px;
+            display: inline-block;
+        }
+
+        &-name {
+            @include font(20px, -0.04em, 20px);
+            color: $color-white;
+            position: absolute;
+            bottom: -21.5px;
+            left: 7px;
+
+            &--primary {
+                color: #CBC3B3;
+                display: block;
+            }
+
+            &--large {
+                display: none;
+            }
+        }
     }
-    &-label {
-      font-family: 'Century Gothic Italic' !important;
-      @include font(10px, 0.02em, 16px);
-      color: $color-white;
-      margin-top: 4px;
-      margin-left: 13px;
-      margin-right: 3px;
+
+    &__button {
+        cursor: pointer;
+        margin-left: -29px;
+        width: 147px;
+        height: 147px;
+        border-radius: 50%;
+        background-color: #D1CABC;
+        @include font(10px, 0.02em, 15px);
+        @include flex-center();
+        padding-top: 30px;
+        text-transform: uppercase;
+        position: relative;
+
+        &::after {
+            content: url(../img/uniforms/button-arrow.svg);
+            position: absolute;
+            top: 42%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
-    &-description {
-      @include font(10px, 0.02em, 16px);
-      margin-top: 4px;
-      color: $color-white;
-      max-width: 171px;
-      display: inline-block;
-    }
-    &-name {
-      @include font(20px, -0.04em, 20px);
-      color: $color-white;
-      position: absolute;
-      bottom: -21.5px;
-      left: 7px;
-      &--primary {
-        color: #CBC3B3;
-        display: block;
-      }
-      &--large {
-        display: none;
-      }
-    }
-  }
-  &__button {
-    cursor: pointer;
-    margin-left: -29px;
-    width: 147px;
-    height: 147px;
-    border-radius: 50%;
-    background-color: #D1CABC;
-    @include font(10px, 0.02em, 15px);
-    @include flex-center();
-    padding-top: 30px;
-    text-transform: uppercase;
-    position: relative;
-    &::after {
-      content: url(../img/uniforms/button-arrow.svg);
-      position: absolute;
-      top: 42%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
 }

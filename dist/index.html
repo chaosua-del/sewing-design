@@ -166,7 +166,7 @@
       <section class="design">
         <div class="container design__container">
           <h2 class="design__title">Дизайн-макет бесплатно, за 1 день</h2>
-          <p class="design__subtitle">Оставьте заявку и получите дизайн-макет вашей будущей униформы. Сделаем его для вас иничего&nbsp;не возьмем.</p>
+          <p class="design__subtitle">Опишите, какую униформу вы хотите, а наши дизайнеры подготовят подробный дизайн-макет. Это бесплатно и ни к чему не обязывает.</p>
           <form class="form design__form design--hidden" id="designForm1">
             <input class="form__input design__form-input" type="text" placeholder="Как вас зовут?" name="userName">
             <input class="form__input design__form-input" type="tel" placeholder="Номер телефона" name="userPhone">
@@ -200,18 +200,15 @@
       <section class="model" id="quality">
         <div class="model__card">
           <div class="model__buttons">
-            <div class="model__button-shoulder">
-              <button class="model__button">+</button>
-              <p class="model__button-text">100 % ХЛОПОК ПРОЧНОГО ПЛЕТЕНИЯ Натуральная дышащая ткань —  комфорт в любое время года</p>
-            </div>
-            <button class="model__button model__button-pocket">+</button>
-            <button class="model__button model__button-robe">+</button>
-            <button class="model__button model__button-loop">+</button>
-            <button class="model__button model__button-neck button--expand button--close"> </button>
+            <button class="model__button model__button-shoulder" data-name="shoulder">+</button>
+            <button class="model__button model__button-pocket" data-name="pocket">+</button>
+            <button class="model__button model__button-robe" data-name="robe">+</button>
+            <button class="model__button model__button-loop" data-name="loop">+</button>
+            <button class="model__button model__button-neck button--expand button--close" data-name="neck"></button>
           </div>
           <div class="model__info">
-            <p class="model__info-subtitle">высокая точность без потери качества</p>
-            <h2 class="model__info-title">Вышивка самых сложных логотипов</h2>
+            <p class="model__info-subtitle">Натуральная кожа гарантирует долговечность, надежность и презентабельный вид</p>
+            <h2 class="model__info-title">ТОЛЬКО НАТУРАЛЬНАЯ КОЖА ДЛЯ КРЕПЛЕНИЙ</h2>
           </div>
         </div>
         <div class="swiper-container model__swiper-container">
@@ -523,7 +520,8 @@
         </div>
         <div class="banner2">
           <div class="banner2__wrap">
-            <h2 class="banner2__text">отвечаем на частые вопросы клиентов отвечаем на частые вопросы клиентов</h2>
+            <h2 class="banner2__text">отвечаем на частые вопросы клиентов </h2>
+            <h2 class="banner2__text">отвечаем на частые вопросы клиентов </h2>
           </div>
         </div>
       </section>
@@ -620,10 +618,11 @@
         </div>
       </div>
     </footer>
-    <div class="popup hidden">
+    <div class="popup__dimm"></div>
+    <div class="popup">
       <div class="container popup__container">
-        <div class="popup__close-button">Закрыть</div>
-        <div class="button popup__button">Получить каталог</div>
+        <button class="popup__close-fixed popup__close-button">Закрыть</button>
+        <div class="popup__close-button">Закрыть</div><a class="button popup__button" href="#popupForm">Получить каталог</a>
         <h2 class="popup__title">Униформа от&nbsp;производителя</h2>
       </div>
       <div class="swiper-container popup__swiper-container">
@@ -728,13 +727,13 @@
       </div>
       <div class="container popup__container">
         <div class="popup__title popup__title--big">Полный каталог моделей у вас на&nbsp;почте за 3 минуты  </div>
-        <button class="button popup__button popup__button--rounded">Дизайн  в подарок</button>
+        <button class="popup__button popup__button--rounded">Дизайн  в подарок</button>
         <p class="popup__description popup__description--big">Укажите свои контактные данные для скачивания каталога моделей для персонала ресторанов, кафе, пабов и фудкортов с ценами.</p>
         <form class="form popup__form" action="#" id="popupForm">
           <input class="form__input popup__input" type="text" placeholder="Как вас зовут?" name="userName">
           <input class="form__input popup__input" type="tel" placeholder="Номер телефона" name="userPhone">
           <div class="form__policy-wrap">
-            <input class="form__checkbox" type="checkbox" id="policy-checkbox">
+            <input class="form__checkbox" type="checkbox" id="policy-checkbox" checked>
             <label class="form__policy" for="policy-checkbox">Ознакомлен с политикой конфиденциальности</label>
           </div>
           <div class="button-wrap">
@@ -750,6 +749,25 @@
       <div class="submit__wrap">
         <h2 class="submit__title">ФОРМА ОТПРАВЛЕНА</h2><span class="submit__subtitle">Мы свяжемся с вами, спасибо.</span>
         <button class="submit__button button">СПАСИБО</button>
+      </div>
+    </div>
+    <div class="modalForm">
+      <div class="modalForm__wrap">
+        <button class="modalForm__close">+</button>
+        <h2 class="design__title">Дизайн-макет бесплатно, за 1 день</h2>
+        <p class="design__subtitle">Оставьте заявку и получите дизайн-макет вашей будущей униформы. Сделаем его для вас иничего&nbsp;не возьмем.</p>
+        <form class="form design__form" id="designForm3">
+          <input class="form__input design__form-input" type="text" placeholder="Как вас зовут?" name="userName">
+          <input class="form__input design__form-input" type="tel" placeholder="Номер телефона" name="userPhone">
+          <textarea class="form__input form__input--text" placeholder="Какая униформа нужна? (необязательно)"></textarea>
+          <div class="button-wrap design__button-wrap">
+            <button class="button design__button" type="submit" form="designForm3">Получить макет и расчёт</button>
+            <div class="button-label design__button-label"> 
+              <p class="button-labelText">Free</p>
+            </div>
+          </div>
+          <p class="design__policy">Отправляя заявку, вы соглашаетесь с условиями <a class="design__policy--strong" href="#">политики конфиденциальности</a></p>
+        </form>
       </div>
     </div>
     <link rel="stylesheet" href="assets/css/common.css?v=1.1.1">

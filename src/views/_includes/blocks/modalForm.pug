@@ -1,0 +1,17 @@
+.modalForm
+  .modalForm__wrap
+    button.modalForm__close +
+
+    h2.design__title Дизайн-макет бесплатно, за 1 день
+    p.design__subtitle Оставьте заявку и получите дизайн-макет вашей будущей униформы. Сделаем его для вас иничего&nbsp;не возьмем.
+
+    form.form.design__form#designForm3
+      input(type="text", placeholder="Как вас зовут?", name="userName").form__input.design__form-input
+      input(type="tel", placeholder="Номер телефона", name="userPhone").form__input.design__form-input
+      textarea(placeholder="Какая униформа нужна? (необязательно)").form__input.form__input--text
+      .button-wrap.design__button-wrap
+        button.button.design__button(type="submit", form="designForm3") Получить макет и расчёт
+        .button-label.design__button-label 
+          p.button-labelText Free
+      p.design__policy Отправляя заявку, вы соглашаетесь с условиями 
+        a(href="#").design__policy--strong политики конфиденциальности

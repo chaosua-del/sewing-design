@@ -22,4 +22,11 @@ export default function scrollDown() {
             scrollTop: $(this.hash).offset().top
         }, 1000);
     });
+
+    $('.popup__button').click(function (b) {
+        b.preventDefault();
+        $('body,html').animate({
+            scrollTop: $(this.hash).offset().top - 200
+        }, 1000);
+    });
 }

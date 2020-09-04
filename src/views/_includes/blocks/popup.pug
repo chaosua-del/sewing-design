@@ -1,7 +1,10 @@
-.popup.hidden
+.popup__dimm
+.popup
   .container.popup__container
+    
+    button.popup__close-fixed.popup__close-button Закрыть
     .popup__close-button Закрыть
-    .button.popup__button Получить каталог
+    a(href="#popupForm").button.popup__button Получить каталог
     h2.popup__title Униформа от&nbsp;производителя
 
   .swiper-container.popup__swiper-container
@@ -96,14 +99,14 @@
   
   .container.popup__container
     .popup__title.popup__title--big Полный каталог моделей у вас на&nbsp;почте за 3 минуты  
-    button.button.popup__button.popup__button--rounded Дизайн  в подарок
+    button.popup__button.popup__button--rounded Дизайн  в подарок
     p.popup__description.popup__description--big Укажите свои контактные данные для скачивания каталога моделей для персонала ресторанов, кафе, пабов и фудкортов с ценами.
 
     form.form(action="#").popup__form#popupForm
       input.form__input.popup__input(type="text", placeholder="Как вас зовут?", name="userName")
       input.form__input.popup__input(type="tel", placeholder="Номер телефона", name="userPhone")
       .form__policy-wrap
-        input.form__checkbox(type="checkbox", id="policy-checkbox") 
+        input.form__checkbox(type="checkbox", id="policy-checkbox", checked) 
         label.form__policy(for="policy-checkbox") Ознакомлен с политикой конфиденциальности
       .button-wrap
         button.button(type="submit", form="popupForm").form-button.popup__form-button Скачать полный каталог
