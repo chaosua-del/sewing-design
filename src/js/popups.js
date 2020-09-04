@@ -91,6 +91,11 @@ export default function popupMenu() {
         $('.modalForm').fadeIn('fast');
         // console.log('asdsadsa');
     });
+
+    $('.header__button').on('click', event => {
+        $('.modalForm').fadeIn('fast');
+        // console.log('asdsadsa');
+    });
     // console.log($('.modalForm__close'));
 
     $('.modalForm__close').on('click', event => {
