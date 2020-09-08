@@ -1,5 +1,6 @@
+import $ from 'jquery';
 import Swiper from 'swiper/js/swiper.js';
-
+import mousewheel from 'libs/jquery.mousewheel.min.js';
 
 export default function () {
     const photos = new Swiper('.photos__swiper-container', {
@@ -94,23 +95,52 @@ export default function () {
             slidesPerView: 1,
         });
 
-        document.querySelector('.stages__card--second').addEventListener('mouseleave', () => {
-            stages.mousewheel.disable();
+        $('.stages__swiper-container').on('mouseenter', ()=> {
+            setTimeout(function() {
+                $('.stages__card--third').mousewheel(function(turn, delta) {
+                    if(delta == 1) {
+                        console.log('suka');
+                        stages.mousewheel.enable();
+                    } else {
+                        stages.mousewheel.disable();
+                    }
+                });
+        
+                $('.stages__card--first').mousewheel(function(turn, delta) {
+                    if(delta == 1) {
+                        console.log('suka');
+                        stages.mousewheel.disable();
+                    } else {
+                        stages.mousewheel.enable();
+                    }
+                });
+            }, 200);
+           
         });
 
-        document.querySelector('.stages__card--third').addEventListener('mouseleave', () => {
-            stages.mousewheel.enable();
-        });
+      
+               // popup.mousewheel(function(turn, delta) {
 
-        document.querySelector('.stages__card--first').addEventListener('mouseleave', () => {
-            stages.mousewheel.enable();
-        });
+                //     if (delta == 1) {
+                //         popup.ontouchend = function(e){ return true; }
+
+                //     } else {
+                //         console.log('hi');
+                //     }
+
+                //     return false;
+                // console.log($(window).scrollTop(), popup.height(), popup.height() - $(window).scrollTop());
+                //   });
+       
     }
     if (window.innerWidth >= 1450) {
         const feedback = new Swiper('.feedback__swiper-container', {
-            loop: false,
+            loop: true,
             slidesPerView: 'auto',
-            freeMode: true
+            freeMode: false,
+            mousewheel: true,
+            speed: 600
+            
             // pagination: false,
         });
         feedback.pagination.update();

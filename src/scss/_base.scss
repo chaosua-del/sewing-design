@@ -32,6 +32,10 @@
     display: none !important;
 }
 
+.overflow-hidden {
+    position: fixed;
+}
+
 .hidden-sm {
     @include media-breakpoint-down(sm) {
         display: none !important;

@@ -91,7 +91,8 @@ let app = {
             bannerScroll();
             sliders();
             cardHeight();
-            console.log('resizing');
+            popupMenu();
+            // console.log('resizing');
         });
 
     },
