@@ -8,6 +8,11 @@ export default function () {
         spaceBetween: 0,
         freeMode: true,
         loop: true,
+        breakpoints: {
+            1250: {
+                loop:false
+            }
+        }
     });
 
 

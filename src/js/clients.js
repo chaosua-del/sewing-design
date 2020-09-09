@@ -22,6 +22,8 @@ export default function clientsHovers() {
             setTimeout(() => {
                 clientsPhoto.style.zIndex = '1';
                 clientsPhoto.style.opacity = '1';
+                // clientsPhoto.style.display = 'block';
+                clientsPhoto.style.visibility = 'visible';
             }), 100;
             if (window.innerWidth >= 1450) {
                 // console.log(this.getBoundingClientRect().left);
@@ -35,8 +37,9 @@ export default function clientsHovers() {
             clientsDimm.classList.remove('clients--darken');
             this.style.zIndex = '0';
             setTimeout(() => {
-                clientsPhoto.style.zIndex = '-1';
+                clientsPhoto.style.visibility = 'hidden';
                 clientsPhoto.style.opacity = '0';
+                
             }), 100;
 
             // clientsDimm.style.height = '0';

@@ -711,6 +711,9 @@ input.form__error {
   width: 102px !important;
   height: 102px !important; }
 
+.photos__swiper-container {
+  overflow: visible !important; }
+
 .photos__wrap {
   display: flex;
   margin-bottom: 125px;
@@ -2099,7 +2102,7 @@ input.form__error {
 .modalForm {
   display: none;
   background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   z-index: 100000; }
@@ -2110,11 +2113,15 @@ input.form__error {
     transform: rotate(45deg);
     font-size: 38px; }
   .modalForm__wrap {
-    top: 30px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     width: 100%;
     padding: 60px 25px;
     background: #E3E8EC;
-    position: relative; }
+    position: relative;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important; }
   .modalForm .button-label {
     font-size: 13px; }
 

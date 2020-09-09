@@ -10,18 +10,18 @@ export default function bannerHover() {
             elem.addEventListener('mouseenter', (event) => {
                 event.target.classList.add('banner__wrap--active');
                 if (event.clientX > window.innerWidth / 2) {
-
+                    
 
 
                     $(event.target).animate({
 
-                        marginLeft: '-5000px',
+                        marginLeft: '5000px',
 
                     }, 10000);
 
                     let interval = setInterval(() => {
 
-                        if (parseInt($(event.target).css('margin-left')) <= -parseInt($(event.target).css('width')) / 1.8) {
+                        if (parseInt($(event.target).css('margin-left')) >= -20) {
                             $(event.target).stop();
                             // console.log('hello');
                             clearInterval(interval);
@@ -37,13 +37,14 @@ export default function bannerHover() {
                 } else if (event.clientX < window.innerWidth / 2) {
                     $(event.target).animate({
 
-                        marginLeft: '5000px',
+                        marginLeft: '-5000px',
 
                     }, 10000);
 
                     let interval = setInterval(() => {
 
-                        if (parseInt($(event.target).css('margin-left')) >= -20) {
+
+                        if (parseInt($(event.target).css('margin-left')) <= -parseInt($(event.target).css('width')) / 2) {
                             $(event.target).stop();
                             // console.log('hello');
                             clearInterval(interval);
@@ -53,6 +54,9 @@ export default function bannerHover() {
                 }
 
             });
+
+          
+
         });
 
 

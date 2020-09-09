@@ -123,23 +123,44 @@ export default function popupMenu() {
     });
 
     $('.hero__button').on('click', event => {
-        $('.modalForm').fadeIn('fast');
-        // console.log('asdsadsa');
+        modalShow();
     });
 
     $('.header__contacts-button').on('click', event => {
-        $('.modalForm').fadeIn('fast');
-        // console.log('asdsadsa');
+        modalShow();
     });
 
     $('.header__button').on('click', event => {
-        $('.modalForm').fadeIn('fast');
-        // console.log('asdsadsa');
+        modalShow();
     });
-    // console.log($('.modalForm__close'));
+
+    $('.footer__contacts-button').on('click', event => {
+        modalShow();
+    });
+
+    $('.stages__card-button').on('click', event => {
+        modalShow();
+    });
 
     $('.modalForm__close').on('click', event => {
-        $('.modalForm').fadeOut('fast');
+        modalHide();
     });
+
+    document.querySelector('.modalForm').addEventListener('click', event => {
+        if(event.target.classList.contains('modalForm')) {
+            // console.log('hello');
+            modalHide();
+        } 
+    });
+
+    function modalShow() {
+        $('.modalForm').fadeIn('fast');
+        $('body').css('overflow', 'hidden');
+    }
+
+    function modalHide() {
+        $('.modalForm').fadeOut('fast');
+        $('body').css('overflow', 'visible');
+    }
 
 }

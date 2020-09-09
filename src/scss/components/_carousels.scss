@@ -12,6 +12,10 @@
         height: 102px !important;
     }
 
+    &__swiper-container {
+        overflow: visible !important;
+    }
+
     &__wrap {
         display: flex;
         margin-bottom: 125px;
