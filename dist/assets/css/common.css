@@ -840,6 +840,9 @@ input.form__error {
   letter-spacing: -0.04em;
   line-height: 80px; }
 
+#bannermarquee {
+  display: none; }
+
 .uniforms {
   padding-bottom: 79px;
   display: flex;
@@ -2935,6 +2938,10 @@ input.form__error {
     left: 15%; } }
 
 @media (min-width: 1280px) {
+  #bannerslide {
+    display: none; }
+  #bannermarquee {
+    display: block; }
   .modalForm__wrap {
     top: 196px;
     max-width: 1170px;
@@ -3091,11 +3098,8 @@ input.form__error {
   .benefits2__card .benefits__card--right {
     min-width: 283px; }
   .banner__wrap {
-    width: 5100px !important;
     padding-top: 86px;
     padding-bottom: 64px; }
-  .banner__swiper-slide {
-    width: 5100px !important; }
   .banner__title {
     font-size: 90px; }
   .banner2__wrap {
@@ -3423,6 +3427,8 @@ input.form__error {
       margin-right: 42px !important; }
     .feedback__swiper-pagination {
       display: none !important; }
+    .feedback__swiper-container {
+      overflow: visible !important; }
     .feedback__swiper-button-next, .feedback__swiper-button-prev {
       display: none !important; }
     .feedback__user {
@@ -3717,14 +3723,15 @@ input.form__error {
       transition: background-color 0.2s ease-in-out; }
   .banner__wrap {
     background-image: url("../img/carousel/banner-color.svg");
-    transition: background-image 0.1s ease-in-out; }
+    transition: background-image 0.3s ease-in-out; }
   .banner__swiper-wrapper {
     transform: translate3d(0, 0, 0) !important; }
   .banner__wrap--active {
     background-image: url("../img/carousel/banner-bg.webp"); }
     .banner__wrap--active .banner__title {
       color: transparent;
-      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4); }
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+      text-shadow: '-2px 2px 0 rgba(#fff, 0.4), 2px 2px 0 rgba(#fff, 0.4), 2px -2px 0 rgba(#fff, 0.4), -2px -2px 0 rgba(#fff, 0.4)'; }
       .banner__wrap--active .banner__title:hover {
         color: #FFFFFF; }
   .button {

@@ -9,8 +9,11 @@ export default function cardHeight() {
         // console.log(temp);
 
         cards.forEach(elem => {
-            container.style.height = temp + 200 + 'px';
+            window.innerWidth >= 1450 ? container.style.height = temp + 'px' : container.style.height = temp + 200 + 'px'
+            // container.style.height = temp + 200 + 'px';
             elem.style.height = temp + 'px';
         });
+
+
     });
 }

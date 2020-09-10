@@ -46,7 +46,7 @@
 
     .banner__wrap {
         background-image: url('../img/carousel/banner-color.svg');
-        transition: background-image 0.1s ease-in-out;
+        transition: background-image 0.3s ease-in-out;
     }
 
     .banner__swiper-wrapper {
@@ -60,7 +60,8 @@
             color: transparent;
             -webkit-text-stroke: 1px rgba(#FFFFFF, 0.4);
 
-            // text-shadow: '-2px 2px 0 rgba(#fff, 0.4), 2px 2px 0 rgba(#fff, 0.4), 2px -2px 0 rgba(#fff, 0.4), -2px -2px 0 rgba(#fff, 0.4)';
+            text-shadow: '-2px 2px 0 rgba(#fff, 0.4), 2px 2px 0 rgba(#fff, 0.4), 2px -2px 0 rgba(#fff, 0.4), -2px -2px 0 rgba(#fff, 0.4)';
+
             &:hover {
                 color: #FFFFFF;
             }
@@ -117,6 +118,6 @@
         }
     }
 
-   
+
 
 }

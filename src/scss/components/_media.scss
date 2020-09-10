@@ -1393,6 +1393,14 @@
 
 @media(min-width: 1280px) {
 
+    #bannerslide {
+        display: none;
+    }
+
+    #bannermarquee {
+        display: block;
+    }
+
     // modalForm-1450
     .modalForm {
         &__wrap {
@@ -1669,14 +1677,14 @@
 
     .banner {
         &__wrap {
-            width: 5100px !important;
+            // width: 5100px !important;
             padding-top: 86px;
             padding-bottom: 64px;
         }
 
-        &__swiper-slide {
-            width: 5100px !important;
-        }
+        // &__swiper-slide {
+        //     // width: 5100px !important;
+        // }
 
         &__title {
             font-size: 90px;
@@ -2205,6 +2213,10 @@
 
         &__swiper-pagination {
             display: none !important;
+        }
+
+        &__swiper-container {
+            overflow: visible !important;
         }
 
         &__swiper-button-next,

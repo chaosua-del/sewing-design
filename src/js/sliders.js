@@ -10,7 +10,7 @@ export default function () {
         loop: true,
         breakpoints: {
             1250: {
-                loop:false
+                loop: false
             }
         }
     });
@@ -19,12 +19,7 @@ export default function () {
 
 
     if (window.innerWidth < 768) {
-        const banner = new Swiper('.banner__swiper-container', {
-            slidesPerView: 'auto',
-            spaceBetween: 0,
-            freeMode: true,
-            loop: true,
-        });
+
 
         const model = new Swiper('.model__swiper-container', {
             parallax: true,
@@ -81,7 +76,19 @@ export default function () {
             },
         });
 
+
+
     }
+
+    if (window.innerWidth < 1250) {
+        const banner = new Swiper('.banner__swiper-container', {
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            freeMode: true,
+            loop: true,
+        });
+    }
+
     if (window.innerWidth >= 768) {
         const banner = new Swiper('.banner__swiper-container', {
             slidesPerView: 'auto',
@@ -100,19 +107,19 @@ export default function () {
             slidesPerView: 1,
         });
 
-        $('.stages__swiper-container').on('mouseenter', ()=> {
-            setTimeout(function() {
-                $('.stages__card--third').mousewheel(function(turn, delta) {
-                    if(delta == 1) {
+        $('.stages__swiper-container').on('mouseenter', () => {
+            setTimeout(function () {
+                $('.stages__card--third').mousewheel(function (turn, delta) {
+                    if (delta == 1) {
                         console.log('suka');
                         stages.mousewheel.enable();
                     } else {
                         stages.mousewheel.disable();
                     }
                 });
-        
-                $('.stages__card--first').mousewheel(function(turn, delta) {
-                    if(delta == 1) {
+
+                $('.stages__card--first').mousewheel(function (turn, delta) {
+                    if (delta == 1) {
                         console.log('suka');
                         stages.mousewheel.disable();
                     } else {
@@ -120,23 +127,23 @@ export default function () {
                     }
                 });
             }, 200);
-           
+
         });
 
-      
-               // popup.mousewheel(function(turn, delta) {
 
-                //     if (delta == 1) {
-                //         popup.ontouchend = function(e){ return true; }
+        // popup.mousewheel(function(turn, delta) {
 
-                //     } else {
-                //         console.log('hi');
-                //     }
+        //     if (delta == 1) {
+        //         popup.ontouchend = function(e){ return true; }
 
-                //     return false;
-                // console.log($(window).scrollTop(), popup.height(), popup.height() - $(window).scrollTop());
-                //   });
-       
+        //     } else {
+        //         console.log('hi');
+        //     }
+
+        //     return false;
+        // console.log($(window).scrollTop(), popup.height(), popup.height() - $(window).scrollTop());
+        //   });
+
     }
     if (window.innerWidth >= 1450) {
         const feedback = new Swiper('.feedback__swiper-container', {
@@ -145,12 +152,14 @@ export default function () {
             freeMode: false,
             mousewheel: true,
             speed: 600
-            
+
             // pagination: false,
         });
         feedback.pagination.update();
         // feedback.update();
     } else if (window.innerWidth < 1450) {
+
+
         const feedback = new Swiper('.feedback__swiper-container', {
             slidesPerView: 'auto',
             loop: false,
