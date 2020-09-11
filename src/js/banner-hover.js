@@ -1,6 +1,8 @@
 import $ from 'jquery';
 // import marquee from 'jquery.marquee.min.js'
-import normalize from 'utils';
+import {
+    normalize
+} from 'utils';
 window.jQuery = $;
 // window.app = app;
 
@@ -37,7 +39,7 @@ export default function bannerHover() {
             canMove = false;
             return;
         }
-        console.log(nextPos);
+        // console.log(nextPos);
         bannerText.style.transform = `translate(${nextPos}px, -50%)`;
 
     }, 1000 / 60);

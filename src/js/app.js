@@ -73,7 +73,7 @@ let app = {
 
         app.window.on('load', () => {
             headerMenu();
-            // bannerScroll();
+            bannerScroll();
             bannerHover();
             sliders();
             popupMenu();
@@ -89,7 +89,7 @@ let app = {
         this.document.on(app.resizeEventName, () => {
             // console.log('im resizing');
             // bannerHover();
-            // bannerScroll();
+            bannerScroll();
             sliders();
             cardHeight();
             popupMenu();

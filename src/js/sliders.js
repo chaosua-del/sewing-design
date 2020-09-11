@@ -3,18 +3,6 @@ import Swiper from 'swiper/js/swiper.js';
 import mousewheel from 'libs/jquery.mousewheel.min.js';
 
 export default function () {
-    const photos = new Swiper('.photos__swiper-container', {
-        slidesPerView: 'auto',
-        spaceBetween: 0,
-        freeMode: true,
-        loop: true,
-        breakpoints: {
-            1250: {
-                loop: false
-            }
-        }
-    });
-
 
 
 
@@ -81,6 +69,13 @@ export default function () {
     }
 
     if (window.innerWidth < 1250) {
+        const photos = new Swiper('.photos__swiper-container', {
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            freeMode: true,
+            loop: true,
+        });
+
         const banner = new Swiper('.banner__swiper-container', {
             slidesPerView: 'auto',
             spaceBetween: 0,

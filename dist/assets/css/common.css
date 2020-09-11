@@ -846,6 +846,9 @@ input.form__error {
 #bannermarquee {
   display: none; }
 
+#photos1 {
+  margin-bottom: -100px; }
+
 .uniforms {
   padding-bottom: 79px;
   display: flex;
@@ -2152,6 +2155,8 @@ input.form__error {
     justify-content: center; } }
 
 @media (min-width: 768px) {
+  #photos1 {
+    margin-bottom: 0; }
   .modalForm__wrap {
     top: 58px;
     padding-left: 129px;
@@ -2464,21 +2469,21 @@ input.form__error {
     margin-left: auto;
     margin-right: 106px; }
   .model__button {
-    width: 29.83px;
-    height: 29.83px;
-    font-size: 24px;
+    width: 25px;
+    height: 25px;
+    font-size: 21px;
     font-family: 'Century Gothic Regular' !important; }
     .model__button-neck {
-      left: 67%;
-      top: 38%; }
+      left: 58%;
+      top: 31%; }
     .model__button-shoulder {
-      top: 186px;
-      left: 75px; }
+      top: 157px;
+      left: 71px; }
     .model__button-pocket {
-      left: 93px;
-      top: 249px; }
+      left: 58px;
+      top: 262px; }
     .model__button-robe {
-      left: 162px;
+      left: 147px;
       top: 49%; }
     .model__button-loop {
       right: 60px;
@@ -2493,7 +2498,7 @@ input.form__error {
       position: absolute; }
     .model__button::after {
       content: '';
-      margin-top: 32px;
+      margin-top: 12px;
       max-height: 0;
       max-width: 0;
       opacity: 0;
@@ -2508,8 +2513,8 @@ input.form__error {
     max-height: 0 !important; }
     .button--expand::after {
       opacity: 1 !important;
-      max-height: 131px !important;
-      max-width: 131px !important; }
+      max-height: 113px !important;
+      max-width: 113px !important; }
     .button--expand ~ .model__button-text {
       display: block; }
   .button--close::before {
@@ -3288,13 +3293,13 @@ input.form__error {
       width: 613px; }
     .model__button {
       font-family: sans-serif;
-      font-weight: bold;
+      font-weight: normal;
       font-size: 47px;
-      width: 66px;
-      height: 66px; }
+      width: 56px;
+      height: 56px; }
       .model__button::before {
-        top: -70px;
-        left: 125px;
+        top: -98px;
+        left: 78px;
         opacity: 0;
         z-index: 20;
         transition: opacity 0.3s;
@@ -3312,29 +3317,29 @@ input.form__error {
         border: 3px solid #FFFFFF;
         transition: max-width 0.1s ease-in, max-height 0.1s ease-in; }
       .model__button-shoulder {
-        top: 74%;
-        left: 95px; }
+        top: 64%;
+        left: 172px; }
       .model__button-pocket {
-        left: 40%;
-        top: 58%; }
+        left: 51%;
+        top: 59%; }
       .model__button-robe {
-        left: 75%;
-        top: 74%; }
+        left: 71%;
+        top: 70%; }
       .model__button-loop {
-        right: 28%;
-        top: 30%; }
+        right: 29%;
+        top: 40%; }
       .model__button-neck {
         display: flex;
         justify-content: center;
-        left: 13%;
-        top: 37%; }
+        left: 34%;
+        top: 44%; }
   .button--expand {
     border: 0 !important;
     max-height: 0 !important; }
     .button--expand::after {
       opacity: 1 !important;
-      max-height: 283px !important;
-      max-width: 283px !important; }
+      max-height: 263px !important;
+      max-width: 263px !important; }
   .button--close::before {
     content: '+';
     transform: rotate(45deg);
