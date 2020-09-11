@@ -10,7 +10,7 @@ import {
 export default function bannerScroll() {
     const speed = 5;
     const speed2 = 0.5;
-    const speed3 = 0.2;
+    const speed3 = -0.5;
     const photos = $('#photos1');
     const photos2 = $('#photos2');
     const banner = $('#banner2');
@@ -31,18 +31,21 @@ export default function bannerScroll() {
             photos2.css('transform', `translateX(${-percentageClamped2 * 50}%)`);
 
 
-            let viewportOffset = document.getElementById('banner2').getBoundingClientRect();
-            const percentage3 = normalize(viewportOffset.top, -(banner.innerHeight() * speed3), Math.round(banner.offset().top));
-            const percentageClamped3 = clamp(percentage3, 0, 1);
-            // console.log(percentageClamped);
-            banner.css('transform', `translateX(${-percentageClamped3 * 50}%)`);
 
 
         });
     }
 
 
+    window.addEventListener('scroll', event => {
+        let viewportOffset = document.getElementById('banner2').getBoundingClientRect();
+        const percentage3 = normalize(viewportOffset.top, -(banner.innerHeight() * speed3), Math.round(banner.offset().top));
+        const percentageClamped3 = clamp(percentage3, 0, 1);
+        // console.log(percentageClamped);
+        banner.css('transform', `translateX(${-percentageClamped3 * 50}%)`);
 
+
+    });
 
 
 
