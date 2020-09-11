@@ -29,4 +29,21 @@ export default function scrollDown() {
             scrollTop: $(this.hash).offset().top - 200
         }, 1000);
     });
+
+    // var $win = $(window);
+    // var $marker = $('#marker');
+
+    // //отслеживаем событие прокрутки страницы
+    // $(window).on('scroll', () => {
+    //     if ($(window).scrollTop() + $(window).height() >= $('.stages').offset().top && $(window).scrollTop() + $(window).height() >= $('.stages').offset().top - $('.stages').innerHeight()) {
+    //         console.log('sd');
+
+    //     }
+    // });
+    //   //Складываем значение прокрутки страницы и высоту окна, этим мы получаем положение страницы относительно нижней границы окна, потом проверяем, если это значение больше, чем отступ нужного элемента от верха страницы, то значит элемент уже появился внизу окна, соответственно виден
+    //   if($win.scrollTop() + $win.height() >= $marker.offset().top) {
+    //     $('#message').html('виден'); //выполняем действия если элемент виден
+    //   }else{
+    //     $('#message').html('не виден'); //выполняем действия если не элемент виден
+
 }

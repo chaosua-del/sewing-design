@@ -111,7 +111,7 @@ export default function () {
             setTimeout(function () {
                 $('.stages__card--third').mousewheel(function (turn, delta) {
                     if (delta == 1) {
-                        console.log('suka');
+
                         stages.mousewheel.enable();
                     } else {
                         stages.mousewheel.disable();
@@ -120,7 +120,7 @@ export default function () {
 
                 $('.stages__card--first').mousewheel(function (turn, delta) {
                     if (delta == 1) {
-                        console.log('suka');
+
                         stages.mousewheel.disable();
                     } else {
                         stages.mousewheel.enable();

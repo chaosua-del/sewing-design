@@ -8,29 +8,41 @@ export default function clientsHovers() {
     place.forEach(element => {
         // console.log(element);
         element.addEventListener('mouseenter', function (event) {
-            // console.log(element);
             let placeOffset = element.getBoundingClientRect().top;
-            let html = `<img src="${event.target.dataset.url}" />`;
-            clientsPhoto.innerHTML = html;
-
+            let html = `<img style="max-height: 400px" src="${event.target.dataset.url}" />`;
             let clientsDimmOffset = clientsDimm.getBoundingClientRect().top;
             let offset = placeOffset - clientsDimmOffset;
-            // console.log(event.target.dataset.url);
-            clientsPhoto.style.top = offset + 70 + 'px';
+            clientsPhoto.innerHTML = html;
             clientsDimm.classList.add('clients--darken');
             this.style.zIndex = '30';
+            clientsPhoto.style.left = this.getBoundingClientRect().left + 'px';
+            clientsPhoto.style.transform = 'translateX(0)';
+            if (window.innerWidth >= 1450) {
+                // console.log(this.getBoundingClientRect().left);
+                // clientsPhoto.style.left = this.getBoundingClientRect().left + 'px';
+                // clientsPhoto.style.transform = 'translateX(0)';
+
+                if (offset > clientsDimm.offsetHeight / 2) {
+                    clientsPhoto.style.top = offset - 400 + 'px';
+                } else {
+                    clientsPhoto.style.top = offset + 100 + 'px';
+                }
+            } else {
+                html = `<img style="max-height: 300px" src="${event.target.dataset.url}" />`;
+                // console.log(element);
+                // console.log(event.target.dataset.url);
+                if (offset > clientsDimm.offsetHeight / 2) {
+                    clientsPhoto.style.top = offset - 400 + 'px';
+                } else {
+                    clientsPhoto.style.top = offset + 70 + 'px';
+                }
+            }
             setTimeout(() => {
                 clientsPhoto.style.zIndex = '1';
                 clientsPhoto.style.opacity = '1';
                 // clientsPhoto.style.display = 'block';
                 clientsPhoto.style.visibility = 'visible';
             }), 100;
-            if (window.innerWidth >= 1450) {
-                // console.log(this.getBoundingClientRect().left);
-                clientsPhoto.style.left = this.getBoundingClientRect().left + 'px';
-                clientsPhoto.style.transform = 'translateX(0)';
-                clientsPhoto.style.top = offset + 100 + 'px';
-            }
         });
 
         element.onmouseleave = function () {
@@ -39,7 +51,7 @@ export default function clientsHovers() {
             setTimeout(() => {
                 clientsPhoto.style.visibility = 'hidden';
                 clientsPhoto.style.opacity = '0';
-                
+
             }), 100;
 
             // clientsDimm.style.height = '0';
