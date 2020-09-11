@@ -147,11 +147,9 @@ export default function () {
     }
     if (window.innerWidth >= 1450) {
         const feedback = new Swiper('.feedback__swiper-container', {
-            loop: true,
+            loop: false,
             slidesPerView: 'auto',
             freeMode: false,
-            mousewheel: true,
-            speed: 600
 
             // pagination: false,
         });

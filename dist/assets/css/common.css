@@ -806,12 +806,15 @@ input.form__error {
     .banner__title:nth-child(1) {
       letter-spacing: -0.0668em; }
   .banner__wrap {
-    margin-left: -300px;
     padding-top: 10px;
     padding-bottom: 18px;
-    width: 1600px;
     overflow: hidden;
-    background-color: #D1CABC; }
+    background-color: #D1CABC;
+    position: relative; }
+    .banner__wrap-text {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); }
 
 .lower-case {
   text-transform: none;
@@ -2292,7 +2295,7 @@ input.form__error {
     width: 234px !important;
     height: 234px !important; }
   .banner__wrap {
-    width: 3100px;
+    width: 5000px !important;
     padding-top: 43px;
     padding-bottom: 45px; }
   .banner__title {
@@ -2979,7 +2982,10 @@ input.form__error {
     right: 35px;
     top: 15px; }
   .modalForm .design__form {
-    width: auto; } }
+    width: auto; }
+  .banner__wrap2 {
+    height: 150px;
+    width: 10000px !important; } }
 
 @media (min-width: 1450px) {
   .submit__wrap {
@@ -3074,6 +3080,8 @@ input.form__error {
     line-height: 49px; }
   .banner2__text {
     margin-right: 236px; }
+  .banner__wrap2 {
+    height: 247px; }
   .photos__swiper-wrapper {
     padding-bottom: 124px; }
   .photos__swiper-slide {

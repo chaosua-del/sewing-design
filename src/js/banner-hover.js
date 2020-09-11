@@ -1,33 +1,19 @@
 import $ from 'jquery';
 // import marquee from 'jquery.marquee.min.js'
+import normalize from 'utils';
 window.jQuery = $;
 // window.app = app;
 
 
+
 export default function bannerHover() {
-    // $mq.marquee('pause');
-    // banner hovers
-
-    // location.reload();
-    window.$mq = window.$('.banner__wrap2').marquee({
-        //speed in milliseconds of the marquee
-        duration: 10000,
-        //gap in pixels between the tickers
-        gap: 50,
-        //time in milliseconds before the marquee will start animating
-        delayBeforeStart: 0,
-        //'left' or 'right'
-        direction: 'right',
-        //true or false - should the marquee be duplicated to show an effect of continues flow
-        duplicated: true,
-        startVisible: true
-    });
-    window.$mq.marquee('pause');
 
 
-    let bannerWrap = document.querySelectorAll('.banner__wrap2');
+
+    let bannerWrap = document.querySelector('.banner__wrap2');
     let bannerSlide = document.querySelector('.banner__swiper-slide');
     let bannerTitle = document.querySelectorAll('.banner__title');
+    let bannerText = document.querySelector('.banner__wrap-text');
 
     // bannerTitle.forEach(elem => {
     //     elem.addEventListener('mouseover', event => {
@@ -38,107 +24,42 @@ export default function bannerHover() {
     //     });
     // });
 
-    bannerWrap.forEach((elem) => {
-        elem.addEventListener('mousemove', (event) => {
-            elem.classList.add('banner__wrap--active');
-            // if (event.clientX > window.innerWidth / 2) {
-            window.$mq.marquee('resume');
-            // window.$mq.marquee('start');
+    const speed = 100;
+    let direction = 0;
+    let speedMultiplier = 0;
+    let nextPos = -2000;
+    let canMove = false;
 
-            // $(event.target).animate({
+    let interval = setInterval(() => {
+        if (!canMove) return;
+        nextPos += speed * speedMultiplier * direction;
+        if (nextPos <= -bannerText.scrollWidth + window.innerWidth || nextPos >= 0) {
+            canMove = false;
+            return;
+        }
+        console.log(nextPos);
+        bannerText.style.transform = `translate(${nextPos}px, -50%)`;
 
-            //     marginLeft: '5000px',
+    }, 1000 / 60);
 
-            // }, 10000);
-
-            // let interval = setInterval(() => {
-
-            //     if (parseInt($(event.target).css('margin-left')) >= -20) {
-            //         $(event.target).stop();
-            //         // console.log('hello');
-            //         clearInterval(interval);
-            //     }
-
-            // }, 100);
-
-            // event.target.addEventListener('mouseleave', function (event) {
-            //     event.target.classList.remove('banner__wrap--active');
-            //     // 
-            //     $(event.target).stop();
-            // });
-            // } else if (event.clientX < window.innerWidth / 2) {
-            //     console.log('half2');
-            //     window.$mq.marquee({
-            //         duration: 10000,
-            //         //gap in pixels between the tickers
-            //         gap: 50,
-            //         //time in milliseconds before the marquee will start animating
-            //         delayBeforeStart: 0,
-            //         //'left' or 'right'
-            //         direction: 'left',
-            //         //true or false - should the marquee be duplicated to show an effect of continues flow
-            //         duplicated: true,
-            //         startVisible: true
-            //     });
-            // window.$mq = window.$('.banner__wrap').marquee({
-            //     //speed in milliseconds of the marquee
-            //     duration: 10000,
-            //     //gap in pixels between the tickers
-            //     gap: 50,
-            //     //time in milliseconds before the marquee will start animating
-            //     delayBeforeStart: 0,
-            //     //'left' or 'right'
-            //     direction: 'right',
-            //     //true or false - should the marquee be duplicated to show an effect of continues flow
-            //     duplicated: true,
-            //     startVisible: true
-            // });
-
-            // $(event.target).animate({
-
-            //     marginLeft: '-5000px',
-
-            // }, 10000);
-
-            // let interval = setInterval(() => {
-
-
-            //     if (parseInt($(event.target).css('margin-left')) <= -parseInt($(event.target).css('width')) / 2) {
-            //         $(event.target).stop();
-            //         // console.log('hello');
-            //         clearInterval(interval);
-            //     }
-
-            // }, 0);
-            // }
-
-        });
-
-        elem.addEventListener('mouseleave', (event) => {
-            event.target.classList.remove('banner__wrap--active');
-            window.$mq.marquee('pause');
-        });
+    bannerWrap.addEventListener('mousemove', event => {
+        let center = window.innerWidth / 2;
+        let left = 0;
+        let right = window.innerWidth;
+        direction = normalize((event.clientX - center), right, left);
+        speedMultiplier = Math.abs(direction);
 
     });
 
+    bannerText.addEventListener('mouseenter', () => {
+        canMove = true;
+        bannerWrap.classList.add('banner__wrap--active');
+    });
 
-
-    //  else {
-    //     window.$mq = window.$('.banner__wrap').marquee({
-    //         //speed in milliseconds of the marquee
-    //         duration: 10000,
-    //         //gap in pixels between the tickers
-    //         gap: 50,
-    //         //time in milliseconds before the marquee will start animating
-    //         delayBeforeStart: 0,
-    //         //'left' or 'right'
-    //         direction: 'right',
-    //         //true or false - should the marquee be duplicated to show an effect of continues flow
-    //         duplicated: true,
-    //         startVisible: true
-    //     });
-    //     window.$mq.marquee('destroy');
-    // }
+    bannerText.addEventListener('mouseleave', () => {
+        canMove = false;
+        bannerWrap.classList.remove('banner__wrap--active');
+    });
 
     const photosDimm = document.querySelectorAll('.photos__dimm');
 

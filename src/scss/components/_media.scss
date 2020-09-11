@@ -306,7 +306,7 @@
 
     .banner {
         &__wrap {
-            width: 3100px;
+            width: 5000px !important;
             padding-top: 43px;
             padding-bottom: 45px;
             // margin-top: 52px;
@@ -1450,6 +1450,13 @@
             width: auto;
         }
     }
+
+    .banner {
+        &__wrap2 {
+            height: 150px;
+            width: 10000px !important;
+        }
+    }
 }
 
 @media(min-width: 1450px) {
@@ -1617,6 +1624,12 @@
     .banner2 {
         &__text {
             margin-right: 236px;
+        }
+    }
+
+    .banner {
+        &__wrap2 {
+            height: 247px;
         }
     }
 
