@@ -584,9 +584,14 @@
             font-size: 24px;
             font-family: 'Century Gothic Regular' !important;
 
+            &-neck {
+                left: 67%;
+                top: 38%;
+            }
+
             &-shoulder {
-                top: 132px;
-                left: 44px;
+                top: 186px;
+                left: 75px;
             }
 
             &-pocket {
@@ -595,13 +600,13 @@
             }
 
             &-robe {
-                left: 200px;
-                top: 96px;
+                left: 162px;
+                top: 49%;
             }
 
             &-loop {
-                right: 20px;
-                top: 182px;
+                right: 60px;
+                top: 294px;
             }
 
             &::before {
@@ -1319,24 +1324,23 @@
     .sliderModel {
         &__swiper-container {
             margin-top: 87px;
-            max-width: 840px;
+            // max-width: 840px;
+            width: 700px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
         }
 
         &__swiper-wrapper {
             padding-bottom: 65px;
+
         }
 
-        &__uniform {
-            width: 690px;
-            height: 354px;
 
-            &::after {
-                content: url('../img/popup/ellipse.svg');
-                position: absolute;
-                right: -30px;
-                top: 150px;
-                z-index: 5;
-            }
+
+        &__uniform {
+            width: 598px;
+            height: 399px;
+
 
             img {
                 right: 0;
@@ -1353,23 +1357,40 @@
     .sliderModel__swiper-button-prev,
     .sliderModel__swiper-button-next {
         display: block !important;
+        background-color: #fff;
+        border-radius: 50%;
+        width: 74px !important;
+        height: 74px !important;
+
     }
 
     .sliderModel__swiper-button-prev {
-        left: 29px !important;
+        left: 9px !important;
         top: 166px !important;
 
         &::after {
             content: url('../img/popup/arrow-prev.svg') !important;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+
         }
     }
 
     .sliderModel__swiper-button-next {
         top: 171px !important;
-        right: 92px !important;
+        right: 9px !important;
+        width: 74px !important;
+        height: 74px !important;
 
         &::after {
             content: url('../img/popup/arrow-next.svg') !important;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 
@@ -1914,7 +1935,7 @@
         &__description {
             font-size: 18px;
             line-height: 28px;
-            width: 721px;
+            width: 659px;
             letter-spacing: 0.005em;
         }
     }
@@ -2642,37 +2663,42 @@
 
     .sliderModel {
         &__swiper-container {
-            max-width: 100%;
+            // max-width: 100%;
+            width: 1136px !important;
+            // overflow: hidden !important;
+        }
+
+        &__swiper-slide {
+            width: 100% !important;
         }
 
         &__uniform {
-            width: 1170px;
-            height: 600px;
+            width: 1036px;
+            height: 691px;
 
-            &::after {
-                content: url(../img/popup/ellipse-lg.svg);
-                right: -19px;
-                top: 225px;
-            }
         }
 
         &__swiper-button {
             &-next {
                 top: 264px !important;
-                right: 133px !important;
+                right: 13px !important;
+                transition: background-color 0.2s ease-in-out;
 
-                &::after {
-                    content: url('../img/popup/arrow-next-lg.svg') !important;
+                &:hover {
+                    background-color: #E3E8EC;
                 }
+
             }
 
             &-prev {
-                left: 17px !important;
+                left: 13px !important;
                 top: 262px !important;
+                transition: background-color 0.2s ease-in-out;
 
-                &::after {
-                    content: url('../img/popup/arrow-prev-lg.svg') !important;
+                &:hover {
+                    background-color: #E3E8EC;
                 }
+
             }
         }
 

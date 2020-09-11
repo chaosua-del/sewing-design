@@ -71,7 +71,10 @@
         }
 
         &-neck {
-            display: none;
+            display: flex;
+            justify-content: center;
+            left: 13%;
+            top: 37%;
         }
 
         &-text {

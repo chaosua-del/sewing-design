@@ -119,7 +119,7 @@ export default function formValidation() {
 
     let selector = document.querySelectorAll('[type=tel]');
     Inputmask({
-        mask: '+7 (999) 999 99 99',
+        mask: '+9 (999) 999 99 99',
         showMaskOnHover: false,
     }).mask(selector);
 
