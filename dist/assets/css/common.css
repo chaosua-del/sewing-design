@@ -377,9 +377,6 @@ svg {
 .hidden {
   display: none !important; }
 
-.overflow-hidden {
-  position: fixed; }
-
 @media (max-width: 767.98px) {
   .hidden-sm {
     display: none !important; } }
@@ -510,6 +507,13 @@ input.form__error {
 
 .form__error {
   font-size: 12px; }
+
+.overflow-hidden {
+  overflow: hidden; }
+
+.overflow-auto {
+  overflow: auto !important;
+  height: 100vh !important; }
 
 @font-face {
   font-family: 'Century Gothic Regular';

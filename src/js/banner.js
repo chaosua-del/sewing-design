@@ -20,14 +20,14 @@ export default function bannerScroll() {
             let viewportOffset3 = document.getElementById('photos1').getBoundingClientRect();
             const percentage = normalize(viewportOffset3.top, -(photos.innerHeight() * speed), Math.round(photos.offset().top));
             const percentageClamped = clamp(percentage, 0, 1);
-            console.log(percentageClamped);
+            // console.log(percentageClamped);
             photos.css('transform', `translateX(${-percentageClamped * 100}%)`);
 
 
             let viewportOffset2 = document.getElementById('photos2').getBoundingClientRect();
             const percentage2 = normalize(viewportOffset2.top * 10, -(photos2.innerHeight() * speed2), Math.round(photos2.offset().top));
             const percentageClamped2 = clamp(percentage2, 0, 1);
-            console.log(percentageClamped);
+            // console.log(percentageClamped);
             photos2.css('transform', `translateX(${-percentageClamped2 * 50}%)`);
 
 

@@ -32,9 +32,6 @@
     display: none !important;
 }
 
-.overflow-hidden {
-    position: fixed;
-}
 
 .hidden-sm {
     @include media-breakpoint-down(sm) {
@@ -201,4 +198,13 @@ input.form__error {
 .form__input {
     // border-bottom: 2px solid transparent;
     // transition: border-bottom 0.1s ease-in-out;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-auto {
+    overflow: auto !important;
+    height: 100vh !important;
 }

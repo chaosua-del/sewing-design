@@ -102,7 +102,7 @@ export default function () {
             slidesPerView: 1,
         });
 
-        $('.stages__swiper-container').on('mouseenter', () => {
+        $('.stages__swiper-container').on('mouseenter', (event) => {
             setTimeout(function () {
                 $('.stages__card--third').mousewheel(function (turn, delta) {
                     if (delta == 1) {
@@ -122,6 +122,10 @@ export default function () {
                     }
                 });
             }, 200);
+
+            window.addEventListener('scroll', event => {
+                event.preventDefault();
+            });
 
         });
 
