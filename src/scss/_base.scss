@@ -208,3 +208,8 @@ input.form__error {
     overflow: auto !important;
     height: 100vh !important;
 }
+
+
+.transform-none {
+    transform: translate3d(0, 0, 0) !important;
+}

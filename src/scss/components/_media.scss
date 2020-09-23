@@ -47,14 +47,14 @@
 
     // modalForm-768
     .modalForm {
-        &__wrap {
-            top: 58px;
-            padding-left: 129px;
-            padding-right: 129px;
-            padding-top: 70px;
-            bottom: 70px;
+        // &__wrap {
+        //     // top: 58px;
+        //     // padding-left: 129px;
+        //     // padding-right: 129px;
+        //     // padding-top: 70px;
+        //     // bottom: 70px;
 
-        }
+        // }
 
         &__close {
             font-family: sans-serif;
@@ -673,7 +673,7 @@
     }
 
 
-    // stages
+    // stages-768
     .stages {
         padding-top: 121px;
         padding-bottom: 115px;
@@ -1429,18 +1429,18 @@
     // modalForm-1450
     .modalForm {
         &__wrap {
-            top: 196px;
+            // top: 196px;
             max-width: 1170px;
-            margin-left: auto;
-            margin-right: auto;
+            // margin-left: auto;
+            // margin-right: auto;
             padding-left: 244px;
             padding-right: 220px;
             padding-top: 79px;
             padding-bottom: 142px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            // text-align: center;
+            // display: flex;
+            // flex-direction: column;
+            // align-items: center;
 
         }
 
@@ -2108,6 +2108,10 @@
         }
 
         &__card {
+            &-bg {
+                width: 50%;
+            }
+
             height: 879px;
 
             &--first {
@@ -2732,3 +2736,7 @@
         }
     }
 }
+
+// @media(min-width:1920px) {
+
+// }

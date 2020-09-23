@@ -2,7 +2,12 @@ import Swiper from 'swiper/js/swiper.js';
 import $ from 'jquery';
 import mousewheel from 'libs/jquery.mousewheel.min.js';
 
+
+
+
 export default function popupMenu() {
+
+
     const popupButton = $('.uniforms__button');
     const popupClose = $('.popup__close-button');
     const popup = $('.popup');
@@ -112,45 +117,46 @@ export default function popupMenu() {
         initPopup();
     });
 
-    $('.hero__button').on('click', event => {
-        modalShow();
-    });
 
-    $('.header__contacts-button').on('click', event => {
-        modalShow();
-    });
+    // $('.hero__button').on('click', event => {
+    //     modalShow();
+    // });
 
-    $('.header__button').on('click', event => {
-        modalShow();
-    });
+    // $('.header__contacts-button').on('click', event => {
+    //     modalShow();
+    // });
 
-    $('.footer__contacts-button').on('click', event => {
-        modalShow();
-    });
+    // $('.header__button').on('click', event => {
+    //     modalShow();
+    // });
 
-    $('.stages__card-button').on('click', event => {
-        modalShow();
-    });
+    // $('.footer__contacts-button').on('click', event => {
+    //     modalShow();
+    // });
+
+    // $('.stages__card-button').on('click', event => {
+    //     modalShow();
+    // });
 
     $('.modalForm__close').on('click', event => {
-        modalHide();
+        window.$.fancybox.close();
     });
 
-    document.querySelector('.modalForm').addEventListener('click', event => {
-        if (event.target.classList.contains('modalForm')) {
-            // console.log('hello');
-            modalHide();
-        }
-    });
+    // document.querySelector('.modalForm').addEventListener('click', event => {
+    //     if (event.target.classList.contains('modalForm')) {
+    //         // console.log('hello');
+    //         modalHide();
+    //     }
+    // });
 
-    function modalShow() {
-        $('.modalForm').fadeIn('fast');
-        $('body').css('overflow', 'hidden');
-    }
+    // function modalShow() {
+    //     $('.modalForm').fadeIn('fast');
+    //     $('body').css('overflow', 'hidden');
+    // }
 
-    function modalHide() {
-        $('.modalForm').fadeOut('fast');
-        $('body').css('overflow', 'visible');
-    }
+    // function modalHide() {
+    //     $('.modalForm').fadeOut('fast');
+    //     $('body').css('overflow', 'visible');
+    // }
 
 }

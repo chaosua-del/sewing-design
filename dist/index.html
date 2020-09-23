@@ -41,9 +41,9 @@
 <img class="lazyload" src="assets/img/header-logo.svg" alt="logo">
             <p class="header__logo-text">since 2015</p>
           </picture></a><a class="header__navigation-item" href="#contacts">Контакты</a>
-        <button class="header__button">Заказать Звонок</button>
+        <button class="header__button" data-fancybox data-src="#modal">Заказать Звонок</button>
         <div class="header__contacts"> <a class="phone header__contacts-phone" href="tel:88003503745">8 800 350-37-45</a>
-          <button class="header__contacts-button">Заказать Звонок</button><a class="web-site header__contacts-web-site" href="#">info@site.com</a>
+          <button class="header__contacts-button" data-fancybox data-src="#modal">Заказать Звонок</button><a class="web-site header__contacts-web-site" href="#">info@site.com</a>
         </div>
       </div>
     </header>
@@ -53,7 +53,7 @@
           <h1 class="hero__title">Униформа для персонала без&nbsp;переплат от производителя</h1>
           <h3 class="hero__subtitle">Изготовим униформу от 2 дней и доставим по всей России</h3>
           <div class="button-wrap">
-            <button class="hero__button button">Получить бесплатный дизайн</button>
+            <button class="hero__button button" data-fancybox data-src="#modal">Получить бесплатный дизайн</button>
             <div class="button-label hero__button-label"> 
               <p class="button-labelText">free</p>
             </div>
@@ -343,7 +343,7 @@
                 <h3 class="stages__card-title" data-swiper-parallax="-200">нарисуем дизайн под вашу компанию</h3>
                 <p class="stages__card-description" data-swiper-parallax="-100">Нанесём логотип и подберём ткань под фирменные цвета вашего бренда. </p>
                 <p class="stages__card-description" data-swiper-parallax="-100">Для вас на выбор более 100 расцветок тканей, джинсовая ткань уровня качества Левайс и нанесение логотипов любой сложности на японском оборудованиии Tajima.</p>
-                <button class="button stages__card-button" data-swiper-parallax="-100">получить макет и расчёт</button>
+                <button class="button stages__card-button" data-swiper-parallax="-100" data-fancybox data-src="#modal">получить макет и расчёт</button>
               </div>
             </div>
             <div class="swiper-slide stages__swiper-slide">
@@ -670,7 +670,7 @@
           </div>
           <d class="footer-block footer__contacts-block"><a class="web-site" href="#">info@site.com</a>
             <div class="footer__contacts"><a class="phone footer__contacts-phone" href="tel:88003503745">8 800 350-37-45</a>
-              <button class="phone-button footer__contacts-button">Заказать звонок</button>
+              <button class="phone-button footer__contacts-button" data-fancybox data-src="#modal">Заказать звонок</button>
             </div>
           </d>
         </div>
@@ -868,7 +868,7 @@
         <button class="submit__button button">СПАСИБО</button>
       </div>
     </div>
-    <div class="modalForm">
+    <div class="modalForm" id="modal">
       <div class="modalForm__wrap">
         <button class="modalForm__close">+</button>
         <h2 class="design__title">Дизайн-макет бесплатно, за 1 день</h2>
@@ -888,7 +888,7 @@
       </div>
     </div>
     <link rel="stylesheet" href="assets/css/common.css?v=1.1.1">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="">
     <script>
       /* изменяемые настройки скриптов, указаны значения по умолчанию */
@@ -902,6 +902,6 @@
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
     <script src="assets/js/vendors~main.bundle.js"></script>
     <script src="assets/js/main.bundle.js?v=1.1.1"></script><script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/jquery.marquee@1.5.0/jquery.marquee.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
   </body>
 </html>

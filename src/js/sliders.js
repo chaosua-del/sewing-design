@@ -94,40 +94,95 @@ export default function () {
 
         banner.destroy();
 
+
+
+
         const stages = new Swiper('.stages__swiper-container', {
             direction: 'horizontal',
             mousewheel: true,
             speed: 600,
             parallax: true,
             slidesPerView: 1,
-        });
+            on: {
+                slideChangeTransitionEnd: function () {
+                    if (stages.isEnd) {
 
-        $('.stages__swiper-container').on('mouseenter', (event) => {
-            setTimeout(function () {
-                $('.stages__card--third').mousewheel(function (turn, delta) {
-                    if (delta == 1) {
+                        // console.log('down');
+                        stages.mousewheel.disable();
 
-                        stages.mousewheel.enable();
-                    } else {
+                    } else if (stages.isBeginning) {
+
                         stages.mousewheel.disable();
                     }
-                });
-
-                $('.stages__card--first').mousewheel(function (turn, delta) {
-                    if (delta == 1) {
-
-                        stages.mousewheel.disable();
-                    } else {
-                        stages.mousewheel.enable();
-                    }
-                });
-            }, 200);
-
-            window.addEventListener('scroll', event => {
-                event.preventDefault();
-            });
-
+                }
+            }
         });
+
+        // const stagesWrapper = $('.stages__swiper-wrapper');
+        const stagesContainer = $('.stages__swiper-container');
+
+        stages.mousewheel.disable();
+
+        let canAnimateScroll = true;
+
+        // window.addEventListener('scroll', event => {
+        //     console.log($('.stages__swiper-container').offset().top - $(window).scrollTop(), stagesContainer.getBoundingClientRect().top);
+        //     let stagesTop = $('.stages__swiper-container').offset().top - $(window).scrollTop();
+        // });
+        window.addEventListener('scroll', event => {
+            const stagesOffsetTop = document.querySelector('.stages__swiper-container').getBoundingClientRect().top;
+            const stagesHeight = stagesContainer.height();
+
+            const stagesRange = 300;
+            const stagesCenter = (stagesOffsetTop - window.innerHeight / 2) + stagesHeight / 2;
+            // const stagesInRange = stagesCenter < stagesRange && stagesCenter > -stagesRange;
+            const stagesInRange = stagesOffsetTop + stagesHeight < window.innerHeight && stagesOffsetTop > 0;
+
+            if (stagesInRange && canAnimateScroll) {
+                stages.mousewheel.enable();
+
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: stagesContainer.offset().top
+                });
+                canAnimateScroll = false;
+            }
+
+            if (!stagesInRange) {
+                canAnimateScroll = true;
+            }
+        });
+
+        // $('.stages__swiper-container').on('mouseenter', (event) => {
+        //     setTimeout(function () {
+        //         $('.stages__card--third').mousewheel(function (turn, delta) {
+        //             if (delta == 1) {
+        //                 slideScroll = false;
+        //                 // stages.mousewheel.enable();
+        //             } else {
+        //                 slideScroll = true;
+        //                 $('body').removeClass('overflow-hidden');
+        //                 stages.mousewheel.disable();
+        //             }
+        //         });
+
+        //         $('.stages__card--first') {
+        //             if (delta == 1) {
+        //                 $('body').removeClass('overflow-hidden');
+        //                 stages.mousewheel.disable();
+        //                 slideScroll = true;
+        //             } else {
+        //                 // stages.mousewheel.enable();
+        //                 slideScroll = false;
+        //             }
+        //         });
+        //     }, 200);
+
+        //     // window.addEventListener('scroll', event => {
+        //     //     console.dir();
+        //     //     // event.preventDefault();
+        //     // });
+
+        // });
 
 
         // popup.mousewheel(function(turn, delta) {
