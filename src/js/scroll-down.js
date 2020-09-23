@@ -25,7 +25,7 @@ export default function scrollDown() {
 
     $('.popup__button').click(function (b) {
         b.preventDefault();
-        $('body,html').animate({
+        $('.popup').animate({
             scrollTop: $(this.hash).offset().top - 200
         }, 1000);
     });

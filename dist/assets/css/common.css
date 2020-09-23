@@ -2027,6 +2027,8 @@ input.form__error {
   justify-content: center;
   align-items: center;
   background-color: #000; }
+  .sliderModel__uniform picture {
+    max-height: 100%; }
   .sliderModel__uniform img {
     max-width: 100%; }
 
@@ -2726,7 +2728,7 @@ input.form__error {
   .banner2__text {
     font-size: 50px;
     line-height: 80px;
-    margin-right: 38px; }
+    margin-right: 100px; }
   .questions__collapsible {
     font-size: 20px;
     line-height: 35px;
@@ -2930,7 +2932,8 @@ input.form__error {
     width: 598px;
     height: 399px; }
     .sliderModel__uniform img {
-      right: 0; }
+      right: 0;
+      height: 399px; }
   .sliderModel__swiper-pagination .swiper-pagination-bullet {
     width: 65.5px !important; }
   .sliderModel__swiper-button-prev,
@@ -3715,6 +3718,8 @@ input.form__error {
   .sliderModel__uniform {
     width: 1036px;
     height: 691px; }
+    .sliderModel__uniform img {
+      height: 691px; }
   .sliderModel__swiper-button-next {
     top: 264px !important;
     right: 13px !important;

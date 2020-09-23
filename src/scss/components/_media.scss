@@ -994,7 +994,7 @@
         &__text {
             font-size: 50px;
             line-height: 80px;
-            margin-right: 38px;
+            margin-right: 100px;
         }
     }
 
@@ -1347,6 +1347,7 @@
 
             img {
                 right: 0;
+                height: 399px;
             }
         }
 
@@ -2691,6 +2692,10 @@
         &__uniform {
             width: 1036px;
             height: 691px;
+
+            img {
+                height: 691px;
+            }
 
         }
 
