@@ -1,10 +1,14 @@
 section.model#quality
   .model__card
     .model__buttons
-      button.model__button.model__button-shoulder(data-name="shoulder") &#43;
-      button.model__button.model__button-pocket(data-name="pocket", align="center") +
-      button.model__button.model__button-robe(data-name="robe") +
-      button.model__button.model__button-loop(data-name="loop") +
+      button.model__button.model__button-shoulder(data-name="shoulder") 
+        span.model-plus +
+      button.model__button.model__button-pocket(data-name="pocket", align="center")
+        span.model-plus +
+      button.model__button.model__button-robe(data-name="robe")
+        span.model-plus +
+      button.model__button.model__button-loop(data-name="loop")
+        span.model-plus +
       button.model__button.model__button-neck.button--expand.button--close(data-name="neck")
     .model__info
       p.model__info-subtitle Натуральная кожа гарантирует долговечность, надежность и презентабельный вид
