@@ -94,35 +94,36 @@ export default function () {
 
         banner.destroy();
 
-
         var controller = new ScrollMagic.Controller();
-
-        // define movement of panels
         var wipeAnimation = new TimelineMax()
-            // .fromTo(".stages__card--first", 1, {
-            //     x: "-100%"
-            // }, {
-            //     x: "0%",
-            //     ease: Linear.easeNone
-            // }) // in from left
-            .fromTo(".stages__card--second", 1, {
-                x: "100%"
-            }, {
-                x: "0%",
-                ease: Linear.easeNone
-            }) // in from right
-            .fromTo(".stages__card--third", 1, {
-                x: "100%"
-            }, {
-                x: "0%",
-                ease: Linear.easeNone
-            }); // in from top
+            // animate to second panel
+            .to("#slideContainer", 0.5, {
+                z: -150
+            }) // move back in 3D space
+            .to("#slideContainer", 1, {
+                x: "-33.3%"
+            }) // move in to first panel
+            .to("#slideContainer", 0.5, {
+                z: 0
+            }) // move back to origin in 3D space
+            // animate to third panel
+            .to("#slideContainer", 0.5, {
+                z: -150,
+                delay: 1
+            })
+            .to("#slideContainer", 1, {
+                x: "-66.6%"
+            })
+            .to("#slideContainer", 0.5, {
+                z: 0
+            })
+
 
         // create scene to pin and link animation
         new ScrollMagic.Scene({
                 triggerElement: "#pinContainer",
                 triggerHook: "onLeave",
-                duration: "300%"
+                duration: "500%"
             })
             .setPin("#pinContainer")
             .setTween(wipeAnimation)

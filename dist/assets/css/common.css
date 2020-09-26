@@ -527,12 +527,20 @@ input.form__error {
 #pinContainer {
   width: 100%;
   height: 100vh;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000; }
   #pinContainer .stages__card {
     height: 100% !important;
-    width: 100% !important;
-    position: absolute !important;
+    width: 33.3% !important;
+    /* relative to parent -> 25% of 400% = 100% of window width */
+    float: left !important;
     background-color: #fff; }
+
+#slideContainer {
+  width: 300%;
+  /* to contain 4 panels, each with 100% of window width */
+  height: 100%; }
 
 @font-face {
   font-family: 'Century Gothic Regular';
