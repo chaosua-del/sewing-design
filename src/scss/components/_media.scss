@@ -45,6 +45,14 @@
         margin-bottom: 0;
     }
 
+    .visible-768 {
+        display: block;
+    }
+
+    .hidden-768 {
+        display: none;
+    }
+
     // modalForm-768
     .modalForm {
         // &__wrap {
@@ -590,7 +598,7 @@
 
             &-neck {
                 left: 58%;
-                top: 31%;
+                top: 140px;
             }
 
             &-shoulder {
@@ -605,7 +613,7 @@
 
             &-robe {
                 left: 147px;
-                top: 49%;
+                top: 227px;
             }
 
             &-loop {
@@ -2024,30 +2032,34 @@
 
             &-shoulder {
                 // opacity: 0;
-                top: 64%;
+                top: 591px;
                 left: 172px;
+
+                &::before {
+                    top: -112px;
+                }
             }
 
             &-pocket {
                 left: 51%;
-                top: 59%;
+                top: 503px;
             }
 
             &-robe {
                 left: 71%;
-                top: 70%;
+                top: 626px;
             }
 
             &-loop {
                 right: 29%;
-                top: 40%;
+                top: 358px;
             }
 
             &-neck {
                 display: flex;
                 justify-content: center;
                 left: 34%;
-                top: 44%;
+                top: 393px;
             }
         }
 
@@ -2138,6 +2150,14 @@
 
             &-bg-image {
                 width: 1080px;
+                height: 100% !important;
+                display: flex !important;
+                bottom: 0 !important;
+
+                img {
+                    object-fit: cover !important;
+
+                }
             }
 
             &-title {

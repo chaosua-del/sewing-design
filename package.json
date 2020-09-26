@@ -21,9 +21,11 @@
         "@fancyapps/fancybox": "3.x",
         "browser-detect": "^0.2.28",
         "fastclick": "1.x",
+        "gsap": "^3.5.1",
         "inputmask": "^5.0.3",
         "jquery": "3.x",
         "lazysizes": "5.x",
+        "scrollmagic": "^2.0.7",
         "svg4everybody": "2.x",
         "swiper": "^5.3.0"
     },

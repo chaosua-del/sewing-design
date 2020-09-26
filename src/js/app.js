@@ -3,6 +3,7 @@ import 'lazysizes';
 import validate from 'jquery.validate.min';
 // import fancybox from '@fancyapps/fancybox/dist/jquery.fancybox';
 
+
 import page from 'page';
 import forms from 'forms';
 import sliders from 'sliders';

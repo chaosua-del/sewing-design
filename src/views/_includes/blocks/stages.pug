@@ -3,9 +3,9 @@ section.stages#production
     h3.stages__title Вы сэкономите до 20 часов времени, общаясь с одной компанией вместо трех 
     p.stages__description Общайтесь с одной командой, отвечающей за окончательный результат. Мы объединили для вас дизайн, проектирование, производство и всю волокиту с быстрой доставкой. 
 
-  .swiper-container.stages__swiper-container
+  .swiper-container.stages__swiper-container.hidden-768
     .swiper-wrapper.stages__swiper-wrapper
-      .swiper-slide.stages__swiper-slide
+      .swiper-slide.stages__swiper-slide.stages__swiper-slide--first
         .stages__card.stages__card--first
           .stages__card-bg
             picture.stages__card-bg-image(data-swiper-parallax="-300")
@@ -16,7 +16,7 @@ section.stages#production
           p.stages__card-description(data-swiper-parallax="-100") Поможем с выбором существующей модели или изготовим конкретно для вас. 
           p.stages__card-description(data-swiper-parallax="-100") Заменяем цвета, карманы, отделку, фурнитуру любых моделей одежды. 
           .stages__card-arrow scroll
-      .swiper-slide.stages__swiper-slide
+      .swiper-slide.stages__swiper-slide.stages__swiper-slide--second
         .stages__card.stages__card--second
           .stages__card-bg
             picture.stages__card-bg-image(data-swiper-parallax="-300")
@@ -27,7 +27,7 @@ section.stages#production
           p.stages__card-description(data-swiper-parallax="-100") Нанесём логотип и подберём ткань под фирменные цвета вашего бренда. 
           p.stages__card-description(data-swiper-parallax="-100") Для вас на выбор более 100 расцветок тканей, джинсовая ткань уровня качества Левайс и нанесение логотипов любой сложности на японском оборудованиии Tajima.
           button.button.stages__card-button(data-swiper-parallax="-100", data-fancybox, data-src="#modal") получить макет и расчёт
-      .swiper-slide.stages__swiper-slide
+      .swiper-slide.stages__swiper-slide.stages__swiper-slide--third
         .stages__card.stages__card--third
           .stages__card-bg
             picture.stages__card-bg-image(data-swiper-parallax="-300")
@@ -49,3 +49,46 @@ section.stages#production
     .swiper-pagination.stages__swiper-pagination
     .swiper-button-prev.stages__swiper-button-prev
     .swiper-button-next.stages__swiper-button-next
+
+  #pinContainer.visible-768
+  
+    .stages__card.stages__card--first
+      .stages__card-bg
+        picture.stages__card-bg-image(data-swiper-parallax="-300")
+            <source type="image/webp" media="(max-width: 767px)" srcset="assets/img/stages/1.webp">
+            <source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/stages/1.jpg">
+            img(src="assets/img/stages/1.webp", alt="model-1")
+      h3.stages__card-title(data-swiper-parallax="-200")  Подберем модели и&nbsp;материалы
+      p.stages__card-description(data-swiper-parallax="-100") Поможем с выбором существующей модели или изготовим конкретно для вас. 
+      p.stages__card-description(data-swiper-parallax="-100") Заменяем цвета, карманы, отделку, фурнитуру любых моделей одежды. 
+      .stages__card-arrow scroll
+    
+    .stages__card.stages__card--second
+      .stages__card-bg
+        picture.stages__card-bg-image(data-swiper-parallax="-300")
+            <source type="image/webp" media="(max-width: 767px)" srcset="assets/img/stages/2.webp">
+            <source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/stages/2.jpg">
+            img(src="assets/img/stages/2.webp", alt="model-2")
+      h3.stages__card-title(data-swiper-parallax="-200") нарисуем дизайн под вашу компанию
+      p.stages__card-description(data-swiper-parallax="-100") Нанесём логотип и подберём ткань под фирменные цвета вашего бренда. 
+      p.stages__card-description(data-swiper-parallax="-100") Для вас на выбор более 100 расцветок тканей, джинсовая ткань уровня качества Левайс и нанесение логотипов любой сложности на японском оборудованиии Tajima.
+      button.button.stages__card-button(data-swiper-parallax="-100", data-fancybox, data-src="#modal") получить макет и расчёт
+  
+    .stages__card.stages__card--third
+      .stages__card-bg
+        picture.stages__card-bg-image(data-swiper-parallax="-300")
+            <source type="image/webp" media="(max-width: 767px)" srcset="assets/img/stages/3.webp">
+            <source type="image/jpg" media="(max-width: 767px)" srcset="assets/img/stages/3.jpg">
+            <source type="image/webp" media="(min-width: 1450px)" srcset="assets/img/stages/3-lg.webp">
+            <source type="image/jpg" media="(max-width: 1450px)" srcset="assets/img/stages/3-lg.png">
+            img(src="assets/img/stages/3.webp", alt="model-3")
+      h3.stages__card-title(data-swiper-parallax="-200") произведем и доставим
+      p.stages__card-description(data-swiper-parallax="-100") Производим срочные заказы от 100 единиц в день. Работаем с транспортными компаниями 
+      .stages__card-companies(data-swiper-parallax="-100")
+        picture(data-swiper-parallax="-300")
+          <source type="image/webp" media="(max-width: 767px)" srcset="assets/img/stages/companies.webp">
+          <source type="image/png" media="(max-width: 767px)" srcset="assets/img/stages/companies.png">
+          <source type="image/webp" media="(min-width: 768px)" srcset="assets/img/stages/companies-md.webp">
+          <source type="image/png" media="(min-width: 768px)" srcset="assets/img/stages/companies-md.png">
+          img(src="assets/img/stages/companies.webp", alt="companies")
+      p.stages__card-description(data-swiper-parallax="-100") Поможем с оформлением доставки и отслеживанием.
