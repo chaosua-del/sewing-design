@@ -222,16 +222,24 @@ input.form__error {
     display: block;
 }
 
+// .scrollmagic-pin-spacer {
+//     padding-bottom: 0 !important;
+// }
 
 #pinContainer {
     width: 100%;
-    height: 100vh;
+    // max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
     overflow: hidden;
     -webkit-perspective: 1000;
     perspective: 1000;
 
     .stages__card {
-        height: 100% !important;
+        margin-left: auto;
+        margin-right: auto;
+        // height: 100% !important;
         width: 33.3% !important;
         /* relative to parent -> 25% of 400% = 100% of window width */
         float: left !important;
