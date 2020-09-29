@@ -15,13 +15,16 @@ export default function clientsHovers() {
             clientsPhoto.innerHTML = html;
             clientsDimm.classList.add('clients--darken');
             this.style.zIndex = '30';
-            clientsPhoto.style.left = this.getBoundingClientRect().left + 'px';
+            if (element.getBoundingClientRect().left > clientsDimm.clientWidth / 2) {
+                clientsPhoto.style.left = 'auto';
+                clientsPhoto.style.right = (clientsDimm.clientWidth - element.getBoundingClientRect().right) + 'px';
+                console.log(clientsDimm.clientWidth - element.getBoundingClientRect().right);
+            } else {
+
+                clientsPhoto.style.left = this.getBoundingClientRect().left + 'px';
+            }
             clientsPhoto.style.transform = 'translateX(0)';
             if (window.innerWidth >= 1450) {
-                // console.log(this.getBoundingClientRect().left);
-                // clientsPhoto.style.left = this.getBoundingClientRect().left + 'px';
-                // clientsPhoto.style.transform = 'translateX(0)';
-
                 if (offset > clientsDimm.offsetHeight / 2) {
                     clientsPhoto.style.top = offset - 400 + 'px';
                 } else {

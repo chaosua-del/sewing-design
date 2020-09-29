@@ -65,7 +65,7 @@
         // transition: z-index 0.2s ease-out;
         &-photo {
             position: absolute;
-            width: 694px;
+            // width: auto !important;
             height: 405px;
             opacity: 0;
             transition: opacity 0.1s ease-in;

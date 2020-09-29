@@ -1539,7 +1539,6 @@ input.form__error {
     align-items: center; }
     .clients__dimmed-photo {
       position: absolute;
-      width: 694px;
       height: 405px;
       opacity: 0;
       transition: opacity 0.1s ease-in;
