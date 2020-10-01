@@ -1154,7 +1154,7 @@ input.form__error {
   width: 267px; }
 
 .model {
-  background-color: #E3E8EC; }
+  background-color: #e3e8ec; }
   .model__swiper-container {
     max-width: 320px !important;
     margin-left: auto;
@@ -1173,13 +1173,13 @@ input.form__error {
     height: 100%;
     width: 280px;
     background: transparent;
-    background: url("../img/model/girl-lg.webp") no-repeat 76% 0%/cover;
+    background: url("../img/model/girl-lg.png") no-repeat 76% 0%/cover;
     background-size: 286%; }
   .model__button {
     position: absolute;
     width: 19px;
     height: 19px;
-    border: 1px solid #CBC3B3;
+    border: 1px solid #cbc3b3;
     background-color: #F6F6F6;
     color: #313131;
     border-radius: 50%;
@@ -1188,10 +1188,12 @@ input.form__error {
     display: flex;
     justify-content: center;
     align-items: center; }
+    .model__button-ring {
+      opacity: 0; }
     .model__button:hover {
       border: 1px solid #1E1E1E;
       background-color: #1E1E1E;
-      color: #D1CABC; }
+      color: #d1cabc; }
     .model__button-shoulder {
       left: 28px;
       top: 145px; }
@@ -1215,7 +1217,7 @@ input.form__error {
       font-size: 12px;
       /* or 175% */
       letter-spacing: -0.01em;
-      color: #FFFFFF;
+      color: #ffffff;
       max-width: 131px;
       top: -36px;
       left: -29px;
@@ -1229,7 +1231,7 @@ input.form__error {
     color: #F6F6F6;
     text-transform: uppercase; }
     .model__info-subtitle {
-      font-family: 'Century Gothic Regular' !important;
+      font-family: "Century Gothic Regular" !important;
       margin-bottom: 14px;
       transition: opacity 0.2s ease-in-out;
       font-family: 'Century Gothic Bold';
@@ -1255,7 +1257,7 @@ input.form__error {
     .model__advantages-subtitle {
       margin-top: 31px;
       margin-bottom: 19px;
-      font-family: 'Century Gothic Regular' !important;
+      font-family: "Century Gothic Regular" !important;
       text-transform: uppercase;
       color: #757575;
       font-family: 'Century Gothic Bold';
@@ -1274,7 +1276,7 @@ input.form__error {
     .model__advantages-number {
       right: 24px;
       position: absolute;
-      color: #C4BCBC;
+      color: #c4bcbc;
       font-family: 'Century Gothic Bold';
       font-size: 30px;
       letter-spacing: -0.03em;
@@ -2501,10 +2503,56 @@ input.form__error {
     margin-left: auto;
     margin-right: 106px; }
   .model__button {
-    width: 25px;
-    height: 25px;
+    min-width: 25px;
+    min-height: 25px;
     font-size: 21px;
-    font-family: sans-serif !important; }
+    font-family: sans-serif !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.1s ease-in; }
+    .model__button-ring {
+      max-height: 0;
+      max-width: 0;
+      position: absolute;
+      width: 131px;
+      height: 131px;
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      transition: max-width 0.1s ease-in, max-height 0.1s ease-in; }
+    .model__button-close {
+      background: #ffffff;
+      border: 1px solid #cbc3b3;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      right: 0px;
+      top: 18px;
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      transition: opacity 0.2s ease-in-out;
+      font-size: 14px; }
+    .model__button--active {
+      border: none;
+      color: transparent;
+      background-color: transparent; }
+      .model__button--active:hover {
+        border: none;
+        color: transparent;
+        background-color: transparent; }
+      .model__button--active .model__button-plus {
+        display: none; }
+      .model__button--active .model__button-close {
+        position: absolute;
+        color: #313131 !important;
+        opacity: 1; }
+      .model__button--active .model__button-ring {
+        opacity: 1;
+        max-width: 131px;
+        max-height: 131px; }
     .model__button-neck {
       left: 58%;
       top: 140px; }
@@ -2520,46 +2568,6 @@ input.form__error {
     .model__button-loop {
       right: 60px;
       top: 294px; }
-    .model__button::before {
-      top: -26px;
-      left: 50px;
-      opacity: 0;
-      z-index: 20;
-      transition: opacity 0.3s;
-      font-size: 15px;
-      position: absolute; }
-    .model__button::after {
-      content: '';
-      margin-top: 12px;
-      max-height: 0;
-      max-width: 0;
-      opacity: 0;
-      position: absolute;
-      width: 283px;
-      height: 283px;
-      border-radius: 50%;
-      border: 2px solid #FFFFFF;
-      transition: max-width 0.1s ease-in, max-height 0.1s ease-in; }
-  .button--expand {
-    border: 0 !important;
-    max-height: 0 !important; }
-    .button--expand::after {
-      opacity: 1 !important;
-      max-height: 113px !important;
-      max-width: 113px !important; }
-    .button--expand ~ .model__button-text {
-      display: block; }
-  .button--close::before {
-    content: '+';
-    transform: rotate(45deg);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20px;
-    height: 20px;
-    opacity: 1 !important;
-    background-color: #FFFFFF; }
   .stages {
     padding-top: 121px;
     padding-bottom: 115px; }
@@ -2623,9 +2631,9 @@ input.form__error {
         padding-left: 37px;
         padding-right: 37px; }
     .stages__swiper-button-next::after, .stages__swiper-button-prev::after {
-      content: '' !important; }
+      content: "" !important; }
   .instruction {
-    background: #E4E4E4 url(../img/instruction/instruction-bg-md.webp) no-repeat center; }
+    background: #e4e4e4 url(../img/instruction/instruction-bg-md.webp) no-repeat center; }
     .instruction__container {
       display: flex;
       justify-content: center;
@@ -2668,13 +2676,13 @@ input.form__error {
     margin-bottom: -11px;
     transition: color 0.2s ease-in-out; }
     .clients--darken {
-      color: #4D4D4D; }
+      color: #4d4d4d; }
     .clients__swiper-container {
       display: none; }
     .clients__swiper-pagination {
       display: none; }
     .clients__swiper-button-next::after, .clients__swiper-button-prev::after {
-      content: '' !important; }
+      content: "" !important; }
     .clients__description {
       font-size: 30px;
       line-height: 40px;
@@ -2695,7 +2703,7 @@ input.form__error {
         text-decoration: underline;
         cursor: pointer; }
         .clients__block-name:hover {
-          color: #FFFFFF; }
+          color: #ffffff; }
   .feedback {
     padding-bottom: 106px; }
     .feedback__swiper-slide {
@@ -2861,7 +2869,7 @@ input.form__error {
     line-height: 35px;
     margin-bottom: 108px; }
     .popup__close-button::after {
-      font-family: 'Century Gothic Regular' !important;
+      font-family: "Century Gothic Regular" !important;
       font-size: 48px;
       margin-left: 20px;
       margin-right: 10px; }
@@ -3313,7 +3321,7 @@ input.form__error {
         line-height: 80px;
         width: 1174px; }
     .model__buttons {
-      background: url(../img/model/girl-xl.webp) no-repeat 75%;
+      background: url(../img/model/girl-xl.png) no-repeat 75%;
       background-size: 220%;
       margin-right: 16%;
       width: 613px; }
@@ -3323,30 +3331,21 @@ input.form__error {
       font-size: 47px;
       width: 56px;
       height: 56px; }
-      .model__button::before {
-        top: -98px;
-        left: 78px;
-        opacity: 0;
-        z-index: 20;
-        transition: opacity 0.3s;
-        font-size: 31px; }
-      .model__button::after {
-        content: '';
-        margin-top: 32px;
-        max-height: 0;
-        max-width: 0;
-        opacity: 0;
-        position: absolute;
+      .model__button-ring {
         width: 283px;
         height: 283px;
-        border-radius: 50%;
-        border: 3px solid #FFFFFF;
-        transition: max-width 0.1s ease-in, max-height 0.1s ease-in; }
+        border: 3px solid #ffffff; }
+      .model__button-close {
+        width: 35px;
+        height: 35px;
+        right: 27px;
+        font-size: 25px; }
+      .model__button--active .model__button-ring {
+        max-width: 283px;
+        max-height: 283px; }
       .model__button-shoulder {
         top: 591px;
         left: 172px; }
-        .model__button-shoulder::before {
-          top: -112px; }
       .model__button-pocket {
         left: 51%;
         top: 503px; }
@@ -3361,24 +3360,6 @@ input.form__error {
         justify-content: center;
         left: 34%;
         top: 393px; }
-  .button--expand {
-    border: 0 !important;
-    max-height: 0 !important; }
-    .button--expand::after {
-      opacity: 1 !important;
-      max-height: 263px !important;
-      max-width: 263px !important; }
-  .button--close::before {
-    content: '+';
-    transform: rotate(45deg);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35px;
-    height: 35px;
-    opacity: 1 !important;
-    background-color: #FFFFFF; }
   .stages {
     padding-bottom: 137px; }
     .stages__swiper-container {
@@ -3447,7 +3428,7 @@ input.form__error {
         .stages__card-companies img {
           height: 16px; }
   .instruction {
-    background: #F9F7F2 url(../img/instruction/instruction-bg-lg.webp) no-repeat 0% 0%; }
+    background: #f9f7f2 url(../img/instruction/instruction-bg-lg.webp) no-repeat 0% 0%; }
     .instruction__title {
       font-size: 65px;
       line-height: 80px;
@@ -3553,7 +3534,7 @@ input.form__error {
   .office {
     position: relative; }
     .office__container {
-      background: #EAEEF1 url(../img/decoration-line-2.svg) no-repeat 0% 50%;
+      background: #eaeef1 url(../img/decoration-line-2.svg) no-repeat 0% 50%;
       z-index: 3000;
       width: 691px;
       left: 13%;
@@ -3753,13 +3734,13 @@ input.form__error {
     right: 13px !important;
     transition: background-color 0.2s ease-in-out; }
     .sliderModel__swiper-button-next:hover {
-      background-color: #E3E8EC; }
+      background-color: #e3e8ec; }
   .sliderModel__swiper-button-prev {
     left: 13px !important;
     top: 262px !important;
     transition: background-color 0.2s ease-in-out; }
     .sliderModel__swiper-button-prev:hover {
-      background-color: #E3E8EC; }
+      background-color: #e3e8ec; }
   .sliderModel__swiper-wrapper {
     padding-bottom: 48px; }
   .sliderModel__swiper-container {

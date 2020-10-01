@@ -1,11 +1,26 @@
 section.model#quality
   .model__card
     .model__buttons
-      .model__button.model__button-shoulder(data-name="shoulder") +
-      button.model__button.model__button-pocket(data-name="pocket", align="center") +
-      button.model__button.model__button-robe(data-name="robe") +
-      button.model__button.model__button-loop(data-name="loop") +
+      button.model__button.model__button-shoulder(data-name="shoulder").model__button--active
+        span.model__button-plus +
+        .model__button-ring
+          .model__button-close &#215;
+      button.model__button.model__button-pocket(data-name="pocket", align="center")
+        span.model__button-plus +
+        .model__button-ring
+          .model__button-close &#215;
+      button.model__button.model__button-robe(data-name="robe")
+        span.model__button-plus +
+        .model__button-ring
+          .model__button-close &#215;
+      button.model__button.model__button-loop(data-name="loop")
+        span.model__button-plus +
+        .model__button-ring
+          .model__button-close &#215;
       button.model__button.model__button-neck.button--expand.button--close(data-name="neck")
+        span.model__button-plus +
+        .model__button-ring
+          .model__button-close &#215;
     .model__info
       p.model__info-subtitle Натуральная кожа гарантирует долговечность, надежность и презентабельный вид
       h2.model__info-title ТОЛЬКО НАТУРАЛЬНАЯ КОЖА ДЛЯ КРЕПЛЕНИЙ
