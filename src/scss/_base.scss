@@ -27,11 +27,9 @@
     @include make-container();
 }
 
-
 .hidden {
     display: none !important;
 }
-
 
 .hidden-sm {
     @include media-breakpoint-down(sm) {
@@ -72,7 +70,7 @@
 }
 
 .muted {
-    opacity: .5;
+    opacity: 0.5;
 }
 
 .dashed {
@@ -90,7 +88,7 @@ strong {
 }
 
 ::placeholder {
-    color: rgba($color-text, .5);
+    color: rgba($color-text, 0.5);
 }
 
 :focus::placeholder {
@@ -157,8 +155,8 @@ strong {
         border-radius: 50%;
         @include font(15px, -0.01em, 18px);
         text-transform: uppercase;
-        background: #E3E8EC;
-        @include flex-center()
+        background: #e3e8ec;
+        @include flex-center();
     }
 
     &-labelText {
@@ -176,7 +174,7 @@ img {
 
 .dimmed {
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -195,8 +193,6 @@ input.form__error {
     font-size: 12px;
 }
 
-
-
 .overflow-hidden {
     overflow: hidden;
 }
@@ -206,16 +202,15 @@ input.form__error {
     height: 100vh !important;
 }
 
-
 .transform-none {
     transform: translate3d(0, 0, 0) !important;
 }
 
-.visible-768 {
+.visible-1450 {
     display: none;
 }
 
-.hidden-768 {
+.hidden-1450 {
     display: block;
 }
 
@@ -248,5 +243,4 @@ input.form__error {
     width: 300%;
     /* to contain 4 panels, each with 100% of window width */
     height: 100%;
-
 }

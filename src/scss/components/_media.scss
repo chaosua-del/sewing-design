@@ -43,14 +43,6 @@
         margin-bottom: 0;
     }
 
-    .visible-768 {
-        display: block;
-    }
-
-    .hidden-768 {
-        display: none;
-    }
-
     // modalForm-768
     .modalForm {
         // &__wrap {
@@ -1549,6 +1541,13 @@
 }
 
 @media (min-width: 1450px) {
+    .visible-1450 {
+        display: block;
+    }
+
+    .hidden-1450 {
+        display: none;
+    }
     // submit-1450
     .submit {
         &__wrap {
