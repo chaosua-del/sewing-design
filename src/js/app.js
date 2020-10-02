@@ -1,53 +1,49 @@
-import $ from 'jquery';
-import 'lazysizes';
-import validate from 'jquery.validate.min';
+import $ from "jquery";
+import "lazysizes";
+import validate from "jquery.validate.min";
 // import fancybox from '@fancyapps/fancybox/dist/jquery.fancybox';
 
+import page from "page";
+import forms from "forms";
+import sliders from "sliders";
+import { myMap } from "map";
+import formValidation from "validation";
+import popupMenu from "popups";
+import bannerScroll from "banner";
+import bannerHover from "banner-hover";
+import clientsHovers from "clients";
+import expandMenu from "expand-menu";
+import headerMenu from "header-menu";
+import scrollDown from "scroll-down";
+import modelExpand from "model-expand";
+import cardHeight from "cardHeight";
+import svgReplace from "svgReplace";
 
-import page from 'page';
-import forms from 'forms';
-import sliders from 'sliders';
-import {
-    myMap
-} from 'map';
-import formValidation from 'validation';
-import popupMenu from 'popups';
-import bannerScroll from 'banner';
-import bannerHover from 'banner-hover';
-import clientsHovers from 'clients';
-import expandMenu from 'expand-menu';
-import headerMenu from 'header-menu';
-import scrollDown from 'scroll-down';
-import modelExpand from 'model-expand';
-import cardHeight from 'cardHeight';
-
-
-import Swiper from 'swiper/js/swiper.js';
+import Swiper from "swiper/js/swiper.js";
 // import mask from 'swiper/js/swiper.js';
 
 let app = {
-
     // параметры, изменяемые в appConfig
 
     breakpoints: {
         sm: 320,
         md: 768,
         lg: 1250,
-        xl: 1450
+        xl: 1450,
     },
     media: 320,
-    resizeEventName: 'app_resize',
-    submitEventName: 'app_submit',
-    popupLoadedEventName: 'app_popup_loaded',
-    popupClosedEventName: 'app_popup_closed',
-    tabChangedEventName: 'app_tab_changed',
+    resizeEventName: "app_resize",
+    submitEventName: "app_submit",
+    popupLoadedEventName: "app_popup_loaded",
+    popupClosedEventName: "app_popup_closed",
+    tabChangedEventName: "app_tab_changed",
     scrollToOffset: 200, // оффсет при скролле до элемента
-    scrollToSpeed: 500, // скорость скролла 
+    scrollToSpeed: 500, // скорость скролла
 
     init: function () {
         // read config
-        if (typeof appConfig === 'object') {
-            Object.keys(appConfig).forEach(key => {
+        if (typeof appConfig === "object") {
+            Object.keys(appConfig).forEach((key) => {
                 if (Object.prototype.hasOwnProperty.call(app, key)) {
                     app[key] = appConfig[key];
                 }
@@ -65,7 +61,7 @@ let app = {
         this.forms.init.call(this);
 
         app.checkMedia();
-        app.window.on('resize', app.checkMedia);
+        app.window.on("resize", app.checkMedia);
         window.jQuery = $;
         window.app = app;
 
@@ -73,7 +69,7 @@ let app = {
             this.initScrollTo();
         });
 
-        app.window.on('load', () => {
+        app.window.on("load", () => {
             headerMenu();
             bannerScroll();
             bannerHover();
@@ -85,7 +81,7 @@ let app = {
             expandMenu();
             scrollDown();
             cardHeight();
-
+            svgReplace();
         });
 
         this.document.on(app.resizeEventName, () => {
@@ -98,25 +94,28 @@ let app = {
 
             // console.log('resizing');
         });
-
     },
 
     initScrollTo: function () {
-        app.document.on('click', '.js-scrollto', function () {
-            let target = $(this).data('href');
+        app.document.on("click", ".js-scrollto", function () {
+            let target = $(this).data("href");
             if (target) {
                 let $target = $(target);
                 if ($target.length) {
-                    $('html, body').animate({
-                        scrollTop: $target.offset().top - app.scrollToOffset
-                    }, app.scrollToSpeed);
+                    $("html, body").animate(
+                        {
+                            scrollTop:
+                                $target.offset().top - app.scrollToOffset,
+                        },
+                        app.scrollToSpeed
+                    );
                 }
             }
         });
     },
 
     formatPrice: function (price) {
-        return this.formatNumber(price, 0, ',', ' ');
+        return this.formatNumber(price, 0, ",", " ");
     },
 
     formatNumber: function (number, decimals, dec_point, thousands_sep) {
@@ -126,17 +125,17 @@ let app = {
         let i, j, kw, kd, km;
 
         // input sanitation & defaults
-        if (isNaN(decimals = Math.abs(decimals))) {
+        if (isNaN((decimals = Math.abs(decimals)))) {
             decimals = 2;
         }
         if (dec_point == undefined) {
-            dec_point = ',';
+            dec_point = ",";
         }
         if (thousands_sep == undefined) {
-            thousands_sep = '.';
+            thousands_sep = ".";
         }
 
-        i = parseInt(number = (+number || 0).toFixed(decimals)) + '';
+        i = parseInt((number = (+number || 0).toFixed(decimals))) + "";
 
         if ((j = i.length) > 3) {
             j = j % 3;
@@ -144,13 +143,15 @@ let app = {
             j = 0;
         }
 
-        km = j ?
-            i.substr(0, j) + thousands_sep :
-            '';
-        kw = i.substr(j).replace(/(\d{3})(?=\d)/g, '$1' + thousands_sep);
-        kd = (decimals ?
-            dec_point + Math.abs(number - i).toFixed(decimals).replace(/-/, '0').slice(2) :
-            '');
+        km = j ? i.substr(0, j) + thousands_sep : "";
+        kw = i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands_sep);
+        kd = decimals
+            ? dec_point +
+              Math.abs(number - i)
+                  .toFixed(decimals)
+                  .replace(/-/, "0")
+                  .slice(2)
+            : "";
 
         return km + kw + kd;
     },
@@ -169,7 +170,7 @@ let app = {
         }
         if (app.media != current) {
             app.document.trigger(app.resizeEventName, {
-                media: app.media
+                media: app.media,
             });
         }
     },
@@ -184,7 +185,7 @@ let app = {
      * param  aEndings Array Массив слов или окончаний для чисел (1, 4, 5),
      *         например ['яблоко', 'яблока', 'яблок']
      * return String
-     * 
+     *
      * https://habrahabr.ru/post/105428/
      */
     getNumEnding: function (iNumber, aEndings) {
@@ -195,12 +196,12 @@ let app = {
         } else {
             i = iNumber % 10;
             switch (i) {
-                case (1):
+                case 1:
                     sEnding = aEndings[0];
                     break;
-                case (2):
-                case (3):
-                case (4):
+                case 2:
+                case 3:
+                case 4:
                     sEnding = aEndings[1];
                     break;
                 default:
@@ -211,8 +212,7 @@ let app = {
     },
 
     getKeyByValue: function (object, value) {
-        return Object.keys(object).find(key => object[key] === value);
-    }
-
+        return Object.keys(object).find((key) => object[key] === value);
+    },
 };
 app.init();

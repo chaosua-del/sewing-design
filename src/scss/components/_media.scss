@@ -589,7 +589,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: transform 0.1s ease-in;
+            transition: border 0.2s ease-in-out,
+                background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
             &-ring {
                 max-height: 0;
@@ -603,6 +604,11 @@
                 transition: max-width 0.1s ease-in, max-height 0.1s ease-in;
             }
 
+            &-plus {
+                width: 11px;
+                height: 11px;
+            }
+
             &-close {
                 background: #ffffff;
                 border: 1px solid #cbc3b3;
@@ -612,13 +618,29 @@
                 right: 0px;
                 top: 18px;
                 opacity: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 position: absolute;
                 transition: opacity 0.2s ease-in-out;
-                font-size: 14px;
+                // display: none;
+                // z-index: -100;
+                visibility: hidden;
+
+                path {
+                    width: 7.5px;
+                    height: 7.5px;
+                }
                 // transform: rotate(45deg);
+            }
+
+            &-closeImg {
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                path {
+                    transition: fill 0.2s ease-in-out;
+                }
             }
 
             &--active {
@@ -641,6 +663,22 @@
                     position: absolute;
                     color: #313131 !important;
                     opacity: 1;
+                    display: block;
+                    visibility: visible;
+                    transition: border 0.2s ease-in-out,
+                        background-color 0.2s ease-in-out,
+                        color 0.2s ease-in-out;
+                    &:hover {
+                        border: 1px solid $color-base;
+                        background-color: $color-base;
+                        color: #d1cabc;
+
+                        .model__button-closeImg {
+                            path {
+                                fill: #d1cabc;
+                            }
+                        }
+                    }
                 }
 
                 .model__button-ring {
@@ -2057,10 +2095,20 @@
                 font-size: 25px;
             }
 
+            &-plus {
+                width: 25px;
+                height: 25px;
+            }
+
             &--active {
                 .model__button-ring {
                     max-width: 283px;
                     max-height: 283px;
+                }
+
+                .model__button-closeImg {
+                    width: 15px;
+                    height: 15px;
                 }
             }
 

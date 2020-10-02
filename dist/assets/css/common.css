@@ -1184,16 +1184,22 @@ input.form__error {
     color: #313131;
     border-radius: 50%;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center; }
+    .model__button-plus {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
     .model__button-ring {
       opacity: 0; }
     .model__button:hover {
       border: 1px solid #1E1E1E;
       background-color: #1E1E1E;
       color: #d1cabc; }
+      .model__button:hover .model__button-plus path {
+        fill: #d1cabc; }
     .model__button-shoulder {
       left: 28px;
       top: 145px; }
@@ -2510,7 +2516,7 @@ input.form__error {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.1s ease-in; }
+    transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out; }
     .model__button-ring {
       max-height: 0;
       max-width: 0;
@@ -2520,6 +2526,9 @@ input.form__error {
       border-radius: 50%;
       border: 2px solid #ffffff;
       transition: max-width 0.1s ease-in, max-height 0.1s ease-in; }
+    .model__button-plus {
+      width: 11px;
+      height: 11px; }
     .model__button-close {
       background: #ffffff;
       border: 1px solid #cbc3b3;
@@ -2529,12 +2538,21 @@ input.form__error {
       right: 0px;
       top: 18px;
       opacity: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       position: absolute;
       transition: opacity 0.2s ease-in-out;
-      font-size: 14px; }
+      visibility: hidden; }
+      .model__button-close path {
+        width: 7.5px;
+        height: 7.5px; }
+    .model__button-closeImg {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      .model__button-closeImg path {
+        transition: fill 0.2s ease-in-out; }
     .model__button--active {
       border: none;
       color: transparent;
@@ -2548,7 +2566,16 @@ input.form__error {
       .model__button--active .model__button-close {
         position: absolute;
         color: #313131 !important;
-        opacity: 1; }
+        opacity: 1;
+        display: block;
+        visibility: visible;
+        transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out; }
+        .model__button--active .model__button-close:hover {
+          border: 1px solid #1E1E1E;
+          background-color: #1E1E1E;
+          color: #d1cabc; }
+          .model__button--active .model__button-close:hover .model__button-closeImg path {
+            fill: #d1cabc; }
       .model__button--active .model__button-ring {
         opacity: 1;
         max-width: 131px;
@@ -3340,9 +3367,15 @@ input.form__error {
         height: 35px;
         right: 27px;
         font-size: 25px; }
+      .model__button-plus {
+        width: 25px;
+        height: 25px; }
       .model__button--active .model__button-ring {
         max-width: 283px;
         max-height: 283px; }
+      .model__button--active .model__button-closeImg {
+        width: 15px;
+        height: 15px; }
       .model__button-shoulder {
         top: 591px;
         left: 172px; }

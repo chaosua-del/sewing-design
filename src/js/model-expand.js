@@ -29,10 +29,17 @@ export default function modelExpand() {
             });
             elem.classList.add("model__button--active");
             // elem.classList.add("model__button--active");
-            console.log(event.target);
-            if (event.target.classList.contains("model__button-close")) {
+            // console.log(elem.querySelector("path"));
+            if (
+                (event.target.classList.contains("model__button-close") ||
+                    event.target.classList.contains(
+                        "model__button-closeImg"
+                    )) &&
+                (event.target.firstElementChild.tagName == "path" ||
+                    event.target.firstElementChild.tagName == "svg")
+            ) {
+                // console.log(event.target.firstElementChild.tagName);
                 elem.classList.remove("model__button--active");
-                console.log("sdsd");
             }
 
             // console.log(event.target.dataset.name);
