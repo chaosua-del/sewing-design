@@ -43,7 +43,10 @@ export default function modelExpand() {
             }
 
             // console.log(event.target.dataset.name);
-            let name = event.target.dataset.name;
+            let name =
+                event.target.dataset.name ||
+                event.target.parentElement.dataset.name ||
+                event.target.parentNode.parentNode.dataset.name;
             const modelTitle = document.querySelector(".model__info-title");
             const modelSubtitle = document.querySelector(
                 ".model__info-subtitle"
